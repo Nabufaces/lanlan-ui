@@ -9,7 +9,7 @@
             ]"
             @click="handleClick"
     >
-        <slot></slot>
+        <i :class="imageIcon" v-if="imageIcon"></i><slot></slot>
     </button>
 </template>
 
@@ -75,29 +75,29 @@
     background-color: #F8F8F8;
   }
   .t-btn-primary {
-    border: 1px solid #d8dce5;
-    color: #696969;
-    background-color: #F8F8F8;
+    border: 1px solid #409eff;
+    color: #fff;
+    background-color: #409eff;
   }
   .t-btn-success {
-    border: 1px solid #d8dce5;
-    color: #696969;
-    background-color: #F8F8F8;
+    border: 1px solid #67c23a;
+    color: #fff;
+    background-color: #67c23a;
   }
   .t-btn-warning {
-    border: 1px solid #d8dce5;
-    color: #696969;
-    background-color: #F8F8F8;
+    border: 1px solid #eb9e05;
+    color: #fff;
+    background-color: #eb9e05;
   }
   .t-btn-danger {
-    border: 1px solid #d8dce5;
-    color: #696969;
-    background-color: #F8F8F8;
+    border: 1px solid #fa5555;
+    color: #fff;
+    background-color: #fa5555;
   }
   .t-btn-info {
-    border: 1px solid #d8dce5;
+    border: 1px solid #878d99;
     color: #696969;
-    background-color: #F8F8F8;
+    background-color: #878d99;
   }
   .t-btn:disabled{
     color: #c0ccda;
