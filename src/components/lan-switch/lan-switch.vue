@@ -6,6 +6,8 @@
     @click="change">
     <span class="open"
       :class="{close: !state}"></span>
+    <span class="onText" v-if="state && onText">{{onText}}</span>
+    <span class="offText" v-else-if="!state && offText">{{offText}}</span>
   </span>
 </template>
 
@@ -18,7 +20,9 @@
         required: true
       },
       activeColor: String,
-      inactiveColor: String
+      inactiveColor: String,
+      onText: String,
+      offText: String
     },
     data(){
       return {

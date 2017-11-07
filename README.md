@@ -6,7 +6,8 @@
     2. success
     3. warning
     4. info
-    5. default（default)
+    5. danger
+    6. default（default)
 2. size 按钮尺寸大小
     1. tiny
     2. small
@@ -23,7 +24,9 @@
     2.false   关
 2. activeColor 开启背景颜色
 3. inactiveColor 关闭背景颜色
-4. event: change
+4. onText switch打开时的文字
+5. offText switch关闭时的文字
+6. event: change
 
 #### icon 图标 lan-icon
 1. font-size: icon大小

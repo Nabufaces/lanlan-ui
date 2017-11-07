@@ -39,3 +39,16 @@
   -o-transform: translateX(-22px);
   transform: translateX(-22px);
 }
+.lan-switch .onText,
+.lan-switch .offText {
+  position: absolute;
+  top: 5px;
+  font-size: 12px;
+  line-height: 1;
+}
+.lan-switch .onText {
+  left: 8px;
+}
+.lan-switch .offText {
+  right: 8px;
+}
