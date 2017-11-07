@@ -17,7 +17,7 @@
 5. customClass 样式扩展（可选）
 6. event: click
 
-#### icon 图标 lan-icon 
+#### icon 图标 lan-icon
 1. font-size: icon大小
 2. type: icon名称
 3. color: icon颜色
