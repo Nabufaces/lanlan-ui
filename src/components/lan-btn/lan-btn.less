@@ -29,29 +29,41 @@
     }
   }
   &&-primary {
-    border: none;
+    border: 1px solid #1BAEFF;
     background-color: #1BAEFF;
+    &:hover {
+      background-color: #409eff;
+    }
   }
   &&-success {
-    border: none;
+    border: 1px solid #0EDE00;
     background-color: #0EDE00;
+    &:hover {
+      background-color: #67c23a;
+    }
   }
   &&-warning {
-    border: none;
+    border: 1px solid #FF7846;
     background-color: #FF7846;
     &:hover {
       background-color: #E7551F;
     }
   }
+  &&-danger {
+    border: 1px solid #fb7777;
+    background-color: #fb7777;
+    &:hover {
+      background-color: #FF4949;
+    }
+  }
   &&-info {
-    border: none;
+    border: 1px solid #686E74;
     background-color: #686E74;
     &:hover {
       background-color: #4A5056;
     }
   }
   &:disabled {
-    background-color: #EDF0F4;
     cursor: not-allowed;
   }
 }

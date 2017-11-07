@@ -30,28 +30,40 @@
   background-color: #EDF0F4;
 }
 .lan-btn.lan-btn-primary {
-  border: none;
+  border: 1px solid #1BAEFF;
   background-color: #1BAEFF;
 }
+.lan-btn.lan-btn-primary:hover {
+  background-color: #409eff;
+}
 .lan-btn.lan-btn-success {
-  border: none;
+  border: 1px solid #0EDE00;
   background-color: #0EDE00;
 }
+.lan-btn.lan-btn-success:hover {
+  background-color: #67c23a;
+}
 .lan-btn.lan-btn-warning {
-  border: none;
+  border: 1px solid #FF7846;
   background-color: #FF7846;
 }
 .lan-btn.lan-btn-warning:hover {
   background-color: #E7551F;
 }
+.lan-btn.lan-btn-danger {
+  border: 1px solid #fb7777;
+  background-color: #fb7777;
+}
+.lan-btn.lan-btn-danger:hover {
+  background-color: #FF4949;
+}
 .lan-btn.lan-btn-info {
-  border: none;
+  border: 1px solid #686E74;
   background-color: #686E74;
 }
 .lan-btn.lan-btn-info:hover {
   background-color: #4A5056;
 }
 .lan-btn:disabled {
-  background-color: #EDF0F4;
   cursor: not-allowed;
 }

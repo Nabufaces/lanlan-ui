@@ -6,7 +6,9 @@
       <lan-btn size="small" classType="primary">small primary</lan-btn>
       <lan-btn size="normal" classType="success">normal success</lan-btn>
       <lan-btn size="normal" classType="warning">normal warning</lan-btn>
+      <lan-btn size="normal" classType="danger">normal danger</lan-btn>
       <lan-btn :disabled="true">disabled</lan-btn>
+      <lan-btn size="normal" classType="warning" :disabled="true">disabled</lan-btn>
       <lan-btn size="large" classType="info">large info</lan-btn>
     </div>
     <label class="title">Switch</label>
@@ -14,6 +16,7 @@
       <lan-switch :switchType="true"></lan-switch>
       <lan-switch :switchType="false"></lan-switch>
       <lan-switch :switchType="true" activeColor="#0EDE00"></lan-switch>
+      <lan-switch :switchType="false" inactiveColor="#FF4949"></lan-switch>
     </div>
   </div>
 </template>
@@ -43,5 +46,6 @@
   }
   .group {
     display: inline-block;
+    line-height: 45px;
   }
 </style>
