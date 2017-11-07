@@ -1,4 +1,4 @@
-.t-btn {
+.lan-btn {
   display: inline-block;
   line-height: 1;
   white-space: nowrap;
@@ -9,49 +9,49 @@
   transition: .1s;
   color: #fff;
 }
-.t-btn.t-btn-tiny {
+.lan-btn.lan-btn-tiny {
   padding: 8px 28px;
 }
-.t-btn.t-btn-small {
+.lan-btn.lan-btn-small {
   padding: 8px 38px;
 }
-.t-btn.t-btn-normal {
+.lan-btn.lan-btn-normal {
   padding: 8px 58px;
 }
-.t-btn.t-btn-large {
+.lan-btn.lan-btn-large {
   padding: 8px 137px;
 }
-.t-btn.t-btn-default {
+.lan-btn.lan-btn-default {
   border: 1px solid #B0B4B8;
   color: #1E242A;
   background-color: #ffffff;
 }
-.t-btn.t-btn-default:hover {
+.lan-btn.lan-btn-default:hover {
   background-color: #EDF0F4;
 }
-.t-btn.t-btn-primary {
+.lan-btn.lan-btn-primary {
   border: none;
   background-color: #1BAEFF;
 }
-.t-btn.t-btn-success {
+.lan-btn.lan-btn-success {
   border: none;
   background-color: #0EDE00;
 }
-.t-btn.t-btn-warning {
+.lan-btn.lan-btn-warning {
   border: none;
   background-color: #FF7846;
 }
-.t-btn.t-btn-warning:hover {
+.lan-btn.lan-btn-warning:hover {
   background-color: #E7551F;
 }
-.t-btn.t-btn-info {
+.lan-btn.lan-btn-info {
   border: none;
   background-color: #686E74;
 }
-.t-btn.t-btn-info:hover {
+.lan-btn.lan-btn-info:hover {
   background-color: #4A5056;
 }
-.t-btn:disabled {
+.lan-btn:disabled {
   background-color: #EDF0F4;
   cursor: not-allowed;
 }

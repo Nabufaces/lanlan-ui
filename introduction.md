@@ -6,16 +6,24 @@
     2. success
     3. warning
     4. info
-    5. default
+    5. default（default)
 2. size 按钮尺寸大小
     1. tiny
     2. small
     3. normal（default)
     4. large
 3. imageIcon: 选项icon（可选） 
-4. disabled: 是否禁用
+4. disabled: 是否禁用（可选） 
 5. customClass 样式扩展（可选）
 6. event: click
+
+#### switch 开关 lan-switch
+1. switchType 开关状态(必填)
+    1.true    开
+    2.false   关
+2. activeColor 开启背景颜色
+3. inactiveColor 关闭背景颜色
+4. event: change
 
 #### icon 图标 lan-icon
 1. font-size: icon大小

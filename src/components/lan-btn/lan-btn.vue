@@ -1,10 +1,10 @@
 <template>
     <button
-            class="t-btn"
+            class="lan-btn"
             :disabled="disabled"
             :class="[
-              classType?`t-btn-${classType}`:'',
-              size?`t-btn-${size}`:'',
+              classType?`lan-btn-${classType}`:'',
+              size?`lan-btn-${size}`:'',
               customClass
             ]"
             @click="handleClick"
