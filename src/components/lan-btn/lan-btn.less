@@ -1,0 +1,57 @@
+.t-btn{
+  display: inline-block;
+  line-height: 1;
+  white-space: nowrap;
+  text-align: center;
+  border-radius: 1px;
+  font-size: 14px;
+  outline: none;
+  transition: .1s;
+  color: #fff;
+  &&-tiny {
+    padding: 8px 28px;
+  }
+  &&-small {
+    padding: 8px 38px;
+  }
+  &&-normal {
+    padding: 8px 58px;
+  }
+  &&-large {
+    padding: 8px 137px;
+  }
+  &&-default {
+    border: 1px solid #B0B4B8;
+    color: #1E242A;
+    background-color: #ffffff;
+    &:hover {
+      background-color: #EDF0F4;
+    }
+  }
+  &&-primary {
+    border: none;
+    background-color: #1BAEFF;
+  }
+  &&-success {
+    border: none;
+    background-color: #0EDE00;
+  }
+  &&-warning {
+    border: none;
+    background-color: #FF7846;
+    &:hover {
+      background-color: #E7551F;
+    }
+  }
+  &&-info {
+    border: none;
+    background-color: #686E74;
+    &:hover {
+      background-color: #4A5056;
+    }
+  }
+  &:disabled {
+    background-color: #EDF0F4;
+    cursor: not-allowed;
+  }
+}

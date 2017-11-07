@@ -5,9 +5,8 @@
     1. primary
     2. success
     3. warning
-    4. danger
-    5. info
-    6. default
+    4. info
+    5. default
 2. size 按钮尺寸大小
     1. tiny
     2. small
@@ -18,7 +17,7 @@
 5. customClass 样式扩展（可选）
 6. event: click
 
-#### icon 图标 lan-icon
+#### icon 图标 lan-icon 
 1. font-size: icon大小
 2. type: icon名称
 3. color: icon颜色

@@ -1,0 +1,57 @@
+.t-btn {
+  display: inline-block;
+  line-height: 1;
+  white-space: nowrap;
+  text-align: center;
+  border-radius: 1px;
+  font-size: 14px;
+  outline: none;
+  transition: .1s;
+  color: #fff;
+}
+.t-btn.t-btn-tiny {
+  padding: 8px 28px;
+}
+.t-btn.t-btn-small {
+  padding: 8px 38px;
+}
+.t-btn.t-btn-normal {
+  padding: 8px 58px;
+}
+.t-btn.t-btn-large {
+  padding: 8px 137px;
+}
+.t-btn.t-btn-default {
+  border: 1px solid #B0B4B8;
+  color: #1E242A;
+  background-color: #ffffff;
+}
+.t-btn.t-btn-default:hover {
+  background-color: #EDF0F4;
+}
+.t-btn.t-btn-primary {
+  border: none;
+  background-color: #1BAEFF;
+}
+.t-btn.t-btn-success {
+  border: none;
+  background-color: #0EDE00;
+}
+.t-btn.t-btn-warning {
+  border: none;
+  background-color: #FF7846;
+}
+.t-btn.t-btn-warning:hover {
+  background-color: #E7551F;
+}
+.t-btn.t-btn-info {
+  border: none;
+  background-color: #686E74;
+}
+.t-btn.t-btn-info:hover {
+  background-color: #4A5056;
+}
+.t-btn:disabled {
+  background-color: #EDF0F4;
+  cursor: not-allowed;
+}
