@@ -52,20 +52,19 @@
 4. active 进度条激活，进度条激活时显示动画
 
 #### modal 模态框 lan-modal
-1. title    模态框标题
-2. content    模态框内容
-3. okButton     是否显示确定按钮
-4. cancelButton     是否显示取消按钮
-5. closeButton    是否显示关闭按钮
-6. closeWindow     点击模态框区域之外是否关闭
-7. minHeight    内容区域最小高度
-8. maxHeight    内容区域最大高度，超出则显示滚动条
-9. contentTemplate  内容模板标志,true时可用content插槽
-10. footerTemplate  底部模板标志,true时可用footer插槽
+1. showModal        是否显示模态框（必填）
+2. title            模态框标题
+3. width            模态框宽度，默认400px
+4. showClose        是否显示关闭按钮
+5. closeWindow      点击模态框区域之外是否关闭
+6. slot:
+    1. title        模态框标题内容
+    2. -            模态框内容
+    3. footer       模态框页脚内容
 11. event: 
-    1. ok   确定
-    2. cancel   取消
-    3. close 关闭模态框
+    1. close        关闭模态框
+    2. cancel       点击取消按钮（同时会抛出close事件）
+    3. confirm      点击确认按钮（同时会抛出close事件）
 
 #### scrollend 滚动加载 lan-scrollend
 1. hasMore 是否还有数据加载

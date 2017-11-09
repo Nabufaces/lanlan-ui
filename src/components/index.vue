@@ -44,6 +44,14 @@
       <lan-select :source="source" placeholder="选择内容" :readonly="true">
       </lan-select>
     </div>
+
+    <label class="title">Modal</label>
+    <div class="group">
+      <lan-btn size="small" classType="primary" @click="handleModal">点击打开modal</lan-btn>&nbsp;
+      <lan-modal title="标题" :showModal="showModal" @close="showModal = false">
+        <span>这是modal模板</span>
+      </lan-modal>
+    </div>
   </div>
 </template>
 
@@ -52,6 +60,7 @@
   import lanSwitch from './lan-switch/lan-switch'
   import lanInput from './lan-input/lan-input'
   import lanSelect from './lan-select/lan-select'
+  import lanModal from './lan-modal/lan-modal'
 
   export default {
     data () {
@@ -73,13 +82,20 @@
           value: 4,
           name: '北京烤鸭'
         }],
+        showModal: false
       }
     },
     components: {
       lanBtn,
       lanSwitch,
       lanInput,
-      lanSelect
+      lanSelect,
+      lanModal
+    },
+    methods: {
+      handleModal(){
+        this.showModal = true;
+      }
     }
   }
 </script>

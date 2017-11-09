@@ -49,14 +49,13 @@
     },
     mounted(){
       this.selectWidth = this.$refs.ipt.$el.getBoundingClientRect().width + 'px';
-      console.log(this.$slot)
     },
     methods: {
       handleClick(){
         this.showSelect = !this.showSelect;
       },
       handleBlur(){
-        this.showSelect = false;
+        //this.showSelect = false;
       },
       selectValue(index){
         const select = this.source[index];

@@ -1,0 +1,71 @@
+<template>
+  <div class="lan-modal-mask" v-show="showModal"
+       @click.self="handleCloseWindow">
+    <div class="lan-modal"
+         :style="{width: width ? width + 'px' : '400px'}">
+      <div class="m-hd">
+        <slot name="title">
+          <span class="tt">{{title}}</span>
+        </slot>
+        <span class="close" @click="handleClose" v-if="showClose"><i class="iconfont icon-close"></i></span>
+      </div>
+      <div class="m-cnt">
+        <slot></slot>
+      </div>
+      <div class="m-ft">
+        <slot name="footer"></slot>
+        <lan-btn size="small" @click="handleCancel" v-if="!$slots.footer">取消</lan-btn>
+        <lan-btn size="small" classType="warning" @click="handleConfirm" v-if="!$slots.footer">确定</lan-btn>&nbsp;
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+  import lanBtn from '../lan-btn/lan-btn';
+
+  export default{
+    name: 'lan-modal',
+    props: {
+      showModal: {
+        type: Boolean,
+        require: true
+      },
+      title: [String, Number],
+      width: Number,
+      showClose: {
+        type: Boolean,
+        default: true
+      },
+      closeWindow: {
+        type: Boolean,
+        default: true
+      }
+    },
+    components: {
+      lanBtn
+    },
+    methods: {
+      handleCloseWindow(){
+        if(!this.closeWindow){
+          return;
+        }
+        this.handleClose();
+      },
+      handleClose(){
+        this.$emit('close');
+      },
+      handleCancel(){
+        this.$emit('cancel');
+        this.handleClose();
+      },
+      handleConfirm(){
+        this.$emit('confirm');
+        this.handleClose();
+      }
+    }
+  }
+</script>
+
+<style src="./lan-modal.css" scoped></style>
+
