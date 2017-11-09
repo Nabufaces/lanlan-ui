@@ -18,13 +18,10 @@
 .lan-input .t-ipt:hover {
   border-color: #FF7846;
 }
-.lan-input .t-ipt:disabled,
-.lan-input .t-ipt:read-only {
+.lan-input .t-ipt:disabled {
   background-color: #f5f7fa;
   border-color: #dfe4ed;
   color: #b4bccc;
-}
-.lan-input .t-ipt:disabled {
   cursor: not-allowed;
 }
 .lan-input .prefix,

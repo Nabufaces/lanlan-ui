@@ -6,6 +6,7 @@
       <slot name="prepend"></slot>
     </div>
     <input class="t-ipt"
+           :value="value"
            :class="customClass"
            :placeholder="placeholder"
            :readonly="readonly"
@@ -17,6 +18,7 @@
            @change="handleChange($event.target.value)"
            @focus="handleFocus($event)"
            @blur="handleBlur($event)"
+           @click="handleClick($event)"
            />
     <div class="append" v-if="$slots.append">
       <slot name="append"></slot>
@@ -28,6 +30,7 @@
   export default {
     name: 'lan-input',
     props: {
+      value: [String, Number],
       prefixIcon: String,
       suffixIcon: String,
       customClass: String,
@@ -54,6 +57,9 @@
       handleFocus(event) {
         this.$emit('focus', event);
       },
+      handleClick(event){
+        this.$emit('click', event);
+      }
     }
   }
 </script>

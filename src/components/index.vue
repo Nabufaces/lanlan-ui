@@ -26,6 +26,7 @@
     <label class="title">Input</label>
     <div class="group">
       <lan-input customClass="ipt-wd"></lan-input>&nbsp;
+      <lan-input placeholder="请输入内容" :disabled="true"></lan-input>&nbsp;
       <lan-input placeholder="请输入内容" prefixIcon="search"></lan-input>&nbsp;
       <lan-input placeholder="请输入内容" suffixIcon="less"></lan-input>&nbsp;
       <lan-input placeholder="请输入内容">
@@ -40,7 +41,8 @@
 
     <label class="title">Select</label>
     <div class="group">
-      <!--<lan-select></lan-select>-->
+      <lan-select :source="source" placeholder="选择内容" :readonly="true">
+      </lan-select>
     </div>
   </div>
 </template>
@@ -54,7 +56,23 @@
   export default {
     data () {
       return {
-
+        source: [{
+          value: 0,
+          name: '黄金糕'
+        }, {
+          value: 1,
+          name: '双皮奶'
+        }, {
+          value: 2,
+          name: '蚵仔煎',
+          disabled: true
+        }, {
+          value: 3,
+          name: '龙须面'
+        }, {
+          value: 4,
+          name: '北京烤鸭'
+        }],
       }
     },
     components: {

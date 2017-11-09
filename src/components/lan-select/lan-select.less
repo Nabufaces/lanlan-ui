@@ -1,3 +1,56 @@
 .lan-select {
-  display: block;
+  white-space: nowrap;
+  position: relative;
+  .dropdown {
+    position: absolute;
+    border-radius: 2px;
+    border: 1px solid #E4E6EC;
+    box-sizing: border-box;
+    box-shadow: 0 2px 12px 0 rgba(0,0,0,.1);
+    margin-top: 10px;
+    &::before, &::after {
+      content: '';
+      position: absolute;
+      width: 0;  height: 0;
+      border-right: 8px solid transparent;
+      border-bottom: 8px solid #E4E6EC;
+      border-left: 8px solid transparent;
+      left: 40px;
+      top: -8px;
+    }
+    &::after{
+      border-right: 8px solid transparent;
+      border-bottom: 8px solid #fff;
+      border-left: 8px solid transparent;
+      top: -7px;
+    }
+    &-list {
+      list-style: none;
+      padding: 6px 0;
+      margin: 0;
+      box-sizing: border-box;
+      max-height: 274px;
+      overflow: scroll;
+      &-item {
+        font-size: 14px;
+        padding: 0 20px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        color: #5a5e66;
+        height: 34px;
+        line-height: 34px;
+        box-sizing: border-box;
+        cursor: pointer;
+        &:hover {
+          background-color: #F2F6FA;
+        }
+        &.disabled {
+          color: #b4bccc;
+          cursor: not-allowed;
+          background-color: #fff;
+        }
+      }
+    }
+  }
 }

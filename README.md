@@ -118,15 +118,15 @@
     2. focus       在 Input 获得焦点时触发
     3. input       在 Input 输入值时触发
     4. change      在 Input 值改变时触发
+    5. click       在 Input 点击时触发
   
 
 #### select 下拉选择 lan-select
 1. source 数据源 
     1. name: 选项名
     2. value: 选项值
-    3. readonly: 是否可读
-    4. disabled: 是否禁用
-    5. imageIcon: 选项icon
+    3. disabled: 是否禁用
+    4. imageIcon: 选项icon
 ```
     source: [
         {name: '北京', value: 1, disabled: false, imageIcon: ''},
