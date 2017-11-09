@@ -64,8 +64,8 @@
           return;
         }
         this.selectedValue = select;
+        this.$emit('selected', select);
         this.showSelect = false;
-
       }
     }
   }

@@ -126,22 +126,19 @@
     1. name: 选项名
     2. value: 选项值
     3. disabled: 是否禁用
-    4. imageIcon: 选项icon
 ```
     source: [
-        {name: '北京', value: 1, disabled: false, imageIcon: ''},
+        {name: '北京', value: 1, disabled: true},
         {name: '上海', value: 2}
     ]
 ```
-2. selected  当前选择项
-3. width    组件宽度
-4. size     组件大小, sm/md/lg
-5. placeholder  默认项的文字，如果placeholder为空并且没有选择项时，将会自动选中第一项
-6. multiple  是否多选
-7. maxShowCount  最大展示条数
-8. required     是否必填 
-9. event:
-    1. change: 选中值发生变化时触发
+2. placeholder  输入框填充
+3. readonly     输入框是否只读
+4. disabled     输入框是否禁用
+5. multiple     多选(尚未引入)
+6. slot         自定义模板(尚未引入) 
+7. event:
+    1. selected:  选中时触发
 
 #### Cascader 级联选择 lan-Cascader
 1. source 数据源 
