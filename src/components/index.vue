@@ -62,9 +62,15 @@
       <lan-message :showMessage="showMessage" type="warning" :isModal="false" message="这是一条消息"></lan-message>
     </div>
 
-    <label class="title">pagination</label>
+    <label class="title">Pagination</label>
     <div class="group">
-      <lan-pagination :total="10" :isEllipsis="true"></lan-pagination>
+      <lan-pagination :total="16" :isEllipsis="true"></lan-pagination>
+    </div>
+
+    <label class="title">Table</label>
+    <div class="group">
+      <lan-table :tableSource="tableSource"></lan-table>
+
     </div>
   </div>
 </template>
@@ -77,6 +83,7 @@
   import lanModal from './lan-modal/lan-modal'
   import lanMessage from './lan-message/lan-message'
   import lanPagination from './lan-pagination/lan-pagination'
+  import lanTable from './lan-table/lan-table'
 
   export default {
     data () {
@@ -100,7 +107,24 @@
         }],
         showModal: false,
         showMessageBox: false,
-        showMessage: false
+        showMessage: false,
+        tableSource: [{
+          date: '2016-05-02',
+          name: '王小虎',
+          address: '上海市普陀区金沙江路 1518 弄'
+        }, {
+          date: '2016-05-04',
+          name: '王小虎',
+          address: '上海市普陀区金沙江路 1517 弄'
+        }, {
+          date: '2016-05-01',
+          name: '王小虎',
+          address: '上海市普陀区金沙江路 1519 弄'
+        }, {
+          date: '2016-05-03',
+          name: '王小虎',
+          address: '上海市普陀区金沙江路 1516 弄'
+        }]
       }
     },
     components: {
@@ -110,7 +134,8 @@
       lanSelect,
       lanModal,
       lanMessage,
-      lanPagination
+      lanPagination,
+      lanTable
     },
     methods: {
       handleModal(){

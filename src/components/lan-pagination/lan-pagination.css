@@ -29,6 +29,7 @@
   float: left;
   margin-right: 5px;
   text-align: center;
+  cursor: pointer;
 }
 .lan-pagination ul li.page {
   width: 22px;

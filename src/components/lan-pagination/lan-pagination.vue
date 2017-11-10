@@ -38,17 +38,18 @@
         if(arr.indexOf(newVal) === -1 && total > 5){
           const index = total - newVal;
           if(index < 5) {
-            console.log(index);
-            for(let i = index; i >= 0; i--) {
-              arr[index - i] = newVal - i;
+            let arr_new = [];
+            for(let i = 0; newVal + i <= total; i++) {
+              arr_new.push(newVal + i)
             }
-            console.log(arr);
-            for(let i = index + 1, j = 1; i < 5; i++, j++) {
-              arr[i] = newVal + j;
+            for(let i = 1; arr_new.length < 5; i++) {
+              arr_new.splice(0, 0, newVal - i);
             }
-            console.log(arr);
+            for(let i = 0; i < 5; i++) {
+              arr[i] = arr_new[i];
+            }
           } else {
-            for(let i = 0; i <= 5; i++) {
+            for(let i = 0; i < 5; i++) {
               arr[i] = newVal + i;
             }
           }
