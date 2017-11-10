@@ -184,13 +184,10 @@
 ## 导航
 
 #### pagination 分页 lan-pagination
-1. current  当前页
-2. total    总页数
-3. sumTotal     总个数
-4. pageSize     每页数
-5. isEllipsis   是否展示总条数
-6. step    每页条数选择步长
-7. event: selected: 选择时掉用
+1. total        总页数
+2. isEllipsis   是否展示总页数
+3. event: 
+      1. currentChange: 页数改变时
 
 ## 通知
 

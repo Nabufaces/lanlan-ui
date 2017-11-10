@@ -61,6 +61,11 @@
           @confirm="showMessageBox = false"></lan-message>
       <lan-message :showMessage="showMessage" type="warning" :isModal="false" message="这是一条消息"></lan-message>
     </div>
+
+    <label class="title">pagination</label>
+    <div class="group">
+      <lan-pagination :total="10" :isEllipsis="true"></lan-pagination>
+    </div>
   </div>
 </template>
 
@@ -71,6 +76,7 @@
   import lanSelect from './lan-select/lan-select'
   import lanModal from './lan-modal/lan-modal'
   import lanMessage from './lan-message/lan-message'
+  import lanPagination from './lan-pagination/lan-pagination'
 
   export default {
     data () {
@@ -103,7 +109,8 @@
       lanInput,
       lanSelect,
       lanModal,
-      lanMessage
+      lanMessage,
+      lanPagination
     },
     methods: {
       handleModal(){
