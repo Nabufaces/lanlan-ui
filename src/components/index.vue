@@ -146,6 +146,12 @@
       },
       handleMessage(){
         this.showMessage = true;
+//        new lanMessage({
+//          showMessage: true,
+//          type: "warning",
+//          isModal: false,
+//          message: "这是一条消息"
+//        }).$mount(document.body);
       }
     }
   }

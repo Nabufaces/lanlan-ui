@@ -1,4 +1,5 @@
 <template>
+
   <div class="lan-message" v-if="showFlag">
     <div class="modal-mask" v-if="isModal" @click.self="handleCloseWindow">
         <div class="modal">
@@ -12,7 +13,7 @@
           </div>
         </div>
     </div>
-    <div class="tips" v-else>
+    <div class="tips updown-enter-active" v-else>
       <img :src="modalType[type]" class="iconImg"/>
       <span>{{message}}</span>
     </div>
