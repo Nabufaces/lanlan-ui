@@ -52,6 +52,15 @@
         <span>这是modal模板</span>
       </lan-modal>
     </div>
+
+    <label class="title">Message</label>
+    <div class="group">
+      <lan-btn size="small" classType="primary" @click="handleMessageBox">点击打开messageBox</lan-btn>&nbsp;
+      <lan-btn size="small" classType="primary" @click="handleMessage">点击打开message</lan-btn>&nbsp;
+      <lan-message :showMessage="showMessageBox" type="warning" title="标题" :isModal="true" message="这是一条消息"
+          @confirm="showMessageBox = false"></lan-message>
+      <lan-message :showMessage="showMessage" type="warning" :isModal="false" message="这是一条消息"></lan-message>
+    </div>
   </div>
 </template>
 
@@ -61,6 +70,7 @@
   import lanInput from './lan-input/lan-input'
   import lanSelect from './lan-select/lan-select'
   import lanModal from './lan-modal/lan-modal'
+  import lanMessage from './lan-message/lan-message'
 
   export default {
     data () {
@@ -82,7 +92,9 @@
           value: 4,
           name: '北京烤鸭'
         }],
-        showModal: false
+        showModal: false,
+        showMessageBox: false,
+        showMessage: false
       }
     },
     components: {
@@ -90,11 +102,18 @@
       lanSwitch,
       lanInput,
       lanSelect,
-      lanModal
+      lanModal,
+      lanMessage
     },
     methods: {
       handleModal(){
         this.showModal = true;
+      },
+      handleMessageBox(){
+        this.showMessageBox = true;
+      },
+      handleMessage(){
+        this.showMessage = true;
       }
     }
   }
