@@ -3,14 +3,14 @@
 
     <label class="title">Button</label>
     <div class="group">
-      <lan-btn size="tiny" classType="default">tiny default</lan-btn>&nbsp;
-      <lan-btn size="small" classType="primary">small primary</lan-btn>&nbsp;
-      <lan-btn size="normal" classType="success">normal success</lan-btn>&nbsp;
-      <lan-btn size="normal" classType="warning">normal warning</lan-btn>&nbsp;
-      <lan-btn size="normal" classType="danger">normal danger</lan-btn>&nbsp;
-      <lan-btn :disabled="true">disabled</lan-btn>&nbsp;
-      <lan-btn size="normal" classType="warning" :disabled="true">disabled</lan-btn>&nbsp;
-      <lan-btn size="large" classType="info">large info</lan-btn>
+      <lan-button size="tiny" classType="default">tiny default</lan-button>&nbsp;
+      <lan-button size="small" classType="primary">small primary</lan-button>&nbsp;
+      <lan-button size="normal" classType="success">normal success</lan-button>&nbsp;
+      <lan-button size="normal" classType="warning">normal warning</lan-button>&nbsp;
+      <lan-button size="normal" classType="danger">normal danger</lan-button>&nbsp;
+      <lan-button :disabled="true">disabled</lan-button>&nbsp;
+      <lan-button size="normal" classType="warning" :disabled="true">disabled</lan-button>&nbsp;
+      <lan-button size="large" classType="info">large info</lan-button>
     </div>
 
     <label class="title">Switch</label>
@@ -47,7 +47,7 @@
 
     <label class="title">Modal</label>
     <div class="group">
-      <lan-btn size="small" classType="primary" @click="handleModal">点击打开modal</lan-btn>&nbsp;
+      <lan-button size="small" classType="primary" @click="handleModal">点击打开modal</lan-button>&nbsp;
       <lan-modal title="标题" :showModal="showModal" @close="showModal = false">
         <span>这是modal模板</span>
       </lan-modal>
@@ -55,8 +55,8 @@
 
     <label class="title">Message</label>
     <div class="group">
-      <lan-btn size="small" classType="primary" @click="handleMessageBox">点击打开messageBox</lan-btn>&nbsp;
-      <lan-btn size="small" classType="primary" @click="handleMessage">点击打开message</lan-btn>&nbsp;
+      <lan-button size="small" classType="primary" @click="handleMessageBox">点击打开messageBox</lan-button>&nbsp;
+      <lan-button size="small" classType="primary" @click="handleMessage">点击打开message</lan-button>&nbsp;
       <lan-message :showMessage="showMessageBox" type="warning" title="标题" :isModal="true" message="这是一条消息"
           @confirm="showMessageBox = false"></lan-message>
       <lan-message :showMessage="showMessage" type="warning" :isModal="false" message="这是一条消息"></lan-message>
@@ -69,21 +69,13 @@
 
     <label class="title">Table</label>
     <div class="group">
-      <lan-table :tableSource="tableSource" :height="150">
-        <lan-table-column prop="date" label="日期" :width="100"
-        ></lan-table-column>
-        <lan-table-column prop="name" label="姓名" :width="120"
-        ></lan-table-column>
-        <lan-table-column prop="address" label="地址" :width="300" align="center"
-        ></lan-table-column>
-      </lan-table>
-
+      <lan-table :column="column" :tableSource="tableSource" :border="true" :stripe="true" :height="250"></lan-table>
     </div>
   </div>
 </template>
 
 <script>
-  import lanBtn from './lan-btn/lan-btn'
+  import lanButton from './lan-button/lan-button'
   import lanSwitch from './lan-switch/lan-switch'
   import lanInput from './lan-input/lan-input'
   import lanSelect from './lan-select/lan-select'
@@ -91,7 +83,6 @@
   import lanMessage from './lan-message/lan-message'
   import lanPagination from './lan-pagination/lan-pagination'
   import lanTable from './lan-table/lan-table'
-  import LanTableColumn from "./lan-table/lan-table-column";
 
   export default {
     data () {
@@ -116,32 +107,75 @@
         showModal: false,
         showMessageBox: false,
         showMessage: false,
+        column: [{
+          prop: "id",
+          label: "序号",
+          width: 100,
+          align: 'center',
+          sortable: true
+        }, {
+          prop: "date",
+          label: "日期",
+          width: 100
+        }, {
+          prop: "name",
+          label: "姓名",
+          width: 120
+        }, {
+          prop: "address",
+          label: "地址",
+          width: 300
+        }, {
+          label: "操作",
+          render: (h) => {
+            return h(lanButton, {
+                      props: {
+                        size: 'small',
+                        classType: 'primary'
+                      },
+                      on: {
+                        click: (value) => {
+                          console.log('Button Click!')
+                        }
+                      }
+                   },'操作');
+          }
+        }],
         tableSource: [{
+          id: 0,
           date: '2016-05-02',
           name: '王小虎',
-          address: '上海市普陀区金沙江路 1518 弄'
+          address: '上海市普陀区金沙江路 1518 弄',
         }, {
+          id: 1,
           date: '2016-05-04',
           name: '王小虎',
           address: '上海市普陀区金沙江路 1517 弄'
         }, {
+          id: 2,
           date: '2016-05-01',
           name: '王小虎',
           address: '上海市普陀区金沙江路 1519 弄'
         }, {
+          id: 3,
           date: '2016-05-03',
           name: '王小虎',
           address: '上海市普陀区金沙江路 1516 弄'
         }, {
+          id: 4,
           date: '2016-05-25',
           name: '王小虎',
+          address: '上海市普陀区金沙江路 1520 弄'
+        }, {
+          id: 5,
+          date: '2016-07-25',
+          name: '王小二',
           address: '上海市普陀区金沙江路 1520 弄'
         }]
       }
     },
     components: {
-      LanTableColumn,
-      lanBtn,
+      lanButton,
       lanSwitch,
       lanInput,
       lanSelect,

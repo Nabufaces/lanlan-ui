@@ -8,7 +8,7 @@
           </div>
           <div class="m-cnt"><span>{{message}}</span></div>
           <div class="m-ft">
-            <lan-btn size="small" classType="warning" @click="handleConfirm">确定</lan-btn>&nbsp;
+            <lan-button size="small" classType="warning" @click="handleConfirm">确定</lan-button>&nbsp;
           </div>
         </div>
     </div>
@@ -20,7 +20,7 @@
 </template>
 
 <script>
-  import lanBtn from '../lan-btn/lan-btn';
+  import lanButton from '../lan-button/lan-button';
 
   export default{
     name: 'lan-message',
@@ -54,7 +54,7 @@
       }
     },
     components: {
-      lanBtn
+      lanButton
     },
     watch: {
       showMessage(value){

@@ -14,15 +14,15 @@
       </div>
       <div class="m-ft">
         <slot name="footer"></slot>
-        <lan-btn size="small" @click="handleCancel" v-if="!$slots.footer">取消</lan-btn>
-        <lan-btn size="small" classType="warning" @click="handleConfirm" v-if="!$slots.footer">确定</lan-btn>&nbsp;
+        <lan-button size="small" @click="handleCancel" v-if="!$slots.footer">取消</lan-button>
+        <lan-button size="small" classType="warning" @click="handleConfirm" v-if="!$slots.footer">确定</lan-button>&nbsp;
       </div>
     </div>
   </div>
 </template>
 
 <script>
-  import lanBtn from '../lan-btn/lan-btn';
+  import lanButton from '../lan-button/lan-button';
 
   export default{
     name: 'lan-modal',
@@ -43,7 +43,7 @@
       }
     },
     components: {
-      lanBtn
+      lanButton
     },
     methods: {
       handleCloseWindow(){

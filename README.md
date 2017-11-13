@@ -1,6 +1,6 @@
 ## Basic
 
-#### button 按钮 lan-btn 
+#### button 按钮 lan-button 
 1. classType 样式选择
     1. primary
     2. success
@@ -28,6 +28,34 @@
 5. offText switch关闭时的文字
 6. event: change
 
+#### modal 模态框 lan-modal
+1. showModal        是否显示模态框（必填）
+2. title            模态框标题
+3. width            模态框宽度，默认400px
+4. showClose        是否显示关闭按钮
+5. closeWindow      点击模态框区域之外是否关闭
+6. slot:
+    1. title        模态框标题内容
+    2. default      模态框内容
+    3. footer       模态框页脚内容
+11. event: 
+    1. close        关闭模态框
+    2. cancel       点击取消按钮（同时会抛出close事件）
+    3. confirm      点击确认按钮（同时会抛出close事件）
+    
+#### table 表格 lan-table
+1. column           表格列设置
+    1. prop         对应列内容的字段名
+    2. label        对应列标题
+    3. align        对应列的对齐方式
+    4. width        对应列的宽度
+    5. sortable     对应列排序
+    6. render       自定义模块，用JSX写法
+2. tableSource      表格数据源，与column.prop对应
+3. height           表格高度，超出显示滚动条
+4. border           表格是否带边框
+5. stripe           表格是否带斑马纹
+
 #### icon 图标 lan-icon
 1. font-size: icon大小
 2. type: icon名称
@@ -50,31 +78,6 @@
 2. type	进度条类型  line/circle
 3. size 进度条的尺寸
 4. active 进度条激活，进度条激活时显示动画
-
-#### modal 模态框 lan-modal
-1. showModal        是否显示模态框（必填）
-2. title            模态框标题
-3. width            模态框宽度，默认400px
-4. showClose        是否显示关闭按钮
-5. closeWindow      点击模态框区域之外是否关闭
-6. slot:
-    1. title        模态框标题内容
-    2. -            模态框内容
-    3. footer       模态框页脚内容
-11. event: 
-    1. close        关闭模态框
-    2. cancel       点击取消按钮（同时会抛出close事件）
-    3. confirm      点击确认按钮（同时会抛出close事件）
-    
-#### table 表格 lan-table
-1. tableSource      表格数据源
-2. height           表格高度，超出显示滚动条
-3. table-column            
-    1. width        对应列的宽度
-    2. align        对应列的对齐方式
-    3. prop         对应列内容的字段名
-    4. value        对应列标题
-
 
 #### scrollend 滚动加载 lan-scrollend
 1. hasMore 是否还有数据加载

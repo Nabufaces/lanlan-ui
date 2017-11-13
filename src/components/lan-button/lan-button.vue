@@ -1,10 +1,10 @@
 <template>
     <button
-            class="lan-btn"
+            class="lan-button"
             :disabled="disabled"
             :class="[
-              classType?`lan-btn-${classType}`:'',
-              size?`lan-btn-${size}`:'',
+              classType?`lan-button-${classType}`:'',
+              size?`lan-button-${size}`:'',
               customClass
             ]"
             @click="handleClick"
@@ -16,7 +16,7 @@
 
 <script>
   export default{
-    name: 'lan-btn',
+    name: 'lan-button',
     props: {
       classType: {
         type: String,
@@ -41,5 +41,5 @@
   }
 </script>
 
-<style src="./lan-btn.css" scoped></style>
+<style src="./lan-button.css" scoped></style>
 
