@@ -65,6 +65,16 @@
     1. close        关闭模态框
     2. cancel       点击取消按钮（同时会抛出close事件）
     3. confirm      点击确认按钮（同时会抛出close事件）
+    
+#### table 表格 lan-table
+1. tableSource      表格数据源
+2. height           表格高度，超出显示滚动条
+3. table-column            
+    1. width        对应列的宽度
+    2. align        对应列的对齐方式
+    3. prop         对应列内容的字段名
+    4. value        对应列标题
+
 
 #### scrollend 滚动加载 lan-scrollend
 1. hasMore 是否还有数据加载

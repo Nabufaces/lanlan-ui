@@ -1,5 +1,4 @@
 <template>
-
   <div class="lan-message" v-if="showFlag">
     <div class="modal-mask" v-if="isModal" @click.self="handleCloseWindow">
         <div class="modal">

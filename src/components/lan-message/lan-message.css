@@ -58,7 +58,7 @@
   margin-right: 9px;
 }
 .updown-enter-active {
-  animation: down .8s ease;
+  animation: down .5s ease;
   animation-fill-mode: forwards;
 }
 @keyframes down {

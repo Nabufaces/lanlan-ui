@@ -1,3 +1,42 @@
 .lan-table {
   border: 1px solid #E4E6EC;
+  color: #4A5056;
+  font-size: 14px;
+  .lan-table-header {
+    background-color: #EDF0F4;
+    border-radius: 2px;
+    padding: 5px 0;
+    thead {
+      th {
+        padding: 1px 10px;
+      }
+    }
+  }
+  .lan-table-body {
+    overflow: scroll;
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      tbody {
+        tr {
+          border-bottom: 1px solid #E5E5E5;
+          &:last-child {
+            border-bottom: none;
+          }
+          &:hover {
+            background-color: #f5f7fa;
+          }
+          td {
+            box-sizing: border-box;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: normal;
+            word-break: break-all;
+            line-height: 23px;
+            padding: 10px;
+          }
+        }
+      }
+    }
+  }
 }

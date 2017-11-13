@@ -69,7 +69,14 @@
 
     <label class="title">Table</label>
     <div class="group">
-      <lan-table :tableSource="tableSource"></lan-table>
+      <lan-table :tableSource="tableSource" :height="150">
+        <lan-table-column prop="date" label="日期" :width="100"
+        ></lan-table-column>
+        <lan-table-column prop="name" label="姓名" :width="120"
+        ></lan-table-column>
+        <lan-table-column prop="address" label="地址" :width="300" align="center"
+        ></lan-table-column>
+      </lan-table>
 
     </div>
   </div>
@@ -84,6 +91,7 @@
   import lanMessage from './lan-message/lan-message'
   import lanPagination from './lan-pagination/lan-pagination'
   import lanTable from './lan-table/lan-table'
+  import LanTableColumn from "./lan-table/lan-table-column";
 
   export default {
     data () {
@@ -124,10 +132,15 @@
           date: '2016-05-03',
           name: '王小虎',
           address: '上海市普陀区金沙江路 1516 弄'
+        }, {
+          date: '2016-05-25',
+          name: '王小虎',
+          address: '上海市普陀区金沙江路 1520 弄'
         }]
       }
     },
     components: {
+      LanTableColumn,
       lanBtn,
       lanSwitch,
       lanInput,
