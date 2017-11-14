@@ -63,7 +63,8 @@
     <label class="title">Message</label>
     <div class="group">
       <lan-button size="small" classType="primary" @click="handleMessage">点击打开message</lan-button>&nbsp;
-      <lan-message :showMessage="showMessage" type="warning" :isModal="false" message="这是一条消息"></lan-message>
+      <lan-message v-if="showMessage" type="error" message="这是一条消息"
+                   @close="showMessage = false"></lan-message>
     </div>
 
     <label class="title">Pagination</label>
@@ -225,14 +226,8 @@
       handleMessageBox(){
         this.showMessageBox = true;
       },
-      handleMessage(){
+      handleMessage() {
         this.showMessage = true;
-//        new lanMessage({
-//          showMessage: true,
-//          type: "warning",
-//          isModal: false,
-//          message: "这是一条消息"
-//        }).$mount(document.body);
       }
     }
   }

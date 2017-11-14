@@ -228,9 +228,15 @@
 #### messageBox 消息弹框 lan-messageBox
 1. title          标题	
 2. message	      说明文字
-3. type           消息类型(warning, error, success)
+3. type           消息类型 (warning, error, success)
 4. closeWindow    点击消息弹框区域之外是否关闭
 5. event: confirm 点击确认时触发
+
+#### message 消息 lan-message
+1. message        说明文字	
+2. type           消息类型 (warning, error, success)
+3. duration       显示时间 (默认3000ms)
+4. event: close   消息消失后触发
 
 #### badge 标记
 1. value	显示值
