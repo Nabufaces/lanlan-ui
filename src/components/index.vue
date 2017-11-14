@@ -53,12 +53,16 @@
       </lan-modal>
     </div>
 
+    <label class="title">MessageBox</label>
+    <div class="group">
+      <lan-button size="small" classType="primary" @click="handleMessageBox">点击打开messageBox</lan-button>
+      <lan-message-box :visible="showMessageBox" type="warning" title="标题" message="这是消息弹框"
+                   @confirm="showMessageBox = false"></lan-message-box>
+    </div>
+
     <label class="title">Message</label>
     <div class="group">
-      <lan-button size="small" classType="primary" @click="handleMessageBox">点击打开messageBox</lan-button>&nbsp;
       <lan-button size="small" classType="primary" @click="handleMessage">点击打开message</lan-button>&nbsp;
-      <lan-message :showMessage="showMessageBox" type="warning" title="标题" :isModal="true" message="这是一条消息"
-          @confirm="showMessageBox = false"></lan-message>
       <lan-message :showMessage="showMessage" type="warning" :isModal="false" message="这是一条消息"></lan-message>
     </div>
 
@@ -106,10 +110,11 @@
   import lanInput from './lan-input/lan-input'
   import lanSelect from './lan-select/lan-select'
   import lanModal from './lan-modal/lan-modal'
+  import lanMessageBox from './lan-messageBox/lan-messageBox'
   import lanMessage from './lan-message/lan-message'
   import lanPagination from './lan-pagination/lan-pagination'
   import lanTable from './lan-table/lan-table'
-  import LanTooltip from "./lan-tooltip/lan-tooltip";
+  import LanTooltip from "./lan-tooltip/lan-tooltip"
 
   export default {
     data () {
@@ -156,16 +161,16 @@
           label: "操作",
           render: (h) => {
             return h(lanButton, {
-                      props: {
-                        size: 'small',
-                        classType: 'primary'
-                      },
-                      on: {
-                        click: (value) => {
-                          console.log('Button Click!')
-                        }
-                      }
-                   },'操作');
+              props: {
+                size: 'small',
+                classType: 'primary'
+              },
+              on: {
+                click: (value) => {
+                  console.log('Button Click!')
+                }
+              }
+           },'操作');
           }
         }],
         tableSource: [{
@@ -207,6 +212,7 @@
       lanInput,
       lanSelect,
       lanModal,
+      lanMessageBox,
       lanMessage,
       lanPagination,
       lanTable,

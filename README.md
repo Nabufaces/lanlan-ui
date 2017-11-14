@@ -225,15 +225,12 @@
     1. show:  notify出现
     2. close:  notify消失
     
-#### message 消息 lan-message
-1. title   标题	
-2. message	  说明文字
-3. imageIcon: 选项icon
-4. duration  message停留毫秒数
-5. useInnerHtml   自定义内容标志  boolean
-6. innerHtml    自定义内容，与useInnerHtml联用
-7. showClose	是否显示关闭按钮
-8. event: close:  message消失
+#### messageBox 消息弹框 lan-messageBox
+1. title          标题	
+2. message	      说明文字
+3. type           消息类型(warning, error, success)
+4. closeWindow    点击消息弹框区域之外是否关闭
+5. event: confirm 点击确认时触发
 
 #### badge 标记
 1. value	显示值

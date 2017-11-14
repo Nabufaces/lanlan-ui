@@ -1,14 +1,6 @@
 .lan-tooltip {
   display: inline-block;
 }
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.5s;
-}
-.fade-enter,
-.fade-leave-active {
-  opacity: 0;
-}
 .lan-tooltip-popper {
   display: block;
   font-size: 12px;
