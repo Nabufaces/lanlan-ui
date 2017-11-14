@@ -28,6 +28,15 @@
       <lan-radio v-model="radioValue" label="单选框"></lan-radio>
     </div>
 
+    <label class="title">RadioGroup</label>
+    <div class="group">
+      <lan-radio-group v-model="radioGroup">
+        <lan-radio label="apple">apple</lan-radio>
+        <lan-radio label="android">android</lan-radio>
+        <lan-radio label="windows">windows</lan-radio>
+      </lan-radio-group>
+    </div>
+
     <label class="title">Input</label>
     <div class="group">
       <lan-input customClass="ipt-wd"></lan-input>&nbsp;
@@ -113,6 +122,7 @@
 <script>
   import lanButton from './lan-button/lan-button'
   import lanSwitch from './lan-switch/lan-switch'
+  import lanRadioGroup from './lan-radioGroup/lan-radioGroup'
   import lanRadio from './lan-radio/lan-radio'
   import lanInput from './lan-input/lan-input'
   import lanSelect from './lan-select/lan-select'
@@ -211,12 +221,14 @@
           name: '王小二',
           address: '上海市普陀区金沙江路 1520 弄'
         }],
-        radioValue: false
+        radioValue: false,
+        radioGroup: 'apple'
       }
     },
     components: {
       lanButton,
       lanSwitch,
+      lanRadioGroup,
       lanRadio,
       lanInput,
       lanSelect,

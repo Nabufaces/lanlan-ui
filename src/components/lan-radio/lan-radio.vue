@@ -22,12 +22,12 @@
       },
       label: {
         type: [String, Number]
-      },
+      }
     },
     data() {
       return {
         currentValue: this.value,
-        group: false,
+        group: false
       }
     },
     methods: {
@@ -37,11 +37,15 @@
         }
 
         this.currentValue = event.target.checked;
-
         if (!this.group) {
-          this.$emit('on-change');
+          this.$emit('onChange', this.currentValue);
         }
-      },
+
+        if (this.group && this.label !== undefined) {
+          this.$parent.change(this.label);
+        }
+
+      }
     }
   }
 </script>
