@@ -1,5 +1,5 @@
 <template>
-  <div class="lan-radioGroup">
+  <div class="lan-checkboxGroup">
     <slot></slot>
   </div>
 </template>
@@ -8,7 +8,7 @@
   import mixin from '../../mixins/radio-check-group'
 
   export default {
-    name: 'lan-radioGroup',
+    name: 'lan-checkboxGroup',
     mixins: [mixin],
     methods: {
       updateValue () {
@@ -23,4 +23,4 @@
   };
 </script>
 
-<style src="./lan-radioGroup.css" scoped></style>
+<style src="./lan-lan-checkboxGroup.css" scoped></style>
