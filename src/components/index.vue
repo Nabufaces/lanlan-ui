@@ -23,6 +23,11 @@
       <lan-switch :switchType="false" offText="关"></lan-switch>
     </div>
 
+    <label class="title">Radio</label>
+    <div class="group">
+      <lan-radio v-model="radioValue" label="单选框"></lan-radio>
+    </div>
+
     <label class="title">Input</label>
     <div class="group">
       <lan-input customClass="ipt-wd"></lan-input>&nbsp;
@@ -108,6 +113,7 @@
 <script>
   import lanButton from './lan-button/lan-button'
   import lanSwitch from './lan-switch/lan-switch'
+  import lanRadio from './lan-radio/lan-radio'
   import lanInput from './lan-input/lan-input'
   import lanSelect from './lan-select/lan-select'
   import lanModal from './lan-modal/lan-modal'
@@ -204,12 +210,14 @@
           date: '2016-07-25',
           name: '王小二',
           address: '上海市普陀区金沙江路 1520 弄'
-        }]
+        }],
+        radioValue: false
       }
     },
     components: {
       lanButton,
       lanSwitch,
+      lanRadio,
       lanInput,
       lanSelect,
       lanModal,
