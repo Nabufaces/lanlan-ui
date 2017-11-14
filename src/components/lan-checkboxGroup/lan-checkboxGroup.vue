@@ -5,22 +5,45 @@
 </template>
 
 <script>
-  import mixin from '../../mixins/radio-check-group'
 
   export default {
     name: 'lan-checkboxGroup',
-    mixins: [mixin],
+    props: {
+      value: {
+        type: [String, Number, Array],
+        default: []
+      }
+    },
+    data () {
+      return {
+        currentValue: this.value.length ? this.value : []
+      };
+    },
+    mounted () {
+      this.updateValue();
+    },
     methods: {
       updateValue () {
         const label = this.currentValue;
         const childrens = this.$children;
         childrens.forEach((child) => {
-          child.currentValue = label === child.label;
+          child.currentValue = label.indexOf(child.label) !== -1;
           child.group = true;
         });
+      },
+      change (label, value) {
+        let currentValue = this.currentValue;
+        const index = currentValue.indexOf(label);
+        if(value) {
+          currentValue.push(label);
+        } else {
+          currentValue.splice(index, 1);
+        }
+        this.updateValue();
+        this.$emit('onChange', currentValue);
       }
     }
   };
 </script>
 
-<style src="./lan-lan-checkboxGroup.css" scoped></style>
+<style src="./lan-checkboxGroup.css" scoped></style>

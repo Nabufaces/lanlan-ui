@@ -44,7 +44,11 @@
 
     <label class="title">CheckboxGroup</label>
     <div class="group">
-
+      <lan-checkbox-group v-model="checkboxGroup">
+        <lan-checkbox label="apple">apple</lan-checkbox>
+        <lan-checkbox label="android">android</lan-checkbox>
+        <lan-checkbox label="windows">windows</lan-checkbox>
+      </lan-checkbox-group>
     </div>
 
     <label class="title">Input</label>
@@ -134,6 +138,7 @@
   import lanSwitch from './lan-switch/lan-switch'
   import lanRadioGroup from './lan-radioGroup/lan-radioGroup'
   import lanRadio from './lan-radio/lan-radio'
+  import LanCheckboxGroup from "./lan-checkboxGroup/lan-checkboxGroup";
   import lanCheckbox from './lan-checkbox/lan-checkbox'
   import lanInput from './lan-input/lan-input'
   import lanSelect from './lan-select/lan-select'
@@ -142,7 +147,7 @@
   import lanMessage from './lan-message/lan-message'
   import lanPagination from './lan-pagination/lan-pagination'
   import lanTable from './lan-table/lan-table'
-  import LanTooltip from "./lan-tooltip/lan-tooltip"
+  import lanTooltip from "./lan-tooltip/lan-tooltip"
 
   export default {
     data () {
@@ -234,7 +239,8 @@
         }],
         radioValue: false,
         radioGroup: 'apple',
-        checkboxValue: false
+        checkboxValue: false,
+        checkboxGroup: ['apple']
       }
     },
     components: {
@@ -242,6 +248,7 @@
       lanSwitch,
       lanRadioGroup,
       lanRadio,
+      LanCheckboxGroup,
       lanCheckbox,
       lanInput,
       lanSelect,
@@ -250,7 +257,7 @@
       lanMessage,
       lanPagination,
       lanTable,
-      LanTooltip
+      lanTooltip
     },
     methods: {
       handleModal(){

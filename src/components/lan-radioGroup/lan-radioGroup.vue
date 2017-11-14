@@ -5,11 +5,23 @@
 </template>
 
 <script>
-  import mixin from '../../mixins/radio-check-group'
 
   export default {
     name: 'lan-radioGroup',
-    mixins: [mixin],
+    props: {
+      value: {
+        type: [String, Number],
+        default: ''
+      }
+    },
+    data () {
+      return {
+        currentValue: this.value
+      };
+    },
+    mounted () {
+      this.updateValue();
+    },
     methods: {
       updateValue () {
         const label = this.currentValue;
@@ -18,6 +30,11 @@
           child.currentValue = label === child.label;
           child.group = true;
         });
+      },
+      change (label) {
+        this.currentValue = label;
+        this.updateValue();
+        this.$emit('onChange', label);
       }
     }
   };

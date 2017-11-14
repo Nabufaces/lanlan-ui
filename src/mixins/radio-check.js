@@ -20,7 +20,7 @@ export default {
       }
 
       if (this.group && this.label !== undefined) {
-        this.$parent.change(this.label);
+        this.$parent.change(this.label, this.currentValue);
       }
     }
   }
