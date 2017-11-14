@@ -25,7 +25,7 @@
 
     <label class="title">Radio</label>
     <div class="group">
-      <lan-radio v-model="radioValue" label="单选框"></lan-radio>
+      <lan-radio v-model="radioValue">单选框</lan-radio>
     </div>
 
     <label class="title">RadioGroup</label>
@@ -35,6 +35,16 @@
         <lan-radio label="android">android</lan-radio>
         <lan-radio label="windows">windows</lan-radio>
       </lan-radio-group>
+    </div>
+
+    <label class="title">Checkbox</label>
+    <div class="group">
+      <lan-checkbox v-model="checkboxValue">复选框</lan-checkbox>
+    </div>
+
+    <label class="title">CheckboxGroup</label>
+    <div class="group">
+
     </div>
 
     <label class="title">Input</label>
@@ -124,6 +134,7 @@
   import lanSwitch from './lan-switch/lan-switch'
   import lanRadioGroup from './lan-radioGroup/lan-radioGroup'
   import lanRadio from './lan-radio/lan-radio'
+  import lanCheckbox from './lan-checkbox/lan-checkbox'
   import lanInput from './lan-input/lan-input'
   import lanSelect from './lan-select/lan-select'
   import lanModal from './lan-modal/lan-modal'
@@ -222,7 +233,8 @@
           address: '上海市普陀区金沙江路 1520 弄'
         }],
         radioValue: false,
-        radioGroup: 'apple'
+        radioGroup: 'apple',
+        checkboxValue: false
       }
     },
     components: {
@@ -230,6 +242,7 @@
       lanSwitch,
       lanRadioGroup,
       lanRadio,
+      lanCheckbox,
       lanInput,
       lanSelect,
       lanModal,

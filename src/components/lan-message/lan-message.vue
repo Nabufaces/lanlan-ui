@@ -10,11 +10,11 @@
 </template>
 
 <script>
-  import modalTyle from '../../mixins/modalType'
+  import message from '../../mixins/message'
 
   export default{
     name: 'lan-message',
-    mixins: [modalTyle],
+    mixins: [message],
     props: {
       duration: {
         type: Number,

@@ -13,40 +13,11 @@
 </template>
 
 <script>
+  import mixin from '../../mixins/radio-check'
+
   export default{
     name: 'lan-radio',
-    props: {
-      value: {
-        type: [String, Number, Boolean],
-        default: false
-      },
-      label: {
-        type: [String, Number]
-      }
-    },
-    data() {
-      return {
-        currentValue: this.value,
-        group: false
-      }
-    },
-    methods: {
-      change (event) {
-        if (this.disabled) {
-          return false;
-        }
-
-        this.currentValue = event.target.checked;
-        if (!this.group) {
-          this.$emit('onChange', this.currentValue);
-        }
-
-        if (this.group && this.label !== undefined) {
-          this.$parent.change(this.label);
-        }
-
-      }
-    }
+    mixins: [mixin]
   }
 </script>
 

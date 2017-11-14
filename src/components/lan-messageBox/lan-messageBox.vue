@@ -17,11 +17,11 @@
 
 <script>
   import lanButton from '../lan-button/lan-button'
-  import modalTyle from '../../mixins/modalType'
+  import message from '../../mixins/message'
 
   export default{
     name: 'lan-messageBox',
-    mixins: [modalTyle],
+    mixins: [message],
     props: {
       visible: {
         type: Boolean,

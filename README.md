@@ -112,23 +112,14 @@
 1. value	    指定当前选中的项目。可以使用 v-model 双向绑定数据
 2. event: onChange  选项状态发生改变时触发
 
-#### checkGroup 复选组  lan-checkGroup
-1. source 数据源 
-    1. name: 选项名
-    2. value: 选项值
-    3. readonly: 是否可读
-    4. disabled: 是否禁用
-    5. checked: 是否被选中
-```
-    source: [
-        {name: '北京', value: 1, readonly: false, disabled: false, checked: false},
-        {name: '上海', value: 2}
-    ]
-```
-2. min 最少选几项
-3. max 最多选几项
-4. block 多行显示
-5. event: doChecked
+#### checkbox 复选框 lan-checkbox
+1. value	    只在单独使用时有效。可以使用 v-model 双向绑定数据
+2. label	    只在组合使用时有效。指定当前选项的 value 值，组合会自动判断当前选择的项目
+3. event: onChange  选项状态发生改变时触发
+
+#### checkboxGroup 单选框组  lan-checkboxGroup
+1. value	    指定当前选中的项目。可以使用 v-model 双向绑定数据
+2. event: onChange  选项状态发生改变时触发
 
 #### input 输入框 lan-input
 1. placeholder     占位符
