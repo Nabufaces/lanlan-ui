@@ -156,11 +156,10 @@
     ]
 ```
 2. placeholder  输入框填充
-3. readonly     输入框是否只读
-4. disabled     输入框是否禁用
-5. multiple     多选(尚未引入)
-6. slot         自定义模板(尚未引入) 
-7. event:
+3. disabled     输入框是否禁用
+4. multiple     多选(尚未引入)
+5. slot         自定义模板(尚未引入) 
+6. event:
     1. selected:  选中时触发
 
 #### Cascader 级联选择 lan-Cascader

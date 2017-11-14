@@ -2,7 +2,7 @@
   <div class="lan-select">
     <lan-input :value="selectedValue.name"
                :placeholder="placeholder"
-               :readonly="readonly"
+               :readonly="true"
                :disabled="disabled"
                :suffixIcon="showSelect?'less':'moreunfold'"
                @click="handleClick"
@@ -34,7 +34,6 @@
         require: true
       },
       placeholder: String,
-      readonly: Boolean,
       disabled: Boolean
     },
     components: {
