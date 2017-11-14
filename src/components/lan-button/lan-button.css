@@ -52,11 +52,11 @@
   background-color: #E7551F;
 }
 .lan-button.lan-button-danger {
-  border: 1px solid #fb7777;
-  background-color: #fb7777;
+  border: 1px solid #FE4B4B;
+  background-color: #FE4B4B;
 }
 .lan-button.lan-button-danger:hover {
-  background-color: #FF4949;
+  background-color: #D00000;
 }
 .lan-button.lan-button-info {
   border: 1px solid #686E74;

@@ -18,7 +18,7 @@
       <lan-switch :switchType="true"></lan-switch>&nbsp;
       <lan-switch :switchType="false"></lan-switch>&nbsp;
       <lan-switch :switchType="true" activeColor="#0EDE00"></lan-switch>&nbsp;
-      <lan-switch :switchType="false" inactiveColor="#FF4949"></lan-switch>&nbsp;
+      <lan-switch :switchType="false" inactiveColor="#FE4B4B"></lan-switch>&nbsp;
       <lan-switch :switchType="true" onText="开" offText="关"></lan-switch>&nbsp;
       <lan-switch :switchType="false" offText="关"></lan-switch>
     </div>
