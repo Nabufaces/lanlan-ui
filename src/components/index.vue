@@ -71,6 +71,32 @@
     <div class="group">
       <lan-table :column="column" :tableSource="tableSource" :border="true" :stripe="true" :height="250"></lan-table>
     </div>
+
+    <label class="title">Tooltip</label>
+    <div class="group">
+      <div class="box">
+        <div class="top">
+          <lan-tooltip content="Top 提示文字" placement="top">
+            <lan-button size="small" classType="primary">上</lan-button>
+          </lan-tooltip>
+        </div>
+        <div class="left">
+          <lan-tooltip content="Left 提示文字" placement="left">
+            <lan-button size="small" classType="primary">左</lan-button>
+          </lan-tooltip>
+        </div>
+        <div class="right">
+          <lan-tooltip content="Right 提示文字" placement="right">
+            <lan-button size="small" classType="primary">右</lan-button>
+          </lan-tooltip>
+        </div>
+        <div class="bottom">
+          <lan-tooltip content="Bottom 提示文字" placement="bottom" effect='light'>
+            <lan-button size="small" classType="primary">下</lan-button>
+          </lan-tooltip>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -83,6 +109,7 @@
   import lanMessage from './lan-message/lan-message'
   import lanPagination from './lan-pagination/lan-pagination'
   import lanTable from './lan-table/lan-table'
+  import LanTooltip from "./lan-tooltip/lan-tooltip";
 
   export default {
     data () {
@@ -182,7 +209,8 @@
       lanModal,
       lanMessage,
       lanPagination,
-      lanTable
+      lanTable,
+      LanTooltip
     },
     methods: {
       handleModal(){
@@ -218,4 +246,24 @@
   .ipt-wd {
     width: 500px;
   }
+  .box {
+    width: 500px;
+    margin: 100px 150px;
+  }
+  .box .top {
+    text-align: center;
+  }
+  .box .left {
+    float: left;
+    width: 100px;
+  }
+  .box .right {
+    float: right;
+    width: 100px;
+  }
+  .box .bottom {
+    clear: both;
+    text-align: center;
+  }
+
 </style>

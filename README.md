@@ -56,15 +56,26 @@
 4. border           表格是否带边框
 5. stripe           表格是否带斑马纹
 
+#### toolTip 文字提示 lan-toolTip
+1. placement tooltip的出现位置
+      1. top 
+      2. left 
+      3. right 
+      4. bottom
+2. content          tooltip内容
+3. effect           提供的主题    
+      1. dark
+      2. light
+4. delay            延迟出现
+5. disabled         Tooltip 是否可用
+6. width            Tooltip 宽度
+7. visibleArrow     是否显示 Tooltip 箭头
+8. customClass      样式扩展
+
 #### icon 图标 lan-icon
 1. font-size: icon大小
 2. type: icon名称
 3. color: icon颜色
-
-#### toolTip 文字提示 lan-toolTip
-1. placement tooltip的出现位置
-    - top left right bottom topLeft topRight bottomLeft bottomRight leftTop leftBottom rightTop rightBottom
-2. customClass 样式扩展（可选）
 
 #### popper 弹出框 lan-popper
 1. title 标题

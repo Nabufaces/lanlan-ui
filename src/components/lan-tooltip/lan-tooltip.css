@@ -1,0 +1,112 @@
+.lan-tooltip {
+  display: inline-block;
+}
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s;
+}
+.fade-enter,
+.fade-leave-active {
+  opacity: 0;
+}
+.lan-tooltip-popper {
+  display: block;
+  font-size: 12px;
+  color: #fff;
+  background-color: #1E242A;
+  padding: 9px 8px;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 2px;
+  z-index: 1000;
+}
+.lan-tooltip-popper.dark {
+  color: #fff;
+  background-color: #000;
+}
+.lan-tooltip-popper.light {
+  color: #333;
+  background-color: #fff;
+  border: 1px solid #333;
+}
+.lan-tooltip-popper .popper__arrow {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  position: absolute;
+  margin: 5px;
+}
+.lan-tooltip-popper[x-placement^="top"] {
+  margin-bottom: 5px;
+}
+.lan-tooltip-popper[x-placement^="top"] .popper__arrow {
+  border-width: 5px 5px 0 5px;
+  border-color: #000 transparent transparent transparent;
+  bottom: -5px;
+  left: calc(45%);
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.lan-tooltip-popper[x-placement^="bottom"] {
+  margin-top: 5px;
+}
+.lan-tooltip-popper[x-placement^="bottom"] .popper__arrow {
+  border-width: 0 5px 5px 5px;
+  border-color: transparent transparent #000 transparent;
+  top: -5px;
+  left: calc(45%);
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.lan-tooltip-popper[x-placement^="right"] {
+  margin-left: 5px;
+}
+.lan-tooltip-popper[x-placement^="right"] .popper__arrow {
+  border-width: 5px 5px 5px 0;
+  border-color: transparent #000 transparent transparent;
+  left: -5px;
+  top: calc(45%);
+  margin-left: 0;
+  margin-right: 0;
+}
+.lan-tooltip-popper[x-placement^="left"] {
+  margin-right: 5px;
+}
+.lan-tooltip-popper[x-placement^="left"] .popper__arrow {
+  border-width: 5px 0 5px 5px;
+  border-color: transparent transparent transparent #000;
+  right: -5px;
+  top: calc(45%);
+  margin-left: 0;
+  margin-right: 0;
+}
+.lan-tooltip-popper.light .popper__arrow:after {
+  content: '';
+  width: 0;
+  height: 0;
+  border-style: solid;
+  position: absolute;
+}
+.lan-tooltip-popper.light[x-placement^="top"] .popper__arrow:after {
+  left: -5px;
+  top: -6px;
+  border-width: 5px 5px 0 5px;
+  border-color: #fff transparent transparent transparent;
+}
+.lan-tooltip-popper.light[x-placement^="bottom"] .popper__arrow:after {
+  left: -5px;
+  top: 1px;
+  border-width: 0 5px 5px 5px;
+  border-color: transparent transparent #fff transparent;
+}
+.lan-tooltip-popper.light[x-placement^="left"] .popper__arrow:after {
+  left: -6px;
+  top: -5px;
+  border-width: 5px 0 5px 5px;
+  border-color: transparent transparent transparent #fff;
+}
+.lan-tooltip-popper.light[x-placement^="right"] .popper__arrow:after {
+  left: 1px;
+  top: -5px;
+  border-width: 5px 5px 5px 0;
+  border-color: transparent #fff transparent transparent;
+}
