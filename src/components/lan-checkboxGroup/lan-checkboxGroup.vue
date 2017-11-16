@@ -46,4 +46,4 @@
   };
 </script>
 
-<style src="./lan-checkboxGroup.css" scoped></style>
+<style src="./lan-checkboxGroup.css"></style>

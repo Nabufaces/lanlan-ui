@@ -67,5 +67,5 @@
   }
 </script>
 
-<style src="./lan-modal.css" scoped></style>
+<style src="./lan-modal.css"></style>
 

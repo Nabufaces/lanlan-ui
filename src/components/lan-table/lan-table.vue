@@ -105,5 +105,5 @@
   }
 </script>
 
-<style src="./lan-table.css" scoped></style>
+<style src="./lan-table.css"></style>
 

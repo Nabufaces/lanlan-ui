@@ -75,6 +75,11 @@
       </lan-select>
     </div>
 
+    <label class="title">TimePicker</label>
+    <div class="group">
+      <lan-time-picker></lan-time-picker>
+    </div>
+
     <label class="title">Modal</label>
     <div class="group">
       <lan-button size="small" classType="primary" @click="handleModal">点击打开modal</lan-button>&nbsp;
@@ -144,6 +149,7 @@
   import lanCheckbox from './lan-checkbox/lan-checkbox'
   import lanInput from './lan-input/lan-input'
   import lanSelect from './lan-select/lan-select'
+  import lanTimePicker from './lan-timePicker/lan-timePicker'
   import lanModal from './lan-modal/lan-modal'
   import lanMessageBox from './lan-messageBox/lan-messageBox'
   import lanMessage from './lan-message/lan-message'
@@ -257,6 +263,7 @@
       lanCheckbox,
       lanInput,
       lanSelect,
+      lanTimePicker,
       lanModal,
       lanMessageBox,
       lanMessage,

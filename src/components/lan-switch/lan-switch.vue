@@ -38,5 +38,5 @@
   }
 </script>
 
-<style src="./lan-switch.css" scoped></style>
+<style src="./lan-switch.css"></style>
 

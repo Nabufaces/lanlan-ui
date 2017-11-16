@@ -41,5 +41,5 @@
   }
 </script>
 
-<style src="./lan-button.css" scoped></style>
+<style src="./lan-button.css"></style>
 

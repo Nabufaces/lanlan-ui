@@ -82,5 +82,5 @@
   }
 </script>
 
-<style src="./lan-pagination.css" scoped></style>
+<style src="./lan-pagination.css"></style>
 

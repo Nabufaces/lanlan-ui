@@ -21,5 +21,5 @@
   }
 </script>
 
-<style src="./lan-radio.css" scoped></style>
+<style src="./lan-radio.css"></style>
 

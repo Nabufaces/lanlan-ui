@@ -50,5 +50,5 @@
   }
 </script>
 
-<style src="./lan-messageBox.css" scoped></style>
+<style src="./lan-messageBox.css"></style>
 

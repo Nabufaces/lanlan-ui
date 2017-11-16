@@ -64,4 +64,4 @@
   }
 </script>
 
-<style src="./lan-input.css" scoped></style>
+<style src="./lan-input.css"></style>

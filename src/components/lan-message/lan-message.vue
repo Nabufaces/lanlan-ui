@@ -38,5 +38,5 @@
   }
 </script>
 
-<style src="./lan-message.css" scoped></style>
+<style src="./lan-message.css"></style>
 

@@ -21,5 +21,5 @@
   }
 </script>
 
-<style src="./lan-checkbox.css" scoped></style>
+<style src="./lan-checkbox.css"></style>
 

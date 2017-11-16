@@ -81,5 +81,5 @@
   }
 </script>
 
-<style src="./lan-select.css" scoped></style>
+<style src="./lan-select.css"></style>
 

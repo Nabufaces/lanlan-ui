@@ -40,4 +40,4 @@
   };
 </script>
 
-<style src="./lan-radioGroup.css" scoped></style>
+<style src="./lan-radioGroup.css"></style>
