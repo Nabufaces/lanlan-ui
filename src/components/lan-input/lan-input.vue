@@ -30,7 +30,7 @@
   export default {
     name: 'lan-input',
     props: {
-      value: [String, Number],
+      value: [String, Number, Date],
       prefixIcon: String,
       suffixIcon: String,
       customClass: String,

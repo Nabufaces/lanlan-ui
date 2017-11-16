@@ -4,11 +4,10 @@
                :placeholder="placeholder"
                :readonly="true"
                suffixIcon="task-management"
-               customClass="customClass"
+               :customClass="showSeconds ? 'custom-3' : 'custom-2' "
                @click="showPick = !showPick"
-               @blur="handleBlur"
                ></lan-input>
-    <div class="dropdown" v-if="showPick">
+    <div class="dropdown" v-if="showPick" @mouseleave="handleChange">
       <div class="cells-list">
         <ul>
           <li v-for="h in hoursList" @click="handleClick('hours', h)" :class="hours == h ? 'active': ''">{{h}}</li>
@@ -17,6 +16,11 @@
       <div class="cells-list">
         <ul>
           <li v-for="m in minutesList" @click="handleClick('minutes', m)" :class="minutes == m ? 'active': ''">{{m}}</li>
+        </ul>
+      </div>
+      <div class="cells-list" v-if="showSeconds">
+        <ul>
+          <li v-for="s in minutesList" @click="handleClick('seconds', s)" :class="seconds == s ? 'active': ''">{{s}}</li>
         </ul>
       </div>
     </div>
@@ -54,22 +58,38 @@
           minutes.push(format.fix(i));
         }
         return minutes;
-      }
+      },
+      showSeconds () {
+        return (this.format || '').indexOf('ss') !== -1;
+      },
     },
     data() {
       return {
+        date: format.initTimeDate(),
         pickValue: '',
         showPick: false,
         hours: '',
-        minutes: ''
+        minutes: '',
+        seconds: ''
       }
     },
     methods: {
       handleClick(type, value) {
-        this[type] = value;
+        if(type === 'hours') {
+          this.date.setHours(value);
+          this.hours = this.date.getHours();
+        } else if(type === 'minutes') {
+          this.date.setMinutes(value);
+          this.minutes = this.date.getMinutes();
+        } else if(type === 'seconds') {
+          this.date.setSeconds(value);
+          this.seconds = this.date.getSeconds();
+        }
+        this.pickValue = format.handleFormat(this.date, this.format);
       },
-      handleBlur() {
-
+      handleChange() {
+        this.showPick = false;
+        this.$emit('change', this.pickValue);
       }
     }
   }

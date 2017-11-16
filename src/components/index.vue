@@ -77,7 +77,8 @@
 
     <label class="title">TimePicker</label>
     <div class="group">
-      <lan-time-picker></lan-time-picker>
+      <lan-time-picker></lan-time-picker>&emsp;
+      <lan-time-picker format="HH:mm:ss"></lan-time-picker>
     </div>
 
     <label class="title">Modal</label>

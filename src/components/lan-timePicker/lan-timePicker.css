@@ -1,9 +1,15 @@
 .lan-timePicker {
   position: relative;
 }
-.lan-timePicker .customClass {
+.lan-timePicker .custom-2,
+.lan-timePicker .custom-3 {
   padding: 8px 23px;
+}
+.lan-timePicker .custom-2 {
   width: 113px;
+}
+.lan-timePicker .custom-3 {
+  width: 170px;
 }
 .lan-timePicker .dropdown {
   position: absolute;
