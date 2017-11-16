@@ -38,6 +38,11 @@
   max-height: 274px;
   overflow: scroll;
 }
+.lan-select .dropdown-list .noMatch {
+  color: #B0B4B8;
+  font-size: 15px;
+  text-align: center;
+}
 .lan-select .dropdown-list-item {
   font-size: 14px;
   padding: 0 20px;

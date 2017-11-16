@@ -77,13 +77,6 @@
 2. type: icon名称
 3. color: icon颜色
 
-#### popper 弹出框 lan-popper
-1. title 标题
-2. content	显示的内容，也可以通过 slot 传入 DOM
-3. placement tooltip的出现位置
-    - top left right bottom topLeft topRight bottomLeft bottomRight leftTop leftBottom rightTop rightBottom
-4. customClass 样式扩展（可选）
-
 #### progress 进度条 lan-progress
 1. percentage  百分比（0-100, 必填）
 2. type	进度条类型  line/circle
@@ -135,7 +128,7 @@
     1. prepend     输入框前置内容
     2. append      输入框后置内容
 11. event:
-    1. blur        在 Input 失去焦点时触发
+    1. blur        在 tt 失去焦点时触发
     2. focus       在 Input 获得焦点时触发
     3. input       在 Input 输入值时触发
     4. change      在 Input 值改变时触发
@@ -155,9 +148,10 @@
 ```
 2. placeholder  输入框填充
 3. disabled     输入框是否禁用
-4. multiple     多选(尚未引入)
-5. slot         自定义模板(尚未引入) 
-6. event:
+4. filterable   是否可搜索
+5. multiple     多选(尚未引入)
+6. slot         自定义模板(尚未引入) 
+7. event:
     1. selected:  选中时触发
 
 #### Cascader 级联选择 lan-Cascader

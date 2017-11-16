@@ -69,7 +69,9 @@
 
     <label class="title">Select</label>
     <div class="group">
-      <lan-select :source="source" placeholder="选择内容" :readonly="true">
+      <lan-select :source="source" placeholder="选择内容">
+      </lan-select>&emsp;
+      <lan-select :source="source" placeholder="选择内容" filterable>
       </lan-select>
     </div>
 
@@ -168,6 +170,9 @@
         }, {
           value: 4,
           name: '北京烤鸭'
+        }, {
+          value: 5,
+          name: '北京糖葫芦'
         }],
         showModal: false,
         showMessageBox: false,
