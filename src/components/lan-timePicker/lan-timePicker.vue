@@ -6,8 +6,9 @@
                suffixIcon="task-management"
                :customClass="showSeconds ? 'custom-3' : 'custom-2' "
                @click="showPick = !showPick"
+               @blur="handleChange"
                ></lan-input>
-    <div class="dropdown" v-if="showPick" @mouseleave="handleChange">
+    <div class="dropdown" v-if="showPick" @mousedown.prevent>
       <div class="cells-list">
         <ul>
           <li v-for="item in hoursList" @click="handleClick('hours', item)" :class="getCells(item)" :key="item.text">{{item.text}}</li>
