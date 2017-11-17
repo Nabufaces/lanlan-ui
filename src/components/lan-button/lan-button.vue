@@ -7,9 +7,7 @@
               size?`lan-button-${size}`:'',
               customClass
             ]"
-            @click="handleClick"
-    >
-        <i :class="imageIcon" v-if="imageIcon"></i>
+            @click="handleClick">
         <slot></slot>
     </button>
 </template>
@@ -27,11 +25,7 @@
         default: 'normal'
       },
       disabled: Boolean,
-      customClass: String,
-      imageIcon: {
-        type: String,
-        default: ''
-      }
+      customClass: String
     },
     methods: {
       handleClick: function(){

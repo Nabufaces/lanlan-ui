@@ -13,10 +13,9 @@
     2. small
     3. normal（default)
     4. large
-3. imageIcon: 选项icon（可选） 
-4. disabled: 是否禁用（可选） 
-5. customClass 样式扩展（可选）
-6. event: click
+3. disabled: 是否禁用（可选） 
+4. customClass 样式扩展（可选）
+5. event: click
 
 #### switch 开关 lan-switch
 1. switchType 开关状态(必填)
@@ -179,14 +178,12 @@
     1. change: 选中值发生变化时触发
     
 #### timePicker 时间选择 lan-timePicker
-1. start    开始时间
-2. end	    结束时间
-3. step	    间隔时间
-4. minTime	最小时间，小于该时间的时间段将被禁用
-5. maxTime	最大时间，大于该时间的时间段将被禁用
-6. placeholder  默认项的时间
-7. default-value	选择器打开时默认显示的时间
-8. event: selected
+1. placeholder      非范围选择时的占位内容
+2. format           展示的时间格式（默认 HH:mm)
+3. disabledHours    禁用小时段
+4. disabledMinutes  禁用分钟段
+5. disabledSeconds  禁用秒段
+6. event: change  时间发生变化时触发
 
 #### datePicker 日期选择 lan-datePicker
 1. minDate	    最小日期

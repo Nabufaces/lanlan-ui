@@ -35,7 +35,7 @@
   margin: 0;
   padding: 0;
   list-style: none;
-  max-height: 144px;
+  height: 144px;
   overflow: scroll;
 }
 .lan-timePicker .dropdown .cells-list ul li {
@@ -55,7 +55,14 @@
 .lan-timePicker .dropdown .cells-list ul li:hover {
   background: #f3f3f3;
 }
-.lan-timePicker .dropdown .cells-list ul li.active {
+.lan-timePicker .dropdown .cells-list ul li.selected {
   background: #EDF0F4;
   font-weight: bold;
+}
+.lan-timePicker .dropdown .cells-list ul li.disabled {
+  color: #c3cbd6;
+  cursor: not-allowed;
+}
+.lan-timePicker .dropdown .cells-list ul li.disabled:hover {
+  background: #fff;
 }

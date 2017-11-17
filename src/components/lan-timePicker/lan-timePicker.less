@@ -31,7 +31,7 @@
         margin: 0;
         padding: 0;
         list-style: none;
-        max-height: 144px;
+        height: 144px;
         overflow: scroll;
         li {
           width: 100%;
@@ -49,9 +49,16 @@
           &:hover {
             background: #f3f3f3;
           }
-          &.active {
+          &.selected {
             background: #EDF0F4;
             font-weight: bold;
+          }
+          &.disabled {
+            color: #c3cbd6;
+            cursor: not-allowed;
+            &:hover {
+              background: #fff;
+            }
           }
         }
       }

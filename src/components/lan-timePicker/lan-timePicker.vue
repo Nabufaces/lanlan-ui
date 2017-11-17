@@ -10,17 +10,17 @@
     <div class="dropdown" v-if="showPick" @mouseleave="handleChange">
       <div class="cells-list">
         <ul>
-          <li v-for="h in hoursList" @click="handleClick('hours', h)" :class="hours == h ? 'active': ''">{{h}}</li>
+          <li v-for="item in hoursList" @click="handleClick('hours', item)" :class="getCells(item)" :key="item.text">{{item.text}}</li>
         </ul>
       </div>
       <div class="cells-list">
         <ul>
-          <li v-for="m in minutesList" @click="handleClick('minutes', m)" :class="minutes == m ? 'active': ''">{{m}}</li>
+          <li v-for="item in minutesList" @click="handleClick('minutes', item)" :class="getCells(item)" :key="item.text">{{item.text}}</li>
         </ul>
       </div>
       <div class="cells-list" v-if="showSeconds">
         <ul>
-          <li v-for="s in minutesList" @click="handleClick('seconds', s)" :class="seconds == s ? 'active': ''">{{s}}</li>
+          <li v-for="item in secondsList" @click="handleClick('seconds', item)" :class="getCells(item)" :key="item.text">{{item.text}}</li>
         </ul>
       </div>
     </div>
@@ -31,6 +31,7 @@
 
   import lanInput from '../lan-input/lan-input'
   import format from '../../base/format'
+  import {deepCopy} from '../../base/assist'
 
   export default{
     name: 'lan-timePicker',
@@ -39,6 +40,24 @@
       format: {
         type: String,
         default: 'HH:mm'
+      },
+      disabledHours: {
+        type: Array,
+        default() {
+          return [];
+        }
+      },
+      disabledMinutes: {
+        type: Array,
+        default() {
+          return [];
+        }
+      },
+      disabledSeconds: {
+        type: Array,
+        default() {
+          return [];
+        }
       }
     },
     components: {
@@ -47,17 +66,67 @@
     computed: {
       hoursList () {
         let hours = [];
+        const hours_temp = {
+          text: 0,
+          disabled: false,
+          selected: false
+        };
         for (let i = 0; i < 24; i ++) {
-          hours.push(format.fix(i));
+          const hour = deepCopy(hours_temp);
+          if(this.hours === i) {
+            hour.selected = true;
+          }
+          hour.text = format.fix(i);
+          if(this.disabledHours.length && this.disabledHours.indexOf(i) > -1) {
+            hour.disabled = true;
+          }
+          hours.push(hour);
         }
         return hours;
       },
       minutesList () {
         let minutes = [];
+        const minutes_temp = {
+          text: 0,
+          disabled: false,
+          selected: false
+        };
         for (let i = 0; i < 60; i ++) {
-          minutes.push(format.fix(i));
+          const minute = deepCopy(minutes_temp);
+          if(this.minutes === i) {
+            minute.selected = true;
+          }
+          minute.text = format.fix(i);
+          if(this.disabledMinutes.length && this.disabledMinutes.indexOf(i) > -1) {
+            minute.disabled = true;
+          }
+          minutes.push(minute);
         }
         return minutes;
+      },
+      secondsList () {
+        let seconds = [];
+        const seconds_temp = {
+          text: 0,
+          disabled: false,
+          selected: false
+        };
+        for (let i = 0; i < 60; i ++) {
+          const second = deepCopy(seconds_temp);
+          if(this.seconds === i) {
+            second.selected = true;
+          }
+          second.text = format.fix(i);
+          if(this.disabledSeconds.length && this.disabledSeconds.indexOf(i) > -1) {
+            const second = deepCopy(seconds_temp);
+            second.disabled = true;
+          }
+          if(this.seconds === second.text) {
+            second.selected = true;
+          }
+          seconds.push(second);
+        }
+        return seconds;
       },
       showSeconds () {
         return (this.format || '').indexOf('ss') !== -1;
@@ -74,15 +143,24 @@
       }
     },
     methods: {
-      handleClick(type, value) {
+      getCells(item) {
+        return {
+          'selected' : item.selected,
+          'disabled' : item.disabled
+        }
+      },
+      handleClick(type, item) {
+        if(item.disabled) {
+          return;
+        }
         if(type === 'hours') {
-          this.date.setHours(value);
+          this.date.setHours(item.text);
           this.hours = this.date.getHours();
         } else if(type === 'minutes') {
-          this.date.setMinutes(value);
+          this.date.setMinutes(item.text);
           this.minutes = this.date.getMinutes();
         } else if(type === 'seconds') {
-          this.date.setSeconds(value);
+          this.date.setSeconds(item.text);
           this.seconds = this.date.getSeconds();
         }
         this.pickValue = format.handleFormat(this.date, this.format);
