@@ -13,7 +13,7 @@
   top: 30%;
   left: 50%;
   background: #fff;
-  animation: down .5s ease;
+  animation: messageBoxDown .5s ease;
   animation-fill-mode: forwards;
 }
 .lan-messageBox .modal .m-hd {
@@ -47,7 +47,7 @@
 .fade-leave-active {
   opacity: 0;
 }
-@keyframes down {
+@keyframes messageBoxDown {
   from {
     transform: translate(-50%, -100%);
   }

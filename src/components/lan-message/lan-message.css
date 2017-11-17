@@ -20,12 +20,12 @@
   margin-right: 9px;
 }
 .updown-enter-active {
-  animation: down .5s ease;
+  animation: messageDown .5s ease;
 }
 .updown-leave-active {
-  animation: up .5s ease;
+  animation: messageUp .5s ease;
 }
-@keyframes down {
+@keyframes messageDown {
   from {
     top: 0;
     transform: translate(-50%, -100%);
@@ -35,7 +35,7 @@
     transform: translate(-50%, -50%);
   }
 }
-@keyframes up {
+@keyframes messageUp {
   from {
     top: 8%;
     transform: translate(-50%, -50%);
