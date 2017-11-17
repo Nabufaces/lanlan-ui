@@ -1,6 +1,6 @@
 <template>
   <div class="lan-select">
-    <lan-input :value="selectedValue.label"
+    <lan-input v-model="selectedValue.label"
                :placeholder="placeholder"
                :readonly="!filterable"
                :disabled="disabled"
@@ -39,7 +39,10 @@
       return {
         showSelect: false,
         selectWidth:  '',
-        selectedValue: {},
+        selectedValue: {
+          label: '',
+          value: ''
+        },
         showNoMatch: false
       }
     },
@@ -47,10 +50,14 @@
       this.selectWidth = this.$refs.ipt.$el.getBoundingClientRect().width + 'px';
     },
     methods: {
-      handleClick(){
+      handleClick (){
         this.showSelect = !this.showSelect;
+        this.$nextTick(() => {
+          this.handleInput(this.selectedValue.label);
+        })
       },
       handleBlur(){
+        this.showNoMatch = false;
         this.showSelect = false;
       },
       handleInput(value) {
@@ -58,6 +65,9 @@
         let count = 0;
         options.forEach((item) => {
           let option = item.child;
+          if(!option) {
+            return;
+          }
           if(option.label.indexOf(value) === -1) {
             option.hidden = true;
             count++;
@@ -65,11 +75,7 @@
             option.hidden = false;
           }
         });
-        if(options.length === count) {
-          this.showNoMatch = true;
-        } else {
-          this.showNoMatch = false;
-        }
+        this.showNoMatch = options.length === count;
       },
       handleSelect(item){
         this.selectedValue = item;

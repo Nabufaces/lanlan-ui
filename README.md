@@ -135,22 +135,15 @@
   
 
 #### select 下拉选择 lan-select
-1. source 数据源 
-    1. name: 选项名
-    2. value: 选项值
-    3. disabled: 是否禁用
-```
-    source: [
-        {name: '北京', value: 1, disabled: true},
-        {name: '上海', value: 2}
-    ]
-```
-2. placeholder  输入框填充
-3. disabled     输入框是否禁用
-4. filterable   是否可搜索
-5. multiple     多选(尚未引入)
-6. slot         自定义模板(尚未引入) 
-7. event:
+1. placeholder  输入框填充
+2. disabled     输入框是否禁用
+3. filterable   是否可搜索
+4. option       结合lan-option联用
+    1. label      选项显示的内容
+    2. value      选项值
+    3. disabled   是否禁用当前项
+    4. slot       自定义模板
+5. event:
     1. selected:  选中时触发
 
 #### Cascader 级联选择 lan-Cascader
