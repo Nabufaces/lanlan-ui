@@ -69,9 +69,23 @@
 
     <label class="title">Select</label>
     <div class="group">
-      <lan-select :source="source" placeholder="选择内容">
+      <lan-select placeholder="含禁止">
+        <lan-option :value="item.value" :label="item.label" :disabled="item.disabled" v-for="item in source" :key="item.value"></lan-option>
       </lan-select>&emsp;
-      <lan-select :source="source" placeholder="选择内容" filterable>
+      <lan-select placeholder="含搜索" filterable>
+        <lan-option :value="item.value" :label="item.label" :disabled="item.disabled" v-for="item in source" :key="item.value"></lan-option>
+      </lan-select>&emsp;
+      <lan-select placeholder="自定义模板">
+        <lan-option :value="item.value" :label="item.label" :disabled="item.disabled" v-for="item in source" :key="item.value">
+          <span>{{item.label}}</span><br/>
+          <span>{{item.value}}</span>
+        </lan-option>
+      </lan-select>&emsp;
+      <lan-select placeholder="含搜索的自定义模板" filterable>
+        <lan-option :value="item.value" :label="item.label" :disabled="item.disabled" v-for="item in source" :key="item.value">
+          <span>{{item.label}}</span><br/>
+          <span>{{item.value}}</span>
+        </lan-option>
       </lan-select>
     </div>
 
@@ -150,6 +164,7 @@
   import lanCheckbox from './lan-checkbox/lan-checkbox'
   import lanInput from './lan-input/lan-input'
   import lanSelect from './lan-select/lan-select'
+  import lanOption from './lan-option/lan-option'
   import lanTimePicker from './lan-timePicker/lan-timePicker'
   import lanModal from './lan-modal/lan-modal'
   import lanMessageBox from './lan-messageBox/lan-messageBox'
@@ -163,23 +178,23 @@
       return {
         source: [{
           value: 0,
-          name: '黄金糕'
+          label: '黄金糕'
         }, {
           value: 1,
-          name: '双皮奶'
+          label: '双皮奶'
         }, {
           value: 2,
-          name: '蚵仔煎',
+          label: '蚵仔煎',
           disabled: true
         }, {
           value: 3,
-          name: '龙须面'
+          label: '龙须面'
         }, {
           value: 4,
-          name: '北京烤鸭'
+          label: '北京烤鸭'
         }, {
           value: 5,
-          name: '北京糖葫芦'
+          label: '北京糖葫芦'
         }],
         showModal: false,
         showMessageBox: false,
@@ -264,6 +279,7 @@
       lanCheckbox,
       lanInput,
       lanSelect,
+      lanOption,
       lanTimePicker,
       lanModal,
       lanMessageBox,

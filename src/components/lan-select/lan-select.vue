@@ -1,6 +1,6 @@
 <template>
   <div class="lan-select">
-    <lan-input :value="selectedValue.name"
+    <lan-input :value="selectedValue.label"
                :placeholder="placeholder"
                :readonly="!filterable"
                :disabled="disabled"
@@ -13,16 +13,10 @@
     ></lan-input>
     <div class="dropdown" v-if="showSelect" :style="{width: selectWidth}">
       <ul class="dropdown-list">
-        <li class="noMatch" v-if="selectContent.length == 0">
+        <li class="dropdown-list-noMatch" v-if="showNoMatch">
           <span>无匹配数据</span>
         </li>
-        <li class="dropdown-list-item" v-for="(item, index) in selectContent"
-            :key="index"
-            :class="item.disabled?'disabled':''"
-            @mousedown.prevent="selectValue(index)"
-            >
-          <span>{{item.name}}</span>
-        </li>
+        <slot></slot>
       </ul>
     </div>
   </div>
@@ -34,10 +28,6 @@
   export default{
     name: 'lan-select',
     props: {
-      source: {
-        type: Array,
-        require: true
-      },
       placeholder: String,
       disabled: Boolean,
       filterable: Boolean
@@ -47,13 +37,13 @@
     },
     data(){
       return {
-        selectContent: this.source,
         showSelect: false,
         selectWidth:  '',
-        selectedValue: {}
+        selectedValue: {},
+        showNoMatch: false
       }
     },
-    mounted(){
+    mounted() {
       this.selectWidth = this.$refs.ipt.$el.getBoundingClientRect().width + 'px';
     },
     methods: {
@@ -64,17 +54,26 @@
         this.showSelect = false;
       },
       handleInput(value) {
-        this.selectContent = this.source.filter((item) => {
-          return item.name.indexOf(value) >= 0;
+        const options = this.$slots.default;
+        let count = 0;
+        options.forEach((item) => {
+          let option = item.child;
+          if(option.label.indexOf(value) === -1) {
+            option.hidden = true;
+            count++;
+          } else {
+            option.hidden = false;
+          }
         });
-      },
-      selectValue(index){
-        const select = this.selectContent[index];
-        if(select.disabled){
-          return;
+        if(options.length === count) {
+          this.showNoMatch = true;
+        } else {
+          this.showNoMatch = false;
         }
-        this.selectedValue = select;
-        this.$emit('selected', select);
+      },
+      handleSelect(item){
+        this.selectedValue = item;
+        this.$emit('selected', item);
         this.showSelect = false;
       }
     }
