@@ -1,6 +1,39 @@
 <template>
   <div class="mn">
 
+    <label class="title">Grid</label>
+    <div class="group">
+      <lan-row customClass="grid">
+        <lan-col span="12"><div class="demo">col-12</div></lan-col>
+        <lan-col span="12"><div class="demo">col-12</div></lan-col>
+      </lan-row>
+      <lan-row customClass="grid">
+        <lan-col span="8"><div class="demo">col-8</div></lan-col>
+        <lan-col span="8"><div class="demo">col-8</div></lan-col>
+        <lan-col span="8"><div class="demo">col-8</div></lan-col>
+      </lan-row>
+      <lan-row customClass="grid">
+        <lan-col span="6"><div class="demo">col-6</div></lan-col>
+        <lan-col span="6"><div class="demo">col-6</div></lan-col>
+        <lan-col span="6"><div class="demo">col-6</div></lan-col>
+        <lan-col span="6"><div class="demo">col-6</div></lan-col>
+      </lan-row>
+      <lan-row customClass="grid" :gutter="16">
+        <lan-col span="6"><div class="demo">col-6</div></lan-col>
+        <lan-col span="6"><div class="demo">col-6</div></lan-col>
+        <lan-col span="6"><div class="demo">col-6</div></lan-col>
+        <lan-col span="6"><div class="demo">col-6</div></lan-col>
+      </lan-row>
+      <lan-row customClass="grid">
+        <lan-col span="6" :offset="2"><div class="demo">col-6 offset-2</div></lan-col>
+        <lan-col span="6" :push="3"><div class="demo">col-6 push-3</div></lan-col>
+      </lan-row>
+      <lan-row customClass="grid">
+        <lan-col span="6" :push="18"><div class="demo">col-6 push-18</div></lan-col>
+        <lan-col span="6" :pull="3"><div class="demo">col-6 pull-3</div></lan-col>
+      </lan-row>
+    </div>
+
     <label class="title">Button</label>
     <div class="group">
       <lan-button size="tiny" classType="default">tiny default</lan-button>&nbsp;
@@ -156,6 +189,8 @@
 </template>
 
 <script>
+  import lanRow from './lan-row/lan-row'
+  import lanCol from './lan-col/lan-col'
   import lanButton from './lan-button/lan-button'
   import lanSwitch from './lan-switch/lan-switch'
   import lanRadioGroup from './lan-radioGroup/lan-radioGroup'
@@ -271,6 +306,8 @@
       }
     },
     components: {
+      lanRow,
+      lanCol,
       lanButton,
       lanSwitch,
       lanRadioGroup,
@@ -312,6 +349,20 @@
   .group {
     display: flex;
     flex-wrap: wrap;
+  }
+  .grid {
+    width: 500px;
+  }
+  .grid .lan-col  {
+    color: #fff;
+    text-align: center;
+    margin: 10px 0;
+  }
+  .grid .lan-col .demo {
+    background: rgba(0,153,229,.9);
+  }
+  .grid .lan-col:nth-child(odd) .demo{
+    background: rgba(0, 153, 229, .7);
   }
   .ipt-wd {
     width: 500px;
