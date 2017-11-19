@@ -4,7 +4,7 @@
   </div>
 </template>
 <script>
-  import { findComponentUpward } from '../../base/assist';
+  import { findComponentUpward } from '../../base/assist'
 
   const prefixCls = 'lan-col';
 

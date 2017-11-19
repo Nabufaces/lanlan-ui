@@ -24,6 +24,7 @@
 
 <script>
   import lanInput from '../lan-input/lan-input'
+  import { findComponentsDownward } from '../../base/assist'
 
   export default{
     name: 'lan-select',
@@ -61,18 +62,14 @@
         this.showSelect = false;
       },
       handleInput(value) {
-        const options = this.$slots.default;
+        const options = findComponentsDownward(this, 'lan-option');
         let count = 0;
         options.forEach((item) => {
-          let option = item.child;
-          if(!option) {
-            return;
-          }
-          if(option.label.indexOf(value) === -1) {
-            option.hidden = true;
+          if(item.label.indexOf(value) === -1) {
+            item.hidden = true;
             count++;
           } else {
-            option.hidden = false;
+            item.hidden = false;
           }
         });
         this.showNoMatch = options.length === count;

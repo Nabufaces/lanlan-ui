@@ -8,6 +8,7 @@
   const prefix = 'dropdown-list-item';
 
   export default {
+    name: 'lan-option',
     props: {
       label: {
         type: [String, Number],
