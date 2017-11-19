@@ -53,7 +53,9 @@
   transition: background 0.2s ease-in-out;
 }
 .lan-timePicker .dropdown .cells-list ul li:hover {
-  background: #f3f3f3;
+  color: #1E242A;
+  background: #EDF0F4;
+  font-weight: 500;
 }
 .lan-timePicker .dropdown .cells-list ul li.selected {
   background: #EDF0F4;

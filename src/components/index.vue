@@ -124,8 +124,13 @@
 
     <label class="title">TimePicker</label>
     <div class="group">
-      <lan-time-picker :disabledHours="[1,3,6]" :disabledMinutes="[5,10]"></lan-time-picker>&emsp;
-      <lan-time-picker format="HH时mm分ss秒"></lan-time-picker>
+      <lan-time-picker placeholder="选择时间" :disabledHours="[1,3,6]" :disabledMinutes="[5,10]"></lan-time-picker>&emsp;
+      <lan-time-picker placeholder="选择时间" format="HH时mm分ss秒"></lan-time-picker>
+    </div>
+
+    <label class="title">DatePicker</label>
+    <div class="group">
+      <lan-date-picker placeholder="选择日期"></lan-date-picker>
     </div>
 
     <label class="title">Modal</label>
@@ -201,6 +206,7 @@
   import lanSelect from './lan-select/lan-select'
   import lanOption from './lan-option/lan-option'
   import lanTimePicker from './lan-timePicker/lan-timePicker'
+  import lanDatePicker from './lan-datePicker/lan-datePicker'
   import lanModal from './lan-modal/lan-modal'
   import lanMessageBox from './lan-messageBox/lan-messageBox'
   import lanMessage from './lan-message/lan-message'
@@ -318,6 +324,7 @@
       lanSelect,
       lanOption,
       lanTimePicker,
+      lanDatePicker,
       lanModal,
       lanMessageBox,
       lanMessage,
