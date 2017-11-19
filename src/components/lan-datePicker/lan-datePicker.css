@@ -1,6 +1,9 @@
 .lan-datePicker {
   position: relative;
 }
+.lan-datePicker .custonClass {
+  width: 266px;
+}
 .lan-datePicker-dropdown {
   position: absolute;
   background: #fff;
@@ -17,16 +20,18 @@
   text-align: center;
   color: #22282E;
   font-size: 14px;
-  padding: 0 5px;
+  padding: 0 15px;
 }
 .lan-datePicker-dropdown .dropdown-hd span:hover {
   color: #FF7846;
 }
 .lan-datePicker-dropdown .dropdown-hd .btn-back {
   margin-right: 8px;
+  float: left;
 }
 .lan-datePicker-dropdown .dropdown-hd .btn-more {
   margin-left: 8px;
+  float: right;
 }
 .lan-datePicker-dropdown .dropdown-hd .btn-month {
   margin-left: 22px;

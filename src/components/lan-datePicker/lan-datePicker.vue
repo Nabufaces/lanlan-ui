@@ -4,6 +4,7 @@
                :placeholder="placeholder"
                :readonly="true"
                suffixIcon="date"
+               customClass="custonClass"
                @click="showPick = !showPick"
                @blur="showPick = false"
     ></lan-input>
@@ -13,8 +14,8 @@
         <span class="btn-back" @click="prevMonthPreview"><i class="iconfont icon-back"></i></span>
         <span class="btn-month" @click="chosenType('month')">{{tmpMonth+1 | formatMonth}}</span>
         <span class="btn-year" @click="chosenType('year')">{{tmpYear}}</span>
-        <span class="btn-more" @click="nextMonthPreview"><i class="iconfont icon-more"></i></span>
         <span class="btn-more" @click="nextYearPreview"><i class="iconfont icon-double-more"></i></span>
+        <span class="btn-more" @click="nextMonthPreview"><i class="iconfont icon-more"></i></span>
       </div>
       <div class="dropdown-bd">
         <div class="cells-list" v-if="panelType == 'year'">
