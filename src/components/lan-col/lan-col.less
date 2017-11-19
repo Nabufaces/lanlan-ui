@@ -46,17 +46,17 @@
   .loop-grid-columns((@index - 1), @class);
 }
 
-.make-grid(@class: ~'') {
+.make-col(@class: ~'') {
   .float-grid-columns(@class);
   .loop-grid-columns(@grid-columns, @class);
 }
-
 .lan-row {
   .make-row();
   .lan-col {
     position: relative;
+    box-sizing: border-box;
   }
-  .make-grid();
 }
+.make-col();
 
 

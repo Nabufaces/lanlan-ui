@@ -2,7 +2,7 @@
   <div class="mn">
 
     <label class="title">Grid</label>
-    <div class="group">
+    <div class="group" style="display: block">
       <lan-row customClass="grid">
         <lan-col span="12"><div class="demo">col-12</div></lan-col>
         <lan-col span="12"><div class="demo">col-12</div></lan-col>
@@ -341,6 +341,9 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
+  * {
+    box-sizing: border-box;
+  }
   label.title{
     font-size: 40px;
     display: block;
@@ -349,9 +352,6 @@
   .group {
     display: flex;
     flex-wrap: wrap;
-  }
-  .grid {
-    width: 500px;
   }
   .grid .lan-col  {
     color: #fff;
