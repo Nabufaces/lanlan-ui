@@ -1,7 +1,7 @@
 /**
  * doc look https://popper.js.org/documentation.html
  */
-var PopperJS = require('./popper');
+var PopperJS = require('./popper.js');
 
 module.exports = {
   props: {

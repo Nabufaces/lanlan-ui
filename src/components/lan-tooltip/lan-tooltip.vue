@@ -21,7 +21,7 @@
   </div>
 </template>
 <script>
-  import Popper from '../../base/vue-popper';
+  import Popper from '../../base/vue-popper'
 
   export default {
     name: 'lan-tooltip',

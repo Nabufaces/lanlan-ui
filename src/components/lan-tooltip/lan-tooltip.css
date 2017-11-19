@@ -1,10 +1,6 @@
 .lan-tooltip {
   display: inline-block;
 }
-.lan-tooltip-rel {
-  display: inline-block;
-  position: relative;
-}
 .lan-tooltip-popper {
   display: block;
   font-size: 12px;
