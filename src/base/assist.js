@@ -1,4 +1,40 @@
-const typeOf = (obj) => {
+// init time
+export function initTimeDate() {
+  const date = new Date();
+  date.setHours(0);
+  date.setMinutes(0);
+  date.setSeconds(0);
+  return date;
+}
+
+// zero fill
+export function fixString(str) {
+  str = "" + str;
+  return str.length <= 1? "0" + str : str;
+}
+
+const maps = {
+  'yyyy': date => date.getFullYear(),
+  'MM': date => fixString(date.getMonth() + 1),
+  'dd': date => fixString(date.getDate()),
+  'HH': date => fixString(date.getHours()),
+  'mm': date => fixString(date.getMinutes()),
+  'ss': date => fixString(date.getSeconds())
+};
+
+// datetime format
+export function handleFormat(value, format = "yyyy-MM-dd HH:mm:ss") {
+  const trunk = new RegExp(Object.keys(maps).join('|'),'g');
+
+  value = new Date(value);
+
+  return format.replace(trunk, (capture) => {
+    return maps[capture]? maps[capture](value): "";
+  });
+}
+
+// judge type
+export function typeOf(obj) {
   const toString = Object.prototype.toString;
   const map = {
     '[object Boolean]'  : 'boolean',
@@ -13,7 +49,7 @@ const typeOf = (obj) => {
     '[object Object]'   : 'object'
   };
   return map[toString.call(obj)];
-};
+}
 
 // deepCopy
 export function deepCopy(data) {
@@ -38,7 +74,7 @@ export function deepCopy(data) {
     }
   }
   return o;
-};
+}
 
 
 // Find components upward

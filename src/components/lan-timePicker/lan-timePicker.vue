@@ -31,8 +31,7 @@
 <script>
 
   import lanInput from '../lan-input/lan-input'
-  import format from '../../base/format'
-  import {deepCopy} from '../../base/assist'
+  import {initTimeDate, fixString, handleFormat, deepCopy} from '../../base/assist'
 
   export default{
     name: 'lan-timePicker',
@@ -77,7 +76,7 @@
           if(this.hours === i) {
             hour.selected = true;
           }
-          hour.text = format.fix(i);
+          hour.text = fixString(i);
           if(this.disabledHours.length && this.disabledHours.indexOf(i) > -1) {
             hour.disabled = true;
           }
@@ -97,7 +96,7 @@
           if(this.minutes === i) {
             minute.selected = true;
           }
-          minute.text = format.fix(i);
+          minute.text = fixString(i);
           if(this.disabledMinutes.length && this.disabledMinutes.indexOf(i) > -1) {
             minute.disabled = true;
           }
@@ -117,7 +116,7 @@
           if(this.seconds === i) {
             second.selected = true;
           }
-          second.text = format.fix(i);
+          second.text = fixString(i);
           if(this.disabledSeconds.length && this.disabledSeconds.indexOf(i) > -1) {
             const second = deepCopy(seconds_temp);
             second.disabled = true;
@@ -135,7 +134,7 @@
     },
     data() {
       return {
-        date: format.initTimeDate(),
+        date: initTimeDate(),
         pickValue: '',
         showPick: false,
         hours: '',
@@ -164,7 +163,7 @@
           this.date.setSeconds(item.text);
           this.seconds = this.date.getSeconds();
         }
-        this.pickValue = format.handleFormat(this.date, this.format);
+        this.pickValue = handleFormat(this.date, this.format);
       },
       handleChange() {
         this.showPick = false;
