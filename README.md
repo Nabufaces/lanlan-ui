@@ -1,5 +1,16 @@
 ## Basic
 
+#### row 行 lan-row
+1. gutter	        栅格间距
+2. customClass    样式扩展
+
+#### col 列 lan-col
+1. span           栅格的占位格数，可选值为0~24的整数
+2. offset	        栅格左侧的间隔格数，间隔内不可以有栅格
+3. push	          栅格向右移动格数
+4. pull	          栅格向左移动格数
+5. customClass    样式扩展
+
 #### button 按钮 lan-button 
 1. classType 样式选择
     1. primary
