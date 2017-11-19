@@ -155,12 +155,12 @@
           case 'month':
             return item === this.tmpMonth && this.year === this.tmpYear;
           case 'date':
-            return item.value === this.tmpDate && this.month === this.tmpMonth && item.currentMonth;
+            return item.value === this.tmpDate && this.month === this.tmpMonth && this.year === this.tmpYear && item.currentMonth;
         }
       },
       selectYear (year) {
         if(this.validateYear(year)) return;
-        this.tmpYear = year;
+        this.year = this.tmpYear = year;
         this.panelType = 'month';
       },
       validateYear (year) {
@@ -168,7 +168,7 @@
       },
       selectMonth (month) {
         if(this.validateMonth(month)) return;
-        this.tmpMonth = month;
+        this.month = this.tmpMonth = month;
         this.panelType = 'date';
       },
       validateMonth (month) {
@@ -180,7 +180,6 @@
       },
       selectDate (date) {
         if(this.validateDate(date)) return;
-        this.tmpDate = date.value;
         if(date.previousMonth){
           if(this.tmpMonth === 0){
             this.tmpYear--;
@@ -196,6 +195,9 @@
             this.tmpMonth++;
           }
         }
+        this.year = this.tmpYear;
+        this.month = this.tmpMonth;
+        this.date = this.tmpDate = date.value;
       },
       validateDate (date) {
         let mon = this.tmpMonth;
@@ -235,10 +237,7 @@
         this.tmpYear++;
       },
       handleClick() {
-        this.year = this.tmpYear;
-        this.month = this.tmpMonth;
-        this.date = this.tmpDate;
-        this.pickValue = handleFormat(`${this.year}-${this.month}-${this.date}`, this.format);
+        this.pickValue = handleFormat(`${this.year}-${this.month+1}-${this.date}`, this.format);
         this.$emit('change', this.pickValue);
         this.showPick = false;
       },
