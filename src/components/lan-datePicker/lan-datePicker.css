@@ -70,12 +70,28 @@
 .lan-datePicker-dropdown .dropdown-bd .cells-list .cell-month:hover {
   color: #666;
   background: #EDF0F4;
-  border-radius: 2px;
 }
 .lan-datePicker-dropdown .dropdown-bd .cells-list .cell-year.isSelected,
 .lan-datePicker-dropdown .dropdown-bd .cells-list .cell-month.isSelected {
   color: #fff;
   background-color: #FF7846;
+}
+.lan-datePicker-dropdown .dropdown-bd .cells-list .cell-year.isSelected:hover,
+.lan-datePicker-dropdown .dropdown-bd .cells-list .cell-month.isSelected:hover {
+  color: #fff;
+  background-color: #FF7846;
+  font-weight: normal;
+}
+.lan-datePicker-dropdown .dropdown-bd .cells-list .cell-year.invalid,
+.lan-datePicker-dropdown .dropdown-bd .cells-list .cell-month.invalid {
+  color: #c3cbd6;
+  background-color: #fff;
+  cursor: not-allowed;
+}
+.lan-datePicker-dropdown .dropdown-bd .cells-list .cell-year.invalid:hover,
+.lan-datePicker-dropdown .dropdown-bd .cells-list .cell-month.invalid:hover {
+  color: #c3cbd6;
+  background-color: #fff;
 }
 .lan-datePicker-dropdown .dropdown-bd .cells-list .cell-week,
 .lan-datePicker-dropdown .dropdown-bd .cells-list .cell-date {
@@ -103,6 +119,20 @@
 .lan-datePicker-dropdown .dropdown-bd .cells-list .cell-date .isSelected {
   color: #fff;
   background-color: #FF7846;
+}
+.lan-datePicker-dropdown .dropdown-bd .cells-list .cell-date .isSelected:hover {
+  color: #fff;
+  background-color: #FF7846;
+  font-weight: normal;
+}
+.lan-datePicker-dropdown .dropdown-bd .cells-list .cell-date .invalid {
+  color: #c3cbd6;
+  background-color: #fff;
+  cursor: not-allowed;
+}
+.lan-datePicker-dropdown .dropdown-bd .cells-list .cell-date .invalid:hover {
+  color: #c3cbd6;
+  background-color: #fff;
 }
 .lan-datePicker-dropdown .dropdown-ft {
   padding-bottom: 16px;

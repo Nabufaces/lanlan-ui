@@ -5,7 +5,7 @@
                :readonly="true"
                suffixIcon="date"
                @click="showPick = !showPick"
-               @blur="handleChange"
+               @blur="showPick = false"
     ></lan-input>
     <div class="lan-datePicker-dropdown" v-if="showPick" @mousedown.prevent>
       <div class="dropdown-hd">
@@ -19,7 +19,10 @@
       <div class="dropdown-bd">
         <div class="cells-list" v-if="panelType == 'year'">
           <span class="cell-year" v-for="item in yearList"
-                :class="{isSelected: isSelected('year', item)}"
+                :class="{
+                    isSelected: isSelected('year', item),
+                    invalid: validateYear(item)
+                }"
                 @click="selectYear(item)"
           >
               <em>{{item}}</em>
@@ -27,7 +30,10 @@
         </div>
         <div class="cells-list" v-else-if="panelType == 'month'">
           <span class="cell-month" v-for="item, index in monthList"
-                :class="{isSelected: isSelected('month', index)}"
+                :class="{
+                    isSelected: isSelected('month', index),
+                    invalid: validateMonth(index)
+                }"
                 @click="selectMonth(index)"
           >
               <em>{{item | formatMonth}}</em>
@@ -42,15 +48,16 @@
                   :class="{
                     notCurrent: !item.currentMonth,
                     current: item.currentMonth,
-                    isSelected: isSelected('date', item)
+                    isSelected: isSelected('date', item),
+                    invalid: validateDate(item)
                   }"
                   @click="selectDate(item)">{{item.value}}</span>
           </div>
         </div>
       </div>
       <div class="dropdown-ft">
-        <lan-button size="tiny" classType="default">清除</lan-button>
-        <lan-button size="tiny" classType="warning">确定</lan-button>&nbsp;
+        <lan-button size="tiny" classType="default" @click="handleDelete">清除</lan-button>
+        <lan-button size="tiny" classType="warning" @click="handleClick">确定</lan-button>&nbsp;
       </div>
     </div>
   </div>
@@ -60,6 +67,7 @@
 
   import lanInput from '../lan-input/lan-input'
   import lanButton from '../lan-button/lan-button'
+  import {handleFormat} from '../../base/assist'
 
   export default{
     name: 'lan-timePicker',
@@ -69,6 +77,9 @@
     },
     props: {
       placeholder: String,
+      format: {
+        default: 'yyyy-MM-dd'
+      },
       min: {
         default: '1970-01-01'
       },
@@ -98,20 +109,20 @@
     },
     watch: {
       min(v) {
-        let minArr = v.split('-');
-        this.minYear = Number(minArr[0]);
-        this.minMonth = Number(minArr[1]);
-        this.minDate = Number(minArr[2]);
+        let minArr = new Date(this.min);
+        this.minYear = minArr.getFullYear();
+        this.minMonth = minArr.getMonth() + 1;
+        this.minDate = minArr.getDate();
       },
       max(v) {
-        let maxArr = v.split('-');
-        this.maxYear = Number(maxArr[0]);
-        this.maxMonth = Number(maxArr[1]);
-        this.maxDate = Number(maxArr[2]);
+        let maxArr = new Date(this.max);
+        this.maxYear = maxArr.getFullYear();
+        this.maxMonth = maxArr.getMonth() + 1;
+        this.maxDate = maxArr.getDate();
       },
     },
     data() {
-      let now = new Date;
+      const now = new Date;
       return {
         pickValue: '',
         showPick: false,
@@ -121,12 +132,7 @@
         date: now.getDate(),
         tmpYear: now.getFullYear(),
         tmpMonth: now.getMonth(),
-        tmpStartYear: now.getFullYear(),
-        tmpStartMonth: now.getMonth(),
-        tmpStartDate: now.getDate(),
-        tmpEndYear: now.getFullYear(),
-        tmpEndMonth: now.getMonth(),
-        tmpEndDate: now.getDate(),
+        tmpDate: now.getDate(),
         minYear: Number,
         minMonth: Number,
         minDate: Number,
@@ -149,7 +155,7 @@
           case 'month':
             return item === this.tmpMonth && this.year === this.tmpYear;
           case 'date':
-            return this.date === item.value && this.month === this.tmpMonth && item.currentMonth;
+            return item.value === this.tmpDate && this.month === this.tmpMonth && item.currentMonth;
         }
       },
       selectYear (year) {
@@ -173,66 +179,36 @@
         return true
       },
       selectDate (date) {
-        setTimeout(() => {
-          if(this.validateDate(date)) return
-          if(date.previousMonth){
-            if(this.tmpMonth === 0){
-              this.year -= 1
-              this.tmpYear -= 1
-              this.month = this.tmpMonth = 11
-            }else{
-              this.month = this.tmpMonth - 1
-              this.tmpMonth -= 1
-            }
-          }else if(date.nextMonth){
-            if(this.tmpMonth === 11){
-              this.year += 1
-              this.tmpYear += 1
-              this.month = this.tmpMonth = 0
-            }else{
-              this.month = this.tmpMonth + 1
-              this.tmpMonth += 1
-            }
+        if(this.validateDate(date)) return;
+        this.tmpDate = date.value;
+        if(date.previousMonth){
+          if(this.tmpMonth === 0){
+            this.tmpYear--;
+            this.tmpMonth = 11;
+          }else{
+            this.tmpMonth--;
           }
-          if(!this.range){
-            this.year = this.tmpYear
-            this.month = this.tmpMonth
-            this.date = date.value
-            let value = `${this.tmpYear}-${('0' + (this.month + 1)).slice(-2)}-${('0' + this.date).slice(-2)}`
-            this.$emit('input', value)
-            this.panelState = false
-          }else if(this.range && !this.rangeStart){
-            this.tmpEndYear = this.tmpStartYear = this.tmpYear
-            this.tmpEndMonth = this.tmpStartMonth = this.tmpMonth
-            this.tmpEndDate = this.tmpStartDate = date.value
-            this.rangeStart = true
-          }else if(this.range && this.rangeStart){
-
-            this.tmpEndYear = this.tmpYear
-            this.tmpEndMonth = this.tmpMonth
-            this.tmpEndDate = date.value
-            let d1 = new Date(this.tmpStartYear, this.tmpStartMonth, this.tmpStartDate).getTime(),
-              d2 = new Date(this.tmpEndYear, this.tmpEndMonth, this.tmpEndDate).getTime()
-            if(d1 > d2){
-              let tmpY, tmpM, tmpD
-              tmpY = this.tmpEndYear
-              tmpM = this.tmpEndMonth
-              tmpD = this.tmpEndDate
-              this.tmpEndYear = this.tmpStartYear
-              this.tmpEndMonth = this.tmpStartMonth
-              this.tmpEndDate = this.tmpStartDate
-              this.tmpStartYear = tmpY
-              this.tmpStartMonth = tmpM
-              this.tmpStartDate = tmpD
-            }
-            let RangeStart = `${this.tmpStartYear}-${('0' + (this.tmpStartMonth + 1)).slice(-2)}-${('0' + this.tmpStartDate).slice(-2)}`
-            let RangeEnd = `${this.tmpEndYear}-${('0' + (this.tmpEndMonth + 1)).slice(-2)}-${('0' + this.tmpEndDate).slice(-2)}`
-            let value = [RangeStart, RangeEnd]
-            this.$emit('input', value)
-            this.rangeStart = false
-            this.panelState = false
+        }else if(date.nextMonth){
+          if(this.tmpMonth === 11){
+            this.tmpYear++;
+            this.tmpMonth = 0;
+          }else{
+            this.tmpMonth++;
           }
-        }, 0)
+        }
+      },
+      validateDate (date) {
+        let mon = this.tmpMonth;
+        if(date.previousMonth){
+          mon -= 1
+        }else if(date.nextMonth){
+          mon += 1
+        }
+        if(new Date(this.tmpYear, mon, date.value).getTime() >= new Date(this.minYear, this.minMonth - 1, this.minDate).getTime()
+          && new Date(this.tmpYear, mon, date.value).getTime() <= new Date(this.maxYear, this.maxMonth - 1, this.maxDate).getTime()){
+          return false
+        }
+        return true
       },
       prevMonthPreview () {
         if(this.tmpMonth === 0) {
@@ -258,24 +234,34 @@
       nextYearPreview () {
         this.tmpYear++;
       },
-//      handleClick(type, item) {
-//        this.pickValue = handleFormat(this.date, this.format);
-//      },
-      handleChange() {
-        //this.showPick = false;
+      handleClick() {
+        this.year = this.tmpYear;
+        this.month = this.tmpMonth;
+        this.date = this.tmpDate;
+        this.pickValue = handleFormat(`${this.year}-${this.month}-${this.date}`, this.format);
         this.$emit('change', this.pickValue);
+        this.showPick = false;
+      },
+      handleDelete() {
+        //重置所有日期
+        const now = new Date;
+        this.year = this.tmpYear = now.getFullYear();
+        this.month = this.tmpMonth = now.getMonth();
+        this.date = this.tmpDate = now.getDate();
+        this.pickValue = '';
+        this.showPick = false;
       }
     },
     mounted() {
-      let minArr = this.min.split('-');
-      this.minYear = Number(minArr[0]);
-      this.minMonth = Number(minArr[1]);
-      this.minDate = Number(minArr[2]);
+      let minArr = new Date(this.min);
+      this.minYear = minArr.getFullYear();
+      this.minMonth = minArr.getMonth() + 1;
+      this.minDate = minArr.getDate();
 
-      let maxArr = this.max.split('-');
-      this.maxYear = Number(maxArr[0]);
-      this.maxMonth = Number(maxArr[1]);
-      this.maxDate = Number(maxArr[2]);
+      let maxArr = new Date(this.max);
+      this.maxYear = maxArr.getFullYear();
+      this.maxMonth = maxArr.getMonth() + 1;
+      this.maxDate = maxArr.getDate();
     },
     filters: {
       formatWeek: item => {

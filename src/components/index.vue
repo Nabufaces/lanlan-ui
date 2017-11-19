@@ -130,7 +130,7 @@
 
     <label class="title">DatePicker</label>
     <div class="group">
-      <lan-date-picker placeholder="选择日期"></lan-date-picker>
+      <lan-date-picker placeholder="选择日期" min="2015-09-01" max="2020-12-30"></lan-date-picker>
     </div>
 
     <label class="title">Modal</label>

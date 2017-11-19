@@ -1,6 +1,21 @@
 .isSelected() {
   color: #fff;
   background-color: #FF7846;
+  &:hover {
+    color: #fff;
+    background-color: #FF7846;
+    font-weight: normal;
+  }
+}
+
+.invalid() {
+  color: #c3cbd6;
+  background-color: #fff;
+  cursor: not-allowed;
+  &:hover {
+    color: #c3cbd6;
+    background-color: #fff;
+  }
 }
 
 .lan-datePicker {
@@ -67,10 +82,12 @@
           &:hover {
             color: #666;
             background: #EDF0F4;
-            border-radius: 2px;
           }
           &.isSelected {
             .isSelected()
+          }
+          &.invalid {
+            .invalid()
           }
         }
         .cell-week, .cell-date {
@@ -97,6 +114,9 @@
           }
           .isSelected {
             .isSelected()
+          }
+          .invalid {
+            .invalid()
           }
         }
       }
