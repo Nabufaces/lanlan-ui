@@ -63,5 +63,3 @@
     }
   }
 </script>
-
-<style src="./lan-input.css"></style>

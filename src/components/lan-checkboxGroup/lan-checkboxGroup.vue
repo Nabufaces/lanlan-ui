@@ -45,5 +45,3 @@
     }
   };
 </script>
-
-<style src="./lan-checkboxGroup.css"></style>

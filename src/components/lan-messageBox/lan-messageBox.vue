@@ -49,6 +49,3 @@
     }
   }
 </script>
-
-<style src="./lan-messageBox.css"></style>
-

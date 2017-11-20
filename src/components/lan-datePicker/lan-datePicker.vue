@@ -275,5 +275,3 @@
   }
 </script>
 
-<style src="./lan-datePicker.css"></style>
-

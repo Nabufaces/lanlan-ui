@@ -37,6 +37,3 @@
     }
   }
 </script>
-
-<style src="./lan-switch.css"></style>
-

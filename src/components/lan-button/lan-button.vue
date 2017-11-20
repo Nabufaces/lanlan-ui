@@ -35,5 +35,3 @@
   }
 </script>
 
-<style src="./lan-button.css"></style>
-

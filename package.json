@@ -8,6 +8,8 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "less": "^2.7.3",
+    "less-loader": "^4.0.5",
     "vue": "^2.5.0"
   },
   "devDependencies": {

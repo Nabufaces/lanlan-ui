@@ -39,5 +39,3 @@
     }
   };
 </script>
-
-<style src="./lan-radioGroup.css"></style>

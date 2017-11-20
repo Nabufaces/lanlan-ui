@@ -82,6 +82,3 @@
     }
   }
 </script>
-
-<style src="./lan-select.css"></style>
-

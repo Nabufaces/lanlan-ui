@@ -20,6 +20,3 @@
     mixins: [mixin]
   }
 </script>
-
-<style src="./lan-radio.css"></style>
-

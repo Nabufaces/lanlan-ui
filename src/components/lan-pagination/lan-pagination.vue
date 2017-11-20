@@ -81,6 +81,3 @@
     }
   }
 </script>
-
-<style src="./lan-pagination.css"></style>
-

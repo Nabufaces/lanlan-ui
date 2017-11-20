@@ -14,10 +14,3 @@
     }
   }
 </script>
-
-<style>
-  @import './icon/iconfont.css';
-  #app {
-    font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  }
-</style>

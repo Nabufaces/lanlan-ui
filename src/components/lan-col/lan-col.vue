@@ -62,5 +62,3 @@
     }
   };
 </script>
-
-<style src="./lan-col.css"></style>

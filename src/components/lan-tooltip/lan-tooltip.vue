@@ -64,5 +64,3 @@
     }
   };
 </script>
-
-<style src="./lan-tooltip.css"></style>

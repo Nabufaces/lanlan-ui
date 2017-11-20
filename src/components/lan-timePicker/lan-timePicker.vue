@@ -172,6 +172,3 @@
     }
   }
 </script>
-
-<style src="./lan-timePicker.css"></style>
-

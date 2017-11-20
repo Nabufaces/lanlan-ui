@@ -21,5 +21,3 @@
   }
 </script>
 
-<style src="./lan-checkbox.css"></style>
-

@@ -104,6 +104,3 @@
     }
   }
 </script>
-
-<style src="./lan-table.css"></style>
-
