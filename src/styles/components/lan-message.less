@@ -1,6 +1,6 @@
 .lan-message {
   position: fixed;
-  top: 8%;
+  top: 10%;
   left: 50%;
   transform: translate(-50%, -50%);
   .tips {
@@ -17,31 +17,5 @@
       height: 24px;
       margin-right: 9px;
     }
-  }
-}
-.updown-enter-active {
-  animation: messageDown .5s ease;
-}
-.updown-leave-active {
-  animation: messageUp .5s ease;
-}
-@keyframes messageDown {
-  from {
-    top: 0;
-    transform: translate(-50%, -100%);
-  }
-  to {
-    top: 8%;
-    transform: translate(-50%, -50%);
-  }
-}
-@keyframes messageUp {
-  from {
-    top: 8%;
-    transform: translate(-50%, -50%);
-  }
-  to {
-    top: 0;
-    transform: translate(-50%, -100%);
   }
 }

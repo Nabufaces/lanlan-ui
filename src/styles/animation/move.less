@@ -1,0 +1,121 @@
+@import "common";
+
+.move-motion(@className, @keyframeName) {
+  .make-motion(@className, @keyframeName);
+  .@{className}-enter-active, .@{className}-enter {
+    opacity: 0;
+    animation-timing-function: @ease-in-out;
+  }
+  .@{className}-leave-active {
+    animation-timing-function: @ease-in-out;
+  }
+}
+
+.move-motion(move-up, lanMoveUp);
+.move-motion(move-down, lanMoveDown);
+.move-motion(move-left, lanMoveLeft);
+.move-motion(move-right, lanMoveRight);
+
+@keyframes lanMoveUpIn {
+  0% {
+    transform-origin: 0 0;
+    transform: translate(-50%, 100%);
+    opacity: 0;
+  }
+  100% {
+    transform-origin: 0 0;
+    transform: translate(-50%, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes lanMoveUpOut {
+  0% {
+    transform-origin: 0 0;
+    transform: translate(-50%, 0);
+    opacity: 1;
+  }
+  100% {
+    transform-origin: 0 0;
+    transform: translate(-50%, 100%);
+    opacity: 0;
+  }
+}
+
+@keyframes lanMoveRightIn {
+  0% {
+    transform-origin: 0 0;
+    transform: translate(-100%, -50%);
+    opacity: 0;
+  }
+  100% {
+    transform-origin: 0 0;
+    transform: translate(0%, -50%);
+    opacity: 1;
+  }
+}
+
+@keyframes lanMoveRightOut {
+  0% {
+    transform-origin: 0 0;
+    transform: translate(0%, -50%);
+    opacity: 1;
+  }
+  100% {
+    transform-origin: 0 0;
+    transform: translate(-100%, -50%);
+    opacity: 0;
+  }
+}
+
+@keyframes lanMoveLeftIn {
+  0% {
+    opacity: 0;
+    transform-origin: 0 0;
+    transform: translate(100%, -50%);
+  }
+  100% {
+    opacity: 1;
+    transform-origin: 0 0;
+    transform: translate(0%, -50%);
+  }
+}
+
+@keyframes lanMoveLeftOut {
+  0% {
+    transform-origin: 0 0;
+    transform: translate(0%, -50%);
+    opacity: 1;
+  }
+  100% {
+    transform-origin: 0 0;
+    transform: translate(100%, -50%);
+    opacity: 0;
+  }
+}
+
+@keyframes lanMoveDownIn {
+  0% {
+    transform-origin: 0 0;
+    transform: translate(-50%, -100%);
+    opacity: 0;
+  }
+  100% {
+    transform-origin: 0 0;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+}
+
+@keyframes lanMoveDownOut {
+  0% {
+    transform-origin: 0 0;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+  100% {
+    transform-origin: 0 0;
+    transform: translate(-50%, -100%);
+    opacity: 0;
+  }
+}

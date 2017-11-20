@@ -1,5 +1,5 @@
 <template>
-  <transition name="updown">
+  <transition name="move-down">
     <div class="lan-message" v-show="visible">
       <div class="tips">
         <img :src="modalType[type]" class="iconImg"/>

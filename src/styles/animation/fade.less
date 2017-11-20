@@ -1,6 +1,32 @@
-.fade-enter-active, .fade-leave-active {
-  transition: opacity .5s
+@import "common";
+
+.fade-motion(@className, @keyframeName) {
+  .make-motion(@className, @keyframeName);
+  .@{className}-enter-active, .@{className}-enter {
+    opacity: 0;
+    animation-timing-function: linear;
+  }
+  .@{className}-leave-active {
+    animation-timing-function: linear;
+  }
 }
-.fade-enter, .fade-leave-active {
-  opacity: 0
+
+.fade-motion(fade, lanFade);
+
+@keyframes lanFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes lanFadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
