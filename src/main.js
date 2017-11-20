@@ -1,7 +1,7 @@
 // The Vue build version to load with the `import` command
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
-import App from './App'
+import index from './components/index.vue'
 import './styles/index.less';
 
 import lanRow from './components/lan-row'
@@ -60,19 +60,17 @@ const install = function(Vue, opts = {}) {
 // auto install
 install(Vue);
 
-const API = {
+export default {
   version: '0.0.1',
   install,
   ...components
 };
-
-//module.exports.default = module.exports = API;   // eslint-disable-line no-undef
 
 Vue.config.productionTip = false;
 
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
-  template: '<App/>',
-  components: { App }
+  template: '<index/>',
+  components: { index }
 });
