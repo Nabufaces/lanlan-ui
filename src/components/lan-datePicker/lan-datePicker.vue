@@ -239,7 +239,7 @@
       },
       handleClick() {
         this.pickValue = handleFormat(`${this.year}-${this.month+1}-${this.date}`, this.format);
-        this.$emit('change', this.pickValue);
+        this.$emit('confirm', this.pickValue);
         this.showPick = false;
       },
       handleDelete() {

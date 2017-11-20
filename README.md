@@ -190,11 +190,11 @@
 6. event: change  时间发生变化时触发
 
 #### datePicker 日期选择 lan-datePicker
-1. minDate	    最小日期
-2. maxDate	    最大日期
-3. placeholder  默认项的日期，时间
-4. showTime     是否显示时间（参数参考timePicker）
-8. event: selected
+1. placeholder	    非范围选择时的占位内容
+2. min        	    最小日期（例: '2000-01-01'）
+3. max              最大日期
+4. format           展示的日期格式（默认 'yyyy-MM-dd')
+5. event: confirm   日期确认时触发
 
 
 ## 导航
