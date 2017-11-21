@@ -190,6 +190,8 @@
         </div>
       </div>
     </div>
+
+    <lan-back-top></lan-back-top>
   </div>
 </template>
 
@@ -200,7 +202,7 @@
   import lanSwitch from './lan-switch/lan-switch'
   import lanRadioGroup from './lan-radioGroup/lan-radioGroup'
   import lanRadio from './lan-radio/lan-radio'
-  import LanCheckboxGroup from "./lan-checkboxGroup/lan-checkboxGroup";
+  import LanCheckboxGroup from './lan-checkboxGroup/lan-checkboxGroup'
   import lanCheckbox from './lan-checkbox/lan-checkbox'
   import lanInput from './lan-input/lan-input'
   import lanSelect from './lan-select/lan-select'
@@ -212,7 +214,8 @@
   import lanMessage from './lan-message/lan-message'
   import lanPagination from './lan-pagination/lan-pagination'
   import lanTable from './lan-table/lan-table'
-  import lanTooltip from "./lan-tooltip/lan-tooltip"
+  import lanTooltip from './lan-tooltip/lan-tooltip'
+  import lanBackTop from './lan-backTop'
 
   export default {
     data () {
@@ -330,7 +333,8 @@
       lanMessage,
       lanPagination,
       lanTable,
-      lanTooltip
+      lanTooltip,
+      lanBackTop
     },
     methods: {
       handleModal(){

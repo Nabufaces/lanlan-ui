@@ -2,7 +2,7 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import index from './components/index.vue'
-import './styles/index.less';
+import './styles/index.css';
 
 import lanRow from './components/lan-row'
 import lanCol from './components/lan-col'
@@ -23,6 +23,7 @@ import lanMessage from './components/lan-message'
 import lanPagination from './components/lan-pagination'
 import lanTable from './components/lan-table'
 import lanTooltip from './components/lan-tooltip'
+import lanBackTop from './components/lan-backTop'
 
 const components = {
     lanRow,
@@ -43,7 +44,8 @@ const components = {
     lanMessage,
     lanPagination,
     lanTable,
-    lanTooltip
+    lanTooltip,
+    lanBackTop
 };
 
 const install = function(Vue, opts = {}) {

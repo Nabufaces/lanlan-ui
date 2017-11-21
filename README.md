@@ -87,21 +87,12 @@
 2. type: icon名称
 3. color: icon颜色
 
-#### progress 进度条 lan-progress
-1. percentage  百分比（0-100, 必填）
-2. type	进度条类型  line/circle
-3. size 进度条的尺寸
-4. active 进度条激活，进度条激活时显示动画
-
-#### scrollend 滚动加载 lan-scrollend
-1. hasMore 是否还有数据加载
-2. hasError  加载报错
-3. showLoading  显示加载icon
-4. showEnd  显示加载到底
-5. scrollDistance: 加载距离, 默认400px
-5. event: 
-    1. loadMore: 加载数据
-    2. scrollEnd: 滚动到底
+#### backTop 回到顶部 lan-backTop
+1. height	        页面滚动高度达到该值时显示(默认400)
+2. bottom	        组件距离底部的距离(默认30)
+3. right	        组件距离右部的距离(默认30)
+4. duration	      滚动动画持续时间(默认1000)
+5. event: click   点击按钮时触发
  
  
 ## 表单
@@ -156,30 +147,6 @@
     4. slot       自定义模板
 5. event:
     1. selected:  选中时触发
-
-#### Cascader 级联选择 lan-Cascader
-1. source 数据源 
-    1. name: 选项名
-    2. value: 选项值
-    3. readonly: 是否可读
-    4. disabled: 是否禁用
-    5. imageIcon: 选项icon
-    6. children: 下一级选项
-```
-    source: [
-        {name: '北京', value: 1, disabled: false, imageIcon: '', children: []},
-        {name: '上海', value: 2}
-    ]
-```
-2. selected  当前选择项
-3. width    组件宽度
-4. size     组件大小, sm/md/lg
-5. placeholder  默认项的文字，如果placeholder为空并且没有选择项时，将会自动选中第一项
-6. multiple  是否多选
-7. maxShowCount  最大展示条数
-8. required     是否必填 
-9. event:
-    1. change: 选中值发生变化时触发
     
 #### timePicker 时间选择 lan-timePicker
 1. placeholder      非范围选择时的占位内容
