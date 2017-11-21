@@ -944,28 +944,11 @@ input::-ms-reveal {
   display: none;
 }
 a {
-  color: #FF7846;
   background: transparent;
   text-decoration: none;
   outline: none;
   cursor: pointer;
   transition: color 0.2s ease;
-}
-a:hover {
-  color: #ff936b;
-}
-a:active {
-  color: #f27243;
-}
-a:active,
-a:hover {
-  outline: 0;
-  text-decoration: none;
-}
-a[disabled] {
-  color: #ccc;
-  cursor: not-allowed;
-  pointer-events: none;
 }
 code,
 kbd,
@@ -2087,6 +2070,20 @@ samp {
 }
 .lan-table .lan-table-body table tbody tr td.border:last-child {
   border-right: none;
+}
+.lan-tabs {
+  color: #1E242A;
+  font-size: 16px;
+}
+.lan-tabs-item {
+  display: inline-block;
+  height: 100%;
+  padding: 8px 16px;
+  margin-right: 16px;
+}
+.lan-tabs-item.active {
+  color: #FF7846;
+  border-bottom: 2px solid #FF7846;
 }
 .lan-timePicker {
   position: relative;

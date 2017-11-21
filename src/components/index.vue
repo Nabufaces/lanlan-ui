@@ -165,6 +165,11 @@
       <lan-table :column="column" :tableSource="tableSource" :border="true" :stripe="true" :height="250"></lan-table>
     </div>
 
+    <label class="title">Tabs</label>
+    <div class="group">
+      <lan-tabs :tabSource="tabSource" activeKey="标签二"></lan-tabs>
+    </div>
+
     <label class="title">Tooltip</label>
     <div class="group">
       <div class="box">
@@ -214,6 +219,7 @@
   import lanMessage from './lan-message/lan-message'
   import lanPagination from './lan-pagination/lan-pagination'
   import lanTable from './lan-table/lan-table'
+  import lanTabs from './lan-tabs/lan-tabs'
   import lanTooltip from './lan-tooltip/lan-tooltip'
   import lanBackTop from './lan-backTop'
 
@@ -308,6 +314,16 @@
           name: '王小二',
           address: '上海市普陀区金沙江路 1520 弄'
         }],
+        tabSource: [{
+          label: '标签一'
+        }, {
+          label: '标签二'
+        }, {
+          label: '标签三'
+        }, {
+          label: '标签四',
+          icon: 'all'
+        }],
         radioValue: false,
         radioGroup: 'apple',
         checkboxValue: false,
@@ -333,6 +349,7 @@
       lanMessage,
       lanPagination,
       lanTable,
+      lanTabs,
       lanTooltip,
       lanBackTop
     },

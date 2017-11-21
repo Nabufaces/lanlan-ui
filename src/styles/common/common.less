@@ -46,32 +46,11 @@ input::-ms-clear, input::-ms-reveal {
 }
 
 a {
-  color: @link-color;
   background: transparent;
   text-decoration: none;
   outline: none;
   cursor: pointer;
   transition: color @transition-time ease;
-
-  &:hover {
-    color: @link-hover-color;
-  }
-
-  &:active {
-    color: @link-active-color;
-  }
-
-  &:active,
-  &:hover {
-    outline: 0;
-    text-decoration: none;
-  }
-
-  &[disabled] {
-    color: #ccc;
-    cursor: @cursor-disabled;
-    pointer-events: none;
-  }
 }
 
 code,

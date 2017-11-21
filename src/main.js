@@ -22,6 +22,7 @@ import lanMessageBox from './components/lan-messageBox'
 import lanMessage from './components/lan-message'
 import lanPagination from './components/lan-pagination'
 import lanTable from './components/lan-table'
+import lanTabs from './components/lan-tabs'
 import lanTooltip from './components/lan-tooltip'
 import lanBackTop from './components/lan-backTop'
 
@@ -44,6 +45,7 @@ const components = {
     lanMessage,
     lanPagination,
     lanTable,
+    lanTabs,
     lanTooltip,
     lanBackTop
 };
