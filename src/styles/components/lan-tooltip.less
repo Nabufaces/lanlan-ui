@@ -1,103 +1,126 @@
+@dark : #1E242A;
+@light : #fff;
+
 .lan-tooltip {
   display: inline-block;
   &-popper {
     display: block;
     font-size: 12px;
-    padding: 9px 8px;
-    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, .2);
-    border-radius: 2px;
     z-index: 1000;
-    &.dark {
-      color: #fff;
-      background-color: #1E242A;
-    }
-    &.light {
-      color: #1E242A;
-      background-color: #fff;
-    }
-    .popper__arrow{
-      border-style: solid;
-      position: absolute;
-      margin: 5px;
-    }
-    &[x-placement^="top"] {
-      margin-bottom: 5px;
-      .popper__arrow {
-        border-width: 5px 5px 0 5px;
-        bottom: -5px;
-        left: calc(50% - 5px);
-        margin-top: 0;
-        margin-bottom: 0;
-      }
+    .lan-tooltip-inner {
+      width: 100%;
+      background-clip: padding-box;
+      padding: 8px;
+      box-shadow: 0 1px 6px rgba(0, 0, 0, .2);
+      border-radius: 2px;
+      word-wrap: break-word;
       &.dark {
-        .popper__arrow {
-          border-color: #1E242A transparent transparent transparent;
-        }
+        color: @light;
+        background-color: @dark;
       }
       &.light {
-        .popper__arrow {
-          border-color: #fff transparent transparent transparent;
-        }
+        color: @dark;
+        background-color: @light;
       }
     }
-    &[x-placement^="bottom"] {
-      margin-top: 5px;
-      .popper__arrow {
-        border-width: 0 5px 5px 5px;
-        top: -5px;
-        left: calc(50% - 5px);
-        margin-top: 0;
-        margin-bottom: 0;
+    &[x-placement^=top] {
+      padding-bottom: 9px;
+      &::before, &::after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        margin-left: -6px;
+        border-style: solid;
+        border-width: 6px 6px 0 6px;
+        border-color: transparent;
       }
-      &.dark {
-        .popper__arrow {
-          border-color: transparent transparent #1E242A transparent;
-        }
+      &::before {
+        bottom: 2px;
+        border-top-color: hsla(0,0%,85%,.5);
       }
-      &.light {
-        .popper__arrow {
-          border-color: transparent transparent #fff transparent;
-        }
+      &::after {
+        bottom: 3px;
       }
-    }
-    &[x-placement^="right"] {
-      margin-left: 5px;
-      .popper__arrow {
-        border-width: 5px 5px 5px 0;
-        left: -5px;
-        top: calc(50% - 5px);
-        margin-left: 0;
-        margin-right: 0;
+      &.dark::after {
+        border-top-color: @dark;
       }
-      &.dark {
-        .popper__arrow {
-          border-color: transparent #1E242A transparent transparent;
-        }
-      }
-      &.light {
-        .popper__arrow {
-          border-color: transparent #fff transparent transparent;
-        }
+      &.light::after {
+        border-top-color: @light;
       }
     }
-    &[x-placement^="left"] {
-      margin-right: 5px;
-      .popper__arrow {
-        border-width: 5px 0 5px 5px;
-        right: -5px;
-        top: calc(50% - 5px);
-        margin-left: 0;
-        margin-right: 0;
+    &[x-placement^=right] {
+      padding-left: 9px;
+      &::before, &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        margin-top: -6px;
+        border-style: solid;
+        border-width: 6px 6px 6px 0;
+        border-color: transparent;
       }
-      &.dark {
-        .popper__arrow {
-          border-color: transparent transparent transparent #1E242A;
-        }
+      &::before {
+        left: 2px;
+        border-right-color: hsla(0,0%,85%,.5);
       }
-      &.light {
-        .popper__arrow {
-          border-color: transparent transparent transparent #fff;
-        }
+      &::after {
+        left: 3px;
+      }
+      &.dark::after {
+        border-right-color: @dark;
+      }
+      &.light::after {
+        border-right-color: @light;
+      }
+    }
+    &[x-placement^=bottom] {
+      padding-top: 9px;
+      &::before, &::after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        margin-left: -6px;
+        border-style: solid;
+        border-width: 0 6px 6px 6px;
+        border-color: transparent;
+      }
+      &::before {
+        top: 2px;
+        border-bottom-color: hsla(0,0%,85%,.5);
+      }
+      &::after {
+        top: 3px;
+      }
+      &.dark:after {
+        border-bottom-color: @dark;
+      }
+      &.light::after {
+        border-bottom-color: @light;
+      }
+    }
+    &[x-placement^=left] {
+      padding-right: 9px;
+      &::before, &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        margin-top: -6px;
+        border-style: solid;
+        border-width: 6px 0 6px 6px;
+        border-color: transparent;
+      }
+      &::before {
+        right: 2px;
+        border-left-color: hsla(0,0%,85%,.5);
+      }
+      &::after {
+        right: 3px;
+      }
+      &.dark::after {
+        border-left-color: @dark;
+      }
+      &.light::after {
+        border-left-color: @light;
       }
     }
   }

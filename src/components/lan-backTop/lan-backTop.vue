@@ -11,7 +11,7 @@
   import { scrollTop } from '../../base/assist'
   import { on, off } from '../../base/dom'
 
-  const prefix = 'lan-backTop';
+  const prefixCls = 'lan-backTop';
 
   export default {
     props: {
@@ -48,9 +48,9 @@
     computed: {
       classes () {
         return [
-          prefix,
+          prefixCls,
           {
-            [`${prefix}-show`]: this.backTop
+            [`${prefixCls}-show`]: this.backTop
           }
         ];
       },
@@ -61,7 +61,7 @@
         };
       },
       innerClasses () {
-        return `${prefix}-inner`;
+        return `${prefixCls}-inner`;
       }
     },
     methods: {

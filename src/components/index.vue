@@ -169,12 +169,12 @@
     <div class="group">
       <div class="box">
         <div class="top">
-          <lan-tooltip content="Top 提示文字" placement="top">
+          <lan-tooltip content="Top 提示文字 Top 提示文字 Top 提示文字" placement="top" :width="100">
             <lan-button size="small" classType="primary">上</lan-button>
           </lan-tooltip>
         </div>
         <div class="left">
-          <lan-tooltip content="Left 提示文字" placement="left">
+          <lan-tooltip content="Left 提示文字" placement="left"  effect='light'>
             <lan-button size="small" classType="primary">左</lan-button>
           </lan-tooltip>
         </div>

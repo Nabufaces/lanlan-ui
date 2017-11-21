@@ -1,23 +1,22 @@
 <template>
-  <div class="lan-tooltip"
-       ref="reference"
+  <div :class="`${prefixCls}`"   ref="reference"
        @mouseenter="handleShowPopper"
-       @mouseleave="handleHidePopper">
+       @mouseleave="handleClosePopper">
     <slot></slot>
 
     <transition name="fade">
-      <div class="lan-tooltip-popper"
-           :class="[effect, customClass]"
-           ref="popper"
-           v-show="!disabled && showPopper"
-           :style="{ width: width + 'px' }"
-      >
-        <slot name="content">
-          <span>{{content}}</span>
-        </slot>
+      <div
+        :class="[`${prefixCls}-popper`, effect]"
+        :style="{maxWidth: `${width}px`}"
+        ref="popper"
+        v-show="visible"
+        @mouseenter="handleShowPopper"
+        @mouseleave="handleClosePopper">
+        <div :class="[`${prefixCls}-inner`, effect]">
+          <slot name="content">{{ content }}</slot>
+        </div>
       </div>
     </transition>
-
   </div>
 </template>
 <script>
@@ -29,38 +28,53 @@
     mixins: [Popper],
 
     props: {
-      delay:{
+      placement: {
+        type: String,
+        default: 'top'
+      },
+      content: {
+        type: [String, Number],
+        default: ''
+      },
+      delay: {
         type: Number,
         default: 100
       },
-      disabled: Boolean,
-      content: String,
       effect: {
         type: String,
         default: 'dark'
       },
-      width: Number,
-      customClass: String,
-      visibleArrow: {
-        default: true
+      width: Number
+    },
+    data () {
+      return {
+        prefixCls: 'lan-tooltip'
+      };
+    },
+    watch: {
+      content () {
+        this.updatePopper();
       }
     },
-
     methods: {
-
       handleShowPopper() {
+        if (this.timeout) clearTimeout(this.timeout);
         this.timeout = setTimeout(() => {
-          this.removeOnDestroy = true;
-          this.createPopper();
-          this.showPopper = true;
-        }, this.delay)
+          this.visible = true;
+        }, this.delay);
       },
-
-      handleHidePopper() {
-        clearTimeout(this.timeout);
-        this.destroyPopper();
-        this.showPopper = false;
+      handleClosePopper() {
+        if (this.timeout) {
+          clearTimeout(this.timeout);
+          this.timeout = setTimeout(() => {
+            this.visible = false;
+          }, this.delay);
+        }
       }
+    },
+    mounted () {
+      this.updatePopper();
     }
   };
 </script>
+

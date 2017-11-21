@@ -1,11 +1,10 @@
 /**
- * doc look https://popper.js.org/documentation.html
- */
-var PopperJS = require('./popper.js');
+ * https://github.com/freeze-component/vue-popper
+ * */
+const Popper = require('./popper.js').Popper;  // eslint-disable-line
 
-module.exports = {
+export default {
   props: {
-    // top,bottom,left,right,(top-start|top-end)
     placement: {
       type: String,
       default: 'bottom'
@@ -14,123 +13,99 @@ module.exports = {
       type: Number,
       default: 5
     },
+    reference: Object,
+    popper: Object,
     offset: {
       default: 0
     },
-    value: Boolean, // 支持 v-model
-    visibleArrow: Boolean,
+    value: {
+      type: Boolean,
+      default: false
+    },
     transition: String,
     options: {
       type: Object,
-      default: function(){
+      default () {
         return {
-          gpuAcceleration: false // 是否开启gpu
+          gpuAcceleration: false,
+          boundariesElement: 'body'
         };
       }
     },
-    appendToBody: {
-      type: Boolean,
-      default: true
-    }
   },
-
-  data: function(){
+  data () {
     return {
-      showPopper: false,
-      currentPlacement: ''
-    }
+      visible: this.value
+    };
   },
-
   watch: {
     value: {
       immediate: true,
-      handler: function(val) {
-        this.showPopper = val;
+      handler(val) {
+        this.visible = val;
         this.$emit('input', val);
       }
     },
-
-    showPopper: function(val) {
-      //val ? this.updatePopper() : this.destroyPopper();
-      val ? this.updatePopper() : this.closePopper();
+    visible(val) {
+      if (val) {
+        this.updatePopper();
+        this.$emit('on-popper-show');
+      } else {
+        this.destroyPopper();
+        this.$emit('on-popper-hide');
+      }
       this.$emit('input', val);
     }
   },
-
   methods: {
-
-    createPopper: function(){
-
-      this.currentPlacement = this.currentPlacement || this.placement;
-
+    createPopper() {
       if (!/^(top|bottom|left|right)(-start|-end)?$/g.test(this.placement)) {
         return;
       }
-      // 引用元素,和 popper目标元素
-      var popper = this.popperEl || this.$refs.popper;
-      var reference = this.referenceEl || this.$refs.reference;
+
+      const options = this.options;
+      const popper = this.popper || this.$refs.popper;
+      const reference = this.reference || this.$refs.reference;
 
       if (!popper || !reference) return;
 
-      if (this.visibleArrow) this.appendArrow(popper);
-
-      if (this.appendToBody) document.body.appendChild(popper);
-
-      if (this.popperJS && this.popperJS.destroy) {
+      if (this.popperJS && this.popperJS.hasOwnProperty('destroy')) {
         this.popperJS.destroy();
       }
 
-      var options = this.options;
-      options.placement = this.currentPlacement;
-      options.boundariesPadding = this.boundariesPadding;
+      options.placement = this.placement;
       options.offset = this.offset;
 
-      if(this.removeOnDestroy){
-        options.removeOnDestroy = this.removeOnDestroy;
-      }
-
-      this.popperJS = new PopperJS.Popper(reference, popper, options);
+      this.popperJS = new Popper(reference, popper, options);
+      this.popperJS.onCreate(popper => {
+        this.resetTransformOrigin(popper);
+        this.$nextTick(this.updatePopper);
+        this.$emit('created', this);
+      });
     },
-
-    updatePopper: function() {
+    updatePopper() {
       this.popperJS ? this.popperJS.update() : this.createPopper();
     },
-
-    resetTransformOrigin: function() {
-      var placementMap = { top: 'bottom', bottom: 'top', left: 'right', right: 'left' };
-      var placement = this.popperJS._popper.getAttribute('x-placement').split('-')[0];
-      var origin = placementMap[placement];
-      this.popperJS._popper.style.transformOrigin = ['top', 'bottom'].indexOf(placement) > -1
-        ? 'center ' + origin
-        : origin + ' center';
-    },
-
-    closePopper: function(){
-      if (this.popperJS) {
-        this.resetTransformOrigin();
-      }
-    },
-
-    destroyPopper: function(){
-
-      if (!this.popperJS) return;
+    doDestroy() {
+      if (this.visible) return;
       this.popperJS.destroy();
       this.popperJS = null;
     },
-
-    appendArrow: function(element){
-
-      if (this.appended) {
-        return;
+    destroyPopper() {
+      if (this.popperJS) {
+        this.resetTransformOrigin(this.popperJS);
       }
-
-      this.appended = true;
-
-      var arrow = document.createElement('div');
-      arrow.setAttribute('x-arrow', '');
-      arrow.className = 'popper__arrow';
-      element.appendChild(arrow);
+    },
+    resetTransformOrigin(popper) {
+      let placementMap = {top: 'bottom', bottom: 'top', left: 'right', right: 'left'};
+      let placement = popper._popper.getAttribute('x-placement').split('-')[0];
+      let origin = placementMap[placement];
+      popper._popper.style.transformOrigin = ['top', 'bottom'].indexOf(placement) > -1 ? `center ${ origin }` : `${ origin } center`;
     }
-
+  },
+  beforeDestroy() {
+    if (this.popperJS) {
+      this.popperJS.destroy();
+    }
   }
-}
+};

@@ -74,13 +74,11 @@
       4. bottom
 2. content          tooltip内容
 3. effect           提供的主题    
-      1. dark
+      1. dark(默认)
       2. light
 4. delay            延迟出现
-5. disabled         Tooltip 是否可用
-6. width            Tooltip 宽度
-7. visibleArrow     是否显示 Tooltip 箭头
-8. customClass      样式扩展
+5. width            Tooltip 宽度,设置后文字超出会自动换行
+
 
 #### icon 图标 lan-icon
 1. font-size: icon大小

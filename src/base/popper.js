@@ -1,6 +1,6 @@
 /**
  * @fileOverview Kickass library to create and place poppers near their reference elements.
- * @version 0.6.4
+ * @version {{version}}
  * @license
  * Copyright (c) 2016 Federico Zivolo and contributors
  *
@@ -226,32 +226,6 @@
     // make sure to apply the popper position before any computation
     this.state.position = this._getPosition(this._popper, this._reference);
     setStyle(this._popper, { position: this.state.position});
-
-    // IE9 不支持 performance.now()
-    // performance.now() polyfill
-    (function(){
-
-      if ("performance" in window == false) {
-        window.performance = {};
-      }
-
-      Date.now = (Date.now || function () {  // thanks IE8
-        return new Date().getTime();
-      });
-
-      if ("now" in window.performance == false){
-
-        var nowOffset = Date.now();
-
-        if (performance.timing && performance.timing.navigationStart){
-          nowOffset = performance.timing.navigationStart
-        }
-
-        window.performance.now = function now(){
-          return Date.now() - nowOffset;
-        }
-      }
-    })();
 
     // to avoid useless computations we throttle the popper position refresh to 60fps
     root.requestAnimationFrame(function() {
@@ -689,6 +663,7 @@
     // Be aware, modifiers could override the properties defined in the previous
     // lines of this modifier!
     Object.assign(styles, data.styles);
+
     setStyle(this._popper, styles);
 
     // set an attribute which will be useful to style the tooltip (use it to properly position its arrow)
@@ -1088,8 +1063,7 @@
   function getOffsetParent(element) {
     // NOTE: 1 DOM access here
     var offsetParent = element.offsetParent;
-    //return offsetParent === root.document.body || !offsetParent ? root.document.documentElement : offsetParent;
-    return offsetParent === root.document.body || !offsetParent ? root.document.body : offsetParent;
+    return offsetParent === root.document.body || !offsetParent ? root.document.documentElement : offsetParent;
   }
 
   /**
@@ -1220,11 +1194,7 @@
    * @return {Object} client rect
    */
   function getBoundingClientRect(element) {
-    // element 为根元素 document.documentElement时,
-    // 在ie9下,top值不包含滚动距离
-    // 在chrome 下top值,包含滚动值,为负值
     var rect = element.getBoundingClientRect();
-
     return {
       left: rect.left,
       top: rect.top,
@@ -1232,27 +1202,6 @@
       bottom: rect.bottom,
       width: rect.right - rect.left,
       height: rect.bottom - rect.top
-    };
-  }
-
-  /**
-   *
-   * @param element
-   * @returns {*}
-   */
-  function getScrollOffset(element){
-    element = element || window;
-
-    if(element.pageXOffset != null)
-      return { left: element.pageXOffset, top: element.pageYOffset };
-
-    var d = document;
-    var left = d.body.scrollLeft + d.documentElement.scrollLeft;
-    var top = d.body.scrollTop + d.documentElement.scrollTop;
-
-    return {
-      left: left,
-      top: top
     };
   }
 
