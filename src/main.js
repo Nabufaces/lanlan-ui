@@ -67,8 +67,8 @@ const install = function(Vue, opts = {}) {
 };
 
 
-module.exports.default = module.exports = {
-  version: '0.0.2',
+export default {
+  version: '0.0.5',
   install,
   ...components
 };
