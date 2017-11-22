@@ -1,6 +1,6 @@
 {
-  "name": "xiaoshijie",
-  "version": "1.0.0",
+  "name": "lanlan-ui",
+  "version": "0.0.1",
   "description": "懒懒前端UI库",
   "scripts": {
     "dev": "node build/dev-server.js",
