@@ -50,11 +50,6 @@ const components = {
     //lanCarousel
 };
 
-/* istanbul ignore if */
-if (typeof window !== 'undefined' && window.Vue) {
-  install(window.Vue);
-};
-
 const install = function(Vue, opts = {}) {
 
   Object.keys(components).forEach(key => {
@@ -64,6 +59,11 @@ const install = function(Vue, opts = {}) {
   Vue.prototype.$Modal = lanModal;
   Vue.prototype.$Message = lanMessage;
   Vue.prototype.$messageBox = lanMessageBox;
+};
+
+/* istanbul ignore if */
+if (typeof window !== 'undefined' && window.Vue) {
+  install(window.Vue);
 };
 
 

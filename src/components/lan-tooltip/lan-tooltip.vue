@@ -1,8 +1,10 @@
 <template>
-  <div :class="`${prefixCls}`"   ref="reference"
+  <div :class="`${prefixCls}`" 
        @mouseenter="handleShowPopper"
        @mouseleave="handleClosePopper">
-    <slot></slot>
+     <div :class="`${prefixCls}-rel`" ref="reference">
+        <slot></slot>
+     </div>
 
     <transition name="fade">
       <div
