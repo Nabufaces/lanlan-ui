@@ -1,0 +1,59 @@
+.lan-input {
+  position: relative;
+  font-size: 14px;
+  display: flex;
+}
+.lan-input .t-ipt {
+  background-color: #fff;
+  border-radius: 2px;
+  border: 1px solid #E4E6EC;
+  box-sizing: border-box;
+  color: #B0B4B8;
+  display: inline-block;
+  font-size: inherit;
+  outline: none;
+  padding: 10px 23px;
+  transition: border-color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.lan-input .t-ipt:hover {
+  border-color: #FF7846;
+}
+.lan-input .t-ipt:disabled {
+  background-color: #f5f7fa;
+  border-color: #dfe4ed;
+  color: #b4bccc;
+  cursor: not-allowed;
+}
+.lan-input .prefix,
+.lan-input .suffix {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #B0B4B8;
+  transition: all .3s;
+}
+.lan-input .prefix {
+  left: 5px;
+}
+.lan-input .suffix {
+  right: 5px;
+}
+.lan-input .prepend,
+.lan-input .append {
+  background-color: #f5f7fa;
+  color: #878d99;
+  border: 1px solid #E4E6EC;
+  border-radius: 2px;
+  padding: 9px 20px;
+  white-space: nowrap;
+}
+.lan-input .prepend {
+  border-right: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.lan-input .append {
+  border-left: 0;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}

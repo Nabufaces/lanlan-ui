@@ -1,0 +1,128 @@
+.lan-tooltip {
+  display: inline-block;
+}
+.lan-tooltip-popper {
+  display: block;
+  font-size: 12px;
+  z-index: 1000;
+}
+.lan-tooltip-popper .lan-tooltip-inner {
+  width: 100%;
+  background-clip: padding-box;
+  padding: 8px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
+  border-radius: 2px;
+  word-wrap: break-word;
+}
+.lan-tooltip-popper .lan-tooltip-inner.dark {
+  color: #fff;
+  background-color: #1E242A;
+}
+.lan-tooltip-popper .lan-tooltip-inner.light {
+  color: #1E242A;
+  background-color: #fff;
+}
+.lan-tooltip-popper[x-placement^=top] {
+  padding-bottom: 9px;
+}
+.lan-tooltip-popper[x-placement^=top]::before,
+.lan-tooltip-popper[x-placement^=top]::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  margin-left: -6px;
+  border-style: solid;
+  border-width: 6px 6px 0 6px;
+  border-color: transparent;
+}
+.lan-tooltip-popper[x-placement^=top]::before {
+  bottom: 2px;
+  border-top-color: rgba(217, 217, 217, 0.5);
+}
+.lan-tooltip-popper[x-placement^=top]::after {
+  bottom: 3px;
+}
+.lan-tooltip-popper[x-placement^=top].dark::after {
+  border-top-color: #1E242A;
+}
+.lan-tooltip-popper[x-placement^=top].light::after {
+  border-top-color: #fff;
+}
+.lan-tooltip-popper[x-placement^=right] {
+  padding-left: 9px;
+}
+.lan-tooltip-popper[x-placement^=right]::before,
+.lan-tooltip-popper[x-placement^=right]::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  margin-top: -6px;
+  border-style: solid;
+  border-width: 6px 6px 6px 0;
+  border-color: transparent;
+}
+.lan-tooltip-popper[x-placement^=right]::before {
+  left: 2px;
+  border-right-color: rgba(217, 217, 217, 0.5);
+}
+.lan-tooltip-popper[x-placement^=right]::after {
+  left: 3px;
+}
+.lan-tooltip-popper[x-placement^=right].dark::after {
+  border-right-color: #1E242A;
+}
+.lan-tooltip-popper[x-placement^=right].light::after {
+  border-right-color: #fff;
+}
+.lan-tooltip-popper[x-placement^=bottom] {
+  padding-top: 9px;
+}
+.lan-tooltip-popper[x-placement^=bottom]::before,
+.lan-tooltip-popper[x-placement^=bottom]::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  margin-left: -6px;
+  border-style: solid;
+  border-width: 0 6px 6px 6px;
+  border-color: transparent;
+}
+.lan-tooltip-popper[x-placement^=bottom]::before {
+  top: 2px;
+  border-bottom-color: rgba(217, 217, 217, 0.5);
+}
+.lan-tooltip-popper[x-placement^=bottom]::after {
+  top: 3px;
+}
+.lan-tooltip-popper[x-placement^=bottom].dark:after {
+  border-bottom-color: #1E242A;
+}
+.lan-tooltip-popper[x-placement^=bottom].light::after {
+  border-bottom-color: #fff;
+}
+.lan-tooltip-popper[x-placement^=left] {
+  padding-right: 9px;
+}
+.lan-tooltip-popper[x-placement^=left]::before,
+.lan-tooltip-popper[x-placement^=left]::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  margin-top: -6px;
+  border-style: solid;
+  border-width: 6px 0 6px 6px;
+  border-color: transparent;
+}
+.lan-tooltip-popper[x-placement^=left]::before {
+  right: 2px;
+  border-left-color: rgba(217, 217, 217, 0.5);
+}
+.lan-tooltip-popper[x-placement^=left]::after {
+  right: 3px;
+}
+.lan-tooltip-popper[x-placement^=left].dark::after {
+  border-left-color: #1E242A;
+}
+.lan-tooltip-popper[x-placement^=left].light::after {
+  border-left-color: #fff;
+}
