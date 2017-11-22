@@ -25,6 +25,7 @@ import lanTable from './components/lan-table'
 import lanTabs from './components/lan-tabs'
 import lanTooltip from './components/lan-tooltip'
 import lanBackTop from './components/lan-backTop'
+//import lanCarousel from './components/lan-carousel'
 
 const components = {
     lanRow,
@@ -47,7 +48,8 @@ const components = {
     lanTable,
     lanTabs,
     lanTooltip,
-    lanBackTop
+    lanBackTop,
+    //lanCarousel
 };
 
 const install = function(Vue, opts = {}) {

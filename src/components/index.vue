@@ -196,32 +196,38 @@
       </div>
     </div>
 
+    <!--<label class="title">Carousel</label>-->
+    <!--<div class="group">-->
+      <!--<lan-carousel :carouselSource="carouselSource"></lan-carousel>-->
+    <!--</div>-->
+
     <lan-back-top></lan-back-top>
   </div>
 </template>
 
 <script>
-  import lanRow from './lan-row/lan-row'
-  import lanCol from './lan-col/lan-col'
-  import lanButton from './lan-button/lan-button'
-  import lanSwitch from './lan-switch/lan-switch'
-  import lanRadioGroup from './lan-radioGroup/lan-radioGroup'
-  import lanRadio from './lan-radio/lan-radio'
-  import LanCheckboxGroup from './lan-checkboxGroup/lan-checkboxGroup'
-  import lanCheckbox from './lan-checkbox/lan-checkbox'
-  import lanInput from './lan-input/lan-input'
-  import lanSelect from './lan-select/lan-select'
-  import lanOption from './lan-option/lan-option'
-  import lanTimePicker from './lan-timePicker/lan-timePicker'
-  import lanDatePicker from './lan-datePicker/lan-datePicker'
-  import lanModal from './lan-modal/lan-modal'
-  import lanMessageBox from './lan-messageBox/lan-messageBox'
-  import lanMessage from './lan-message/lan-message'
-  import lanPagination from './lan-pagination/lan-pagination'
-  import lanTable from './lan-table/lan-table'
-  import lanTabs from './lan-tabs/lan-tabs'
-  import lanTooltip from './lan-tooltip/lan-tooltip'
+  import lanRow from './lan-row'
+  import lanCol from './lan-col'
+  import lanButton from './lan-button'
+  import lanSwitch from './lan-switch'
+  import lanRadioGroup from './lan-radioGroup'
+  import lanRadio from './lan-radio'
+  import LanCheckboxGroup from './lan-checkboxGroup'
+  import lanCheckbox from './lan-checkbox'
+  import lanInput from './lan-input'
+  import lanSelect from './lan-select'
+  import lanOption from './lan-option'
+  import lanTimePicker from './lan-timePicker'
+  import lanDatePicker from './lan-datePicker'
+  import lanModal from './lan-modal'
+  import lanMessageBox from './lan-messageBox'
+  import lanMessage from './lan-message'
+  import lanPagination from './lan-pagination'
+  import lanTable from './lan-table'
+  import lanTabs from './lan-tabs'
+  import lanTooltip from './lan-tooltip'
   import lanBackTop from './lan-backTop'
+  //import lanCarousel from './lan-carousel'
 
   export default {
     data () {
@@ -327,7 +333,14 @@
         radioValue: false,
         radioGroup: 'apple',
         checkboxValue: false,
-        checkboxGroup: ['apple']
+        checkboxGroup: ['apple'],
+        carouselSource: [
+          "http://oss.lanlanlife.com/3d31bd5315845d3d086834d6e9b25c90_800x800.jpg",
+          "http://oss.lanlanlife.com/4b25875c82cb38e0d1596385ff787144_800x800.jpg",
+          "http://oss2.lanlanlife.com/1ba41ca1974f728980e176556cecc653_800x800.jpg",
+          "http://oss.lanlanlife.com/6a86cc4e9d1f9f8b8924d15bccf19b90_800x800.jpg",
+          "http://oss2.lanlanlife.com/fc6210dda360119aa324d7b046f70fc2_800x800.jpg"
+        ]
       }
     },
     components: {
@@ -351,7 +364,8 @@
       lanTable,
       lanTabs,
       lanTooltip,
-      lanBackTop
+      lanBackTop,
+      //lanCarousel
     },
     methods: {
       handleModal(){
