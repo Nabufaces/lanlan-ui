@@ -1,6 +1,5 @@
 // The Vue build version to load with the `import` command
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
-import Vue from 'vue'
 import './styles/index.css';
 
 import lanRow from './components/lan-row'
@@ -51,6 +50,11 @@ const components = {
     //lanCarousel
 };
 
+/* istanbul ignore if */
+if (typeof window !== 'undefined' && window.Vue) {
+  install(window.Vue);
+};
+
 const install = function(Vue, opts = {}) {
 
   Object.keys(components).forEach(key => {
@@ -62,10 +66,6 @@ const install = function(Vue, opts = {}) {
   Vue.prototype.$messageBox = lanMessageBox;
 };
 
-/* istanbul ignore if */
-if (typeof window !== 'undefined' && window.Vue) {
-  install(window.Vue);
-};
 
 module.exports.default = module.exports = {
   version: '0.0.2',
