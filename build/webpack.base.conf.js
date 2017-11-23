@@ -10,7 +10,8 @@ function resolve (dir) {
 
 module.exports = {
   entry: {
-    app: './src/main.js'
+    //app: './src/main.js'
+    app: './examples/main.js'
   },
   output: {
     path: config.build.assetsRoot,
@@ -61,23 +62,7 @@ module.exports = {
           limit: 10000,
           name: utils.assetsPath('fonts/[name].[hash:7].[ext]')
         }
-      },
-      {
-          test: /\.css$/,
-          use: [
-              'style-loader',
-              'css-loader',
-              'autoprefixer-loader'
-          ]
-      },
-      {
-          test: /\.less$/,
-          use: [
-              'style-loader',
-              'css-loader',
-              'less-loader'
-          ]
-      },
+      }
     ]
   }
 };

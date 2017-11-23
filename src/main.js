@@ -1,6 +1,6 @@
 // The Vue build version to load with the `import` command
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
-//import './styles/index.css';
+import './styles/index.less';
 
 import lanRow from './components/lan-row'
 import lanCol from './components/lan-col'
@@ -21,7 +21,7 @@ import lanMessage from './components/lan-message'
 import lanPagination from './components/lan-pagination'
 import lanTable from './components/lan-table'
 import lanTabs from './components/lan-tabs'
-//import lanTooltip from './components/lan-tooltip'
+import lanTooltip from './components/lan-tooltip'
 import lanBackTop from './components/lan-backTop'
 //import lanCarousel from './components/lan-carousel'
 
@@ -45,7 +45,7 @@ const components = {
     lanPagination,
     lanTable,
     lanTabs,
-    //lanTooltip,
+    lanTooltip,
     lanBackTop,
     //lanCarousel
 };
