@@ -1,207 +1,249 @@
 <template>
-  <div class="mn">
+  <!--<div class="mn">-->
 
-    <label class="title">Grid</label>
-    <div class="group" style="display: block">
-      <lan-row customClass="grid">
-        <lan-col span="12"><div class="demo">col-12</div></lan-col>
-        <lan-col span="12"><div class="demo">col-12</div></lan-col>
-      </lan-row>
-      <lan-row customClass="grid">
-        <lan-col span="8"><div class="demo">col-8</div></lan-col>
-        <lan-col span="8"><div class="demo">col-8</div></lan-col>
-        <lan-col span="8"><div class="demo">col-8</div></lan-col>
-      </lan-row>
-      <lan-row customClass="grid">
-        <lan-col span="6"><div class="demo">col-6</div></lan-col>
-        <lan-col span="6"><div class="demo">col-6</div></lan-col>
-        <lan-col span="6"><div class="demo">col-6</div></lan-col>
-        <lan-col span="6"><div class="demo">col-6</div></lan-col>
-      </lan-row>
-      <lan-row customClass="grid" :gutter="16">
-        <lan-col span="6"><div class="demo">col-6</div></lan-col>
-        <lan-col span="6"><div class="demo">col-6</div></lan-col>
-        <lan-col span="6"><div class="demo">col-6</div></lan-col>
-        <lan-col span="6"><div class="demo">col-6</div></lan-col>
-      </lan-row>
-      <lan-row customClass="grid">
-        <lan-col span="6" :offset="2"><div class="demo">col-6 offset-2</div></lan-col>
-        <lan-col span="6" :push="3"><div class="demo">col-6 push-3</div></lan-col>
-      </lan-row>
-      <lan-row customClass="grid">
-        <lan-col span="6" :push="18"><div class="demo">col-6 push-18</div></lan-col>
-        <lan-col span="6" :pull="3"><div class="demo">col-6 pull-3</div></lan-col>
-      </lan-row>
-    </div>
-
-    <label class="title">Button</label>
-    <div class="group">
-      <lan-button size="tiny" classType="default">tiny default</lan-button>&nbsp;
-      <lan-button size="small" classType="primary">small primary</lan-button>&nbsp;
-      <lan-button size="normal" classType="success">normal success</lan-button>&nbsp;
-      <lan-button size="normal" classType="warning">normal warning</lan-button>&nbsp;
-      <lan-button size="normal" classType="danger">normal danger</lan-button>&nbsp;
-      <lan-button :disabled="true">disabled</lan-button>&nbsp;
-      <lan-button size="normal" classType="warning" :disabled="true">disabled</lan-button>&nbsp;
-      <lan-button size="large" classType="info">large info</lan-button>
-    </div>
-
-    <label class="title">Switch</label>
-    <div class="group">
-      <lan-switch :switchType="true"></lan-switch>&nbsp;
-      <lan-switch :switchType="false"></lan-switch>&nbsp;
-      <lan-switch :switchType="true" activeColor="#0EDE00"></lan-switch>&nbsp;
-      <lan-switch :switchType="false" inactiveColor="#FE4B4B"></lan-switch>&nbsp;
-      <lan-switch :switchType="true" onText="开" offText="关"></lan-switch>&nbsp;
-      <lan-switch :switchType="false" offText="关"></lan-switch>
-    </div>
-
-    <label class="title">Radio</label>
-    <div class="group">
-      <lan-radio v-model="radioValue">单选框</lan-radio>
-    </div>
-
-    <label class="title">RadioGroup</label>
-    <div class="group">
-      <lan-radio-group v-model="radioGroup">
-        <lan-radio label="apple">apple</lan-radio>
-        <lan-radio label="android">android</lan-radio>
-        <lan-radio label="windows">windows</lan-radio>
-      </lan-radio-group>
-    </div>
-
-    <label class="title">Checkbox</label>
-    <div class="group">
-      <lan-checkbox v-model="checkboxValue">复选框</lan-checkbox>
-    </div>
-
-    <label class="title">CheckboxGroup</label>
-    <div class="group">
-      <lan-checkbox-group v-model="checkboxGroup">
-        <lan-checkbox label="apple">apple</lan-checkbox>
-        <lan-checkbox label="android">android</lan-checkbox>
-        <lan-checkbox label="windows">windows</lan-checkbox>
-      </lan-checkbox-group>
-    </div>
-
-    <label class="title">Input</label>
-    <div class="group">
-      <lan-input customClass="ipt-wd"></lan-input>&nbsp;
-      <lan-input placeholder="请输入内容" :disabled="true"></lan-input>&nbsp;
-      <lan-input placeholder="请输入内容" prefixIcon="search"></lan-input>&nbsp;
-      <lan-input placeholder="请输入内容" suffixIcon="less"></lan-input>&nbsp;
-      <lan-input placeholder="请输入内容">
-        <template slot="prepend">
-          <span>Http://</span>
-        </template>
-        <template slot="append">
-          <i class="iconfont icon-search"></i>
-        </template>
-      </lan-input>
-    </div>
-
-    <label class="title">Select</label>
-    <div class="group">
-      <lan-select placeholder="含禁止">
-        <lan-option :value="item.value" :label="item.label" :disabled="item.disabled" v-for="item in source" :key="item.value"></lan-option>
-      </lan-select>&emsp;
-      <lan-select placeholder="含搜索" filterable>
-        <lan-option :value="item.value" :label="item.label" :disabled="item.disabled" v-for="item in source" :key="item.value"></lan-option>
-      </lan-select>&emsp;
-      <lan-select placeholder="自定义模板">
-        <lan-option :value="item.value" :label="item.label" :disabled="item.disabled" v-for="item in source" :key="item.value">
-          <span>{{item.label}}</span><br/>
-          <span>{{item.value}}</span>
-        </lan-option>
-      </lan-select>&emsp;
-      <lan-select placeholder="含搜索的自定义模板" filterable>
-        <lan-option :value="item.value" :label="item.label" :disabled="item.disabled" v-for="item in source" :key="item.value">
-          <span>{{item.label}}</span><br/>
-          <span>{{item.value}}</span>
-        </lan-option>
-      </lan-select>
-    </div>
-
-    <label class="title">TimePicker</label>
-    <div class="group">
-      <lan-time-picker placeholder="选择时间" :disabledHours="[1,3,6]" :disabledMinutes="[5,10]"></lan-time-picker>&emsp;
-      <lan-time-picker placeholder="选择时间" format="HH时mm分ss秒"></lan-time-picker>
-    </div>
-
-    <label class="title">DatePicker</label>
-    <div class="group">
-      <lan-date-picker placeholder="选择日期" min="2015-09-01" max="2020-12-30"></lan-date-picker>
-    </div>
-
-    <label class="title">Modal</label>
-    <div class="group">
-      <lan-button size="small" classType="primary" @click="handleModal">点击打开modal</lan-button>&nbsp;
-      <lan-modal title="标题" :showModal="showModal" @close="showModal = false">
-        <span>这是modal模板</span>
-      </lan-modal>
-    </div>
-
-    <label class="title">MessageBox</label>
-    <div class="group">
-      <lan-button size="small" classType="primary" @click="handleMessageBox">点击打开messageBox</lan-button>
-      <lan-message-box :visible="showMessageBox" type="warning" title="标题" message="这是消息弹框"
-                   @confirm="showMessageBox = false"></lan-message-box>
-    </div>
-
-    <label class="title">Message</label>
-    <div class="group">
-      <lan-button size="small" classType="primary" @click="handleMessage">点击打开message</lan-button>&nbsp;
-      <lan-message v-if="showMessage" type="error" message="这是一条消息"
-                   @close="showMessage = false"></lan-message>
-    </div>
-
-    <label class="title">Pagination</label>
-    <div class="group">
-      <lan-pagination :total="16" :isEllipsis="true"></lan-pagination>
-    </div>
-
-    <label class="title">Table</label>
-    <div class="group">
-      <lan-table :column="column" :tableSource="tableSource" :border="true" :stripe="true" :height="250"></lan-table>
-    </div>
-
-    <label class="title">Tabs</label>
-    <div class="group">
-      <lan-tabs :tabSource="tabSource" activeKey="标签二"></lan-tabs>
-    </div>
-
-    <label class="title">Tooltip</label>
-    <div class="group">
-      <div class="box">
-        <div class="top">
-          <lan-tooltip content="Top 提示文字 Top 提示文字 Top 提示文字" placement="top" :width="100">
-            <lan-button size="small" classType="primary">上</lan-button>
-          </lan-tooltip>
-        </div>
-        <div class="left">
-          <lan-tooltip content="Left 提示文字" placement="left"  effect='light'>
-            <lan-button size="small" classType="primary">左</lan-button>
-          </lan-tooltip>
-        </div>
-        <div class="right">
-          <lan-tooltip content="Right 提示文字" placement="right">
-            <lan-button size="small" classType="primary">右</lan-button>
-          </lan-tooltip>
-        </div>
-        <div class="bottom">
-          <lan-tooltip content="Bottom 提示文字" placement="bottom" effect='light'>
-            <lan-button size="small" classType="primary">下</lan-button>
-          </lan-tooltip>
-        </div>
-      </div>
-    </div>
-
-    <!--<label class="title">Carousel</label>-->
-    <!--<div class="group">-->
-      <!--<lan-carousel :carouselSource="carouselSource"></lan-carousel>-->
+    <!--<label class="title">Grid</label>-->
+    <!--<div class="group" style="display: block">-->
+      <!--<lan-row customClass="grid">-->
+        <!--<lan-col span="12"><div class="demo">col-12</div></lan-col>-->
+        <!--<lan-col span="12"><div class="demo">col-12</div></lan-col>-->
+      <!--</lan-row>-->
+      <!--<lan-row customClass="grid">-->
+        <!--<lan-col span="8"><div class="demo">col-8</div></lan-col>-->
+        <!--<lan-col span="8"><div class="demo">col-8</div></lan-col>-->
+        <!--<lan-col span="8"><div class="demo">col-8</div></lan-col>-->
+      <!--</lan-row>-->
+      <!--<lan-row customClass="grid">-->
+        <!--<lan-col span="6"><div class="demo">col-6</div></lan-col>-->
+        <!--<lan-col span="6"><div class="demo">col-6</div></lan-col>-->
+        <!--<lan-col span="6"><div class="demo">col-6</div></lan-col>-->
+        <!--<lan-col span="6"><div class="demo">col-6</div></lan-col>-->
+      <!--</lan-row>-->
+      <!--<lan-row customClass="grid" :gutter="16">-->
+        <!--<lan-col span="6"><div class="demo">col-6</div></lan-col>-->
+        <!--<lan-col span="6"><div class="demo">col-6</div></lan-col>-->
+        <!--<lan-col span="6"><div class="demo">col-6</div></lan-col>-->
+        <!--<lan-col span="6"><div class="demo">col-6</div></lan-col>-->
+      <!--</lan-row>-->
+      <!--<lan-row customClass="grid">-->
+        <!--<lan-col span="6" :offset="2"><div class="demo">col-6 offset-2</div></lan-col>-->
+        <!--<lan-col span="6" :push="3"><div class="demo">col-6 push-3</div></lan-col>-->
+      <!--</lan-row>-->
+      <!--<lan-row customClass="grid">-->
+        <!--<lan-col span="6" :push="18"><div class="demo">col-6 push-18</div></lan-col>-->
+        <!--<lan-col span="6" :pull="3"><div class="demo">col-6 pull-3</div></lan-col>-->
+      <!--</lan-row>-->
     <!--</div>-->
 
-    <lan-back-top></lan-back-top>
+    <!--<label class="title">Button</label>-->
+    <!--<div class="group">-->
+      <!--<lan-button size="tiny" classType="default">tiny default</lan-button>&nbsp;-->
+      <!--<lan-button size="small" classType="primary">small primary</lan-button>&nbsp;-->
+      <!--<lan-button size="normal" classType="success">normal success</lan-button>&nbsp;-->
+      <!--<lan-button size="normal" classType="warning">normal warning</lan-button>&nbsp;-->
+      <!--<lan-button size="normal" classType="danger">normal danger</lan-button>&nbsp;-->
+      <!--<lan-button :disabled="true">disabled</lan-button>&nbsp;-->
+      <!--<lan-button size="normal" classType="warning" :disabled="true">disabled</lan-button>&nbsp;-->
+      <!--<lan-button size="large" classType="info">large info</lan-button>-->
+    <!--</div>-->
+
+    <!--<label class="title">Switch</label>-->
+    <!--<div class="group">-->
+      <!--<lan-switch :switchType="true"></lan-switch>&nbsp;-->
+      <!--<lan-switch :switchType="false"></lan-switch>&nbsp;-->
+      <!--<lan-switch :switchType="true" activeColor="#0EDE00"></lan-switch>&nbsp;-->
+      <!--<lan-switch :switchType="false" inactiveColor="#FE4B4B"></lan-switch>&nbsp;-->
+      <!--<lan-switch :switchType="true" onText="开" offText="关"></lan-switch>&nbsp;-->
+      <!--<lan-switch :switchType="false" offText="关"></lan-switch>-->
+    <!--</div>-->
+
+    <!--<label class="title">Radio</label>-->
+    <!--<div class="group">-->
+      <!--<lan-radio v-model="radioValue">单选框</lan-radio>-->
+    <!--</div>-->
+
+    <!--<label class="title">RadioGroup</label>-->
+    <!--<div class="group">-->
+      <!--<lan-radio-group v-model="radioGroup">-->
+        <!--<lan-radio label="apple">apple</lan-radio>-->
+        <!--<lan-radio label="android">android</lan-radio>-->
+        <!--<lan-radio label="windows">windows</lan-radio>-->
+      <!--</lan-radio-group>-->
+    <!--</div>-->
+
+    <!--<label class="title">Checkbox</label>-->
+    <!--<div class="group">-->
+      <!--<lan-checkbox v-model="checkboxValue">复选框</lan-checkbox>-->
+    <!--</div>-->
+
+    <!--<label class="title">CheckboxGroup</label>-->
+    <!--<div class="group">-->
+      <!--<lan-checkbox-group v-model="checkboxGroup">-->
+        <!--<lan-checkbox label="apple">apple</lan-checkbox>-->
+        <!--<lan-checkbox label="android">android</lan-checkbox>-->
+        <!--<lan-checkbox label="windows">windows</lan-checkbox>-->
+      <!--</lan-checkbox-group>-->
+    <!--</div>-->
+
+    <!--<label class="title">Input</label>-->
+    <!--<div class="group">-->
+      <!--<lan-input customClass="ipt-wd"></lan-input>&nbsp;-->
+      <!--<lan-input placeholder="请输入内容" :disabled="true"></lan-input>&nbsp;-->
+      <!--<lan-input placeholder="请输入内容" prefixIcon="search"></lan-input>&nbsp;-->
+      <!--<lan-input placeholder="请输入内容" suffixIcon="less"></lan-input>&nbsp;-->
+      <!--<lan-input placeholder="请输入内容">-->
+        <!--<template slot="prepend">-->
+          <!--<span>Http://</span>-->
+        <!--</template>-->
+        <!--<template slot="append">-->
+          <!--<i class="iconfont icon-search"></i>-->
+        <!--</template>-->
+      <!--</lan-input>-->
+    <!--</div>-->
+
+    <!--<label class="title">Select</label>-->
+    <!--<div class="group">-->
+      <!--<lan-select placeholder="含禁止">-->
+        <!--<lan-option :value="item.value" :label="item.label" :disabled="item.disabled" v-for="item in source" :key="item.value"></lan-option>-->
+      <!--</lan-select>&emsp;-->
+      <!--<lan-select placeholder="含搜索" filterable>-->
+        <!--<lan-option :value="item.value" :label="item.label" :disabled="item.disabled" v-for="item in source" :key="item.value"></lan-option>-->
+      <!--</lan-select>&emsp;-->
+      <!--<lan-select placeholder="自定义模板">-->
+        <!--<lan-option :value="item.value" :label="item.label" :disabled="item.disabled" v-for="item in source" :key="item.value">-->
+          <!--<span>{{item.label}}</span><br/>-->
+          <!--<span>{{item.value}}</span>-->
+        <!--</lan-option>-->
+      <!--</lan-select>&emsp;-->
+      <!--<lan-select placeholder="含搜索的自定义模板" filterable>-->
+        <!--<lan-option :value="item.value" :label="item.label" :disabled="item.disabled" v-for="item in source" :key="item.value">-->
+          <!--<span>{{item.label}}</span><br/>-->
+          <!--<span>{{item.value}}</span>-->
+        <!--</lan-option>-->
+      <!--</lan-select>-->
+    <!--</div>-->
+
+    <!--<label class="title">TimePicker</label>-->
+    <!--<div class="group">-->
+      <!--<lan-time-picker placeholder="选择时间" :disabledHours="[1,3,6]" :disabledMinutes="[5,10]"></lan-time-picker>&emsp;-->
+      <!--<lan-time-picker placeholder="选择时间" format="HH时mm分ss秒"></lan-time-picker>-->
+    <!--</div>-->
+
+    <!--<label class="title">DatePicker</label>-->
+    <!--<div class="group">-->
+      <!--<lan-date-picker placeholder="选择日期" min="2015-09-01" max="2020-12-30"></lan-date-picker>-->
+    <!--</div>-->
+
+    <!--<label class="title">Modal</label>-->
+    <!--<div class="group">-->
+      <!--<lan-button size="small" classType="primary" @click="handleModal">点击打开modal</lan-button>&nbsp;-->
+      <!--<lan-modal title="标题" :showModal="showModal" @close="showModal = false">-->
+        <!--<span>这是modal模板</span>-->
+      <!--</lan-modal>-->
+    <!--</div>-->
+
+    <!--<label class="title">MessageBox</label>-->
+    <!--<div class="group">-->
+      <!--<lan-button size="small" classType="primary" @click="handleMessageBox">点击打开messageBox</lan-button>-->
+      <!--<lan-message-box :visible="showMessageBox" type="warning" title="标题" message="这是消息弹框"-->
+                   <!--@confirm="showMessageBox = false"></lan-message-box>-->
+    <!--</div>-->
+
+    <!--<label class="title">Message</label>-->
+    <!--<div class="group">-->
+      <!--<lan-button size="small" classType="primary" @click="handleMessage">点击打开message</lan-button>&nbsp;-->
+      <!--<lan-message v-if="showMessage" type="error" message="这是一条消息"-->
+                   <!--@close="showMessage = false"></lan-message>-->
+    <!--</div>-->
+
+    <!--<label class="title">Pagination</label>-->
+    <!--<div class="group">-->
+      <!--<lan-pagination :total="16" :isEllipsis="true"></lan-pagination>-->
+    <!--</div>-->
+
+    <!--<label class="title">Table</label>-->
+    <!--<div class="group">-->
+      <!--<lan-table :column="column" :tableSource="tableSource" :border="true" :stripe="true" :height="250"></lan-table>-->
+    <!--</div>-->
+
+    <!--<label class="title">Tabs</label>-->
+    <!--<div class="group">-->
+      <!--<lan-tabs :tabSource="tabSource" activeKey="标签二"></lan-tabs>-->
+    <!--</div>-->
+
+    <!--<label class="title">Tooltip</label>-->
+    <!--<div class="group">-->
+      <!--<div class="box">-->
+        <!--<div class="top">-->
+          <!--<lan-tooltip content="Top 提示文字 Top 提示文字 Top 提示文字" placement="top" :width="100">-->
+            <!--<lan-button size="small" classType="primary">上</lan-button>-->
+          <!--</lan-tooltip>-->
+        <!--</div>-->
+        <!--<div class="left">-->
+          <!--<lan-tooltip content="Left 提示文字" placement="left"  effect='light'>-->
+            <!--<lan-button size="small" classType="primary">左</lan-button>-->
+          <!--</lan-tooltip>-->
+        <!--</div>-->
+        <!--<div class="right">-->
+          <!--<lan-tooltip content="Right 提示文字" placement="right">-->
+            <!--<lan-button size="small" classType="primary">右</lan-button>-->
+          <!--</lan-tooltip>-->
+        <!--</div>-->
+        <!--<div class="bottom">-->
+          <!--<lan-tooltip content="Bottom 提示文字" placement="bottom" effect='light'>-->
+            <!--<lan-button size="small" classType="primary">下</lan-button>-->
+          <!--</lan-tooltip>-->
+        <!--</div>-->
+      <!--</div>-->
+    <!--</div>-->
+
+    <!--&lt;!&ndash;<label class="title">Carousel</label>&ndash;&gt;-->
+    <!--&lt;!&ndash;<div class="group">&ndash;&gt;-->
+      <!--&lt;!&ndash;<lan-carousel :carouselSource="carouselSource"></lan-carousel>&ndash;&gt;-->
+    <!--&lt;!&ndash;</div>&ndash;&gt;-->
+
+    <!--<lan-back-top></lan-back-top>-->
+  <!--</div>-->
+  <div class="m-wrapper">
+    <div class="m-hd">
+      <img src="../../static/img/logo.png" class="m-hd-logo"/>
+      <lan-tabs :tabSource="tabSource" activeKey="组件"></lan-tabs>
+    </div>
+    <div class="m-mn">
+      <lan-row>
+        <lan-col :span="4">
+          <ul class="m-leftBar">
+            <li class="menu-item menu-group"><router-link to="/affix">安装</router-link></li>
+            <li class="menu-group">basic</li>
+            <li class="menu-item"><router-link to="/gird">Grid 栅格</router-link></li>
+            <li class="menu-item">Button 按钮</li>
+            <li class="menu-item">Icon 图标</li>
+            <li class="menu-group">Form</li>
+            <li class="menu-item">Switch 开关</li>
+            <li class="menu-item">Radio 单选框</li>
+            <li class="menu-item">Checkbox 复选框</li>
+            <li class="menu-item">Input 输入框</li>
+            <li class="menu-item">Select 选择器</li>
+            <li class="menu-item">TimePicker 时间选择器</li>
+            <li class="menu-item">DatePicker 日期选择器</li>
+            <li class="menu-item">Table 表格</li>
+            <li class="menu-group">View</li>
+            <li class="menu-item">Message 消息</li>
+            <li class="menu-item">MessageBox 消息框</li>
+            <li class="menu-item">Modal 模态框</li>
+            <li class="menu-item">Tooltip 提示</li>
+            <li class="menu-group">Other</li>
+            <li class="menu-item">Tabs 标签</li>
+            <li class="menu-item">Pagination 分页</li>
+            <li class="menu-item">BackTop 返回顶部</li>
+          </ul>
+        </lan-col>
+        <lan-col :span="20">
+          <div class="m-wrapper">
+            <router-view></router-view>
+          </div>
+        </lan-col>
+      </lan-row>
+    </div>
   </div>
 </template>
 
@@ -299,14 +341,9 @@
           address: '上海市普陀区金沙江路 1520 弄'
         }],
         tabSource: [{
-          label: '标签一'
+          label: '组件'
         }, {
-          label: '标签二'
-        }, {
-          label: '标签三'
-        }, {
-          label: '标签四',
-          icon: 'all'
+          label: '仓库'
         }],
         radioValue: false,
         radioGroup: 'apple',
@@ -336,49 +373,53 @@
   }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style>
-  label.title{
-    font-size: 40px;
-    display: block;
-    margin: 20px auto;
-  }
-  .group {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  .grid .lan-col  {
-    color: #fff;
-    text-align: center;
-    margin: 10px 0;
-  }
-  .grid .lan-col .demo {
-    background: rgba(0,153,229,.9);
-  }
-  .grid .lan-col:nth-child(odd) .demo{
-    background: rgba(0, 153, 229, .7);
-  }
-  .ipt-wd {
-    width: 500px;
-  }
-  .box {
-    width: 500px;
-    margin: 100px 150px;
-  }
-  .box .top {
-    text-align: center;
-  }
-  .box .left {
-    float: left;
-    width: 100px;
-  }
-  .box .right {
-    float: right;
-    width: 100px;
-  }
-  .box .bottom {
-    clear: both;
-    text-align: center;
-  }
-
+<style lang="less">
+  @import '../styles/index.less';
 </style>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<!--<style>-->
+  <!--label.title{-->
+    <!--font-size: 40px;-->
+    <!--display: block;-->
+    <!--margin: 20px auto;-->
+  <!--}-->
+  <!--.group {-->
+    <!--display: flex;-->
+    <!--flex-wrap: wrap;-->
+  <!--}-->
+  <!--.grid .lan-col  {-->
+    <!--color: #fff;-->
+    <!--text-align: center;-->
+    <!--margin: 10px 0;-->
+  <!--}-->
+  <!--.grid .lan-col .demo {-->
+    <!--background: rgba(0,153,229,.9);-->
+  <!--}-->
+  <!--.grid .lan-col:nth-child(odd) .demo{-->
+    <!--background: rgba(0, 153, 229, .7);-->
+  <!--}-->
+  <!--.ipt-wd {-->
+    <!--width: 500px;-->
+  <!--}-->
+  <!--.box {-->
+    <!--width: 500px;-->
+    <!--margin: 100px 150px;-->
+  <!--}-->
+  <!--.box .top {-->
+    <!--text-align: center;-->
+  <!--}-->
+  <!--.box .left {-->
+    <!--float: left;-->
+    <!--width: 100px;-->
+  <!--}-->
+  <!--.box .right {-->
+    <!--float: right;-->
+    <!--width: 100px;-->
+  <!--}-->
+  <!--.box .bottom {-->
+    <!--clear: both;-->
+    <!--text-align: center;-->
+  <!--}-->
+
+<!--</style>-->

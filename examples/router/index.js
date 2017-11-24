@@ -8,6 +8,14 @@ export default new Router({
     {
       path: '/'
     },
+    {
+      path: '/affix',
+      component: resolve => {require(['../components/affix'],resolve)}
+    },
+    {
+      path: '/gird',
+      component: resolve => {require(['../components/grid'],resolve)}
+    }
     // {
     //   path: '/findMusic',
     //   component: resolve => {require(['@/components/findMusic/findMusic'],resolve)},

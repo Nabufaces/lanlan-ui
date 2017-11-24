@@ -9,12 +9,10 @@ Vue.config.productionTip = false;
 
 Vue.use(lanlanui)
 
-console.log(lanlanui)
-
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
-  //router,
+  router,
   template: '<index/>',
   components: { index }
 });
