@@ -212,9 +212,9 @@
       <lan-row>
         <lan-col :span="4">
           <ul class="m-leftBar">
-            <li class="menu-item menu-group"><router-link to="/affix">安装</router-link></li>
+            <router-link to="/affix" class="menu-item menu-group" tag="li">安装</router-link>
             <li class="menu-group">basic</li>
-            <li class="menu-item"><router-link to="/gird">Grid 栅格</router-link></li>
+            <router-link to="/gird" class="menu-item" tag="li">Grid 栅格</router-link>
             <li class="menu-item">Button 按钮</li>
             <li class="menu-item">Icon 图标</li>
             <li class="menu-group">Form</li>

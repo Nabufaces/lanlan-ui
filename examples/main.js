@@ -4,10 +4,13 @@ import Vue from 'vue'
 import router from './router'
 import lanlanui from '../src/main'
 import index from './components/index.vue'
+import hightlight from './lib/highlight'
 
 Vue.config.productionTip = false;
 
-Vue.use(lanlanui)
+Vue.use(lanlanui);
+Vue.use(hightlight);
+//console.log(hightlight)
 
 /* eslint-disable no-new */
 new Vue({
