@@ -21,7 +21,10 @@ export default new Router({
       path: '/button',
       component: resolve => {require(['../components/button'],resolve)}
     },
-
+    {
+      path: '/switch',
+      component: resolve => {require(['../components/switch'],resolve)}
+    },
     {
       path: '/tabs',
       component: resolve => {require(['../components/tabs'],resolve)}

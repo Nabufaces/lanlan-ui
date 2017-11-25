@@ -1,13 +1,22 @@
-#### switch 开关 lan-switch
-1. switchType 开关状态(必填)
-    1.true    开
-    2.false   关
-2. activeColor 开启背景颜色
-3. inactiveColor 关闭背景颜色
-4. onText switch打开时的文字
-5. offText switch关闭时的文字
-6. event: change
+## 懒懒UI库
 
+### NPM安装
+
+#### 全局引入
+      $ npm install lanlan-ui@0.0.10 --save
+      import lanlanui from 'lanlan-ui'
+      Vue.use(lanlanui);
+  
+#### 按需引入
+      $ npm install lanlan-ui@0.0.10 --save
+      import { lanButton } from 'lanlan-ui'
+      new Vue({
+        el: '#app',
+        components: {
+          lanButton
+        }
+      })
+      
 #### modal 模态框 lan-modal
 1. showModal        是否显示模态框（必填）
 2. title            模态框标题

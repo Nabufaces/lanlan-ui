@@ -1,5 +1,4 @@
 .lan-switch {
-  width: 44px;
   height: 22px;
   display: inline-block;
   position: relative;
@@ -10,6 +9,18 @@
   transition: border-color 0.3s, background-color 0.3s;
   vertical-align: middle;
   color: #fff;
+}
+.lan-switch.lan-switch-normal {
+  width: 44px;
+}
+.lan-switch.lan-switch-normal .close {
+  transform: translateX(-22px);
+}
+.lan-switch.lan-switch-large {
+  width: 58px;
+}
+.lan-switch.lan-switch-large .close {
+  transform: translateX(-36px);
 }
 .lan-switch .open,
 .lan-switch .close {
@@ -23,9 +34,6 @@
 }
 .lan-switch .open {
   right: 2px;
-}
-.lan-switch .close {
-  transform: translateX(-22px);
 }
 .lan-switch .onText,
 .lan-switch .offText {

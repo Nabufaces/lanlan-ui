@@ -10,7 +10,6 @@ Vue.config.productionTip = false;
 
 Vue.use(lanlanui);
 Vue.use(hightlight);
-//console.log(hightlight)
 
 /* eslint-disable no-new */
 new Vue({

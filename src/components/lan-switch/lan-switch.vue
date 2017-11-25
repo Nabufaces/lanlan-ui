@@ -1,5 +1,6 @@
 <template>
   <span class="lan-switch"
+    :class="`lan-switch-${size}`"
     :style="{
       backgroundColor: (state ? (activeColor ? activeColor : '#FF7846') : (inactiveColor ? inactiveColor : '#686E74'))
     }"
@@ -17,7 +18,14 @@
     props: {
       switchType: {
         type: Boolean,
-        required: true
+        default: true
+      },
+      size: {
+        type: String,
+        default: 'normal',
+        validator: function (value) {
+          return ['normal', 'large'].indexOf(value) > -1
+        }
       },
       activeColor: String,
       inactiveColor: String,

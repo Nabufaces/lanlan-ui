@@ -1,5 +1,4 @@
 .lan-switch {
-  width: 44px;
   height: 22px;
   display: inline-block;
   position: relative;
@@ -10,7 +9,19 @@
   transition: border-color .3s,background-color .3s;
   vertical-align: middle;
   color: #fff;
-  .open, .close{
+  &&-normal {
+    width: 44px;
+    .close {
+      transform: translateX(-22px);
+    }
+  }
+  &&-large {
+    width: 58px;
+    .close {
+      transform: translateX(-36px);
+    }
+  }
+  .open, .close {
     width: 18px;
     height: 18px;
     position: absolute;
@@ -22,10 +33,7 @@
   .open {
     right: 2px;
   }
-  .close {
-    transform: translateX(-22px);
-  }
-  .onText, .offText{
+  .onText, .offText {
     position: absolute;
     top: 5px;
     font-size: 12px;

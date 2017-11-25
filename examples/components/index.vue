@@ -221,7 +221,7 @@
             <router-link to="/button" class="menu-item" tag="li">Button 按钮</router-link>
             <li class="menu-item">Icon 图标</li>
             <li class="menu-group">Form</li>
-            <li class="menu-item">Switch 开关</li>
+            <router-link to="/switch" class="menu-item" tag="li">Switch 开关</router-link>
             <li class="menu-item">Radio 单选框</li>
             <li class="menu-item">Checkbox 复选框</li>
             <li class="menu-item">Input 输入框</li>
