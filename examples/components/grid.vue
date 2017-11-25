@@ -11,7 +11,7 @@
       <li>每个<code>row</code>中的col总和应该为24</li>
     </ul>
 
-    <h2>代码示例</h2>
+    <h2 style="margin-top: 40px">代码示例</h2>
     <lan-row customClass="demo-grid">
       <lan-col span="12"><div class="demo">col-12</div></lan-col>
       <lan-col span="12"><div class="demo">col-12</div></lan-col>

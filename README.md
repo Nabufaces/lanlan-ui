@@ -1,20 +1,3 @@
-#### button 按钮 lan-button 
-1. classType 样式选择
-    1. primary
-    2. success
-    3. warning
-    4. info
-    5. danger
-    6. default（default)
-2. size 按钮尺寸大小
-    1. tiny
-    2. small
-    3. normal（default)
-    4. large
-3. disabled: 是否禁用（可选） 
-4. customClass 样式扩展（可选）
-5. event: click
-
 #### switch 开关 lan-switch
 1. switchType 开关状态(必填)
     1.true    开

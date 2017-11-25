@@ -215,7 +215,7 @@
             <router-link to="/affix" class="menu-item menu-group" tag="li">安装</router-link>
             <li class="menu-group">basic</li>
             <router-link to="/gird" class="menu-item" tag="li">Grid 栅格</router-link>
-            <li class="menu-item">Button 按钮</li>
+            <router-link to="/button" class="menu-item" tag="li">Button 按钮</router-link>
             <li class="menu-item">Icon 图标</li>
             <li class="menu-group">Form</li>
             <li class="menu-item">Switch 开关</li>

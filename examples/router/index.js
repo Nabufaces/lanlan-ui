@@ -16,6 +16,10 @@ export default new Router({
     {
       path: '/gird',
       component: resolve => {require(['../components/grid'],resolve)}
+    },
+    {
+      path: '/button',
+      component: resolve => {require(['../components/button'],resolve)}
     }
   ]
 })

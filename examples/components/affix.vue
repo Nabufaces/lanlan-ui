@@ -2,7 +2,7 @@
   <article>
     <h1>NPM安装</h1>
 
-    <h2>全局引入</h2>
+    <h2 style="margin-top: 40px">全局引入</h2>
     <pre v-highlight>
       <code class="javascript">
         $ npm install lanlan-ui@0.0.10 --save
