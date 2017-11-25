@@ -1,61 +1,6 @@
 <template>
   <!--<div class="mn">-->
 
-    <!--<label class="title">Grid</label>-->
-    <!--<div class="group" style="display: block">-->
-      <!--<lan-row customClass="grid">-->
-        <!--<lan-col span="12"><div class="demo">col-12</div></lan-col>-->
-        <!--<lan-col span="12"><div class="demo">col-12</div></lan-col>-->
-      <!--</lan-row>-->
-      <!--<lan-row customClass="grid">-->
-        <!--<lan-col span="8"><div class="demo">col-8</div></lan-col>-->
-        <!--<lan-col span="8"><div class="demo">col-8</div></lan-col>-->
-        <!--<lan-col span="8"><div class="demo">col-8</div></lan-col>-->
-      <!--</lan-row>-->
-      <!--<lan-row customClass="grid">-->
-        <!--<lan-col span="6"><div class="demo">col-6</div></lan-col>-->
-        <!--<lan-col span="6"><div class="demo">col-6</div></lan-col>-->
-        <!--<lan-col span="6"><div class="demo">col-6</div></lan-col>-->
-        <!--<lan-col span="6"><div class="demo">col-6</div></lan-col>-->
-      <!--</lan-row>-->
-      <!--<lan-row customClass="grid" :gutter="16">-->
-        <!--<lan-col span="6"><div class="demo">col-6</div></lan-col>-->
-        <!--<lan-col span="6"><div class="demo">col-6</div></lan-col>-->
-        <!--<lan-col span="6"><div class="demo">col-6</div></lan-col>-->
-        <!--<lan-col span="6"><div class="demo">col-6</div></lan-col>-->
-      <!--</lan-row>-->
-      <!--<lan-row customClass="grid">-->
-        <!--<lan-col span="6" :offset="2"><div class="demo">col-6 offset-2</div></lan-col>-->
-        <!--<lan-col span="6" :push="3"><div class="demo">col-6 push-3</div></lan-col>-->
-      <!--</lan-row>-->
-      <!--<lan-row customClass="grid">-->
-        <!--<lan-col span="6" :push="18"><div class="demo">col-6 push-18</div></lan-col>-->
-        <!--<lan-col span="6" :pull="3"><div class="demo">col-6 pull-3</div></lan-col>-->
-      <!--</lan-row>-->
-    <!--</div>-->
-
-    <!--<label class="title">Button</label>-->
-    <!--<div class="group">-->
-      <!--<lan-button size="tiny" classType="default">tiny default</lan-button>&nbsp;-->
-      <!--<lan-button size="small" classType="primary">small primary</lan-button>&nbsp;-->
-      <!--<lan-button size="normal" classType="success">normal success</lan-button>&nbsp;-->
-      <!--<lan-button size="normal" classType="warning">normal warning</lan-button>&nbsp;-->
-      <!--<lan-button size="normal" classType="danger">normal danger</lan-button>&nbsp;-->
-      <!--<lan-button :disabled="true">disabled</lan-button>&nbsp;-->
-      <!--<lan-button size="normal" classType="warning" :disabled="true">disabled</lan-button>&nbsp;-->
-      <!--<lan-button size="large" classType="info">large info</lan-button>-->
-    <!--</div>-->
-
-    <!--<label class="title">Switch</label>-->
-    <!--<div class="group">-->
-      <!--<lan-switch :switchType="true"></lan-switch>&nbsp;-->
-      <!--<lan-switch :switchType="false"></lan-switch>&nbsp;-->
-      <!--<lan-switch :switchType="true" activeColor="#0EDE00"></lan-switch>&nbsp;-->
-      <!--<lan-switch :switchType="false" inactiveColor="#FE4B4B"></lan-switch>&nbsp;-->
-      <!--<lan-switch :switchType="true" onText="开" offText="关"></lan-switch>&nbsp;-->
-      <!--<lan-switch :switchType="false" offText="关"></lan-switch>-->
-    <!--</div>-->
-
     <!--<label class="title">Radio</label>-->
     <!--<div class="group">-->
       <!--<lan-radio v-model="radioValue">单选框</lan-radio>-->
@@ -206,7 +151,7 @@
   <div class="m-wrapper">
     <div class="m-hd">
       <img src="../../static/img/logo.png" class="m-hd-logo"/>
-      <lan-tabs :activeLabel="1">
+      <lan-tabs :activeLabel="1" @change="toRepository">
         <lan-tab-pane :label="1"><router-link to="/affix" tag="span">组件</router-link></lan-tab-pane>
         <lan-tab-pane :label="2">仓库</lan-tab-pane>
       </lan-tabs>
@@ -252,10 +197,7 @@
 
 <script>
 
-  import LanTabPane from "../../src/components/lan-tab-pane/lan-tab-pane.vue";
-
   export default {
-    components: {LanTabPane},
     data () {
       return {
         source: [{
@@ -361,6 +303,11 @@
     },
 
     methods: {
+      toRepository(value) {
+        if(value === 2) {
+          window.location.href = 'https://code.aliyun.com/lanlan_xsj/lanlanFE'
+        }
+      },
       handleModal(){
         this.showModal = true;
       },
@@ -380,26 +327,6 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <!--<style>-->
-  <!--label.title{-->
-    <!--font-size: 40px;-->
-    <!--display: block;-->
-    <!--margin: 20px auto;-->
-  <!--}-->
-  <!--.group {-->
-    <!--display: flex;-->
-    <!--flex-wrap: wrap;-->
-  <!--}-->
-  <!--.grid .lan-col  {-->
-    <!--color: #fff;-->
-    <!--text-align: center;-->
-    <!--margin: 10px 0;-->
-  <!--}-->
-  <!--.grid .lan-col .demo {-->
-    <!--background: rgba(0,153,229,.9);-->
-  <!--}-->
-  <!--.grid .lan-col:nth-child(odd) .demo{-->
-    <!--background: rgba(0, 153, 229, .7);-->
-  <!--}-->
   <!--.ipt-wd {-->
     <!--width: 500px;-->
   <!--}-->

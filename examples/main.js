@@ -5,6 +5,9 @@ import router from './router'
 import lanlanui from '../src/main'
 import index from './components/index.vue'
 import hightlight from './lib/highlight'
+import lanlan from '../dist/app'
+
+console.log(lanlan);
 
 Vue.config.productionTip = false;
 

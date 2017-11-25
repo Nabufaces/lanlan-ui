@@ -9,10 +9,6 @@ function resolve (dir) {
 }
 
 module.exports = {
-  entry: {
-    //app: './src/main.js',
-    main: './examples/main.js'
-  },
   output: {
     path: config.build.assetsRoot,
     filename: '[name].js',

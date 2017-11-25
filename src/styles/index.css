@@ -944,6 +944,7 @@ input::-ms-reveal {
   display: none;
 }
 a {
+  color: #1E242A;
   background: transparent;
   text-decoration: none;
   outline: none;
