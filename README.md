@@ -36,12 +36,6 @@
 4. border           表格是否带边框
 5. stripe           表格是否带斑马纹
 
-#### tabs 标签页 lan-tabs
-1. tabSource        标签页数据源
-    1. label        选项卡显示文字
-    2. icon         选项卡icon
-2. activeKey        当前激活标签页的 key, 与 tabSource中label对应
-
 #### toolTip 文字提示 lan-toolTip
 1. placement tooltip的出现位置
       1. top 

@@ -10,6 +10,7 @@ import lanRadioGroup from './components/lan-radioGroup'
 import lanRadio from './components/lan-radio'
 import LanCheckboxGroup from './components/lan-checkboxGroup'
 import lanCheckbox from './components/lan-checkbox'
+import lanIcon from './components/lan-icon'
 import lanInput from './components/lan-input'
 import lanSelect from './components/lan-select'
 import lanOption from './components/lan-option'
@@ -21,6 +22,7 @@ import lanMessage from './components/lan-message'
 import lanPagination from './components/lan-pagination'
 import lanTable from './components/lan-table'
 import lanTabs from './components/lan-tabs'
+import lanTabPane from './components/lan-tab-pane'
 import lanTooltip from './components/lan-tooltip'
 import lanBackTop from './components/lan-backTop'
 //import lanCarousel from './components/lan-carousel'
@@ -34,6 +36,7 @@ const components = {
     lanRadio,
     LanCheckboxGroup,
     lanCheckbox,
+    lanIcon,
     lanInput,
     lanSelect,
     lanOption,
@@ -45,6 +48,7 @@ const components = {
     lanPagination,
     lanTable,
     lanTabs,
+    lanTabPane,
     lanTooltip,
     lanBackTop,
     //lanCarousel

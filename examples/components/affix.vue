@@ -33,6 +33,6 @@
 
 <script>
   export default {
-
+    name: 'affix'
   }
 </script>

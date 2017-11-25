@@ -206,7 +206,10 @@
   <div class="m-wrapper">
     <div class="m-hd">
       <img src="../../static/img/logo.png" class="m-hd-logo"/>
-      <lan-tabs :tabSource="tabSource" activeKey="组件"></lan-tabs>
+      <lan-tabs :activeLabel="1">
+        <lan-tab-pane :label="1"><router-link to="/affix" tag="span">组件</router-link></lan-tab-pane>
+        <lan-tab-pane :label="2">仓库</lan-tab-pane>
+      </lan-tabs>
     </div>
     <div class="m-mn">
       <lan-row>
@@ -232,7 +235,7 @@
             <li class="menu-item">Modal 模态框</li>
             <li class="menu-item">Tooltip 提示</li>
             <li class="menu-group">Other</li>
-            <li class="menu-item">Tabs 标签</li>
+            <router-link to="/tabs" class="menu-item" tag="li">Tabs 标签</router-link>
             <li class="menu-item">Pagination 分页</li>
             <li class="menu-item">BackTop 返回顶部</li>
           </ul>
@@ -249,7 +252,10 @@
 
 <script>
 
+  import LanTabPane from "../../src/components/lan-tab-pane/lan-tab-pane.vue";
+
   export default {
+    components: {LanTabPane},
     data () {
       return {
         source: [{
@@ -339,11 +345,6 @@
           date: '2016-07-25',
           name: '王小二',
           address: '上海市普陀区金沙江路 1520 弄'
-        }],
-        tabSource: [{
-          label: '组件'
-        }, {
-          label: '仓库'
         }],
         radioValue: false,
         radioGroup: 'apple',

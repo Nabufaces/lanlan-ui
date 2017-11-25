@@ -2146,6 +2146,7 @@ code {
   height: 100%;
   padding: 8px 16px;
   margin-right: 16px;
+  cursor: pointer;
 }
 .lan-tabs-item.active {
   color: #FF7846;
