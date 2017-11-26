@@ -2,12 +2,12 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import router from './router'
-import lanlanui from '../src/main'
+import '../dist/css/lanlanui.css'
+import lanlanui from '../dist/lanlanui'
 import index from './components/index.vue'
 import hightlight from './lib/highlight'
-import lanlan from '../dist/app'
 
-console.log(lanlan);
+console.log(lanlanui);
 
 Vue.config.productionTip = false;
 
