@@ -16,6 +16,11 @@ const webpackConfig = merge(baseWebpackConfig, {
   entry: {
     app: './src/main.js'
   },
+  output: {
+    path: config.build.assetsRoot,
+    filename: utils.assetsPath('[name].js'),
+    publicPath: config.build.assetsPublicPath
+  },
   module: {
     rules: utils.styleLoaders({
       sourceMap: config.build.productionSourceMap,
@@ -23,11 +28,6 @@ const webpackConfig = merge(baseWebpackConfig, {
     })
   },
   devtool: config.build.productionSourceMap ? '#source-map' : false,
-  output: {
-    path: config.build.assetsRoot,
-    filename: utils.assetsPath('[name].js'),
-    chunkFilename: utils.assetsPath('[id].js')
-  },
   plugins: [
     // http://vuejs.github.io/vue-loader/en/workflow/production.html
     new webpack.DefinePlugin({
