@@ -68,19 +68,6 @@
  
 ## 表单
 
-#### radioGroup 单选框组  lan-radioGroup
-1. value	    指定当前选中的项目。可以使用 v-model 双向绑定数据
-2. event: onChange  选项状态发生改变时触发
-
-#### checkbox 复选框 lan-checkbox
-1. value	    只在单独使用时有效。可以使用 v-model 双向绑定数据
-2. label	    只在组合使用时有效。指定当前选项的 value 值，组合会自动判断当前选择的项目
-3. event: onChange  选项状态发生改变时触发
-
-#### checkboxGroup 单选框组  lan-checkboxGroup
-1. value	    指定当前选中的项目。可以使用 v-model 双向绑定数据
-2. event: onChange  选项状态发生改变时触发
-
 #### input 输入框 lan-input
 1. placeholder     占位符
 2. readonly        是否只读
@@ -113,14 +100,6 @@
     4. slot       自定义模板
 5. event:
     1. selected:  选中时触发
-    
-#### timePicker 时间选择 lan-timePicker
-1. placeholder      非范围选择时的占位内容
-2. format           展示的时间格式（默认 HH:mm)
-3. disabledHours    禁用小时段
-4. disabledMinutes  禁用分钟段
-5. disabledSeconds  禁用秒段
-6. event: change  时间发生变化时触发
 
 #### datePicker 日期选择 lan-datePicker
 1. placeholder	    非范围选择时的占位内容

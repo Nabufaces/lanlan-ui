@@ -34,6 +34,10 @@ export default new Router({
       component: resolve => {require(['../components/checkbox'],resolve)}
     },
     {
+      path: '/timePicker',
+      component: resolve => {require(['../components/timePicker'],resolve)}
+    },
+    {
       path: '/tabs',
       component: resolve => {require(['../components/tabs'],resolve)}
     },

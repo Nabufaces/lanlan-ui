@@ -39,12 +39,6 @@
       <!--</lan-select>-->
     <!--</div>-->
 
-    <!--<label class="title">TimePicker</label>-->
-    <!--<div class="group">-->
-      <!--<lan-time-picker placeholder="选择时间" :disabledHours="[1,3,6]" :disabledMinutes="[5,10]"></lan-time-picker>&emsp;-->
-      <!--<lan-time-picker placeholder="选择时间" format="HH时mm分ss秒"></lan-time-picker>-->
-    <!--</div>-->
-
     <!--<label class="title">DatePicker</label>-->
     <!--<div class="group">-->
       <!--<lan-date-picker placeholder="选择日期" min="2015-09-01" max="2020-12-30"></lan-date-picker>-->
@@ -143,7 +137,7 @@
             <router-link to="/checkbox" class="menu-item" tag="li">Checkbox 复选框</router-link>
             <li class="menu-item">Input 输入框</li>
             <li class="menu-item">Select 选择器</li>
-            <li class="menu-item">TimePicker 时间选择器</li>
+            <router-link to="/timePicker" class="menu-item" tag="li">TimePicker 时间选择器</router-link>
             <li class="menu-item">DatePicker 日期选择器</li>
             <li class="menu-item">Table 表格</li>
             <li class="menu-group">View</li>

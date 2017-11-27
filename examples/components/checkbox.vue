@@ -67,7 +67,7 @@
 <script>
 
   export default {
-    name: 'radio',
+    name: 'checkbox',
     data() {
       return {
         checkboxValue: false,
