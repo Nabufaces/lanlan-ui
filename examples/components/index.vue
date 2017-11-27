@@ -22,10 +22,6 @@
       <!--</lan-select>-->
     <!--</div>-->
 
-    <!--<label class="title">DatePicker</label>-->
-    <!--<div class="group">-->
-      <!--<lan-date-picker placeholder="选择日期" min="2015-09-01" max="2020-12-30"></lan-date-picker>-->
-    <!--</div>-->
 
     <!--<label class="title">Modal</label>-->
     <!--<div class="group">-->
@@ -49,19 +45,9 @@
                    <!--@close="showMessage = false"></lan-message>-->
     <!--</div>-->
 
-    <!--<label class="title">Pagination</label>-->
-    <!--<div class="group">-->
-      <!--<lan-pagination :total="16" :isEllipsis="true"></lan-pagination>-->
-    <!--</div>-->
-
     <!--<label class="title">Table</label>-->
     <!--<div class="group">-->
       <!--<lan-table :column="column" :tableSource="tableSource" :border="true" :stripe="true" :height="250"></lan-table>-->
-    <!--</div>-->
-
-    <!--<label class="title">Tabs</label>-->
-    <!--<div class="group">-->
-      <!--<lan-tabs :tabSource="tabSource" activeKey="标签二"></lan-tabs>-->
     <!--</div>-->
 
     <!--<label class="title">Tooltip</label>-->
@@ -121,7 +107,7 @@
             <router-link to="/input" class="menu-item" tag="li">Input 输入框</router-link>
             <li class="menu-item">Select 选择器</li>
             <router-link to="/timePicker" class="menu-item" tag="li">TimePicker 时间选择器</router-link>
-            <li class="menu-item">DatePicker 日期选择器</li>
+            <router-link to="/datePicker" class="menu-item" tag="li">DatePicker 日期选择器</router-link>
             <li class="menu-item">Table 表格</li>
             <li class="menu-group">View</li>
             <li class="menu-item">Message 消息</li>

@@ -42,6 +42,10 @@ export default new Router({
       component: resolve => {require(['../components/timePicker'],resolve)}
     },
     {
+      path: '/datePicker',
+      component: resolve => {require(['../components/datePicker'],resolve)}
+    },
+    {
       path: '/tabs',
       component: resolve => {require(['../components/tabs'],resolve)}
     },

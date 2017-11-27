@@ -166,6 +166,10 @@
           explain: '在 Input 获得焦点时触发',
           back: '-'
         }, {
+          eventName: 'click',
+          explain: '在 Input 点击时触发',
+          back: '-'
+        }, {
           eventName: 'keyup',
           explain: '原生的 keyup 事件',
           back: '-'

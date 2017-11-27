@@ -5,7 +5,7 @@
                :readonly="true"
                suffixIcon="date"
                customClass="custonClass"
-               @focus="showPick = !showPick"
+               @click="showPick = !showPick"
                @blur="showPick = false"
     ></lan-input>
     <div class="lan-datePicker-dropdown" v-if="showPick" @mousedown.prevent>
@@ -66,8 +66,8 @@
 
 <script>
 
-  import lanInput from '../lan-input/lan-input'
-  import lanButton from '../lan-button/lan-button'
+  import lanInput from '../lan-input'
+  import lanButton from '../lan-button'
   import {handleFormat} from '../../base/assist'
 
   export default{

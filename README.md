@@ -80,17 +80,6 @@
 5. event:
     1. selected:  选中时触发
 
-#### datePicker 日期选择 lan-datePicker
-1. placeholder	    非范围选择时的占位内容
-2. min        	    最小日期（例: '2000-01-01'）
-3. max              最大日期
-4. format           展示的日期格式（默认 'yyyy-MM-dd')
-5. event: confirm   日期确认时触发
-
-
-## 导航
-
-
 ## 通知
 
 #### notify 通知 lan-notify

@@ -5,7 +5,7 @@
                :readonly="true"
                suffixIcon="task-management"
                :customClass="showSeconds ? 'lan-timePicker-group-3' : 'lan-timePicker-group-2' "
-               @focus="showPick = !showPick"
+               @click="showPick = !showPick"
                @blur="handleChange"
                ></lan-input>
     <div class="dropdown" v-if="showPick" @mousedown.prevent>

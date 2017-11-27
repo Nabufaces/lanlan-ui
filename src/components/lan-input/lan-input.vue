@@ -18,6 +18,7 @@
            @change="handleChange($event.target.value)"
            @focus="handleFocus"
            @blur="handleBlur"
+           @click="handleClick"
            @keyup="handleKeyup"
            @keypress="handleKeypress"
            @keydown="handleKeydown"
@@ -71,11 +72,14 @@
       handleChange(value){
         this.$emit('change', value);
       },
+      handleFocus() {
+        this.$emit('focus');
+      },
       handleBlur(){
         this.$emit('blur');
       },
-      handleFocus() {
-        this.$emit('focus');
+      handleClick() {
+        this.$emit('click');
       },
       handleKeyup() {
         this.$emit('keyup');
