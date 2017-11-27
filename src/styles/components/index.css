@@ -706,6 +706,12 @@
   display: inline-block;
   line-height: normal;
 }
+.lan-input.lan-input-prefix .t-ipt {
+  padding-left: 23px;
+}
+.lan-input.lan-input-suffix .t-ipt {
+  padding-right: 23px;
+}
 .lan-input.lan-input-group {
   display: table;
   border-collapse: separate;
@@ -751,14 +757,8 @@
 .lan-input .prefix {
   left: 5px;
 }
-.lan-input .prefix + .t-ipt {
-  padding-left: 23px;
-}
 .lan-input .suffix {
   right: 5px;
-}
-.lan-input .suffix + .t-ipt {
-  padding-right: 23px;
 }
 .lan-input .prepend,
 .lan-input .append {
@@ -1016,6 +1016,7 @@
 .lan-select {
   white-space: nowrap;
   position: relative;
+  display: inline-block;
 }
 .lan-select .dropdown {
   position: absolute;

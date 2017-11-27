@@ -38,12 +38,20 @@ export default new Router({
       component: resolve => {require(['../components/input'],resolve)}
     },
     {
+      path: '/select',
+      component: resolve => {require(['../components/select'],resolve)}
+    },
+    {
       path: '/timePicker',
       component: resolve => {require(['../components/timePicker'],resolve)}
     },
     {
       path: '/datePicker',
       component: resolve => {require(['../components/datePicker'],resolve)}
+    },
+    {
+      path: '/message',
+      component: resolve => {require(['../components/message'],resolve)}
     },
     {
       path: '/tabs',

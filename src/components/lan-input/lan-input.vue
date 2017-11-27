@@ -1,10 +1,10 @@
 <template>
   <div :class="classes">
-    <lan-icon :name="prefixIcon" customClass="prefix" v-if="prefixIcon"></lan-icon>
-    <lan-icon :name="suffixIcon" customClass="suffix" v-if="suffixIcon"></lan-icon>
     <div class="prepend" v-if="$slots.prepend">
       <slot name="prepend"></slot>
     </div>
+    <lan-icon :name="prefixIcon" customClass="prefix" v-if="prefixIcon"></lan-icon>
+    <lan-icon :name="suffixIcon" customClass="suffix" v-if="suffixIcon"></lan-icon>
     <input class="t-ipt"
            :value="value"
            :class="customClass"
@@ -58,6 +58,8 @@
         return [
           prefixCls,
           {
+            [`${prefixCls}-prefix`]: this.prefixIcon,
+            [`${prefixCls}-suffix`]: this.suffixIcon,
             [`${prefixCls}-group`]: this.$slots.prepend || this.$slots.append,
             [`${prefixCls}-group-prepend`]: this.$slots.prepend,
             [`${prefixCls}-group-append`]: this.$slots.append

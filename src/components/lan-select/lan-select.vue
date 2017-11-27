@@ -23,15 +23,21 @@
 </template>
 
 <script>
-  import lanInput from '../lan-input/lan-input'
+  import lanInput from '../lan-input'
   import { findComponentsDownward } from '../../base/assist'
 
   export default{
     name: 'lan-select',
     props: {
       placeholder: String,
-      disabled: Boolean,
-      filterable: Boolean
+      disabled: {
+        type: Boolean,
+        default: false
+      },
+      filterable: {
+        type: Boolean,
+        default: false
+      }
     },
     components: {
       lanInput
@@ -53,9 +59,11 @@
     methods: {
       handleClick (){
         this.showSelect = !this.showSelect;
-        this.$nextTick(() => {
-          this.handleInput(this.selectedValue.label);
-        })
+        if(this.filterable) {
+          this.$nextTick(() => {
+            this.handleInput(this.selectedValue.label);
+          })
+        }
       },
       handleBlur(){
         this.showNoMatch = false;
@@ -65,7 +73,7 @@
         const options = findComponentsDownward(this, 'lan-option');
         let count = 0;
         options.forEach((item) => {
-          if(item.label.indexOf(value) === -1) {
+          if(item.label && item.label.indexOf(value) === -1) {
             item.hidden = true;
             count++;
           } else {
@@ -76,7 +84,7 @@
       },
       handleSelect(item){
         this.selectedValue = item;
-        this.$emit('selected', item);
+        this.$emit('selected', item.value);
         this.showSelect = false;
       }
     }

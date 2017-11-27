@@ -105,12 +105,12 @@
             <router-link to="/radio" class="menu-item" tag="li">Radio 单选框</router-link>
             <router-link to="/checkbox" class="menu-item" tag="li">Checkbox 复选框</router-link>
             <router-link to="/input" class="menu-item" tag="li">Input 输入框</router-link>
-            <li class="menu-item">Select 选择器</li>
+            <router-link to="/select" class="menu-item" tag="li">Select 选择器</router-link>
             <router-link to="/timePicker" class="menu-item" tag="li">TimePicker 时间选择器</router-link>
             <router-link to="/datePicker" class="menu-item" tag="li">DatePicker 日期选择器</router-link>
             <li class="menu-item">Table 表格</li>
             <li class="menu-group">View</li>
-            <li class="menu-item">Message 消息</li>
+            <router-link to="/message" class="menu-item" tag="li">Message 消息</router-link>
             <li class="menu-item">MessageBox 消息框</li>
             <li class="menu-item">Modal 模态框</li>
             <li class="menu-item">Tooltip 提示</li>

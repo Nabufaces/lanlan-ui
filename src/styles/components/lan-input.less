@@ -3,6 +3,16 @@
   font-size: 14px;
   display: inline-block;
   line-height: normal;
+  &&-prefix {
+    .t-ipt {
+      padding-left: 23px;
+    }
+  }
+  &&-suffix {
+    .t-ipt {
+      padding-right: 23px;
+    }
+  }
   &&-group {
     display: table;
     border-collapse: separate;
@@ -50,15 +60,9 @@
   }
   .prefix {
     left: 5px;
-    &+.t-ipt {
-      padding-left: 23px;
-    }
   }
   .suffix {
     right: 5px;
-    &+.t-ipt {
-      padding-right: 23px;
-    }
   }
   .prepend, .append {
     line-height: 1;

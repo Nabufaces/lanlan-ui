@@ -5,14 +5,15 @@
 </template>
 
 <script>
-  const prefix = 'dropdown-list-item';
+  import {findComponentUpward} from '../../base/assist'
+
+  const prefixCls = 'dropdown-list-item';
 
   export default {
     name: 'lan-option',
     props: {
       label: {
-        type: [String, Number],
-        required: true
+        type: [String, Number]
       },
       value: {
         type: [String, Number],
@@ -26,9 +27,9 @@
     computed: {
       classes() {
         return [
-          prefix,
+          prefixCls,
           {
-            [`${prefix}-disabled`] : this.disabled
+            [`${prefixCls}-disabled`] : this.disabled
           }
         ]
       }
@@ -43,7 +44,7 @@
         if(this.disabled){
           return;
         }
-        this.$parent.handleSelect({
+        findComponentUpward(this, 'lan-select').handleSelect({
           label: this.label,
           value: this.value
         });

@@ -1,6 +1,7 @@
 .lan-select {
   white-space: nowrap;
   position: relative;
+  display: inline-block;
 }
 .lan-select .dropdown {
   position: absolute;

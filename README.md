@@ -65,20 +65,7 @@
 1. font-size: icon大小
 2. type: icon名称
 3. color: icon颜色
- 
-## 表单
-  
-#### select 下拉选择 lan-select
-1. placeholder  输入框填充
-2. disabled     输入框是否禁用
-3. filterable   是否可搜索
-4. option       结合lan-option联用
-    1. label      选项显示的内容
-    2. value      选项值
-    3. disabled   是否禁用当前项
-    4. slot       自定义模板
-5. event:
-    1. selected:  选中时触发
+
 
 ## 通知
 
