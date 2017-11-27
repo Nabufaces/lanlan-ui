@@ -79,12 +79,7 @@
     </lan-select>
     <pre v-highlight>
       <code class="html">
-        &ltlan-select placeholder="自定义模板"&gt
-          &ltlan-option :value="item.value" :label="item.label" :disabled="item.disabled" v-for="item in source" :key="item.value"&gt
-            &ltspan&gtitem.label&lt/span&gt&ltbr/&gt
-            &ltspan&gt{item.value}}&lt/span&gt
-          &lt/lan-option&gt
-        &lt/lan-select&gt
+        {{tpl}}
       </code>
     </pre>
 
@@ -96,7 +91,7 @@
     <h3>lan-option props</h3>
     <lan-table :column="columnProps" :tableSource="sourceOption" :border="true"></lan-table>
 
-    <h3>lan-input event</h3>
+    <h3>lan-select event</h3>
     <lan-table :column="columnEvents" :tableSource="sourceEvents" :border="true"></lan-table>
   </article>
 </template>
@@ -127,6 +122,14 @@
           value: 5,
           label: '北京糖葫芦'
         }],
+        tpl: `
+        <lan-select placeholder="自定义模板">
+          <lan-option :value="item.value" :label="item.label" :disabled="item.disabled" v-for="item in source" :key="item.value">
+            <span>{{item.label}}</span><br/>
+            <span>{{item.value}}</span>
+          </lan-option>
+        </lan-select>
+        `,
         columnProps: [{
           prop: "property",
           label: "属性",
