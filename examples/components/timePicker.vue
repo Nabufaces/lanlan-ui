@@ -103,7 +103,7 @@
         }, {
           prop: "back",
           label: "返回值",
-          width: 100
+          width: 200
         }],
         sourceEvents: [{
           eventName: 'change',

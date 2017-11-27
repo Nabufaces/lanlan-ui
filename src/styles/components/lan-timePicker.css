@@ -1,14 +1,12 @@
 .lan-timePicker {
   position: relative;
+  display: inline-block;
+  line-height: normal;
 }
-.lan-timePicker .custom-2,
-.lan-timePicker .custom-3 {
-  padding: 8px 23px;
-}
-.lan-timePicker .custom-2 {
+.lan-timePicker-group-2 {
   width: 113px;
 }
-.lan-timePicker .custom-3 {
+.lan-timePicker-group-3 {
   width: 170px;
 }
 .lan-timePicker .dropdown {

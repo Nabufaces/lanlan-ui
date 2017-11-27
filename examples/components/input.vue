@@ -1,7 +1,7 @@
 <template>
   <article>
-    <h1>TimePicker 时间选择器</h1>
-    <p>选择或输入标准时间，支持选择范围。</p>
+    <h1>Input 输入框</h1>
+    <p>基本表单组件</p>
 
     <h2 style="margin-top: 40px">代码示例</h2>
 

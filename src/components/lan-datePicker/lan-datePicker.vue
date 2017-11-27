@@ -5,7 +5,7 @@
                :readonly="true"
                suffixIcon="date"
                customClass="custonClass"
-               @click="showPick = !showPick"
+               @focus="showPick = !showPick"
                @blur="showPick = false"
     ></lan-input>
     <div class="lan-datePicker-dropdown" v-if="showPick" @mousedown.prevent>

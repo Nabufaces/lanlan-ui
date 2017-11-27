@@ -4,8 +4,8 @@
                :placeholder="placeholder"
                :readonly="true"
                suffixIcon="task-management"
-               :customClass="showSeconds ? 'custom-3' : 'custom-2' "
-               @click="showPick = !showPick"
+               :customClass="showSeconds ? 'lan-timePicker-group-3' : 'lan-timePicker-group-2' "
+               @focus="showPick = !showPick"
                @blur="handleChange"
                ></lan-input>
     <div class="dropdown" v-if="showPick" @mousedown.prevent>
@@ -30,7 +30,7 @@
 
 <script>
 
-  import lanInput from '../lan-input/lan-input'
+  import lanInput from '../lan-input'
   import {initTimeDate, fixString, handleFormat, deepCopy} from '../../base/assist'
 
   export default{
