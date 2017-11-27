@@ -7,6 +7,8 @@
       <code class="javascript">
         $ npm install lanlan-ui@0.0.10 --save
 
+        import 'lanlan-ui/dist/lanlanui.css'
+
         import lanlanui from 'lanlan-ui'
 
         Vue.use(lanlanui);
@@ -17,6 +19,8 @@
     <pre v-highlight>
       <code class="javascript">
         $ npm install lanlan-ui@0.0.10 --save
+
+        import 'lanlan-ui/dist/lanlanui.css'
 
         import { lanButton } from 'lanlan-ui'
 
