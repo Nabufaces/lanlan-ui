@@ -55,7 +55,7 @@
         }, {
           prop: "default",
           label: "默认值",
-          width: 100
+          width: 180
         }],
         sourceTable: [{
           property: 'placeholder',

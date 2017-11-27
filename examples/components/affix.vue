@@ -5,7 +5,7 @@
     <h2 style="margin-top: 40px">全局引入</h2>
     <pre v-highlight>
       <code class="javascript">
-        $ npm install lanlan-ui@0.0.10 --save
+        $ npm install lanlan-ui@0.1.1 --save
 
         import 'lanlan-ui/dist/lanlanui.css'
 
@@ -18,7 +18,7 @@
     <h2>按需引入</h2>
     <pre v-highlight>
       <code class="javascript">
-        $ npm install lanlan-ui@0.0.10 --save
+        $ npm install lanlan-ui@0.1.1 --save
 
         import 'lanlan-ui/dist/lanlanui.css'
 
