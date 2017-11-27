@@ -101,8 +101,8 @@
         }],
         sourceRadioGroup: [{
           property: 'value',
-          explain: '只在单独使用时有效。可以使用 v-model 双向绑定数据',
-          type: 'Boolean',
+          explain: '指定当前选中的项目数据。可以使用 v-model 双向绑定数据',
+          type: 'String | Number',
           default: '-'
         }],
         columnEvents: [{

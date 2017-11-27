@@ -1,7 +1,7 @@
 <template>
   <article>
-    <h1>Radio 单选框</h1>
-    <p>基础组件-单选框。主要用于一组可选项单项选择，或者单独用于切换到选中状态。</p>
+    <h1>Checkbox 复选框</h1>
+    <p>基本组件-多选框。主要用于一组可选项多项选择，或者单独用于标记切换某种状态。</p>
 
     <h2 style="margin-top: 40px">代码示例</h2>
 
@@ -43,7 +43,7 @@
           export default {
             data () {
               return {
-                checkboxGroup: 'apple'
+                checkboxGroup: ['apple']
               }
             }
           }
@@ -54,9 +54,12 @@
     <h2>API</h2>
 
     <h3>lan-checkbox props</h3>
-    <lan-table :column="columnProps" :tableSource="sourceProps" :border="true"></lan-table>
+    <lan-table :column="columnProps" :tableSource="sourceCheckbox" :border="true"></lan-table>
 
-    <h3>lan-checkbox event</h3>
+    <h3>lan-checkbox props</h3>
+    <lan-table :column="columnProps" :tableSource="sourceCheckboxGroup" :border="true"></lan-table>
+
+    <h3>lan-checkbox/lan-checkbox-group event</h3>
     <lan-table :column="columnEvents" :tableSource="sourceEvents" :border="true"></lan-table>
   </article>
 </template>
@@ -68,7 +71,7 @@
     data() {
       return {
         checkboxValue: false,
-        checkboxGroup: 'apple',
+        checkboxGroup: ['apple'],
         columnProps: [{
           prop: "property",
           label: "属性",
@@ -85,7 +88,7 @@
           label: "默认值",
           width: 100
         }],
-        sourceProps: [{
+        sourceCheckbox: [{
           property: 'value',
           explain: '只在单独使用时有效。可以使用 v-model 双向绑定数据',
           type: 'Boolean',
@@ -95,6 +98,12 @@
           explain: '只在组合使用时有效。指定当前选项的 value 值',
           type: 'String | Number',
           default: '-'
+        }],
+        sourceCheckboxGroup: [{
+          property: 'value',
+          explain: '指定选中项目的集合，可以使用 v-model 双向绑定数据',
+          type: 'Array',
+          default: '[]'
         }],
         columnEvents: [{
           prop: "eventName",

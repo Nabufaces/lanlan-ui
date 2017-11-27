@@ -5,18 +5,19 @@
 </template>
 
 <script>
+  import {findComponentsDownward} from '../../base/assist'
 
   export default {
     name: 'lan-checkboxGroup',
     props: {
       value: {
-        type: [String, Number, Array],
+        type: Array,
         default: []
       }
     },
     data () {
       return {
-        currentValue: this.value.length ? this.value : []
+        currentValue: this.value
       };
     },
     mounted () {
@@ -25,7 +26,7 @@
     methods: {
       updateValue () {
         const label = this.currentValue;
-        const childrens = this.$children;
+        const childrens = findComponentsDownward(this, 'lan-checkbox');
         childrens.forEach((child) => {
           child.currentValue = label.indexOf(child.label) !== -1;
           child.group = true;
