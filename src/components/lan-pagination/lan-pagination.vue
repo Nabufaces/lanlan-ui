@@ -24,7 +24,10 @@
         type: Number,
         require: true
       },
-      isEllipsis: Boolean
+      isEllipsis: {
+        type: Boolean,
+        default: true
+      }
     },
     created(){
       for(let i = 1;i <= this.total && i <= 5; i++){

@@ -30,8 +30,20 @@ export default new Router({
       component: resolve => {require(['../components/radio'],resolve)}
     },
     {
+      path: '/checkbox',
+      component: resolve => {require(['../components/checkbox'],resolve)}
+    },
+    {
       path: '/tabs',
       component: resolve => {require(['../components/tabs'],resolve)}
     },
+    {
+      path: '/pagination',
+        component: resolve => {require(['../components/pagination'],resolve)}
+    },
+    {
+      path: '/backTop',
+      component: resolve => {require(['../components/backTop'],resolve)}
+    }
   ]
 })

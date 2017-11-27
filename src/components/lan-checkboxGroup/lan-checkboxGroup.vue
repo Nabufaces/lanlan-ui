@@ -40,7 +40,7 @@
           currentValue.splice(index, 1);
         }
         this.updateValue();
-        this.$emit('onChange', currentValue);
+        this.$emit('change', currentValue);
       }
     }
   };

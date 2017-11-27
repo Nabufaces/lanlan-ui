@@ -1,20 +1,6 @@
 <template>
   <!--<div class="mn">-->
 
-    <!--<label class="title">Checkbox</label>-->
-    <!--<div class="group">-->
-      <!--<lan-checkbox v-model="checkboxValue">复选框</lan-checkbox>-->
-    <!--</div>-->
-
-    <!--<label class="title">CheckboxGroup</label>-->
-    <!--<div class="group">-->
-      <!--<lan-checkbox-group v-model="checkboxGroup">-->
-        <!--<lan-checkbox label="apple">apple</lan-checkbox>-->
-        <!--<lan-checkbox label="android">android</lan-checkbox>-->
-        <!--<lan-checkbox label="windows">windows</lan-checkbox>-->
-      <!--</lan-checkbox-group>-->
-    <!--</div>-->
-
     <!--<label class="title">Input</label>-->
     <!--<div class="group">-->
       <!--<lan-input customClass="ipt-wd"></lan-input>&nbsp;-->
@@ -154,7 +140,7 @@
             <li class="menu-group">Form</li>
             <router-link to="/switch" class="menu-item" tag="li">Switch 开关</router-link>
             <router-link to="/radio" class="menu-item" tag="li">Radio 单选框</router-link>
-            <li class="menu-item">Checkbox 复选框</li>
+            <router-link to="/checkbox" class="menu-item" tag="li">Checkbox 复选框</router-link>
             <li class="menu-item">Input 输入框</li>
             <li class="menu-item">Select 选择器</li>
             <li class="menu-item">TimePicker 时间选择器</li>
@@ -167,8 +153,8 @@
             <li class="menu-item">Tooltip 提示</li>
             <li class="menu-group">Other</li>
             <router-link to="/tabs" class="menu-item" tag="li">Tabs 标签</router-link>
-            <li class="menu-item">Pagination 分页</li>
-            <li class="menu-item">BackTop 返回顶部</li>
+            <router-link to="/pagination" class="menu-item" tag="li">Pagination 分页</router-link>
+            <router-link to="/backTop" class="menu-item" tag="li">BackTop 返回顶部</router-link>
           </ul>
         </lan-col>
         <lan-col :span="20">

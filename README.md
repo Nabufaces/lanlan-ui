@@ -65,14 +65,6 @@
 1. font-size: icon大小
 2. type: icon名称
 3. color: icon颜色
-
-#### backTop 回到顶部 lan-backTop
-1. height	        页面滚动高度达到该值时显示(默认400)
-2. bottom	        组件距离底部的距离(默认30)
-3. right	        组件距离右部的距离(默认30)
-4. duration	      滚动动画持续时间(默认1000)
-5. event: click   点击按钮时触发
- 
  
 ## 表单
 
@@ -140,11 +132,6 @@
 
 ## 导航
 
-#### pagination 分页 lan-pagination
-1. total        总页数
-2. isEllipsis   是否展示总页数
-3. event: 
-      1. currentChange: 页数改变时
 
 ## 通知
 

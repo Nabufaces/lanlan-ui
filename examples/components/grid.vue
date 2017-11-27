@@ -3,7 +3,7 @@
     <h1>Grid 栅格</h1>
     <p>我们采用了24栅格系统，将区域进行24等分，这样可以轻松应对大部分布局问题。使用栅格系统进行网页布局，可以使页面排版美观、舒适。</p>
     <p>我们定义了两个概念，行<code>row</code>和列<code>col</code>，具体使用方法如下：</p>
-    <ul>
+    <ul class="ul">
       <li>使用<code>row</code>在水平方向创建一行</li>
       <li>将一组<code>col</code>插入在<code>row</code>中</li>
       <li>在每个<code>col</code>中，键入自己的内容</li>
