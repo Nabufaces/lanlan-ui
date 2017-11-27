@@ -1,4 +1,0 @@
-&ltlan-option :value="item.value" :label="item.label" :disabled="item.disabled" v-for="item in source" :key="item.value"&gt
-        &ltspan&gt{{item.label}}&lt/span&gt&ltbr/&gt
-        &ltspan&gt{{item.value}}&lt/span&gt
-      &lt/lan-option&gt
