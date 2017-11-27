@@ -67,28 +67,7 @@
 3. color: icon颜色
  
 ## 表单
-
-#### input 输入框 lan-input
-1. placeholder     占位符
-2. readonly        是否只读
-3. disabled        是否禁用
-4. autofocus       自动获取焦点
-5. autocomplete    自动完成
-6. maxlength       文本框最大输入长度
-7. prefixIcon      输入框头部图标
-8. suffixIcon      输入框尾部图标
-9. customClass     扩展样式
-10. slot：
-    1. prepend     输入框前置内容
-    2. append      输入框后置内容
-11. event:
-    1. blur        在 tt 失去焦点时触发
-    2. focus       在 Input 获得焦点时触发
-    3. input       在 Input 输入值时触发
-    4. change      在 Input 值改变时触发
-    5. click       在 Input 点击时触发
   
-
 #### select 下拉选择 lan-select
 1. placeholder  输入框填充
 2. disabled     输入框是否禁用

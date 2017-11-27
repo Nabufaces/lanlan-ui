@@ -6,9 +6,7 @@
     <h2 style="margin-top: 40px">代码示例</h2>
 
     <h3>基础使用</h3>
-    <lan-row>
-      <lan-time-picker placeholder="选择时间"></lan-time-picker>
-    </lan-row>
+    <lan-time-picker placeholder="选择时间"></lan-time-picker>
     <pre v-highlight>
       <code class="html">
         &ltlan-time-picker placeholder="选择时间"&gt&lt/lan-time-picker&gt

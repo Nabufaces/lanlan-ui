@@ -1,7 +1,7 @@
 <template>
-  <div class="lan-input">
-    <i class="prefix iconfont" :class="`icon-${prefixIcon}`" v-if="prefixIcon"></i>
-    <i class="suffix iconfont" :class="`icon-${suffixIcon}`" v-if="suffixIcon"></i>
+  <div :class="classes">
+    <lan-icon :name="prefixIcon" customClass="prefix" v-if="prefixIcon"></lan-icon>
+    <lan-icon :name="suffixIcon" customClass="suffix" v-if="suffixIcon"></lan-icon>
     <div class="prepend" v-if="$slots.prepend">
       <slot name="prepend"></slot>
     </div>
@@ -16,9 +16,11 @@
            :maxlength="maxlength"
            @input="handleInput($event.target.value)"
            @change="handleChange($event.target.value)"
-           @focus="handleFocus($event)"
-           @blur="handleBlur($event)"
-           @click="handleClick($event)"
+           @focus="handleFocus"
+           @blur="handleBlur"
+           @keyup="handleKeyup"
+           @keypress="handleKeypress"
+           @keydown="handleKeydown"
            />
     <div class="append" v-if="$slots.append">
       <slot name="append"></slot>
@@ -27,6 +29,9 @@
 </template>
 
 <script>
+  import lanIcon from '../lan-icon'
+  const prefixCls = 'lan-input';
+
   export default {
     name: 'lan-input',
     props: {
@@ -44,6 +49,21 @@
       },
       maxlength: Number
     },
+    components: {
+      lanIcon
+    },
+    computed: {
+      classes () {
+        return [
+          prefixCls,
+          {
+            [`${prefixCls}-group`]: this.$slots.prepend || this.$slots.append,
+            [`${prefixCls}-group-prepend`]: this.$slots.prepend,
+            [`${prefixCls}-group-append`]: this.$slots.append
+          }
+        ];
+      },
+    },
     methods: {
       handleInput(value){
         this.$emit('input', value);
@@ -51,14 +71,20 @@
       handleChange(value){
         this.$emit('change', value);
       },
-      handleBlur(event){
-        this.$emit('blur', event);
+      handleBlur(){
+        this.$emit('blur');
       },
-      handleFocus(event) {
-        this.$emit('focus', event);
+      handleFocus() {
+        this.$emit('focus');
       },
-      handleClick(event){
-        this.$emit('click', event);
+      handleKeyup() {
+        this.$emit('keyup');
+      },
+      handleKeypress() {
+        this.$emit('keypress');
+      },
+      handleKeydown() {
+        this.$emit('keydown');
       }
     }
   }

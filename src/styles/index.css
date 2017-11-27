@@ -1674,7 +1674,21 @@ code {
 .lan-input {
   position: relative;
   font-size: 14px;
-  display: flex;
+  display: inline-block;
+  line-height: normal;
+}
+.lan-input.lan-input-group {
+  display: table;
+  border-collapse: separate;
+  top: 1px;
+}
+.lan-input.lan-input-group-prepend .t-ipt {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.lan-input.lan-input-group-append .t-ipt {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
 }
 .lan-input .t-ipt {
   background-color: #fff;
@@ -1685,7 +1699,7 @@ code {
   display: inline-block;
   font-size: inherit;
   outline: none;
-  padding: 10px 23px;
+  padding: 8px 10px;
   transition: border-color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 .lan-input .t-ipt:hover {
@@ -1708,17 +1722,25 @@ code {
 .lan-input .prefix {
   left: 5px;
 }
+.lan-input .prefix + .t-ipt {
+  padding-left: 23px;
+}
 .lan-input .suffix {
   right: 5px;
 }
+.lan-input .suffix + .t-ipt {
+  padding-right: 23px;
+}
 .lan-input .prepend,
 .lan-input .append {
+  line-height: 1;
   background-color: #f5f7fa;
   color: #878d99;
   border: 1px solid #E4E6EC;
   border-radius: 2px;
-  padding: 9px 20px;
+  padding: 7px 10px;
   white-space: nowrap;
+  display: table-cell;
 }
 .lan-input .prepend {
   border-right: 0;

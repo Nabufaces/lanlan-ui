@@ -1,0 +1,8 @@
+&ltlan-input placeholder="请输入内容"&gt
+  &lttemplate slot="prepend"&gt
+    &ltspan&gtHttp://&lt/span&gt
+  &lt/template&gt
+  &lttemplate slot="append"&gt
+    &ltlan-icon name="search"&gt&lt/lan-icon&gt&nbsp;搜索
+  &lt/template&gt
+&lt/lan-input&gt

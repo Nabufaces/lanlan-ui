@@ -1,22 +1,5 @@
 <template>
   <!--<div class="mn">-->
-
-    <!--<label class="title">Input</label>-->
-    <!--<div class="group">-->
-      <!--<lan-input customClass="ipt-wd"></lan-input>&nbsp;-->
-      <!--<lan-input placeholder="请输入内容" :disabled="true"></lan-input>&nbsp;-->
-      <!--<lan-input placeholder="请输入内容" prefixIcon="search"></lan-input>&nbsp;-->
-      <!--<lan-input placeholder="请输入内容" suffixIcon="less"></lan-input>&nbsp;-->
-      <!--<lan-input placeholder="请输入内容">-->
-        <!--<template slot="prepend">-->
-          <!--<span>Http://</span>-->
-        <!--</template>-->
-        <!--<template slot="append">-->
-          <!--<i class="iconfont icon-search"></i>-->
-        <!--</template>-->
-      <!--</lan-input>-->
-    <!--</div>-->
-
     <!--<label class="title">Select</label>-->
     <!--<div class="group">-->
       <!--<lan-select placeholder="含禁止">-->
@@ -135,7 +118,7 @@
             <router-link to="/switch" class="menu-item" tag="li">Switch 开关</router-link>
             <router-link to="/radio" class="menu-item" tag="li">Radio 单选框</router-link>
             <router-link to="/checkbox" class="menu-item" tag="li">Checkbox 复选框</router-link>
-            <li class="menu-item">Input 输入框</li>
+            <router-link to="/input" class="menu-item" tag="li">Input 输入框</router-link>
             <li class="menu-item">Select 选择器</li>
             <router-link to="/timePicker" class="menu-item" tag="li">TimePicker 时间选择器</router-link>
             <li class="menu-item">DatePicker 日期选择器</li>
@@ -293,9 +276,6 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <!--<style>-->
-  <!--.ipt-wd {-->
-    <!--width: 500px;-->
-  <!--}-->
   <!--.box {-->
     <!--width: 500px;-->
     <!--margin: 100px 150px;-->
