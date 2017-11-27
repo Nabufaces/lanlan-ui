@@ -1,20 +1,6 @@
 <template>
   <!--<div class="mn">-->
 
-    <!--<label class="title">Radio</label>-->
-    <!--<div class="group">-->
-      <!--<lan-radio v-model="radioValue">单选框</lan-radio>-->
-    <!--</div>-->
-
-    <!--<label class="title">RadioGroup</label>-->
-    <!--<div class="group">-->
-      <!--<lan-radio-group v-model="radioGroup">-->
-        <!--<lan-radio label="apple">apple</lan-radio>-->
-        <!--<lan-radio label="android">android</lan-radio>-->
-        <!--<lan-radio label="windows">windows</lan-radio>-->
-      <!--</lan-radio-group>-->
-    <!--</div>-->
-
     <!--<label class="title">Checkbox</label>-->
     <!--<div class="group">-->
       <!--<lan-checkbox v-model="checkboxValue">复选框</lan-checkbox>-->
@@ -167,7 +153,7 @@
             <li class="menu-item">Icon 图标</li>
             <li class="menu-group">Form</li>
             <router-link to="/switch" class="menu-item" tag="li">Switch 开关</router-link>
-            <li class="menu-item">Radio 单选框</li>
+            <router-link to="/radio" class="menu-item" tag="li">Radio 单选框</router-link>
             <li class="menu-item">Checkbox 复选框</li>
             <li class="menu-item">Input 输入框</li>
             <li class="menu-item">Select 选择器</li>

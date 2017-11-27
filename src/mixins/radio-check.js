@@ -1,7 +1,7 @@
 export default {
   props: {
     value: {
-      type: [String, Number, Boolean],
+      type: Boolean,
       default: false
     },
     label: [String, Number]
@@ -16,7 +16,7 @@ export default {
     change (event) {
       this.currentValue = event.target.checked;
       if (!this.group) {
-        this.$emit('onChange', this.currentValue);
+        this.$emit('change', this.currentValue);
       }
 
       if (this.group && this.label !== undefined) {

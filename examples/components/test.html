@@ -1,2 +1,14 @@
-&ltlan-switch :switchType="true" onText="开" offText="关">&lt/lan-switch>&nbsp;
-&ltlan-switch :switchType="false" onText="ON" offText="OFF">&lt/lan-switch>
+&ltlan-radio-group v-model="radioGroup"&gt
+  &ltlan-radio label="apple"&gtapple&lt/lan-radio&gt
+  &ltlan-radio label="android"&gtandroid&lt/lan-radio&gt
+  &ltlan-radio label="windows"&gtwindows&lt/lan-radio&gt
+&lt/lan-radio-group&gt
+&ltscript&gt
+  export default {
+    data () {
+      return {
+        radioGroup: 'apple'
+      }
+    }
+  }
+&lt/script&gt

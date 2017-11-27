@@ -26,6 +26,10 @@ export default new Router({
       component: resolve => {require(['../components/switch'],resolve)}
     },
     {
+      path: '/radio',
+      component: resolve => {require(['../components/radio'],resolve)}
+    },
+    {
       path: '/tabs',
       component: resolve => {require(['../components/tabs'],resolve)}
     },

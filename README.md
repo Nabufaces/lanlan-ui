@@ -76,11 +76,6 @@
  
 ## 表单
 
-#### radio 单选框 lan-radio
-1. value	    只在单独使用时有效。可以使用 v-model 双向绑定数据
-2. label	    只在组合使用时有效。指定当前选项的 value 值，组合会自动判断当前选择的项目
-3. event: onChange  选项状态发生改变时触发
-
 #### radioGroup 单选框组  lan-radioGroup
 1. value	    指定当前选中的项目。可以使用 v-model 双向绑定数据
 2. event: onChange  选项状态发生改变时触发

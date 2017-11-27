@@ -34,7 +34,7 @@
       change (label) {
         this.currentValue = label;
         this.updateValue();
-        this.$emit('onChange', label);
+        this.$emit('change', label);
       }
     }
   };
