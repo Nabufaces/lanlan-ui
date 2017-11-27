@@ -5,6 +5,7 @@
 </template>
 
 <script>
+  import {findComponentsDownward} from '../../base/assist'
 
   export default {
     name: 'lan-radioGroup',
@@ -25,7 +26,7 @@
     methods: {
       updateValue () {
         const label = this.currentValue;
-        const childrens = this.$children;
+        const childrens = findComponentsDownward(this, 'lan-radio');
         childrens.forEach((child) => {
           child.currentValue = label === child.label;
           child.group = true;

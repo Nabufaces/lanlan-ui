@@ -1,3 +1,10 @@
+import {findComponentUpward} from  '../base/assist'
+
+const map = {
+  'lan-radio' : 'lan-radioGroup',
+  'lan-checkbox' : 'lan-checkboxGroup'
+};
+
 export default {
   props: {
     value: {
@@ -20,7 +27,8 @@ export default {
       }
 
       if (this.group && this.label !== undefined) {
-        this.$parent.change(this.label, this.currentValue);
+        const name = this.$options.name;
+        findComponentUpward(this, map[name]).change(this.label, this.currentValue);
       }
     }
   }

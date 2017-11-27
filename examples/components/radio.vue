@@ -54,9 +54,12 @@
     <h2>API</h2>
 
     <h3>lan-radio props</h3>
-    <lan-table :column="columnProps" :tableSource="sourceProps" :border="true"></lan-table>
+    <lan-table :column="columnProps" :tableSource="sourceRadio" :border="true"></lan-table>
 
-    <h3>lan-radio event</h3>
+    <h3>lan-radio-group props</h3>
+    <lan-table :column="columnProps" :tableSource="sourceRadioGroup" :border="true"></lan-table>
+
+    <h3>lan-radio/lan-radio-group event</h3>
     <lan-table :column="columnEvents" :tableSource="sourceEvents" :border="true"></lan-table>
   </article>
 </template>
@@ -85,7 +88,7 @@
           label: "默认值",
           width: 100
         }],
-        sourceProps: [{
+        sourceRadio: [{
           property: 'value',
           explain: '只在单独使用时有效。可以使用 v-model 双向绑定数据',
           type: 'Boolean',
@@ -94,6 +97,12 @@
           property: 'label',
           explain: '只在组合使用时有效。指定当前选项的 value 值',
           type: 'String | Number',
+          default: '-'
+        }],
+        sourceRadioGroup: [{
+          property: 'value',
+          explain: '只在单独使用时有效。可以使用 v-model 双向绑定数据',
+          type: 'Boolean',
           default: '-'
         }],
         columnEvents: [{
