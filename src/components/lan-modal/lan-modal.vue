@@ -1,19 +1,19 @@
 <template>
   <transition name="fade">
-    <div class="lan-modal-mask" v-show="showModal"
+    <div :class="`${prefixCls}-mask`" v-show="showModal"
          @click.self="handleCloseWindow">
-      <div class="lan-modal"
+      <div :class="`${prefixCls}`"
            :style="{width: width ? width + 'px' : '400px'}">
-        <div class="m-hd">
+        <div :class="`${prefixCls}-hd`">
           <slot name="title">
             <span class="tt">{{title}}</span>
           </slot>
           <span class="close" @click="handleClose" v-if="showClose"><i class="iconfont icon-close"></i></span>
         </div>
-        <div class="m-cnt">
+        <div :class="`${prefixCls}-cnt`">
           <slot></slot>
         </div>
-        <div class="m-ft">
+        <div :class="`${prefixCls}-ft`">
           <slot name="footer">
             <lan-button size="small" @click="handleCancel">取消</lan-button>
             <lan-button size="small" classType="warning" @click="handleConfirm">确定</lan-button>
@@ -25,6 +25,7 @@
 </template>
 
 <script>
+
   import lanButton from '../lan-button'
 
   export default{
@@ -43,6 +44,11 @@
       closeWindow: {
         type: Boolean,
         default: true
+      }
+    },
+    data() {
+      return {
+        prefixCls : 'lan-modal'
       }
     },
     components: {
