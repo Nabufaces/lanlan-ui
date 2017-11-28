@@ -28,8 +28,6 @@
       &::before, &::after {
         content: '';
         position: absolute;
-        left: 50%;
-        margin-left: -6px;
         border-style: solid;
         border-width: 6px 6px 0 6px;
         border-color: transparent;
@@ -48,38 +46,11 @@
         border-top-color: @light;
       }
     }
-    &[x-placement^=right] {
-      padding-left: 9px;
-      &::before, &::after {
-        content: '';
-        position: absolute;
-        top: 50%;
-        margin-top: -6px;
-        border-style: solid;
-        border-width: 6px 6px 6px 0;
-        border-color: transparent;
-      }
-      &::before {
-        left: 2px;
-        border-right-color: hsla(0,0%,85%,.5);
-      }
-      &::after {
-        left: 3px;
-      }
-      &.dark::after {
-        border-right-color: @dark;
-      }
-      &.light::after {
-        border-right-color: @light;
-      }
-    }
     &[x-placement^=bottom] {
       padding-top: 9px;
       &::before, &::after {
         content: '';
         position: absolute;
-        left: 50%;
-        margin-left: -6px;
         border-style: solid;
         border-width: 0 6px 6px 6px;
         border-color: transparent;
@@ -98,13 +69,50 @@
         border-bottom-color: @light;
       }
     }
+    &[x-placement=top], &[x-placement=bottom] {
+      &::before, &::after {
+        left: 50%;
+        margin-left: -6px;
+      }
+    }
+    &[x-placement=top-start], &[x-placement=bottom-start] {
+      &::before, &::after {
+        left: 15px;
+      }
+    }
+    &[x-placement=top-end], &[x-placement=bottom-end] {
+      &::before, &::after {
+        right: 15px;
+      }
+    }
+    &[x-placement^=right] {
+      padding-left: 9px;
+      &::before, &::after {
+        content: '';
+        position: absolute;
+        border-style: solid;
+        border-width: 6px 6px 6px 0;
+        border-color: transparent;
+      }
+      &::before {
+        left: 2px;
+        border-right-color: hsla(0,0%,85%,.5);
+      }
+      &::after {
+        left: 3px;
+      }
+      &.dark::after {
+        border-right-color: @dark;
+      }
+      &.light::after {
+        border-right-color: @light;
+      }
+    }
     &[x-placement^=left] {
       padding-right: 9px;
       &::before, &::after {
         content: '';
         position: absolute;
-        top: 50%;
-        margin-top: -6px;
         border-style: solid;
         border-width: 6px 0 6px 6px;
         border-color: transparent;
@@ -121,6 +129,22 @@
       }
       &.light::after {
         border-left-color: @light;
+      }
+    }
+    &[x-placement=left], &[x-placement=right] {
+      &::before, &::after {
+        top: 50%;
+        margin-top: -6px;
+      }
+    }
+    &[x-placement=left-start], &[x-placement=right-start] {
+      &::before, &::after {
+        top: 5px;
+      }
+    }
+    &[x-placement^=left-end], &[x-placement^=right-end] {
+      &::before, &::after {
+        bottom: 5px;
       }
     }
   }

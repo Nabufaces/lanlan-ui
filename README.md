@@ -47,19 +47,6 @@
 4. border           表格是否带边框
 5. stripe           表格是否带斑马纹
 
-#### toolTip 文字提示 lan-toolTip
-1. placement tooltip的出现位置
-      1. top 
-      2. left 
-      3. right 
-      4. bottom
-2. content          tooltip内容
-3. effect           提供的主题    
-      1. dark(默认)
-      2. light
-4. delay            延迟出现
-5. width            Tooltip 宽度,设置后文字超出会自动换行
-
 
 #### icon 图标 lan-icon
 1. font-size: icon大小

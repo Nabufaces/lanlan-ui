@@ -113,7 +113,7 @@
             <router-link to="/message" class="menu-item" tag="li">Message 消息</router-link>
             <li class="menu-item">MessageBox 消息框</li>
             <li class="menu-item">Modal 模态框</li>
-            <li class="menu-item">Tooltip 提示</li>
+            <router-link to="/tooltip" class="menu-item" tag="li">Tooltip 提示</router-link>
             <li class="menu-group">Other</li>
             <router-link to="/tabs" class="menu-item" tag="li">Tabs 标签</router-link>
             <router-link to="/pagination" class="menu-item" tag="li">Pagination 分页</router-link>
@@ -262,24 +262,24 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <!--<style>-->
-  <!--.box {-->
-    <!--width: 500px;-->
-    <!--margin: 100px 150px;-->
-  <!--}-->
-  <!--.box .top {-->
-    <!--text-align: center;-->
-  <!--}-->
-  <!--.box .left {-->
-    <!--float: left;-->
-    <!--width: 100px;-->
-  <!--}-->
-  <!--.box .right {-->
-    <!--float: right;-->
-    <!--width: 100px;-->
-  <!--}-->
-  <!--.box .bottom {-->
-    <!--clear: both;-->
-    <!--text-align: center;-->
-  <!--}-->
+  .box {
+    width: 500px;
+    margin: 100px 150px;
+  }
+  .box .top {
+    text-align: center;
+  }
+  .box .left {
+    float: left;
+    width: 100px;
+  }
+  .box .right {
+    float: right;
+    width: 100px;
+  }
+  .box .bottom {
+    clear: both;
+    text-align: center;
+  }
 
 <!--</style>-->

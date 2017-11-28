@@ -1,5 +1,5 @@
 <template>
-  <div :class="`${prefixCls}`" 
+  <div :class="`${prefixCls}`"
        @mouseenter="handleShowPopper"
        @mouseleave="handleClosePopper">
      <div :class="`${prefixCls}-rel`" ref="reference">
@@ -32,7 +32,10 @@
     props: {
       placement: {
         type: String,
-        default: 'top'
+        default: 'top',
+        validator (value) {
+          return ['top', 'top-start', 'top-end', 'bottom', 'bottom-start', 'bottom-end', 'left', 'left-start', 'left-end', 'right', 'right-start', 'right-end'].indexOf(value) > -1;
+        }
       },
       content: {
         type: [String, Number],
@@ -44,7 +47,10 @@
       },
       effect: {
         type: String,
-        default: 'dark'
+        default: 'dark',
+        validator (value) {
+          return ['dark', 'light'].indexOf(value) > -1;
+        },
       },
       width: Number
     },

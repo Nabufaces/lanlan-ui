@@ -60,7 +60,6 @@ const install = function(Vue, opts = {}) {
     Vue.component(key, components[key]);
   });
 
-  Vue.prototype.$Modal = lanModal;
   Vue.prototype.$Message = lanMessage;
   Vue.prototype.$messageBox = lanMessageBox;
 };
