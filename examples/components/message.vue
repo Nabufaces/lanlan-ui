@@ -5,18 +5,50 @@
 
     <h2 style="margin-top: 40px">代码示例</h2>
 
-    <h3>单独使用</h3>
+    <h3>基础使用</h3>
     <lan-row>
-      <lan-button @click="handleWarning">显示警告</lan-button>
+      <lan-button classType="primary" @click="handleWarning">显示警告</lan-button>
+      <lan-button classType="primary" @click="handleError">显示错误</lan-button>
+      <lan-button classType="primary" @click="handleSuccess">显示成功</lan-button>
     </lan-row>
     <pre v-highlight>
       <code class="html">
-        &ltlan-checkbox v-model="checkboxValue"&gt复选框&lt/lan-checkbox&gt
+        &ltlan-button classType="primary" @click="handleWarning"&gt显示警告&lt/lan-button&gt
+        &ltlan-button classType="primary" @click="handleError"&gt显示错误&lt/lan-button&gt
+        &ltlan-button classType="primary" @click="handleSuccess"&gt显示成功&lt/lan-button&gt
         &ltscript&gt
           export default {
-            data () {
-              return {
-                checkboxValue: false
+            methods: {
+              handleWarning() {
+                this.$Message.warning('这是一条警告消息')
+              },
+              handleError() {
+                this.$Message.error('这是一条错误消息')
+              },
+              handleSuccess() {
+                this.$Message.success('这是一条成功消息')
+              }
+            }
+          }
+        &lt/script&gt
+      </code>
+    </pre>
+
+    <h3>显示时间配置</h3>
+    <lan-row>
+      <lan-button classType="primary" @click="handleDuration">显示1S</lan-button>
+    </lan-row>
+    <pre v-highlight>
+      <code class="html">
+        &ltlan-button classType="primary" @click="handleDuration"&gt显示1S&lt/lan-button&gt
+        &ltscript&gt
+          export default {
+            methods: {
+              handleDuration() {
+                this.$Message.success({
+                  message: '这是一条成功消息',
+                  duration: 1000
+                })
               }
             }
           }
@@ -26,14 +58,14 @@
 
     <h2>API</h2>
 
-    <h3>lan-checkbox props</h3>
-    <lan-table :column="columnProps" :tableSource="sourceCheckbox" :border="true"></lan-table>
-
-    <h3>lan-checkbox props</h3>
-    <lan-table :column="columnProps" :tableSource="sourceCheckboxGroup" :border="true"></lan-table>
-
-    <h3>lan-checkbox/lan-checkbox-group event</h3>
-    <lan-table :column="columnEvents" :tableSource="sourceEvents" :border="true"></lan-table>
+    <h3>Message instance #</h3>
+    <p>通过直接调用以下方法来使用组件：</p>
+    <ul class="ul" style="margin-bottom: 40px">
+      <li><code>this.$Message.success(config)</code></li>
+      <li><code>this.$Message.warning(config)</code></li>
+      <li><code>this.$Message.error(config)</code></li>
+    </ul>
+    <lan-table :column="columnProps" :tableSource="sourceMessage" :border="true"></lan-table>
   </article>
 </template>
 
@@ -43,8 +75,6 @@
     name: 'message',
     data() {
       return {
-        checkboxValue: false,
-        checkboxGroup: ['apple'],
         columnProps: [{
           prop: "property",
           label: "属性",
@@ -61,44 +91,34 @@
           label: "默认值",
           width: 100
         }],
-        sourceCheckbox: [{
-          property: 'value',
-          explain: '只在单独使用时有效。可以使用 v-model 双向绑定数据',
-          type: 'Boolean',
+        sourceMessage: [{
+          property: 'message',
+          explain: '提示内容',
+          type: 'String',
           default: '-'
         }, {
-          property: 'label',
-          explain: '只在组合使用时有效。指定当前选项的 value 值',
-          type: 'String | Number',
-          default: '-'
-        }],
-        sourceCheckboxGroup: [{
-          property: 'value',
-          explain: '指定选中项目的集合，可以使用 v-model 双向绑定数据',
-          type: 'Array',
-          default: '[]'
-        }],
-        columnEvents: [{
-          prop: "eventName",
-          label: "事件名",
-          width: 200
-        }, {
-          prop: "explain",
-          label: "说明"
-        }, {
-          prop: "back",
-          label: "返回值",
-          width: 100
-        }],
-        sourceEvents: [{
-          eventName: 'change',
-          explain: '选项状态发生改变时触发',
-          back: '当前状态值'
+          property: 'duration',
+          explain: '自动关闭的延时',
+          type: 'Number',
+          default: 3000
         }]
       }
     },
     methods: {
       handleWarning() {
+        this.$Message.warning('这是一条警告消息')
+      },
+      handleError() {
+        this.$Message.error('这是一条错误消息')
+      },
+      handleSuccess() {
+        this.$Message.success('这是一条成功消息')
+      },
+      handleDuration() {
+        this.$Message.success({
+          message: '这是一条成功消息',
+          duration: 1000
+        })
       }
     }
   }

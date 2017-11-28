@@ -1,6 +1,6 @@
 <template>
   <transition name="move-down">
-    <div class="lan-message" v-show="visible">
+    <div class="lan-message" v-if="visible">
       <div class="tips">
         <img :src="modalType[type]" class="iconImg"/>
         <span>{{message}}</span>
@@ -15,25 +15,17 @@
   export default{
     name: 'lan-message',
     mixins: [message],
-    props: {
-      duration: {
-        type: Number,
-        default: 3000
+    methods: {
+      addProps(props) {
+        this.clearCloseTimer();
+        this.type = props.type;
+        this.duration = props.duration;
+        this.message = props.message;
+        this.visible = true;
+        this.closeTimer = setTimeout(() => {
+          this.visible = false;
+        }, this.duration);
       }
-    },
-    data(){
-      return {
-        visible: true
-      }
-    },
-    mounted() {
-      setTimeout(() => {
-        this.visible = false;
-        //不延迟抛出消失动画无法展示
-        setTimeout(() => {
-          this.$emit('close');
-        }, 500);
-      }, this.duration)
     }
   }
 </script>
