@@ -1844,6 +1844,7 @@ code {
   top: 17px;
   right: 17px;
   font-weight: 600;
+  cursor: pointer;
 }
 .lan-modal-mask .lan-modal .m-cnt {
   padding: 15px;

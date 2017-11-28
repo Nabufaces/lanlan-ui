@@ -1,28 +1,4 @@
 <template>
-  <!--<div class="mn">-->
-    <!--<label class="title">Select</label>-->
-    <!--<div class="group">-->
-      <!--<lan-select placeholder="含禁止">-->
-        <!--<lan-option :value="item.value" :label="item.label" :disabled="item.disabled" v-for="item in source" :key="item.value"></lan-option>-->
-      <!--</lan-select>&emsp;-->
-      <!--<lan-select placeholder="含搜索" filterable>-->
-        <!--<lan-option :value="item.value" :label="item.label" :disabled="item.disabled" v-for="item in source" :key="item.value"></lan-option>-->
-      <!--</lan-select>&emsp;-->
-      <!--<lan-select placeholder="自定义模板">-->
-        <!--<lan-option :value="item.value" :label="item.label" :disabled="item.disabled" v-for="item in source" :key="item.value">-->
-          <!--<span>{{item.label}}</span><br/>-->
-          <!--<span>{{item.value}}</span>-->
-        <!--</lan-option>-->
-      <!--</lan-select>&emsp;-->
-      <!--<lan-select placeholder="含搜索的自定义模板" filterable>-->
-        <!--<lan-option :value="item.value" :label="item.label" :disabled="item.disabled" v-for="item in source" :key="item.value">-->
-          <!--<span>{{item.label}}</span><br/>-->
-          <!--<span>{{item.value}}</span>-->
-        <!--</lan-option>-->
-      <!--</lan-select>-->
-    <!--</div>-->
-
-
     <!--<label class="title">Modal</label>-->
     <!--<div class="group">-->
       <!--<lan-button size="small" classType="primary" @click="handleModal">点击打开modal</lan-button>&nbsp;-->
@@ -112,7 +88,7 @@
             <li class="menu-group">View</li>
             <router-link to="/message" class="menu-item" tag="li">Message 消息</router-link>
             <li class="menu-item">MessageBox 消息框</li>
-            <li class="menu-item">Modal 模态框</li>
+            <router-link to="/modal" class="menu-item" tag="li">Modal 模态框</router-link>
             <router-link to="/tooltip" class="menu-item" tag="li">Tooltip 提示</router-link>
             <li class="menu-group">Other</li>
             <router-link to="/tabs" class="menu-item" tag="li">Tabs 标签</router-link>
@@ -243,9 +219,6 @@
           window.location.href = 'https://code.aliyun.com/lanlan_xsj/lanlanFE'
         }
       },
-      handleModal(){
-        this.showModal = true;
-      },
       handleMessageBox(){
         this.showMessageBox = true;
       },
@@ -256,30 +229,6 @@
   }
 </script>
 
-<style lang="less">
+<style lang="less" scoped>
   @import '../styles/index.less';
 </style>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<!--<style>-->
-  .box {
-    width: 500px;
-    margin: 100px 150px;
-  }
-  .box .top {
-    text-align: center;
-  }
-  .box .left {
-    float: left;
-    width: 100px;
-  }
-  .box .right {
-    float: right;
-    width: 100px;
-  }
-  .box .bottom {
-    clear: both;
-    text-align: center;
-  }
-
-<!--</style>-->

@@ -54,6 +54,10 @@ export default new Router({
       component: resolve => {require(['../components/message'],resolve)}
     },
     {
+      path: '/modal',
+      component: resolve => {require(['../components/modal'],resolve)}
+    },
+    {
       path: '/tooltip',
       component: resolve => {require(['../components/tooltip'],resolve)}
     },

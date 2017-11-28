@@ -18,21 +18,6 @@
           lanButton
         }
       })
-      
-#### modal 模态框 lan-modal
-1. showModal        是否显示模态框（必填）
-2. title            模态框标题
-3. width            模态框宽度，默认400px
-4. showClose        是否显示关闭按钮
-5. closeWindow      点击模态框区域之外是否关闭
-6. slot:
-    1. title        模态框标题内容
-    2. default      模态框内容
-    3. footer       模态框页脚内容
-11. event: 
-    1. close        关闭模态框
-    2. cancel       点击取消按钮（同时会抛出close事件）
-    3. confirm      点击确认按钮（同时会抛出close事件）
     
 #### table 表格 lan-table
 1. column           表格列设置
@@ -55,16 +40,6 @@
 
 
 ## 通知
-
-#### notify 通知 lan-notify
-1. message  通知内容
-2. imageIcon: 选项icon
-3. duration  notify停留毫秒数
-4. useInnerHtml   自定义内容标志  boolean
-5. innerHtml    自定义内容，与useInnerHtml联用
-6. event:
-    1. show:  notify出现
-    2. close:  notify消失
     
 #### messageBox 消息弹框 lan-messageBox
 1. title          标题	
