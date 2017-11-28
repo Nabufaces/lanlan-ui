@@ -1,14 +1,12 @@
 <template>
-  <li :class="[
-          `${prefixCls}-item`,
-          active ? 'active' : ''
-        ]"
-      @click="handleChange">
+  <li :class="classes" @click="handleChange">
     <slot></slot>
   </li>
 </template>
 <script>
   import { findComponentUpward } from '../../base/assist'
+
+  const prefixCls = 'lan-tabs';
 
   export default {
     name: 'lan-tab-pane',
@@ -18,9 +16,18 @@
     },
     data () {
       return {
-        prefixCls: 'lan-tabs',
         active: false
-      };
+      }
+    },
+    computed: {
+      classes() {
+        return [
+          `${prefixCls}-item`,
+          {
+            [`${prefixCls}-active`]: this.active
+          }
+        ]
+      }
     },
     methods: {
       handleChange() {

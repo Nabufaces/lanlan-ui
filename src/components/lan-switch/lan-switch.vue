@@ -1,14 +1,12 @@
 <template>
-  <span class="lan-switch"
-    :class="`lan-switch-${size}`"
+  <span :class="[prefixCls, `${prefixCls}-${size}`]"
     :style="{
       backgroundColor: (state ? (activeColor ? activeColor : '#FF7846') : (inactiveColor ? inactiveColor : '#686E74'))
     }"
     @click="change">
-    <span class="open"
-      :class="{close: !state}"></span>
-    <span class="onText" v-if="state && onText">{{onText}}</span>
-    <span class="offText" v-else-if="!state && offText">{{offText}}</span>
+    <span :class="stateClasses"></span>
+    <span :class="`${prefixCls}-onText`" v-if="state && onText">{{onText}}</span>
+    <span :class="`${prefixCls}-offText`" v-else-if="!state && offText">{{offText}}</span>
   </span>
 </template>
 
@@ -23,7 +21,7 @@
       size: {
         type: String,
         default: 'normal',
-        validator: function (value) {
+        validator(value) {
           return ['normal', 'large'].indexOf(value) > -1
         }
       },
@@ -34,7 +32,18 @@
     },
     data(){
       return {
-        state: this.switchType
+        state: this.switchType,
+        prefixCls: 'lan-switch'
+      }
+    },
+    computed: {
+      stateClasses() {
+        return [
+          `${this.prefixCls}-open`,
+          {
+            [`${this.prefixCls}-close`]: !this.state
+          }
+        ]
       }
     },
     methods: {

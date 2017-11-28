@@ -9,7 +9,7 @@
   margin-right: 16px;
   cursor: pointer;
 }
-.lan-tabs-item.active {
+.lan-tabs-active {
   color: #FF7846;
   border-bottom: 2px solid #FF7846;
 }

@@ -17,14 +17,15 @@
   animation-fill-mode: forwards;
 }
 .lan-messageBox-wrapper-hd {
-  padding: 15px;
-  display: flex;
-  align-items: center;
+  height: 50px;
+  line-height: 50px;
+  padding: 0 15px;
 }
 .lan-messageBox-wrapper-hd-iconImg {
   width: 24px;
   height: 24px;
   margin-right: 10px;
+  vertical-align: middle;
 }
 .lan-messageBox-wrapper-hd-tt {
   color: #1E242A;

@@ -4,75 +4,89 @@
     <p>我们采用了24栅格系统，将区域进行24等分，这样可以轻松应对大部分布局问题。使用栅格系统进行网页布局，可以使页面排版美观、舒适。</p>
     <p>我们定义了两个概念，行<code>row</code>和列<code>col</code>，具体使用方法如下：</p>
     <ul class="ul">
-      <li>使用<code>row</code>在水平方向创建一行</li>
-      <li>将一组<code>col</code>插入在<code>row</code>中</li>
-      <li>在每个<code>col</code>中，键入自己的内容</li>
-      <li>通过设置<code>col</code>的span参数，指定跨越的范围，其范围是1到24</li>
-      <li>每个<code>row</code>中的col总和应该为24</li>
+      <li class="li">使用<code>row</code>在水平方向创建一行</li>
+      <li class="li">将一组<code>col</code>插入在<code>row</code>中</li>
+      <li class="li">在每个<code>col</code>中，键入自己的内容</li>
+      <li class="li">通过设置<code>col</code>的span参数，指定跨越的范围，其范围是1到24</li>
+      <li class="li">每个<code>row</code>中的col总和应该为24</li>
     </ul>
 
     <h2 style="margin-top: 40px">代码示例</h2>
-    <lan-row customClass="demo-grid">
-      <lan-col span="12"><div class="demo">col-12</div></lan-col>
-      <lan-col span="12"><div class="demo">col-12</div></lan-col>
+    <lan-row>
+      <lan-col span="12"><div class="demo1">col-12</div></lan-col>
+      <lan-col span="12"><div class="demo2">col-12</div></lan-col>
     </lan-row>
-    <lan-row customClass="demo-grid">
-      <lan-col span="8"><div class="demo">col-8</div></lan-col>
-      <lan-col span="8"><div class="demo">col-8</div></lan-col>
-      <lan-col span="8"><div class="demo">col-8</div></lan-col>
+    <lan-row>
+      <lan-col span="8"><div class="demo1">col-8</div></lan-col>
+      <lan-col span="8"><div class="demo2">col-8</div></lan-col>
+      <lan-col span="8"><div class="demo1">col-8</div></lan-col>
     </lan-row>
-    <lan-row customClass="demo-grid">
-      <lan-col span="6"><div class="demo">col-6</div></lan-col>
-      <lan-col span="6"><div class="demo">col-6</div></lan-col>
-      <lan-col span="6"><div class="demo">col-6</div></lan-col>
-      <lan-col span="6"><div class="demo">col-6</div></lan-col>
+    <lan-row>
+      <lan-col span="6"><div class="demo1">col-6</div></lan-col>
+      <lan-col span="6"><div class="demo2">col-6</div></lan-col>
+      <lan-col span="6"><div class="demo1">col-6</div></lan-col>
+      <lan-col span="6"><div class="demo2">col-6</div></lan-col>
     </lan-row>
-    <lan-row customClass="demo-grid" :gutter="16">
-      <lan-col span="6"><div class="demo">col-6</div></lan-col>
-      <lan-col span="6"><div class="demo">col-6</div></lan-col>
-      <lan-col span="6"><div class="demo">col-6</div></lan-col>
-      <lan-col span="6"><div class="demo">col-6</div></lan-col>
+    <lan-row :gutter="16">
+      <lan-col span="6"><div class="demo1">col-6</div></lan-col>
+      <lan-col span="6"><div class="demo2">col-6</div></lan-col>
+      <lan-col span="6"><div class="demo1">col-6</div></lan-col>
+      <lan-col span="6"><div class="demo2">col-6</div></lan-col>
     </lan-row>
-    <lan-row customClass="demo-grid">
-      <lan-col span="6" :offset="2"><div class="demo">col-6 offset-2</div></lan-col>
-      <lan-col span="6" :push="3"><div class="demo">col-6 push-3</div></lan-col>
+    <lan-row>
+      <lan-col span="6" :offset="2"><div class="demo1">col-6 offset-2</div></lan-col>
+      <lan-col span="6" :push="3"><div class="demo2">col-6 push-3</div></lan-col>
     </lan-row>
-    <lan-row customClass="demo-grid">
-      <lan-col span="6" :push="18"><div class="demo">col-6 push-18</div></lan-col>
-      <lan-col span="6" :pull="3"><div class="demo">col-6 pull-3</div></lan-col>
+    <lan-row>
+      <lan-col span="6" :push="18"><div class="demo1">col-6 push-18</div></lan-col>
+      <lan-col span="6" :pull="3"><div class="demo2">col-6 pull-3</div></lan-col>
     </lan-row>
 
     <pre v-highlight>
       <code class="html">
         &ltlan-row&gt
-          &ltlan-col span="12"&gt&ltdiv&gtcol-12&lt/div&gt&lt/lan-col&gt
-          &ltlan-col span="12"&gt&ltdiv&gtcol-12&lt/div&gt&lt/lan-col&gt
+          &ltlan-col span="12"&gt&ltdiv class="demo1"&gtcol-12&lt/div&gt&lt/lan-col&gt
+          &ltlan-col span="12"&gt&ltdiv class="demo2"&gtcol-12&lt/div&gt&lt/lan-col&gt
         &lt/lan-row&gt
         &ltlan-row&gt
-          &ltlan-col span="8"&gt&ltdiv&gtcol-8&lt/div&gt&lt/lan-col&gt
-          &ltlan-col span="8"&gt&ltdiv&gtcol-8&lt/div&gt&lt/lan-col&gt
-          &ltlan-col span="8"&gt&ltdiv&gtcol-8&lt/div&gt&lt/lan-col&gt
+          &ltlan-col span="8"&gt&ltdiv class="demo1"&gtcol-8&lt/div&gt&lt/lan-col&gt
+          &ltlan-col span="8"&gt&ltdiv class="demo2"&gtcol-8&lt/div&gt&lt/lan-col&gt
+          &ltlan-col span="8"&gt&ltdiv class="demo1"&gtcol-8&lt/div&gt&lt/lan-col&gt
         &lt/lan-row&gt
         &ltlan-row&gt
-          &ltlan-col span="6"&gt&ltdiv&gtcol-6&lt/div&gt&lt/lan-col&gt
-          &ltlan-col span="6"&gt&ltdiv&gtcol-6&lt/div&gt&lt/lan-col&gt
-          &ltlan-col span="6"&gt&ltdiv&gtcol-6&lt/div&gt&lt/lan-col&gt
-          &ltlan-col span="6"&gt&ltdiv&gtcol-6&lt/div&gt&lt/lan-col&gt
+          &ltlan-col span="6"&gt&ltdiv class="demo1"&gtcol-6&lt/div&gt&lt/lan-col&gt
+          &ltlan-col span="6"&gt&ltdiv class="demo2"&gtcol-6&lt/div&gt&lt/lan-col&gt
+          &ltlan-col span="6"&gt&ltdiv class="demo1"&gtcol-6&lt/div&gt&lt/lan-col&gt
+          &ltlan-col span="6"&gt&ltdiv class="demo2"&gtcol-6&lt/div&gt&lt/lan-col&gt
         &lt/lan-row&gt
         &ltlan-row :gutter="16"&gt
-          &ltlan-col span="6"&gt&ltdiv&gtcol-6&lt/div&gt&lt/lan-col&gt
-          &ltlan-col span="6"&gt&ltdiv&gtcol-6&lt/div&gt&lt/lan-col&gt
-          &ltlan-col span="6"&gt&ltdiv&gtcol-6&lt/div&gt&lt/lan-col&gt
-          &ltlan-col span="6"&gt&ltdiv&gtcol-6&lt/div&gt&lt/lan-col&gt
+          &ltlan-col span="6"&gt&ltdiv class="demo1"&gtcol-6&lt/div&gt&lt/lan-col&gt
+          &ltlan-col span="6"&gt&ltdiv class="demo2"&gtcol-6&lt/div&gt&lt/lan-col&gt
+          &ltlan-col span="6"&gt&ltdiv class="demo1"&gtcol-6&lt/div&gt&lt/lan-col&gt
+          &ltlan-col span="6"&gt&ltdiv class="demo2"&gtcol-6&lt/div&gt&lt/lan-col&gt
         &lt/lan-row&gt
         &ltlan-row&gt
-          &ltlan-col span="6" :offset="2"&gt&ltdiv&gtcol-6 offset-2&lt/div&gt&lt/lan-col&gt
-          &ltlan-col span="6" :push="3"&gt&ltdiv&gtcol-6 push-3&lt/div&gt&lt/lan-col&gt
+          &ltlan-col span="6" :offset="2"&gt&ltdiv class="demo1"&gtcol-6 offset-2&lt/div&gt&lt/lan-col&gt
+          &ltlan-col span="6" :push="3"&gt&ltdiv class="demo2"&gtcol-6 push-3&lt/div&gt&lt/lan-col&gt
         &lt/lan-row&gt
         &ltlan-row&gt
-          &ltlan-col span="6" :push="18"&gt&ltdiv&gtcol-6 push-18&lt/div&gt&lt/lan-col&gt
-          &ltlan-col span="6" :pull="3"&gt&ltdiv&gtcol-6 pull-3&lt/div&gt&lt/lan-col&gt
+          &ltlan-col span="6" :push="18"&gt&ltdiv class="demo1"&gtcol-6 push-18&lt/div&gt&lt/lan-col&gt
+          &ltlan-col span="6" :pull="3"&gt&ltdiv class="demo2"&gtcol-6 pull-3&lt/div&gt&lt/lan-col&gt
         &lt/lan-row&gt
+        &ltstyle scoped&gt
+          .demo1, .demo2 {
+            color: #fff;
+            text-align: center;
+            padding: 15px 0;
+            margin: 10px 0;
+          }
+          .demo1 {
+            background: #FF7846;
+          }
+          .demo2 {
+            background: #FE4B4B;
+          }
+        &lt/style&gt
       </code>
     </pre>
 
@@ -149,17 +163,17 @@
 </script>
 
 
-<style lang="less" scoped>
-  .demo-grid {
-    .lan-col {
-      color: #fff;
-      text-align: center;
-      padding: 15px 0;
-      margin: 10px 0;
-      background: #FF7846;
-      &:nth-child(even) {
-        background: #FE4B4B;
-      }
-    }
+<style scoped>
+  .demo1, .demo2 {
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    margin: 10px 0;
+  }
+  .demo1 {
+    background: #FF7846;
+  }
+  .demo2 {
+    background: #FE4B4B;
   }
 </style>

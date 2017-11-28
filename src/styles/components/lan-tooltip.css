@@ -6,22 +6,6 @@
   font-size: 12px;
   z-index: 1000;
 }
-.lan-tooltip-popper .lan-tooltip-inner {
-  width: 100%;
-  background-clip: padding-box;
-  padding: 8px;
-  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
-  border-radius: 2px;
-  word-wrap: break-word;
-}
-.lan-tooltip-popper .lan-tooltip-inner.dark {
-  color: #fff;
-  background-color: #1E242A;
-}
-.lan-tooltip-popper .lan-tooltip-inner.light {
-  color: #1E242A;
-  background-color: #fff;
-}
 .lan-tooltip-popper[x-placement^=top] {
   padding-bottom: 9px;
 }
@@ -40,10 +24,10 @@
 .lan-tooltip-popper[x-placement^=top]::after {
   bottom: 3px;
 }
-.lan-tooltip-popper[x-placement^=top].dark::after {
+.lan-tooltip-popper[x-placement^=top].lan-tooltip-dark::after {
   border-top-color: #1E242A;
 }
-.lan-tooltip-popper[x-placement^=top].light::after {
+.lan-tooltip-popper[x-placement^=top].lan-tooltip-light::after {
   border-top-color: #fff;
 }
 .lan-tooltip-popper[x-placement^=bottom] {
@@ -64,10 +48,10 @@
 .lan-tooltip-popper[x-placement^=bottom]::after {
   top: 3px;
 }
-.lan-tooltip-popper[x-placement^=bottom].dark:after {
+.lan-tooltip-popper[x-placement^=bottom].lan-tooltip-dark:after {
   border-bottom-color: #1E242A;
 }
-.lan-tooltip-popper[x-placement^=bottom].light::after {
+.lan-tooltip-popper[x-placement^=bottom].lan-tooltip-light::after {
   border-bottom-color: #fff;
 }
 .lan-tooltip-popper[x-placement=top]::before,
@@ -107,10 +91,10 @@
 .lan-tooltip-popper[x-placement^=right]::after {
   left: 3px;
 }
-.lan-tooltip-popper[x-placement^=right].dark::after {
+.lan-tooltip-popper[x-placement^=right].lan-tooltip-dark::after {
   border-right-color: #1E242A;
 }
-.lan-tooltip-popper[x-placement^=right].light::after {
+.lan-tooltip-popper[x-placement^=right].lan-tooltip-light::after {
   border-right-color: #fff;
 }
 .lan-tooltip-popper[x-placement^=left] {
@@ -131,10 +115,10 @@
 .lan-tooltip-popper[x-placement^=left]::after {
   right: 3px;
 }
-.lan-tooltip-popper[x-placement^=left].dark::after {
+.lan-tooltip-popper[x-placement^=left].lan-tooltip-dark::after {
   border-left-color: #1E242A;
 }
-.lan-tooltip-popper[x-placement^=left].light::after {
+.lan-tooltip-popper[x-placement^=left].lan-tooltip-light::after {
   border-left-color: #fff;
 }
 .lan-tooltip-popper[x-placement=left]::before,
@@ -155,4 +139,20 @@
 .lan-tooltip-popper[x-placement^=left-end]::after,
 .lan-tooltip-popper[x-placement^=right-end]::after {
   bottom: 5px;
+}
+.lan-tooltip-inner {
+  width: 100%;
+  background-clip: padding-box;
+  padding: 8px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
+  border-radius: 2px;
+  word-wrap: break-word;
+}
+.lan-tooltip-inner.lan-tooltip-dark {
+  color: #fff;
+  background-color: #1E242A;
+}
+.lan-tooltip-inner.lan-tooltip-light {
+  color: #1E242A;
+  background-color: #fff;
 }

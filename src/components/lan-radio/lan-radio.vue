@@ -1,14 +1,10 @@
 <template>
-  <label class="lan-radio">
-        <span class="radio">
-            <span class="radio-inner" :class="currentValue ? 'checked': '' "></span>
-            <input
-              type="radio"
-              class="ipt"
-              :checked="currentValue"
-              @change="change" />
-        </span>
-        <slot>{{ label }}</slot>
+  <label :class="prefixCls">
+    <span :class="`${prefixCls}-wrapper`">
+      <span :class="classes"></span>
+      <input type="radio" :class="`${prefixCls}-ipt`" :checked="currentValue" @change="change" />
+    </span>
+    <slot>{{label}}</slot>
   </label>
 </template>
 
@@ -17,6 +13,19 @@
 
   export default{
     name: 'lan-radio',
-    mixins: [mixin]
+    mixins: [mixin],
+    computed: {
+      prefixCls() {
+        return 'lan-radio'
+      },
+      classes() {
+        return [
+          `${this.prefixCls}-inner`,
+          {
+            [`${this.prefixCls}-checked`]: this.currentValue
+          }
+        ]
+      }
+    }
   }
 </script>

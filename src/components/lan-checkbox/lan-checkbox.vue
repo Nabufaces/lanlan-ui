@@ -1,14 +1,10 @@
 <template>
-  <label class="lan-checkbox">
-        <span class="checkbox">
-            <span class="checkbox-inner" :class="currentValue ? 'checked': '' "></span>
-            <input
-              type="checkbox"
-              class="ipt"
-              :checked="currentValue"
-              @change="change" />
-        </span>
-    <slot>{{ label }}</slot>
+  <label :class="prefixCls">
+    <span :class="`${prefixCls}-wrapper`">
+      <span :class="classes"></span>
+      <input type="checkbox" :class="`${prefixCls}-ipt`" :checked="currentValue" @change="change" />
+    </span>
+    <slot>{{label}}</slot>
   </label>
 </template>
 
@@ -17,7 +13,20 @@
 
   export default{
     name: 'lan-checkbox',
-    mixins: [mixin]
+    mixins: [mixin],
+    computed: {
+      prefixCls() {
+        return 'lan-checkbox'
+      },
+      classes() {
+        return [
+          `${this.prefixCls}-inner`,
+          {
+            [`${this.prefixCls}-checked`]: this.currentValue
+          }
+        ]
+      }
+    }
   }
 </script>
 

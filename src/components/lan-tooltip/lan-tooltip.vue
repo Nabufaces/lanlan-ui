@@ -8,13 +8,13 @@
 
     <transition name="fade">
       <div
-        :class="[`${prefixCls}-popper`, effect]"
+        :class="[`${prefixCls}-popper`, `${prefixCls}-${effect}`]"
         :style="{maxWidth: `${width}px`}"
         ref="popper"
         v-show="visible"
         @mouseenter="handleShowPopper"
         @mouseleave="handleClosePopper">
-        <div :class="[`${prefixCls}-inner`, effect]">
+        <div :class="[`${prefixCls}-inner`, `${prefixCls}-${effect}`]">
           <slot name="content">{{ content }}</slot>
         </div>
       </div>

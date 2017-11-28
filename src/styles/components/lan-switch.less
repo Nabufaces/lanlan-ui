@@ -11,17 +11,17 @@
   color: #fff;
   &&-normal {
     width: 44px;
-    .close {
+    .lan-switch-close {
       transform: translateX(-22px);
     }
   }
   &&-large {
     width: 58px;
-    .close {
+    .lan-switch-close {
       transform: translateX(-36px);
     }
   }
-  .open, .close {
+  &-open, &-close {
     width: 18px;
     height: 18px;
     position: absolute;
@@ -30,19 +30,19 @@
     background-color: #fff;
     transition: transform .3s;
   }
-  .open {
+  &-open {
     right: 2px;
   }
-  .onText, .offText {
+  &-onText, &-offText {
     position: absolute;
     top: 5px;
     font-size: 12px;
     line-height: 1;
   }
-  .onText {
+  &-onText {
     left: 8px;
   }
-  .offText {
+  &-offText {
     right: 8px;
   }
 }

@@ -4,7 +4,7 @@
   display: inline-block;
   margin-right: 8px;
 }
-.lan-checkbox .checkbox {
+.lan-checkbox-wrapper {
   display: inline-block;
   vertical-align: middle;
   white-space: nowrap;
@@ -13,7 +13,7 @@
   line-height: 1;
   position: relative;
 }
-.lan-checkbox .checkbox .checkbox-inner {
+.lan-checkbox-inner {
   display: inline-block;
   width: 14px;
   height: 14px;
@@ -27,7 +27,7 @@
   z-index: 1;
   box-sizing: border-box;
 }
-.lan-checkbox .checkbox .checkbox-inner::after {
+.lan-checkbox-inner::after {
   position: absolute;
   width: 4px;
   height: 8px;
@@ -41,14 +41,14 @@
   transform: rotate(45deg) scale(0);
   transition: all 0.2s ease-in-out;
 }
-.lan-checkbox .checkbox .checkbox-inner.checked,
-.lan-checkbox .checkbox .checkbox-inner:hover {
+.lan-checkbox-inner:hover {
   border-color: #FF7846;
 }
-.lan-checkbox .checkbox .checkbox-inner.checked {
+.lan-checkbox-checked {
+  border-color: #FF7846;
   background-color: #FF7846;
 }
-.lan-checkbox .checkbox .checkbox-inner.checked::after {
+.lan-checkbox-checked::after {
   content: "";
   display: table;
   width: 6px;
@@ -62,7 +62,7 @@
   transform: rotate(45deg) scale(1);
   transition: all 0.2s ease-in-out;
 }
-.lan-checkbox .checkbox .ipt {
+.lan-checkbox-ipt {
   width: 100%;
   height: 100%;
   position: absolute;

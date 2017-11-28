@@ -59,9 +59,9 @@
     <h3>Message instance #</h3>
     <p>通过直接调用以下方法来使用组件：</p>
     <ul class="ul" style="margin-bottom: 40px">
-      <li><code>this.$Message.success(config)</code></li>
-      <li><code>this.$Message.warning(config)</code></li>
-      <li><code>this.$Message.error(config)</code></li>
+      <li class="li"><code>this.$Message.success(config)</code></li>
+      <li class="li"><code>this.$Message.warning(config)</code></li>
+      <li class="li"><code>this.$Message.error(config)</code></li>
     </ul>
     <lan-table :column="columnProps" :tableSource="sourceMessage" :border="true"></lan-table>
   </article>

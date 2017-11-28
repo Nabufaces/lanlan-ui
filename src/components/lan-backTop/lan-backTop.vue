@@ -2,7 +2,7 @@
   <div :class="classes" :style="styles" @click="handleBack">
     <slot>
       <div :class="innerClasses">
-        <i class="iconfont icon-less"></i>
+        <lan-icon name="less"></lan-icon>
       </div>
     </slot>
   </div>
@@ -10,10 +10,15 @@
 <script>
   import { scrollTop } from '../../base/assist'
   import { on, off } from '../../base/dom'
+  import lanIcon from "../lan-icon"
 
   const prefixCls = 'lan-backTop';
 
   export default {
+    name: 'lan-backTop',
+    components: {
+      lanIcon
+    },
     props: {
       height: {
         type: Number,

@@ -1,18 +1,12 @@
 <template>
-    <button
-            class="lan-button"
-            :disabled="disabled"
-            :class="[
-              classType?`lan-button-${classType}`:'',
-              size?`lan-button-${size}`:'',
-              customClass
-            ]"
-            @click="handleClick">
+    <button :class="classes" :disabled="disabled" @click="handleClick">
         <slot></slot>
     </button>
 </template>
 
 <script>
+  const prefixCls = 'lan-button';
+
   export default{
     name: 'lan-button',
     props: {
@@ -26,6 +20,16 @@
       },
       disabled: Boolean,
       customClass: String
+    },
+    computed: {
+      classes() {
+        return [
+          prefixCls,
+          `${prefixCls}-${this.classType}`,
+          `${prefixCls}-${this.size}`,
+          this.customClass
+        ]
+      }
     },
     methods: {
       handleClick: function(){

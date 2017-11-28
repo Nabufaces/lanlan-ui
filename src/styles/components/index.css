@@ -149,7 +149,7 @@
   display: inline-block;
   margin-right: 8px;
 }
-.lan-checkbox .checkbox {
+.lan-checkbox-wrapper {
   display: inline-block;
   vertical-align: middle;
   white-space: nowrap;
@@ -158,7 +158,7 @@
   line-height: 1;
   position: relative;
 }
-.lan-checkbox .checkbox .checkbox-inner {
+.lan-checkbox-inner {
   display: inline-block;
   width: 14px;
   height: 14px;
@@ -172,7 +172,7 @@
   z-index: 1;
   box-sizing: border-box;
 }
-.lan-checkbox .checkbox .checkbox-inner::after {
+.lan-checkbox-inner::after {
   position: absolute;
   width: 4px;
   height: 8px;
@@ -186,14 +186,14 @@
   transform: rotate(45deg) scale(0);
   transition: all 0.2s ease-in-out;
 }
-.lan-checkbox .checkbox .checkbox-inner.checked,
-.lan-checkbox .checkbox .checkbox-inner:hover {
+.lan-checkbox-inner:hover {
   border-color: #FF7846;
 }
-.lan-checkbox .checkbox .checkbox-inner.checked {
+.lan-checkbox-checked {
+  border-color: #FF7846;
   background-color: #FF7846;
 }
-.lan-checkbox .checkbox .checkbox-inner.checked::after {
+.lan-checkbox-checked::after {
   content: "";
   display: table;
   width: 6px;
@@ -207,7 +207,7 @@
   transform: rotate(45deg) scale(1);
   transition: all 0.2s ease-in-out;
 }
-.lan-checkbox .checkbox .ipt {
+.lan-checkbox-ipt {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -217,11 +217,6 @@
   right: 0;
   opacity: 0;
   cursor: pointer;
-}
-.lan-checkboxGroup {
-  display: inline-block;
-  font-size: 12px;
-  vertical-align: middle;
 }
 .lan-row {
   position: relative;
@@ -788,9 +783,9 @@
   transform: translate(-50%, -50%);
 }
 .lan-message-tips {
-  display: flex;
-  align-items: center;
-  padding: 8px 16px;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 16px;
   color: #1E242A;
   background: #FFFFFF;
   font-size: 12px;
@@ -801,6 +796,7 @@
   width: 24px;
   height: 24px;
   margin-right: 9px;
+  vertical-align: middle;
 }
 .lan-messageBox {
   width: 100%;
@@ -821,14 +817,15 @@
   animation-fill-mode: forwards;
 }
 .lan-messageBox-wrapper-hd {
-  padding: 15px;
-  display: flex;
-  align-items: center;
+  height: 50px;
+  line-height: 50px;
+  padding: 0 15px;
 }
 .lan-messageBox-wrapper-hd-iconImg {
   width: 24px;
   height: 24px;
   margin-right: 10px;
+  vertical-align: middle;
 }
 .lan-messageBox-wrapper-hd-tt {
   color: #1E242A;
@@ -942,6 +939,12 @@
 .lan-pagination .ipt:hover {
   border: 1px solid #FF7846;
 }
+.lan-radioGroup,
+.lan-checkboxGroup {
+  display: inline-block;
+  font-size: 12px;
+  vertical-align: middle;
+}
 .lan-radio {
   font-size: 12px;
   vertical-align: middle;
@@ -951,7 +954,7 @@
   margin-right: 8px;
   cursor: pointer;
 }
-.lan-radio .radio {
+.lan-radio-wrapper {
   display: inline-block;
   margin-right: 4px;
   white-space: nowrap;
@@ -961,7 +964,7 @@
   vertical-align: middle;
   cursor: pointer;
 }
-.lan-radio .radio .radio-inner {
+.lan-radio-inner {
   display: inline-block;
   width: 14px;
   height: 14px;
@@ -975,7 +978,7 @@
   z-index: 1;
   box-sizing: border-box;
 }
-.lan-radio .radio .radio-inner::after {
+.lan-radio-inner::after {
   position: absolute;
   width: 6px;
   height: 6px;
@@ -991,16 +994,18 @@
   border-left: 0;
   transition: all 0.2s ease-in-out;
 }
-.lan-radio .radio .radio-inner.checked,
-.lan-radio .radio .radio-inner:hover {
+.lan-radio-inner:hover {
   border-color: #FF7846;
 }
-.lan-radio .radio .radio-inner.checked::after {
+.lan-radio-checked {
+  border-color: #FF7846;
+}
+.lan-radio-checked::after {
   opacity: 1;
   transform: scale(1);
   transition: all 0.2s ease-in-out;
 }
-.lan-radio .radio .ipt {
+.lan-radio-ipt {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -1008,11 +1013,6 @@
   right: 0;
   opacity: 0;
   cursor: pointer;
-}
-.lan-radioGroup {
-  display: inline-block;
-  font-size: 12px;
-  vertical-align: middle;
 }
 .lan-select {
   white-space: nowrap;
@@ -1077,17 +1077,17 @@
 .lan-switch.lan-switch-normal {
   width: 44px;
 }
-.lan-switch.lan-switch-normal .close {
+.lan-switch.lan-switch-normal .lan-switch-close {
   transform: translateX(-22px);
 }
 .lan-switch.lan-switch-large {
   width: 58px;
 }
-.lan-switch.lan-switch-large .close {
+.lan-switch.lan-switch-large .lan-switch-close {
   transform: translateX(-36px);
 }
-.lan-switch .open,
-.lan-switch .close {
+.lan-switch-open,
+.lan-switch-close {
   width: 18px;
   height: 18px;
   position: absolute;
@@ -1096,20 +1096,20 @@
   background-color: #fff;
   transition: transform .3s;
 }
-.lan-switch .open {
+.lan-switch-open {
   right: 2px;
 }
-.lan-switch .onText,
-.lan-switch .offText {
+.lan-switch-onText,
+.lan-switch-offText {
   position: absolute;
   top: 5px;
   font-size: 12px;
   line-height: 1;
 }
-.lan-switch .onText {
+.lan-switch-onText {
   left: 8px;
 }
-.lan-switch .offText {
+.lan-switch-offText {
   right: 8px;
 }
 .lan-table {
@@ -1210,7 +1210,7 @@
   margin-right: 16px;
   cursor: pointer;
 }
-.lan-tabs-item.active {
+.lan-tabs-active {
   color: #FF7846;
   border-bottom: 2px solid #FF7846;
 }
@@ -1290,22 +1290,6 @@
   font-size: 12px;
   z-index: 1000;
 }
-.lan-tooltip-popper .lan-tooltip-inner {
-  width: 100%;
-  background-clip: padding-box;
-  padding: 8px;
-  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
-  border-radius: 2px;
-  word-wrap: break-word;
-}
-.lan-tooltip-popper .lan-tooltip-inner.dark {
-  color: #fff;
-  background-color: #1E242A;
-}
-.lan-tooltip-popper .lan-tooltip-inner.light {
-  color: #1E242A;
-  background-color: #fff;
-}
 .lan-tooltip-popper[x-placement^=top] {
   padding-bottom: 9px;
 }
@@ -1324,10 +1308,10 @@
 .lan-tooltip-popper[x-placement^=top]::after {
   bottom: 3px;
 }
-.lan-tooltip-popper[x-placement^=top].dark::after {
+.lan-tooltip-popper[x-placement^=top].lan-tooltip-dark::after {
   border-top-color: #1E242A;
 }
-.lan-tooltip-popper[x-placement^=top].light::after {
+.lan-tooltip-popper[x-placement^=top].lan-tooltip-light::after {
   border-top-color: #fff;
 }
 .lan-tooltip-popper[x-placement^=bottom] {
@@ -1348,10 +1332,10 @@
 .lan-tooltip-popper[x-placement^=bottom]::after {
   top: 3px;
 }
-.lan-tooltip-popper[x-placement^=bottom].dark:after {
+.lan-tooltip-popper[x-placement^=bottom].lan-tooltip-dark:after {
   border-bottom-color: #1E242A;
 }
-.lan-tooltip-popper[x-placement^=bottom].light::after {
+.lan-tooltip-popper[x-placement^=bottom].lan-tooltip-light::after {
   border-bottom-color: #fff;
 }
 .lan-tooltip-popper[x-placement=top]::before,
@@ -1391,10 +1375,10 @@
 .lan-tooltip-popper[x-placement^=right]::after {
   left: 3px;
 }
-.lan-tooltip-popper[x-placement^=right].dark::after {
+.lan-tooltip-popper[x-placement^=right].lan-tooltip-dark::after {
   border-right-color: #1E242A;
 }
-.lan-tooltip-popper[x-placement^=right].light::after {
+.lan-tooltip-popper[x-placement^=right].lan-tooltip-light::after {
   border-right-color: #fff;
 }
 .lan-tooltip-popper[x-placement^=left] {
@@ -1415,10 +1399,10 @@
 .lan-tooltip-popper[x-placement^=left]::after {
   right: 3px;
 }
-.lan-tooltip-popper[x-placement^=left].dark::after {
+.lan-tooltip-popper[x-placement^=left].lan-tooltip-dark::after {
   border-left-color: #1E242A;
 }
-.lan-tooltip-popper[x-placement^=left].light::after {
+.lan-tooltip-popper[x-placement^=left].lan-tooltip-light::after {
   border-left-color: #fff;
 }
 .lan-tooltip-popper[x-placement=left]::before,
@@ -1439,4 +1423,20 @@
 .lan-tooltip-popper[x-placement^=left-end]::after,
 .lan-tooltip-popper[x-placement^=right-end]::after {
   bottom: 5px;
+}
+.lan-tooltip-inner {
+  width: 100%;
+  background-clip: padding-box;
+  padding: 8px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
+  border-radius: 2px;
+  word-wrap: break-word;
+}
+.lan-tooltip-inner.lan-tooltip-dark {
+  color: #fff;
+  background-color: #1E242A;
+}
+.lan-tooltip-inner.lan-tooltip-light {
+  color: #1E242A;
+  background-color: #fff;
 }

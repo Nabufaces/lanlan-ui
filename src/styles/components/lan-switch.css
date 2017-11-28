@@ -13,17 +13,17 @@
 .lan-switch.lan-switch-normal {
   width: 44px;
 }
-.lan-switch.lan-switch-normal .close {
+.lan-switch.lan-switch-normal .lan-switch-close {
   transform: translateX(-22px);
 }
 .lan-switch.lan-switch-large {
   width: 58px;
 }
-.lan-switch.lan-switch-large .close {
+.lan-switch.lan-switch-large .lan-switch-close {
   transform: translateX(-36px);
 }
-.lan-switch .open,
-.lan-switch .close {
+.lan-switch-open,
+.lan-switch-close {
   width: 18px;
   height: 18px;
   position: absolute;
@@ -32,19 +32,19 @@
   background-color: #fff;
   transition: transform .3s;
 }
-.lan-switch .open {
+.lan-switch-open {
   right: 2px;
 }
-.lan-switch .onText,
-.lan-switch .offText {
+.lan-switch-onText,
+.lan-switch-offText {
   position: absolute;
   top: 5px;
   font-size: 12px;
   line-height: 1;
 }
-.lan-switch .onText {
+.lan-switch-onText {
   left: 8px;
 }
-.lan-switch .offText {
+.lan-switch-offText {
   right: 8px;
 }

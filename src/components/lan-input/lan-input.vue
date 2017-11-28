@@ -31,6 +31,7 @@
 
 <script>
   import lanIcon from '../lan-icon'
+
   const prefixCls = 'lan-input';
 
   export default {
@@ -61,8 +62,8 @@
             [`${prefixCls}-prefix`]: this.prefixIcon,
             [`${prefixCls}-suffix`]: this.suffixIcon,
             [`${prefixCls}-group`]: this.$slots.prepend || this.$slots.append,
-            [`${prefixCls}-group-prepend`]: this.$slots.prepend,
-            [`${prefixCls}-group-append`]: this.$slots.append
+            [`${prefixCls}-group-with-prepend`]: this.$slots.prepend,
+            [`${prefixCls}-group-with-append`]: this.$slots.append
           }
         ];
       },
