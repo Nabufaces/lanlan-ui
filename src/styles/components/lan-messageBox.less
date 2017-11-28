@@ -6,7 +6,7 @@
   left: 0;
   top: 0;
   z-index: 1;
-  .modal {
+  &-wrapper {
     width: 360px;
     position: absolute;
     top: 30%;
@@ -14,26 +14,26 @@
     background: #fff;
     animation: lanMoveDownIn .5s ease;
     animation-fill-mode: forwards;
-    .m-hd {
+    &-hd {
       padding: 15px;
       display: flex;
       align-items: center;
-      .iconImg {
+      &-iconImg {
         width: 24px;
         height: 24px;
         margin-right: 10px;
       }
-      .tt {
+      &-tt {
         color: #1E242A;
         font-size: 16px;
       }
     }
-    .m-cnt {
+    &-cnt {
       padding: 15px 30px 15px 64px;
       color: #B0B4B8;
       font-size: 12px;
     }
-    .m-ft {
+    &-ft {
       padding: 15px;
       text-align: right;
     }

@@ -787,7 +787,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.lan-message .tips {
+.lan-message-tips {
   display: flex;
   align-items: center;
   padding: 8px 16px;
@@ -797,7 +797,7 @@
   box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 }
-.lan-message .tips .iconImg {
+.lan-message-tips-iconImg {
   width: 24px;
   height: 24px;
   margin-right: 9px;
@@ -811,7 +811,7 @@
   top: 0;
   z-index: 1;
 }
-.lan-messageBox .modal {
+.lan-messageBox-wrapper {
   width: 360px;
   position: absolute;
   top: 30%;
@@ -820,26 +820,26 @@
   animation: lanMoveDownIn .5s ease;
   animation-fill-mode: forwards;
 }
-.lan-messageBox .modal .m-hd {
+.lan-messageBox-wrapper-hd {
   padding: 15px;
   display: flex;
   align-items: center;
 }
-.lan-messageBox .modal .m-hd .iconImg {
+.lan-messageBox-wrapper-hd-iconImg {
   width: 24px;
   height: 24px;
   margin-right: 10px;
 }
-.lan-messageBox .modal .m-hd .tt {
+.lan-messageBox-wrapper-hd-tt {
   color: #1E242A;
   font-size: 16px;
 }
-.lan-messageBox .modal .m-cnt {
+.lan-messageBox-wrapper-cnt {
   padding: 15px 30px 15px 64px;
   color: #B0B4B8;
   font-size: 12px;
 }
-.lan-messageBox .modal .m-ft {
+.lan-messageBox-wrapper-ft {
   padding: 15px;
   text-align: right;
 }

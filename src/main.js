@@ -61,7 +61,6 @@ const install = function(Vue, opts = {}) {
   });
 
   Vue.prototype.$Message = lanMessage;
-  Vue.prototype.$MessageBox = lanMessageBox;
 };
 
 /* istanbul ignore if */
@@ -70,7 +69,7 @@ if (typeof window !== 'undefined' && window.Vue) {
 };
 
 export default {
-  version: '0.1.1',
+  version: '0.1.2',
   install,
   ...components
 };

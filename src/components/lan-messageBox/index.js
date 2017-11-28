@@ -1,2 +1,2 @@
-import lanMessageBox from './lan-messageBox.vue';
-export default lanMessageBox;
+import lanMessageBox from './lan-messageBox.vue'
+export default lanMessageBox

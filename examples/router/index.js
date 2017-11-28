@@ -54,6 +54,10 @@ export default new Router({
       component: resolve => {require(['../components/message'],resolve)}
     },
     {
+      path: '/messageBox',
+      component: resolve => {require(['../components/messageBox'],resolve)}
+    },
+    {
       path: '/modal',
       component: resolve => {require(['../components/modal'],resolve)}
     },

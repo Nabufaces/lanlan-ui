@@ -35,9 +35,7 @@
     </pre>
 
     <h3>显示时间配置</h3>
-    <lan-row>
-      <lan-button classType="primary" @click="handleDuration">显示1S</lan-button>
-    </lan-row>
+    <lan-button classType="primary" @click="handleDuration">显示1S</lan-button>
     <pre v-highlight>
       <code class="html">
         &ltlan-button classType="primary" @click="handleDuration"&gt显示1S&lt/lan-button&gt

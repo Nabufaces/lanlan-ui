@@ -1,64 +1,8 @@
 <template>
-    <!--<label class="title">Modal</label>-->
-    <!--<div class="group">-->
-      <!--<lan-button size="small" classType="primary" @click="handleModal">点击打开modal</lan-button>&nbsp;-->
-      <!--<lan-modal title="标题" :showModal="showModal" @close="showModal = false">-->
-        <!--<span>这是modal模板</span>-->
-      <!--</lan-modal>-->
-    <!--</div>-->
-
-    <!--<label class="title">MessageBox</label>-->
-    <!--<div class="group">-->
-      <!--<lan-button size="small" classType="primary" @click="handleMessageBox">点击打开messageBox</lan-button>-->
-      <!--<lan-message-box :visible="showMessageBox" type="warning" title="标题" message="这是消息弹框"-->
-                   <!--@confirm="showMessageBox = false"></lan-message-box>-->
-    <!--</div>-->
-
-    <!--<label class="title">Message</label>-->
-    <!--<div class="group">-->
-      <!--<lan-button size="small" classType="primary" @click="handleMessage">点击打开message</lan-button>&nbsp;-->
-      <!--<lan-message v-if="showMessage" type="error" message="这是一条消息"-->
-                   <!--@close="showMessage = false"></lan-message>-->
-    <!--</div>-->
-
     <!--<label class="title">Table</label>-->
     <!--<div class="group">-->
       <!--<lan-table :column="column" :tableSource="tableSource" :border="true" :stripe="true" :height="250"></lan-table>-->
     <!--</div>-->
-
-    <!--<label class="title">Tooltip</label>-->
-    <!--<div class="group">-->
-      <!--<div class="box">-->
-        <!--<div class="top">-->
-          <!--<lan-tooltip content="Top 提示文字 Top 提示文字 Top 提示文字" placement="top" :width="100">-->
-            <!--<lan-button size="small" classType="primary">上</lan-button>-->
-          <!--</lan-tooltip>-->
-        <!--</div>-->
-        <!--<div class="left">-->
-          <!--<lan-tooltip content="Left 提示文字" placement="left"  effect='light'>-->
-            <!--<lan-button size="small" classType="primary">左</lan-button>-->
-          <!--</lan-tooltip>-->
-        <!--</div>-->
-        <!--<div class="right">-->
-          <!--<lan-tooltip content="Right 提示文字" placement="right">-->
-            <!--<lan-button size="small" classType="primary">右</lan-button>-->
-          <!--</lan-tooltip>-->
-        <!--</div>-->
-        <!--<div class="bottom">-->
-          <!--<lan-tooltip content="Bottom 提示文字" placement="bottom" effect='light'>-->
-            <!--<lan-button size="small" classType="primary">下</lan-button>-->
-          <!--</lan-tooltip>-->
-        <!--</div>-->
-      <!--</div>-->
-    <!--</div>-->
-
-    <!--&lt;!&ndash;<label class="title">Carousel</label>&ndash;&gt;-->
-    <!--&lt;!&ndash;<div class="group">&ndash;&gt;-->
-      <!--&lt;!&ndash;<lan-carousel :carouselSource="carouselSource"></lan-carousel>&ndash;&gt;-->
-    <!--&lt;!&ndash;</div>&ndash;&gt;-->
-
-    <!--<lan-back-top></lan-back-top>-->
-  <!--</div>-->
   <div class="m-wrapper">
     <div class="m-hd">
       <img src="../../static/img/logo.png" class="m-hd-logo"/>
@@ -87,7 +31,7 @@
             <li class="menu-item">Table 表格</li>
             <li class="menu-group">View</li>
             <router-link to="/message" class="menu-item" tag="li">Message 消息</router-link>
-            <li class="menu-item">MessageBox 消息框</li>
+            <router-link to="/messageBox" class="menu-item" tag="li">MessageBox 消息框</router-link>
             <router-link to="/modal" class="menu-item" tag="li">Modal 模态框</router-link>
             <router-link to="/tooltip" class="menu-item" tag="li">Tooltip 提示</router-link>
             <li class="menu-group">Other</li>
@@ -111,29 +55,6 @@
   export default {
     data () {
       return {
-        source: [{
-          value: 0,
-          label: '黄金糕'
-        }, {
-          value: 1,
-          label: '双皮奶'
-        }, {
-          value: 2,
-          label: '蚵仔煎',
-          disabled: true
-        }, {
-          value: 3,
-          label: '龙须面'
-        }, {
-          value: 4,
-          label: '北京烤鸭'
-        }, {
-          value: 5,
-          label: '北京糖葫芦'
-        }],
-        showModal: false,
-        showMessageBox: false,
-        showMessage: false,
         column: [{
           prop: "id",
           label: "序号",
@@ -199,10 +120,6 @@
           name: '王小二',
           address: '上海市普陀区金沙江路 1520 弄'
         }],
-        radioValue: false,
-        radioGroup: 'apple',
-        checkboxValue: false,
-        checkboxGroup: ['apple'],
         carouselSource: [
           "http://oss.lanlanlife.com/3d31bd5315845d3d086834d6e9b25c90_800x800.jpg",
           "http://oss.lanlanlife.com/4b25875c82cb38e0d1596385ff787144_800x800.jpg",
@@ -218,12 +135,6 @@
         if(value === 2) {
           window.location.href = 'https://code.aliyun.com/lanlan_xsj/lanlanFE'
         }
-      },
-      handleMessageBox(){
-        this.showMessageBox = true;
-      },
-      handleMessage() {
-        this.showMessage = true;
       }
     }
   }
