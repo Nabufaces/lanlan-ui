@@ -19,11 +19,11 @@
   padding: 15px;
   border-bottom: 1px solid #E4E6EC;
 }
-.lan-modal-mask .lan-modal-hd .tt {
+.lan-modal-mask .lan-modal-hd-tt {
   color: #1E242A;
   font-size: 16px;
 }
-.lan-modal-mask .lan-modal-hd .close {
+.lan-modal-mask .lan-modal-hd-close {
   position: absolute;
   top: 17px;
   right: 17px;

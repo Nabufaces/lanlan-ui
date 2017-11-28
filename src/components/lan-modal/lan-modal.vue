@@ -6,9 +6,9 @@
            :style="{width: width ? width + 'px' : '400px'}">
         <div :class="`${prefixCls}-hd`">
           <slot name="title">
-            <span class="tt">{{title}}</span>
+            <span :class="`${prefixCls}-hd-tt`">{{title}}</span>
           </slot>
-          <span class="close" @click="handleClose" v-if="showClose"><i class="iconfont icon-close"></i></span>
+          <span :class="`${prefixCls}-hd-close`" @click="handleClose" v-if="showClose"><i class="iconfont icon-close"></i></span>
         </div>
         <div :class="`${prefixCls}-cnt`">
           <slot></slot>
