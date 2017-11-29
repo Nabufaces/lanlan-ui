@@ -2,7 +2,7 @@
   border: 1px solid #E4E6EC;
   color: #4A5056;
   font-size: 14px;
-  .lan-table-header {
+  &-hd {
     background-color: #EDF0F4;
     border-radius: 2px;
     table {
@@ -11,48 +11,48 @@
       thead {
         th {
           padding: 10px;
-          &.border {
+          &.lan-table-border {
             border-right: 1px solid #E5E5E5;
             &:last-child {
               border-right: none;
             }
           }
-          &.pointer {
-            cursor: pointer;
-          }
-          .sort {
-            display: inline-block;
-            width: 14px;
-            height: 14px;
-            margin-left: 5px;
-            margin-top: -4px;
-            vertical-align: middle;
-            overflow: hidden;
-            position: relative;
-            i.iconfont {
-              display: block;
-              height: 6px;
-              line-height: 6px;
-              overflow: hidden;
-              position: absolute;
-              color: #bbbec4;
-              transition: color .2s ease-in-out;
-              &:first-child {
-                top: 0;
-              }
-              &:last-child {
-                bottom: 0;
-              }
-              &.chosen {
-                color: #4A5056;
-              }
-            }
-          }
         }
       }
     }
+    &-pointer {
+      cursor: pointer;
+    }
+    &-sort {
+      display: inline-block;
+      width: 14px;
+      height: 14px;
+      margin-left: 5px;
+      margin-top: -4px;
+      vertical-align: middle;
+      overflow: hidden;
+      position: relative;
+      .iconfont {
+        display: block;
+        height: 6px;
+        line-height: 6px;
+        overflow: hidden;
+        position: absolute;
+        color: #bbbec4;
+        transition: color .2s ease-in-out;
+        &:first-child {
+          top: 0;
+        }
+        &:last-child {
+          bottom: 0;
+        }
+      }
+      &-chosen.iconfont {
+        color: #4A5056;
+      }
+    }
   }
-  .lan-table-body {
+  &-bd {
     overflow: scroll;
     table {
       width: 100%;
@@ -63,7 +63,7 @@
           &:last-child {
             border-bottom: none;
           }
-          &.stripe:nth-child(even) {
+          &.lan-table-stripe:nth-child(even) {
             background-color: #fafafa;
           }
           &:hover>td {
@@ -77,7 +77,7 @@
             word-break: break-all;
             line-height: 23px;
             padding: 10px;
-            &.border {
+            &.lan-table-border {
               border-right: 1px solid #E5E5E5;
               &:last-child {
                 border-right: none;

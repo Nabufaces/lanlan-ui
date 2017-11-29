@@ -1,13 +1,27 @@
 <template>
-  <i class="iconfont" :class="`icon-${name} ${customClass}`"></i>
+  <i :class="classes"></i>
 </template>
 <script>
 
   export default {
     name: 'lan-icon',
     props: {
-      name: String,
+      name: {
+        type: String,
+        required: true
+      },
       customClass: String
+    },
+    computed: {
+      classes() {
+        return [
+          'iconfont',
+          `icon-${this.name}`,
+          {
+            [`${this.customClass}`]: this.customClass
+          }
+        ]
+      }
     }
   };
 </script>

@@ -50,6 +50,10 @@ export default new Router({
       component: resolve => {require(['../components/datePicker'],resolve)}
     },
     {
+      path: '/table',
+      component: resolve => {require(['../components/table'],resolve)}
+    },
+    {
       path: '/message',
       component: resolve => {require(['../components/message'],resolve)}
     },

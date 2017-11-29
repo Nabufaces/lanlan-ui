@@ -1,8 +1,4 @@
 <template>
-    <!--<label class="title">Table</label>-->
-    <!--<div class="group">-->
-      <!--<lan-table :column="column" :tableSource="tableSource" :border="true" :stripe="true" :height="250"></lan-table>-->
-    <!--</div>-->
   <div class="m-wrapper">
     <div class="m-hd">
       <img src="../../static/img/logo.png" class="m-hd-logo"/>
@@ -28,7 +24,7 @@
             <router-link to="/select" class="menu-item" tag="li">Select 选择器</router-link>
             <router-link to="/timePicker" class="menu-item" tag="li">TimePicker 时间选择器</router-link>
             <router-link to="/datePicker" class="menu-item" tag="li">DatePicker 日期选择器</router-link>
-            <li class="menu-item">Table 表格</li>
+            <router-link to="/table" class="menu-item" tag="li">Table 表格</router-link>
             <li class="menu-group">View</li>
             <router-link to="/message" class="menu-item" tag="li">Message 消息</router-link>
             <router-link to="/messageBox" class="menu-item" tag="li">MessageBox 消息框</router-link>
@@ -53,83 +49,6 @@
 <script>
 
   export default {
-    data () {
-      return {
-        column: [{
-          prop: "id",
-          label: "序号",
-          width: 100,
-          align: 'center',
-          sortable: true
-        }, {
-          prop: "date",
-          label: "日期",
-          width: 100
-        }, {
-          prop: "name",
-          label: "姓名",
-          width: 120
-        }, {
-          prop: "address",
-          label: "地址",
-          width: 300
-        }, {
-          label: "操作",
-           render: (h) => {
-             return h('lan-button', {
-               props: {
-                 size: 'small',
-                 classType: 'primary'
-               },
-               on: {
-                 click: (value) => {
-                   console.log('Button Click!')
-                 }
-               }
-            },'操作');
-           }
-        }],
-        tableSource: [{
-          id: 0,
-          date: '2016-05-02',
-          name: '王小虎',
-          address: '上海市普陀区金沙江路 1518 弄',
-        }, {
-          id: 1,
-          date: '2016-05-04',
-          name: '王小虎',
-          address: '上海市普陀区金沙江路 1517 弄'
-        }, {
-          id: 2,
-          date: '2016-05-01',
-          name: '王小虎',
-          address: '上海市普陀区金沙江路 1519 弄'
-        }, {
-          id: 3,
-          date: '2016-05-03',
-          name: '王小虎',
-          address: '上海市普陀区金沙江路 1516 弄'
-        }, {
-          id: 4,
-          date: '2016-05-25',
-          name: '王小虎',
-          address: '上海市普陀区金沙江路 1520 弄'
-        }, {
-          id: 5,
-          date: '2016-07-25',
-          name: '王小二',
-          address: '上海市普陀区金沙江路 1520 弄'
-        }],
-        carouselSource: [
-          "http://oss.lanlanlife.com/3d31bd5315845d3d086834d6e9b25c90_800x800.jpg",
-          "http://oss.lanlanlife.com/4b25875c82cb38e0d1596385ff787144_800x800.jpg",
-          "http://oss2.lanlanlife.com/1ba41ca1974f728980e176556cecc653_800x800.jpg",
-          "http://oss.lanlanlife.com/6a86cc4e9d1f9f8b8924d15bccf19b90_800x800.jpg",
-          "http://oss2.lanlanlife.com/fc6210dda360119aa324d7b046f70fc2_800x800.jpg"
-        ]
-      }
-    },
-
     methods: {
       toRepository(value) {
         if(value === 2) {

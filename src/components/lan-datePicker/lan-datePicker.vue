@@ -4,22 +4,30 @@
                :placeholder="placeholder"
                :readonly="true"
                suffixIcon="date"
-               customClass="custonClass"
+               customClass="lan-datePicker-customClass"
                @click="showPick = !showPick"
                @blur="showPick = false"
     ></lan-input>
     <div class="lan-datePicker-dropdown" v-if="showPick" @mousedown.prevent>
-      <div class="dropdown-hd">
-        <span class="btn-back" @click="prevYearPreview"><i class="iconfont icon-double-back"></i></span>
-        <span class="btn-back" @click="prevMonthPreview"><i class="iconfont icon-back"></i></span>
-        <span class="btn-month" @click="chosenType('month')">{{tmpMonth+1 | formatMonth}}</span>
-        <span class="btn-year" @click="chosenType('year')">{{tmpYear}}</span>
-        <span class="btn-more" @click="nextYearPreview"><i class="iconfont icon-double-more"></i></span>
-        <span class="btn-more" @click="nextMonthPreview"><i class="iconfont icon-more"></i></span>
+      <div class="lan-datePicker-hd">
+        <span class="lan-datePicker-hd-back" @click="prevYearPreview">
+          <lan-icon name="double-back"></lan-icon>
+        </span>
+        <span class="lan-datePicker-hd-back" @click="prevMonthPreview">
+          <lan-icon name="back"></lan-icon>
+        </span>
+        <span class="lan-datePicker-hd-month" @click="chosenType('month')">{{tmpMonth+1 | formatMonth}}</span>
+        <span class="lan-datePicker-hd-year" @click="chosenType('year')">{{tmpYear}}</span>
+        <span class="lan-datePicker-hd-more" @click="nextYearPreview">
+          <lan-icon name="double-more"></lan-icon>
+        </span>
+        <span class="lan-datePicker-hd-more" @click="nextMonthPreview">
+          <lan-icon name="more"></lan-icon>
+        </span>
       </div>
-      <div class="dropdown-bd">
-        <div class="cells-list" v-if="panelType == 'year'">
-          <span class="cell-year" v-for="item in yearList"
+      <div class="lan-datePicker-bd">
+        <div class="lan-datePicker-bd-cell" v-if="panelType == 'year'">
+          <span class="lan-datePicker-bd-cell-year" v-for="item in yearList"
                 :class="{
                     isSelected: isSelected('year', item),
                     invalid: validateYear(item)
@@ -29,8 +37,8 @@
               <em>{{item}}</em>
             </span>
         </div>
-        <div class="cells-list" v-else-if="panelType == 'month'">
-          <span class="cell-month" v-for="item, index in monthList"
+        <div class="lan-datePicker-bd-cell" v-else-if="panelType == 'month'">
+          <span class="lan-datePicker-bd-cell-month" v-for="item, index in monthList"
                 :class="{
                     isSelected: isSelected('month', index),
                     invalid: validateMonth(index)
@@ -40,11 +48,11 @@
               <em>{{item | formatMonth}}</em>
             </span>
         </div>
-        <div class="cells-list" v-else>
-          <div class="cell-week">
+        <div class="lan-datePicker-bd-cell" v-else>
+          <div class="lan-datePicker-bd-cell-week">
             <span v-for="item in weekList">{{item | formatWeek}}</span>
           </div>
-          <div class="cell-date">
+          <div class="lan-datePicker-bd-cell-date">
             <span v-for="(item, index) in dateList"
                   :class="{
                     notCurrent: !item.currentMonth,
@@ -56,7 +64,7 @@
           </div>
         </div>
       </div>
-      <div class="dropdown-ft">
+      <div class="lan-datePicker-ft">
         <lan-button size="tiny" classType="default" @click="handleDelete">清除</lan-button>
         <lan-button size="tiny" classType="warning" @click="handleClick">确定</lan-button>&nbsp;
       </div>
@@ -68,13 +76,15 @@
 
   import lanInput from '../lan-input'
   import lanButton from '../lan-button'
+  import lanIcon from "../lan-icon"
   import {handleFormat} from '../../base/assist'
 
   export default{
     name: 'lan-timePicker',
     components: {
       lanInput,
-      lanButton
+      lanButton,
+      lanIcon
     },
     props: {
       placeholder: String,

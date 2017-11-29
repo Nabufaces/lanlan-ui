@@ -11,9 +11,9 @@
                @input="handleInput"
                ref="ipt"
     ></lan-input>
-    <div class="dropdown" v-if="showSelect" :style="{width: selectWidth}">
-      <ul class="dropdown-list">
-        <li class="dropdown-list-noMatch" v-if="showNoMatch">
+    <div class="lan-select-dropdown" v-if="showSelect" :style="{width: selectWidth}">
+      <ul class="lan-select-list">
+        <li class="lan-select-list-noMatch" v-if="showNoMatch">
           <span>无匹配数据</span>
         </li>
         <slot></slot>

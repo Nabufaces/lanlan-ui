@@ -1,13 +1,12 @@
 <template>
   <div :class="classes">
-    <div class="prepend" v-if="$slots.prepend">
+    <div class="lan-input-prepend" v-if="$slots.prepend">
       <slot name="prepend"></slot>
     </div>
-    <lan-icon :name="prefixIcon" customClass="prefix" v-if="prefixIcon"></lan-icon>
-    <lan-icon :name="suffixIcon" customClass="suffix" v-if="suffixIcon"></lan-icon>
-    <input class="t-ipt"
+    <lan-icon :name="prefixIcon" customClass="lan-input-prefix" v-if="prefixIcon"></lan-icon>
+    <lan-icon :name="suffixIcon" customClass="lan-input-suffix" v-if="suffixIcon"></lan-icon>
+    <input :class="inputClasses"
            :value="value"
-           :class="customClass"
            :placeholder="placeholder"
            :readonly="readonly"
            :disabled="disabled"
@@ -23,7 +22,7 @@
            @keypress="handleKeypress"
            @keydown="handleKeydown"
            />
-    <div class="append" v-if="$slots.append">
+    <div class="lan-input-append" v-if="$slots.append">
       <slot name="append"></slot>
     </div>
   </div>
@@ -59,14 +58,22 @@
         return [
           prefixCls,
           {
-            [`${prefixCls}-prefix`]: this.prefixIcon,
-            [`${prefixCls}-suffix`]: this.suffixIcon,
+            [`${prefixCls}-with-prefix`]: this.prefixIcon,
+            [`${prefixCls}-with-suffix`]: this.suffixIcon,
             [`${prefixCls}-group`]: this.$slots.prepend || this.$slots.append,
             [`${prefixCls}-group-with-prepend`]: this.$slots.prepend,
             [`${prefixCls}-group-with-append`]: this.$slots.append
           }
-        ];
+        ]
       },
+      inputClasses() {
+        return [
+          `${prefixCls}-inner`,
+          {
+            [`${this.customClass}`]: this.customClass
+          }
+        ]
+      }
     },
     methods: {
       handleInput(value){

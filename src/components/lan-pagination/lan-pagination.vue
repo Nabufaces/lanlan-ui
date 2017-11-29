@@ -1,22 +1,23 @@
 <template>
   <div class="lan-pagination" v-if="total>1">
-    <button class="btn" :class="current == 1 ? 'disabled' : '' "  @click="handleClick(current-1)">上一页</button>
-    <ul>
+    <button class="lan-pagination-btn" :class="current == 1 ? 'lan-pagination-btn-disabled' : '' "  @click="handleClick(current-1)">上一页</button>
+    <ul class="lan-pagination-ul">
       <template  v-for="value in pageList">
-        <li class="page" :class="current == value ? 'active' : '' "
+        <li class="lan-pagination-li" :class="current == value ? 'lan-pagination-li-active' : '' "
             @click="handleClick(value)">
           <span>{{value}}</span>
         </li>
       </template>
     </ul>
-    <button class="btn" :class="current == total ? 'disabled' : '' "  @click="handleClick(current+1)">下一页</button>
-    <span class="total" v-if="isEllipsis">共{{total}}页</span>
-    <span>跳至<input class="ipt" v-model="inputValue"/>页</span>
-    <button class="btn" style="margin-left: 5px" @click="handleConfirm">确定</button>
+    <button class="lan-pagination-btn" :class="current == total ? 'lan-pagination-btn-disabled' : '' "  @click="handleClick(current+1)">下一页</button>
+    <span class="lan-pagination-total" v-if="isEllipsis">共{{total}}页</span>
+    <span>跳至<input class="lan-pagination-input" v-model="inputValue"/>页</span>
+    <button class="lan-pagination-btn" style="margin-left: 5px" @click="handleConfirm">确定</button>
   </div>
 </template>
 
 <script>
+
   export default{
     name: 'lan-pagination',
     props: {

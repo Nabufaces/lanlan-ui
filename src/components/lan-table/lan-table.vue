@@ -1,6 +1,6 @@
 <template>
   <div class="lan-table">
-    <div class="lan-table-header">
+    <div class="lan-table-hd">
       <table>
         <colgroup>
           <col v-for="item in columns" :width="item.width">
@@ -8,30 +8,30 @@
         <thead>
         <th v-for="item in columns" :align="item.align ? item.align: 'left'"
             :class="[
-              border ? 'border': '',
-              item.sortType ? 'pointer' : ''
+              border ? 'lan-table-border': '',
+              item.sortType ? 'lan-table-hd-pointer' : ''
             ]"
             @click="handleSort(item)">
           <span>{{item.label}}</span>
-          <span class="sort" v-if="item.sortable">
-            <i class="iconfont icon-less" :class="item.sortType === 2 ? 'chosen' : ''"></i>
-            <i class="iconfont icon-moreunfold" :class="item.sortType === 1 ? 'chosen' : ''"></i>
+          <span class="lan-table-hd-sort" v-if="item.sortable">
+            <lan-icon name="less" :customClass="item.sortType === 2 ? 'lan-table-hd-sort-chosen' : ''"></lan-icon>
+            <lan-icon name="moreunfold" :customClass="item.sortType === 1 ? 'lan-table-hd-sort-chosen' : ''"></lan-icon>
           </span>
         </th>
         </thead>
       </table>
     </div>
 
-    <div class="lan-table-body" :style="{ height: height + 'px'}">
+    <div class="lan-table-bd" :style="{ height: height + 'px'}">
       <table>
         <colgroup>
           <col v-for="item in columns" :width="item.width">
         </colgroup>
         <tbody>
-        <tr v-for="item, index in tableSource" :key="index" :class="stripe ? 'stripe': ''">
-          <td v-for="td in columns" :align="td.align ? td.align : 'left'"  :class="border ? 'border': ''">
+        <tr v-for="item, index in tableSource" :key="index" :class="stripe ? 'lan-table-stripe': ''">
+          <td v-for="td in columns" :align="td.align ? td.align : 'left'"  :class="border ? 'lan-table-border': ''">
             <template v-if="td.render">
-              <lan-table-expand :render="td.render"></lan-table-expand>
+              <lan-table-expand :render="td.render" :index="index" :tr="item" :td="td"></lan-table-expand>
             </template>
             <span v-else>{{item[td.prop]}}</span>
           </td>
@@ -44,7 +44,8 @@
 
 <script>
 
-  import lanTableExpand from './lan-table-expand.js';
+  import lanTableExpand from './lan-table-expand.js'
+  import lanIcon from '../lan-icon'
 
   export default{
     name: 'lan-table',
@@ -74,7 +75,8 @@
       }
     },
     components: {
-      lanTableExpand
+      lanTableExpand,
+      lanIcon
     },
     created() {
       let columns = this.columns = this.column;

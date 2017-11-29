@@ -8,19 +8,19 @@
                @click="showPick = !showPick"
                @blur="handleChange"
                ></lan-input>
-    <div class="dropdown" v-if="showPick" @mousedown.prevent>
-      <div class="cells-list">
-        <ul>
+    <div class="lan-timePicker-dropdown" v-if="showPick" @mousedown.prevent>
+      <div class="lan-timePicker-cells-list">
+        <ul class="lan-timePicker-cells-ul">
           <li v-for="item in hoursList" @click="handleClick('hours', item)" :class="getCells(item)" :key="item.text">{{item.text}}</li>
         </ul>
       </div>
-      <div class="cells-list">
-        <ul>
+      <div class="lan-timePicker-cells-list">
+        <ul class="lan-timePicker-cells-ul">
           <li v-for="item in minutesList" @click="handleClick('minutes', item)" :class="getCells(item)" :key="item.text">{{item.text}}</li>
         </ul>
       </div>
-      <div class="cells-list" v-if="showSeconds">
-        <ul>
+      <div class="lan-timePicker-cells-list" v-if="showSeconds">
+        <ul class="lan-timePicker-cells-ul">
           <li v-for="item in secondsList" @click="handleClick('seconds', item)" :class="getCells(item)" :key="item.text">{{item.text}}</li>
         </ul>
       </div>
@@ -144,10 +144,14 @@
     },
     methods: {
       getCells(item) {
-        return {
-          'selected' : item.selected,
-          'disabled' : item.disabled
-        }
+        const prefix = 'lan-timePicker-cells-li';
+        return [
+          prefix,
+          {
+            [`${prefix}-selected`]: item.selected,
+            [`${prefix}-disabled`]: item.disabled
+          }
+        ]
       },
       handleClick(type, item) {
         if(item.disabled) {

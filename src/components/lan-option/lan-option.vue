@@ -7,7 +7,7 @@
 <script>
   import {findComponentUpward} from '../../base/assist'
 
-  const prefixCls = 'dropdown-list-item';
+  const prefixCls = 'lan-select-list-item';
 
   export default {
     name: 'lan-option',
