@@ -87,7 +87,27 @@
           width: 200
         }, {
           prop: "explain",
-          label: "说明"
+          label: "说明",
+          render: (h, params) => {
+            const tr = params.tr;
+            if(tr.property === 'classType') {
+              return (
+                <span>
+                  按钮类型 <code>primary</code> <code>success</code> <code>warning</code> <code>info</code> <code>danger</code> <code>default</code>
+                </span>
+              )
+            } else if(tr.property === 'size') {
+              return (
+                <span>
+                按钮大小 <code>tiny</code> <code>small</code> <code>normal</code> <code>large</code>
+                </span>
+              )
+            } else {
+              return (
+                <span>{tr['explain']}</span>
+              )
+            }
+          }
         }, {
           prop: "type",
           label: "类型",
@@ -99,12 +119,10 @@
         }],
         sourceProps: [{
           property: 'classType',
-          explain: '按钮类型 primary success warning info danger default',
           type: 'String',
           default: 'default'
         }, {
           property: 'size',
-          explain: '按钮大小 tiny small normal large',
           type: 'String',
           default: 'normal'
         }, {

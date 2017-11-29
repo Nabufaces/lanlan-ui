@@ -44,7 +44,21 @@
           width: 200
         }, {
           prop: "explain",
-          label: "说明"
+          label: "说明",
+          render: (h, params) => {
+            const tr = params.tr;
+            if(tr.property === 'type') {
+              return (
+                <span>
+                  消息弹框类型 <code>warning</code> <code>error</code> <code>success</code>
+                </span>
+              )
+            } else {
+              return (
+                <span>{tr['explain']}</span>
+              )
+            }
+          }
         }, {
           prop: "type",
           label: "类型",
@@ -66,7 +80,6 @@
           default: '-'
         }, {
           property: 'type',
-          explain: '消息弹框类型 warning error success',
           type: 'String',
           default: '-'
         }, {

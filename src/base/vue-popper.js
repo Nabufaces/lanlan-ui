@@ -1,7 +1,7 @@
 /**
  * https://github.com/freeze-component/vue-popper
  * */
-const Popper = require('./popper.js').Popper;  // eslint-disable-line
+const Popper = require('./popper.js');  // eslint-disable-line
 
 export default {
   props: {

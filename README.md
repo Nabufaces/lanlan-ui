@@ -3,13 +3,13 @@
 ### NPM安装
 
 #### 全局引入
-      $ npm install lanlan-ui@0.1.2 --save
+      $ npm install lanlan-ui@0.1.3 --save
       import 'lanlan-ui/dist/lanlanui.css'
       import lanlanui from 'lanlan-ui'
       Vue.use(lanlanui);
   
 #### 按需引入
-      $ npm install lanlan-ui@0.1.2 --save
+      $ npm install lanlan-ui@0.1.3 --save
       import 'lanlan-ui/dist/lanlanui.css'
       import { lanButton } from 'lanlan-ui'
       new Vue({

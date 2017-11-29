@@ -64,7 +64,23 @@
           width: 200
         }, {
           prop: "explain",
-          label: "说明"
+          label: "说明",
+          render: (h, params) => {
+            const index = params.index;
+            const tr = params.tr;
+            const td = params.td;
+            if(tr.property === 'size') {
+              return (
+                <span>
+                  开关尺寸，可选值为 <code>normal</code> <code>large</code>
+                </span>
+            )
+            } else {
+              return (
+                <span>{tr['explain']}</span>
+            )
+            }
+          }
         }, {
           prop: "type",
           label: "类型",
@@ -81,7 +97,6 @@
           default: 'true'
         }, {
           property: 'size',
-          explain: '开关尺寸，可选值为normal、large',
           type: 'String',
           default: 'normal'
         }, {
