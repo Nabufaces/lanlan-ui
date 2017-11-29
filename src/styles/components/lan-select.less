@@ -2,7 +2,7 @@
   white-space: nowrap;
   position: relative;
   display: inline-block;
-  .dropdown {
+  &-dropdown {
     position: absolute;
     border-radius: 2px;
     border: 1px solid #E4E6EC;
@@ -11,36 +11,36 @@
     box-shadow: 0 2px 12px 0 rgba(0,0,0,.1);
     margin-top: 5px;
     z-index: 1000;
-    &-list {
-      list-style: none;
-      padding: 6px 0;
-      margin: 0;
+  }
+  &-list {
+    list-style: none;
+    padding: 6px 0;
+    margin: 0;
+    box-sizing: border-box;
+    max-height: 274px;
+    overflow: scroll;
+    &-noMatch {
+      color: #B0B4B8;
+      font-size: 15px;
+      text-align: center;
+    }
+    &-item {
+      font-size: 14px;
+      padding: 8px 20px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      color: #5a5e66;
       box-sizing: border-box;
-      max-height: 274px;
-      overflow: scroll;
-      &-noMatch {
-        color: #B0B4B8;
-        font-size: 15px;
-        text-align: center;
+      cursor: pointer;
+      &:hover {
+        background-color: #F2F6FA;
       }
-      &-item {
-        font-size: 14px;
-        padding: 8px 20px;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        color: #5a5e66;
-        box-sizing: border-box;
-        cursor: pointer;
+      &-disabled {
+        color: #b4bccc;
+        cursor: not-allowed;
         &:hover {
-          background-color: #F2F6FA;
-        }
-        &-disabled {
-          color: #b4bccc;
-          cursor: not-allowed;
-          &:hover {
-            background-color: #fff;
-          }
+          background-color: #fff;
         }
       }
     }

@@ -3,13 +3,13 @@
   font-size: 14px;
   display: inline-block;
   line-height: normal;
-  &&-prefix {
-    .t-ipt {
+  &&-with-prefix {
+    .lan-input-inner {
       padding-left: 23px;
     }
   }
-  &&-suffix {
-    .t-ipt {
+  &&-with-suffix {
+    .lan-input-inner {
       padding-right: 23px;
     }
   }
@@ -17,20 +17,20 @@
     display: table;
     border-collapse: separate;
     top: 1px;
-    &-prepend {
-      .t-ipt {
+    &-with-prepend {
+      .lan-input-inner {
         border-top-left-radius: 0;
         border-bottom-left-radius: 0;
       }
     }
-    &-append {
-      .t-ipt {
+    &-with-append {
+      .lan-input-inner {
         border-top-right-radius: 0;
         border-bottom-right-radius: 0;
       }
     }
   }
-  .t-ipt {
+  &-inner {
     background-color: #fff;
     border-radius: 2px;
     border: 1px solid #E4E6EC;
@@ -51,20 +51,20 @@
       cursor: not-allowed;
     }
   }
-  .prefix, .suffix {
+  &-prefix, &-suffix {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     color: #B0B4B8;
     transition: all .3s;
   }
-  .prefix {
+  &-prefix {
     left: 5px;
   }
-  .suffix {
+  &-suffix {
     right: 5px;
   }
-  .prepend, .append {
+  &-prepend, &-append {
     line-height: 1;
     background-color: #f5f7fa;
     color: #878d99;
@@ -74,12 +74,12 @@
     white-space: nowrap;
     display: table-cell;
   }
-  .prepend {
+  &-prepend {
     border-right: 0;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
   }
-  .append {
+  &-append {
     border-left: 0;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;

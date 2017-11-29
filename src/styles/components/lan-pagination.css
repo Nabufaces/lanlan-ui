@@ -1,48 +1,44 @@
 .lan-pagination {
-  padding: 20px;
+  padding: 10px;
   color: #1E242A;
   font-size: 12px;
-  display: flex;
-  align-items: center;
+  display: inline-block;
 }
-.lan-pagination .btn {
+.lan-pagination-btn {
   background: #fff;
   padding: 4px 7px;
   border-radius: 2px;
   border: 1px solid #B0B4B8;
   outline: none;
   margin-right: 5px;
+  cursor: pointer;
 }
-.lan-pagination .btn.disabled {
+.lan-pagination-btn.lan-pagination-btn-disabled {
   cursor: not-allowed;
 }
-.lan-pagination .btn.disabled:hover {
+.lan-pagination-btn.lan-pagination-btn-disabled:hover {
   background-color: #EDF0F4;
 }
-.lan-pagination ul {
+.lan-pagination-ul {
   display: inline-block;
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
+  vertical-align: middle;
 }
-.lan-pagination ul li {
+.lan-pagination-li {
+  width: 22px;
+  height: 22px;
+  line-height: 22px;
   float: left;
   margin-right: 5px;
   text-align: center;
   cursor: pointer;
 }
-.lan-pagination ul li.page {
-  width: 22px;
-  height: 22px;
-  line-height: 22px;
-}
-.lan-pagination ul li.page.active {
+.lan-pagination-li.lan-pagination-li-active {
   background: #FF7846;
 }
-.lan-pagination .total {
+.lan-pagination-total {
   margin: 0 20px 0 5px;
 }
-.lan-pagination .ipt {
+.lan-pagination-input {
   padding: 4px 8px;
   color: #B0B4B8;
   font-size: 12px;
@@ -53,6 +49,6 @@
   width: 40px;
   box-sizing: border-box;
 }
-.lan-pagination .ipt:hover {
+.lan-pagination-input:hover {
   border: 1px solid #FF7846;
 }

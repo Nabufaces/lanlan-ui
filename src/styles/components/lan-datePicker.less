@@ -20,7 +20,7 @@
 
 .lan-datePicker {
   position: relative;
-  .custonClass {
+  &-customClass {
     width: 266px;
   }
   &-dropdown {
@@ -32,105 +32,105 @@
     box-shadow: 0 1px 6px rgba(0,0,0,.2);
     cursor: pointer;
     z-index: 1000;
-    .dropdown-hd {
-      height: 32px;
-      line-height: 32px;
-      text-align: center;
-      color: #22282E;
-      font-size: 14px;
-      padding: 0 15px;
-      span:hover {
-        color: #FF7846;
-      }
-      .btn-back {
-        margin-right: 8px;
-        float: left;
-      }
-      .btn-more {
-        margin-left: 8px;
-        float: right;
-      }
-      .btn-month {
-        margin-left: 22px;
-        margin-right: 10px;
-      }
-      .btn-year {
-        margin-right: 22px;
-      }
+  }
+  &-hd {
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    color: #22282E;
+    font-size: 14px;
+    padding: 0 15px;
+    span:hover {
+      color: #FF7846;
     }
-    .dropdown-bd {
-      color: #22282E;
-      padding: 10px 5px;
-      .cells-list {
-        width: 256px;
-        .cell-year, .cell-month {
+    &-back {
+      margin-right: 8px;
+      float: left;
+    }
+    &-more {
+      margin-left: 8px;
+      float: right;
+    }
+    &-month {
+      margin-left: 22px;
+      margin-right: 10px;
+    }
+    &-year {
+      margin-right: 22px;
+    }
+  }
+  &-bd {
+    color: #22282E;
+    padding: 10px 5px;
+    &-cell {
+      width: 256px;
+      &-year, &-month {
+        width: 50px;
+        height: 28px;
+        line-height: 28px;
+        font-size: 16px;
+        margin: 10px 7px;
+        border-radius: 3px;
+        text-align: center;
+        cursor: pointer;
+        display: inline-block;
+        em {
           width: 50px;
           height: 28px;
           line-height: 28px;
-          font-size: 16px;
-          margin: 10px 7px;
+          font-style: normal;
+          margin: 0;
           border-radius: 3px;
           text-align: center;
-          cursor: pointer;
+          transition: all .2s ease-in-out;
           display: inline-block;
-          em {
-            width: 50px;
-            height: 28px;
-            line-height: 28px;
-            font-style: normal;
-            margin: 0;
-            border-radius: 3px;
-            text-align: center;
-            transition: all .2s ease-in-out;
-            display: inline-block;
-          }
-          &:hover {
-            color: #666;
-            background-color: #EDF0F4;
-          }
-          &.isSelected {
-            .isSelected()
-          }
-          &.invalid {
-            .invalid()
-          }
         }
-        .cell-week, .cell-date {
-          color: rgba(0, 0, 0, .6);
+        &:hover {
+          color: #666;
+          background-color: #EDF0F4;
+        }
+        &.isSelected {
+          .isSelected()
+        }
+        &.invalid {
+          .invalid()
+        }
+      }
+      &-week, &-date {
+        color: rgba(0, 0, 0, .6);
+        text-align: center;
+        span {
+          width: 33px;
+          height: 33px;
+          line-height: 33px;
           text-align: center;
-          span {
-            width: 33px;
-            height: 33px;
-            line-height: 33px;
-            text-align: center;
-            margin: 1px;
-            border-radius: 2px;
-            display: inline-block;
-          }
+          margin: 1px;
+          border-radius: 2px;
+          display: inline-block;
         }
-        .cell-date {
-          .notCurrent {
-            color: #CCC;
-          }
-          .current:hover {
-            color: #666;
-            background: #EDF0F4;
-          }
-          .isSelected {
-            .isSelected()
-          }
-          .invalid {
-            .invalid()
-          }
+      }
+      &-date {
+        .notCurrent {
+          color: #CCC;
+        }
+        .current:hover {
+          color: #666;
+          background: #EDF0F4;
+        }
+        .isSelected {
+          .isSelected()
+        }
+        .invalid {
+          .invalid()
         }
       }
     }
-    .dropdown-ft {
-      padding-bottom: 16px;
-      text-align: center;
-      .lan-button:first-child {
-        margin-right: 15px;
-      }
+  }
+  &-ft {
+    padding-bottom: 16px;
+    text-align: center;
+    .lan-button:first-child {
+      margin-right: 15px;
     }
   }
 }
