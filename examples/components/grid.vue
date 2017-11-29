@@ -156,7 +156,7 @@
         explain: '样式扩展',
         type: 'String',
         default: '-'
-      }],
+      }]
       }
     }
   }

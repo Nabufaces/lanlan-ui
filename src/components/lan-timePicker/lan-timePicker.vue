@@ -3,7 +3,7 @@
     <lan-input :value="pickValue"
                :placeholder="placeholder"
                :readonly="true"
-               suffixIcon="task-management"
+               suffixIcon="clock"
                :customClass="showSeconds ? 'lan-timePicker-group-3' : 'lan-timePicker-group-2' "
                @click="showPick = !showPick"
                @blur="handleChange"

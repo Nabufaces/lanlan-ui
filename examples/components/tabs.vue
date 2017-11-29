@@ -27,7 +27,7 @@
     <lan-row>
       <lan-tabs :activeLabel="1">
         <lan-tab-pane :label="1">
-          <lan-icon name="category"></lan-icon>&nbsp;标签一
+          <lan-icon name="present"></lan-icon>&nbsp;标签一
         </lan-tab-pane>
         <lan-tab-pane :label="2">
           <lan-icon name="date"></lan-icon>&nbsp;标签二
@@ -39,7 +39,7 @@
       <code class="html">
         &ltlan-tabs :activeLabel="1"&gt
           &ltlan-tab-pane :label="1"&gt
-            &ltlan-icon name="category"&gt&lt/lan-icon&gt&nbsp;标签一
+            &ltlan-icon name="present"&gt&lt/lan-icon&gt&nbsp;标签一
           &lt/lan-tab-pane&gt
           &ltlan-tab-pane :label="2"&gt
             &ltlan-icon name="date"&gt&lt/lan-icon&gt&nbsp;标签二

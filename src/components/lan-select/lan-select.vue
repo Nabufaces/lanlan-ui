@@ -5,7 +5,7 @@
                :readonly="!filterable"
                :disabled="disabled"
                :prefixIcon="filterable?'search':''"
-               :suffixIcon="showSelect?'less':'moreunfold'"
+               :suffixIcon="showSelect?'downward':'upward'"
                @click="handleClick"
                @blur="handleBlur"
                @input="handleInput"

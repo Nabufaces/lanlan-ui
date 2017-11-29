@@ -15,7 +15,7 @@
             <li class="menu-group">basic</li>
             <router-link to="/gird" class="menu-item" tag="li">Grid 栅格</router-link>
             <router-link to="/button" class="menu-item" tag="li">Button 按钮</router-link>
-            <li class="menu-item">Icon 图标</li>
+            <router-link to="/icon" class="menu-item" tag="li">Icon 图标</router-link>
             <li class="menu-group">Form</li>
             <router-link to="/switch" class="menu-item" tag="li">Switch 开关</router-link>
             <router-link to="/radio" class="menu-item" tag="li">Radio 单选框</router-link>
