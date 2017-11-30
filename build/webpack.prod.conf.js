@@ -8,6 +8,7 @@ const baseWebpackConfig = require('./webpack.base.conf');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const env = config.build.env;
 
@@ -48,7 +49,7 @@ const webpackConfig = merge(baseWebpackConfig, {
       }
     }),
     new HtmlWebpackPlugin({
-      filename: './src/index.html',
+      filename: './dist/src/index.html',
       template: './src/index.html',
       inject: true
     }),

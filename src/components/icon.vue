@@ -5,787 +5,787 @@
     <ul class="icon_lists">
 
       <li>
-        <i class="icon iconfont icon-appreciate"></i>
+        <lan-icon name="appreciate" customClass="icon"></lan-icon>
         <div class="name">appreciate</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-check"></i>
+        <lan-icon name="check" customClass="icon"></lan-icon>
         <div class="name">check</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-close"></i>
+        <lan-icon name="close" customClass="icon"></lan-icon>
         <div class="name">close</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-edit"></i>
+        <lan-icon name="edit" customClass="icon"></lan-icon>
         <div class="name">edit</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-emoji"></i>
+        <lan-icon name="emoji" customClass="icon"></lan-icon>
         <div class="name">emoji</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-favorfill"></i>
-        <div class="name">favor_fill</div>
+        <lan-icon name="favorfill" customClass="icon"></lan-icon>
+        <div class="name">favorfill</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-favor"></i>
+        <lan-icon name="favor" customClass="icon"></lan-icon>
         <div class="name">favor</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-loading"></i>
+        <lan-icon name="loading" customClass="icon"></lan-icon>
         <div class="name">loading</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-locationfill"></i>
-        <div class="name">location_fill</div>
+        <lan-icon name="locationfill" customClass="icon"></lan-icon>
+        <div class="name">locationfill</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-location"></i>
+        <lan-icon name="location" customClass="icon"></lan-icon>
         <div class="name">location</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-roundcheckfill"></i>
-        <div class="name">round_check_fill</div>
+        <lan-icon name="roundcheckfill" customClass="icon"></lan-icon>
+        <div class="name">roundcheckfill</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-roundcheck"></i>
-        <div class="name">round_check</div>
+        <lan-icon name="roundcheck" customClass="icon"></lan-icon>
+        <div class="name">roundcheck</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-roundclosefill"></i>
-        <div class="name">round_close_fill</div>
+        <lan-icon name="roundclosefill" customClass="icon"></lan-icon>
+        <div class="name">roundclosefill</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-roundclose"></i>
-        <div class="name">round_close</div>
+        <lan-icon name="roundclose" customClass="icon"></lan-icon>
+        <div class="name">roundclose</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-roundrightfill"></i>
-        <div class="name">round_right_fill</div>
+        <lan-icon name="roundrightfill" customClass="icon"></lan-icon>
+        <div class="name">roundrightfill</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-roundright"></i>
-        <div class="name">round_right</div>
+        <lan-icon name="roundright" customClass="icon"></lan-icon>
+        <div class="name">roundright</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-search"></i>
+        <lan-icon name="search" customClass="icon"></lan-icon>
         <div class="name">search</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-timefill"></i>
-        <div class="name">time_fill</div>
+        <lan-icon name="timefill" customClass="icon"></lan-icon>
+        <div class="name">timefill</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-time"></i>
+        <lan-icon name="time" customClass="icon"></lan-icon>
         <div class="name">time</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-downward"></i>
+        <lan-icon name="downward" customClass="icon"></lan-icon>
         <div class="name">downward</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-warnfill"></i>
-        <div class="name">warn_fill</div>
+        <lan-icon name="warnfill" customClass="icon"></lan-icon>
+        <div class="name">warnfill</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-warn"></i>
+        <lan-icon name="warn" customClass="icon"></lan-icon>
         <div class="name">warn</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-camera"></i>
+        <lan-icon name="camera" customClass="icon"></lan-icon>
         <div class="name">camera</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-commentfill"></i>
-        <div class="name">comment_fill</div>
+        <lan-icon name="commentfill" customClass="icon"></lan-icon>
+        <div class="name">commentfill</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-comment"></i>
+        <lan-icon name="comment" customClass="icon"></lan-icon>
         <div class="name">comment</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-like"></i>
+        <lan-icon name="like" customClass="icon"></lan-icon>
         <div class="name">like</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-notificationfill"></i>
-        <div class="name">notification_fill</div>
+        <lan-icon name="notificationfill" customClass="icon"></lan-icon>
+        <div class="name">notificationfill</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-notification"></i>
+        <lan-icon name="notification" customClass="icon"></lan-icon>
         <div class="name">notification</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-order"></i>
+        <lan-icon name="order" customClass="icon"></lan-icon>
         <div class="name">order</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-pay"></i>
+        <lan-icon name="pay" customClass="icon"></lan-icon>
         <div class="name">pay</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-send"></i>
+        <lan-icon name="send" customClass="icon"></lan-icon>
         <div class="name">send</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-shop"></i>
+        <lan-icon name="shop" customClass="icon"></lan-icon>
         <div class="name">shop</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-backward"></i>
+        <lan-icon name="backward" customClass="icon"></lan-icon>
         <div class="name">backward</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-cascades"></i>
+        <lan-icon name="cascades" customClass="icon"></lan-icon>
         <div class="name">cascades</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-more"></i>
+        <lan-icon name="more" customClass="icon"></lan-icon>
         <div class="name">more</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-scan"></i>
+        <lan-icon name="scan" customClass="icon"></lan-icon>
         <div class="name">scan</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-settings"></i>
+        <lan-icon name="settings" customClass="icon"></lan-icon>
         <div class="name">settings</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-questionfill"></i>
-        <div class="name">question_fill</div>
+        <lan-icon name="questionfill" customClass="icon"></lan-icon>
+        <div class="name">questionfill</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-question"></i>
+        <lan-icon name="question" customClass="icon"></lan-icon>
         <div class="name">question</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-form"></i>
+        <lan-icon name="form" customClass="icon"></lan-icon>
         <div class="name">form</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-pic"></i>
+        <lan-icon name="pic" customClass="icon"></lan-icon>
         <div class="name">pic</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-top"></i>
+        <lan-icon name="top" customClass="icon"></lan-icon>
         <div class="name">top</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-pulldown"></i>
-        <div class="name">pull_down</div>
+        <lan-icon name="pulldown" customClass="icon"></lan-icon>
+        <div class="name">pulldown</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-pullup"></i>
-        <div class="name">pull_up</div>
+        <lan-icon name="pullup" customClass="icon"></lan-icon>
+        <div class="name">pullup</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-forward"></i>
+        <lan-icon name="forward" customClass="icon"></lan-icon>
         <div class="name">forward</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-refresh"></i>
+        <lan-icon name="refresh" customClass="icon"></lan-icon>
         <div class="name">refresh</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-moreandroid"></i>
-        <div class="name">more_android</div>
+        <lan-icon name="moreandroid" customClass="icon"></lan-icon>
+        <div class="name">moreandroid</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-deletefill"></i>
-        <div class="name">delete_fill</div>
+        <lan-icon name="deletefill" customClass="icon"></lan-icon>
+        <div class="name">deletefill</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-cart"></i>
+        <lan-icon name="cart" customClass="icon"></lan-icon>
         <div class="name">cart</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-qrcode"></i>
-        <div class="name">qr_code</div>
+        <lan-icon name="qrcode" customClass="icon"></lan-icon>
+        <div class="name">qrcode</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-remind"></i>
+        <lan-icon name="remind" customClass="icon"></lan-icon>
         <div class="name">remind</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-delete"></i>
+        <lan-icon name="delete" customClass="icon"></lan-icon>
         <div class="name">delete</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-profile"></i>
+        <lan-icon name="profile" customClass="icon"></lan-icon>
         <div class="name">profile</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-home"></i>
+        <lan-icon name="home" customClass="icon"></lan-icon>
         <div class="name">home</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-cartfill"></i>
-        <div class="name">cart_fill</div>
+        <lan-icon name="cartfill" customClass="icon"></lan-icon>
+        <div class="name">cartfill</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-homefill"></i>
-        <div class="name">home_fill</div>
+        <lan-icon name="homefill" customClass="icon"></lan-icon>
+        <div class="name">homefill</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-message"></i>
+        <lan-icon name="message" customClass="icon"></lan-icon>
         <div class="name">message</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-addressbook"></i>
-        <div class="name">address_book</div>
+        <lan-icon name="addressbook" customClass="icon"></lan-icon>
+        <div class="name">addressbook</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-link"></i>
+        <lan-icon name="link" customClass="icon"></lan-icon>
         <div class="name">link</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-lock"></i>
+        <lan-icon name="lock" customClass="icon"></lan-icon>
         <div class="name">lock</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-unlock"></i>
+        <lan-icon name="unlock" customClass="icon"></lan-icon>
         <div class="name">unlock</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-vip"></i>
+        <lan-icon name="vip" customClass="icon"></lan-icon>
         <div class="name">vip</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-weibo"></i>
+        <lan-icon name="weibo" customClass="icon"></lan-icon>
         <div class="name">weibo</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-friendaddfill"></i>
-        <div class="name">friend_add_fill</div>
+        <lan-icon name="friendaddfill" customClass="icon"></lan-icon>
+        <div class="name">friendaddfill</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-friendadd"></i>
-        <div class="name">friend_add</div>
+        <lan-icon name="friendadd" customClass="icon"></lan-icon>
+        <div class="name">friendadd</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-friendfamous"></i>
-        <div class="name">friend_famous</div>
+        <lan-icon name="friendfamous" customClass="icon"></lan-icon>
+        <div class="name">friendfamous</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-friend"></i>
+        <lan-icon name="friend" customClass="icon"></lan-icon>
         <div class="name">friend</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-present"></i>
+        <lan-icon name="present" customClass="icon"></lan-icon>
         <div class="name">present</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-double-forward"></i>
+        <lan-icon name="double-forward" customClass="icon"></lan-icon>
         <div class="name">double-forward</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-squarecheckfill"></i>
-        <div class="name">square_check_fill</div>
+        <lan-icon name="squarecheckfill" customClass="icon"></lan-icon>
+        <div class="name">squarecheckfill</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-square"></i>
+        <lan-icon name="square" customClass="icon"></lan-icon>
         <div class="name">square</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-squarecheck"></i>
-        <div class="name">square_check</div>
+        <lan-icon name="squarecheck" customClass="icon"></lan-icon>
+        <div class="name">squarecheck</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-round"></i>
+        <lan-icon name="round" customClass="icon"></lan-icon>
         <div class="name">round</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-roundaddfill"></i>
-        <div class="name">round_add_fill</div>
+        <lan-icon name="roundaddfill" customClass="icon"></lan-icon>
+        <div class="name">roundaddfill</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-roundadd"></i>
-        <div class="name">round_add</div>
+        <lan-icon name="roundadd" customClass="icon"></lan-icon>
+        <div class="name">roundadd</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-add"></i>
+        <lan-icon name="add" customClass="icon"></lan-icon>
         <div class="name">add</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-upward"></i>
+        <lan-icon name="upward" customClass="icon"></lan-icon>
         <div class="name">upward</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-redpacket"></i>
+        <lan-icon name="redpacket" customClass="icon"></lan-icon>
         <div class="name">redpacket</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-similar"></i>
+        <lan-icon name="similar" customClass="icon"></lan-icon>
         <div class="name">similar</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-appreciatefill"></i>
-        <div class="name">appreciate_fill</div>
+        <lan-icon name="appreciatefill" customClass="icon"></lan-icon>
+        <div class="name">appreciatefill</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-infofill"></i>
-        <div class="name">info_fill</div>
+        <lan-icon name="infofill" customClass="icon"></lan-icon>
+        <div class="name">infofill</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-info"></i>
+        <lan-icon name="info" customClass="icon"></lan-icon>
         <div class="name">info</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-rechargefill"></i>
-        <div class="name">recharge_fill</div>
+        <lan-icon name="rechargefill" customClass="icon"></lan-icon>
+        <div class="name">rechargefill</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-recharge"></i>
+        <lan-icon name="recharge" customClass="icon"></lan-icon>
         <div class="name">recharge</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-vipcard"></i>
+        <lan-icon name="vipcard" customClass="icon"></lan-icon>
         <div class="name">vipcard</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-voice"></i>
+        <lan-icon name="voice" customClass="icon"></lan-icon>
         <div class="name">voice</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-voicefill"></i>
-        <div class="name">voice_fill</div>
+        <lan-icon name="voicefill" customClass="icon"></lan-icon>
+        <div class="name">voicefill</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-friendfavor"></i>
-        <div class="name">friend_favor</div>
+        <lan-icon name="friendfavor" customClass="icon"></lan-icon>
+        <div class="name">friendfavor</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-wifi"></i>
+        <lan-icon name="wifi" customClass="icon"></lan-icon>
         <div class="name">wifi</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-share"></i>
+        <lan-icon name="share" customClass="icon"></lan-icon>
         <div class="name">share</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-searchlist"></i>
-        <div class="name">search_list</div>
+        <lan-icon name="searchlist" customClass="icon"></lan-icon>
+        <div class="name">searchlist</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-sort"></i>
+        <lan-icon name="sort" customClass="icon"></lan-icon>
         <div class="name">sort</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-down"></i>
+        <lan-icon name="down" customClass="icon"></lan-icon>
         <div class="name">down</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-mobile"></i>
+        <lan-icon name="mobile" customClass="icon"></lan-icon>
         <div class="name">mobile</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-copy"></i>
+        <lan-icon name="copy" customClass="icon"></lan-icon>
         <div class="name">copy</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-countdownfill"></i>
-        <div class="name">countdown_fill</div>
+        <lan-icon name="countdownfill" customClass="icon"></lan-icon>
+        <div class="name">countdownfill</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-countdown"></i>
+        <lan-icon name="countdown" customClass="icon"></lan-icon>
         <div class="name">countdown</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-noticefill"></i>
-        <div class="name">notice_fill</div>
+        <lan-icon name="noticefill" customClass="icon"></lan-icon>
+        <div class="name">noticefill</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-notice"></i>
+        <lan-icon name="notice" customClass="icon"></lan-icon>
         <div class="name">notice</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-female"></i>
+        <lan-icon name="female" customClass="icon"></lan-icon>
         <div class="name">female</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-male"></i>
+        <lan-icon name="male" customClass="icon"></lan-icon>
         <div class="name">male</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-new"></i>
+        <lan-icon name="new" customClass="icon"></lan-icon>
         <div class="name">new</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-pullleft"></i>
-        <div class="name">pull_left</div>
+        <lan-icon name="pullleft" customClass="icon"></lan-icon>
+        <div class="name">pullleft</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-pullright"></i>
-        <div class="name">pull_right</div>
+        <lan-icon name="pullright" customClass="icon"></lan-icon>
+        <div class="name">pullright</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-rankfill"></i>
-        <div class="name">rank_fill</div>
+        <lan-icon name="rankfill" customClass="icon"></lan-icon>
+        <div class="name">rankfill</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-rank"></i>
+        <lan-icon name="rank" customClass="icon"></lan-icon>
         <div class="name">rank</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-apps"></i>
+        <lan-icon name="apps" customClass="icon"></lan-icon>
         <div class="name">apps</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-picfill"></i>
-        <div class="name">pic_fill</div>
+        <lan-icon name="picfill" customClass="icon"></lan-icon>
+        <div class="name">picfill</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-refresharrow"></i>
-        <div class="name">refresh_arrow</div>
+        <lan-icon name="refresharrow" customClass="icon"></lan-icon>
+        <div class="name">refresharrow</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-markfill"></i>
-        <div class="name">mark_fill</div>
+        <lan-icon name="markfill" customClass="icon"></lan-icon>
+        <div class="name">markfill</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-mark"></i>
+        <lan-icon name="mark" customClass="icon"></lan-icon>
         <div class="name">mark</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-repeal"></i>
+        <lan-icon name="repeal" customClass="icon"></lan-icon>
         <div class="name">repeal</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-album"></i>
+        <lan-icon name="album" customClass="icon"></lan-icon>
         <div class="name">album</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-peoplefill"></i>
-        <div class="name">people_fill</div>
+        <lan-icon name="peoplefill" customClass="icon"></lan-icon>
+        <div class="name">peoplefill</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-people"></i>
+        <lan-icon name="people" customClass="icon"></lan-icon>
         <div class="name">people</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-file"></i>
+        <lan-icon name="file" customClass="icon"></lan-icon>
         <div class="name">file</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-attentionfill"></i>
-        <div class="name">attention_fill</div>
+        <lan-icon name="attentionfill" customClass="icon"></lan-icon>
+        <div class="name">attentionfill</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-attention"></i>
+        <lan-icon name="attention" customClass="icon"></lan-icon>
         <div class="name">attention</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-communityfill"></i>
-        <div class="name">community_fill</div>
+        <lan-icon name="communityfill" customClass="icon"></lan-icon>
+        <div class="name">communityfill</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-community"></i>
+        <lan-icon name="community" customClass="icon"></lan-icon>
         <div class="name">community</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-calendar"></i>
+        <lan-icon name="calendar" customClass="icon"></lan-icon>
         <div class="name">calendar</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-cut"></i>
+        <lan-icon name="cut" customClass="icon"></lan-icon>
         <div class="name">cut</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-backwardfill"></i>
-        <div class="name">backward_fill</div>
+        <lan-icon name="backwardfill" customClass="icon"></lan-icon>
+        <div class="name">backwardfill</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-playfill"></i>
-        <div class="name">play_fill</div>
+        <lan-icon name="playfill" customClass="icon"></lan-icon>
+        <div class="name">playfill</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-stop"></i>
+        <lan-icon name="stop" customClass="icon"></lan-icon>
         <div class="name">stop</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-group"></i>
+        <lan-icon name="group" customClass="icon"></lan-icon>
         <div class="name">group</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-backdelete"></i>
-        <div class="name">back_delete</div>
+        <lan-icon name="backdelete" customClass="icon"></lan-icon>
+        <div class="name">backdelete</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-hotfill"></i>
-        <div class="name">hot_fill</div>
+        <lan-icon name="hotfill" customClass="icon"></lan-icon>
+        <div class="name">hotfill</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-hot"></i>
+        <lan-icon name="hot" customClass="icon"></lan-icon>
         <div class="name">hot</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-post"></i>
+        <lan-icon name="post" customClass="icon"></lan-icon>
         <div class="name">post</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-radiobox"></i>
-        <div class="name">radio_box</div>
+        <lan-icon name="radiobox" customClass="icon"></lan-icon>
+        <div class="name">radiobox</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-rounddown"></i>
-        <div class="name">round_down</div>
+        <lan-icon name="rounddown" customClass="icon"></lan-icon>
+        <div class="name">rounddown</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-upload"></i>
+        <lan-icon name="upload" customClass="icon"></lan-icon>
         <div class="name">upload</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-write"></i>
+        <lan-icon name="write" customClass="icon"></lan-icon>
         <div class="name">write</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-shake"></i>
+        <lan-icon name="shake" customClass="icon"></lan-icon>
         <div class="name">shake</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-move"></i>
+        <lan-icon name="move" customClass="icon"></lan-icon>
         <div class="name">move</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-messagefill"></i>
-        <div class="name">message_fill</div>
+        <lan-icon name="messagefill" customClass="icon"></lan-icon>
+        <div class="name">messagefill</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-sound"></i>
+        <lan-icon name="sound" customClass="icon"></lan-icon>
         <div class="name">sound</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-text"></i>
+        <lan-icon name="text" customClass="icon"></lan-icon>
         <div class="name">text</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-date"></i>
+        <lan-icon name="date" customClass="icon"></lan-icon>
         <div class="name">date</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-roundaddlight"></i>
-        <div class="name">round_add_light</div>
+        <lan-icon name="roundaddlight" customClass="icon"></lan-icon>
+        <div class="name">roundaddlight</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-soundlight"></i>
-        <div class="name">sound_light</div>
+        <lan-icon name="soundlight" customClass="icon"></lan-icon>
+        <div class="name">soundlight</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-sortlight"></i>
-        <div class="name">sort_light</div>
+        <lan-icon name="sortlight" customClass="icon"></lan-icon>
+        <div class="name">sortlight</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-piclight"></i>
-        <div class="name">pic_light</div>
+        <lan-icon name="piclight" customClass="icon"></lan-icon>
+        <div class="name">piclight</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-shoplight"></i>
-        <div class="name">shop_light</div>
+        <lan-icon name="shoplight" customClass="icon"></lan-icon>
+        <div class="name">shoplight</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-voicelight"></i>
-        <div class="name">voice_light</div>
+        <lan-icon name="voicelight" customClass="icon"></lan-icon>
+        <div class="name">voicelight</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-full"></i>
+        <lan-icon name="full" customClass="icon"></lan-icon>
         <div class="name">full</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-mail"></i>
+        <lan-icon name="mail" customClass="icon"></lan-icon>
         <div class="name">mail</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-peoplelist"></i>
-        <div class="name">people_list</div>
+        <lan-icon name="peoplelist" customClass="icon"></lan-icon>
+        <div class="name">peoplelist</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-newshotfill"></i>
-        <div class="name">news_hot_fill</div>
+        <lan-icon name="newshotfill" customClass="icon"></lan-icon>
+        <div class="name">newshotfill</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-newshot"></i>
-        <div class="name">news_hot</div>
+        <lan-icon name="newshot" customClass="icon"></lan-icon>
+        <div class="name">newshot</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-videofill"></i>
-        <div class="name">video_fill</div>
+        <lan-icon name="videofill" customClass="icon"></lan-icon>
+        <div class="name">videofill</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-video"></i>
+        <lan-icon name="video" customClass="icon"></lan-icon>
         <div class="name">video</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-subscription"></i>
+        <lan-icon name="subscription" customClass="icon"></lan-icon>
         <div class="name">subscription</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-clock"></i>
-        <div class="name">task-clock</div>
+        <lan-icon name="clock" customClass="icon"></lan-icon>
+        <div class="name">clock</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-github"></i>
+        <lan-icon name="github" customClass="icon"></lan-icon>
         <div class="name">github</div>
       </li>
 
       <li>
-        <i class="icon iconfont icon-double-backward"></i>
+        <lan-icon name="double-backward" customClass="icon"></lan-icon>
         <div class="name">double-backward</div>
       </li>
 
