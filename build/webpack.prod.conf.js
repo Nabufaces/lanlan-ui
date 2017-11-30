@@ -13,23 +13,12 @@ const env = config.build.env;
 
 const webpackConfig = merge(baseWebpackConfig, {
   entry: {
-    lanlanui: './src/main.js'
+    app: './src/main.js'
   },
   output: {
     path: config.build.assetsRoot,
     publicPath: config.build.assetsPublicPath,
-    filename: utils.assetsPath('[name].js'),
-    library: 'lanlanui',
-    libraryTarget: 'umd',
-    umdNamedDefine: true,
-  },
-  externals: {
-    vue: {
-      root: 'Vue',
-      commonjs: 'vue',
-      commonjs2: 'vue',
-      amd: 'vue'
-    }
+    filename: utils.assetsPath('[name].js')
   },
   module: {
     rules: utils.styleLoaders({
@@ -57,6 +46,11 @@ const webpackConfig = merge(baseWebpackConfig, {
       cssProcessorOptions: {
         safe: true
       }
+    }),
+    new HtmlWebpackPlugin({
+      filename: './src/index.html',
+      template: './src/index.html',
+      inject: true
     }),
     // copy custom static assets
     new CopyWebpackPlugin([

@@ -1,4 +1,99 @@
-@import "animation/index";
-@import "common/common";
-@import "components/index";
-@import "../icon/iconfont.css";
+.m-hd {
+  width: 90%;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  &-logo {
+    width: 84px;
+    height: 25px;
+    margin-right: 500px;
+  }
+}
+.m-mn {
+  background: #fff;
+  width: 90%;
+  margin: 30px auto 20px;
+  border-radius: 6px;
+  box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
+  .m-leftBar {
+    font-size: 14px;
+    padding: 15px 0;
+    color: #1E242A;
+    position: relative;
+    .menu-item {
+      padding: 14px 24px;
+      position: relative;
+      cursor: pointer;
+      z-index: 1;
+      transition: all .2s ease-in-out;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      &:hover {
+        background-color: #EDF0F4;
+      }
+      &.router-link-active {
+        color: #FF7846;
+        border-right: 2px solid #FF7846;
+      }
+    }
+    .menu-group {
+      font-size: 17px;
+      margin: 8px 0;
+      padding: 14px 20px 14px 15px;
+      color: #999;
+    }
+  }
+  .m-wrapper {
+    padding: 25px 40px;
+    position: relative;
+    h1, h2, h3 {
+      font-weight: 400;
+      color: #999;
+      margin: 10px 0;
+    }
+    h1 {
+      font-size: 26px;
+    }
+    h2 {
+      font-size: 20px;
+    }
+    h3 {
+      font-size: 16px;
+    }
+    .ul {
+      padding-left: 40px;
+      list-style-type: disc;
+    }
+    p, .li {
+      margin: 5px;
+      font-size: 14px;
+    }
+  }
+}
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0;
+  -webkit-text-size-adjust: none;
+  color: #1E242A;
+  background-color: #fff;
+}
+.hljs-attr {
+  color: #FF7846;
+}
+.hljs-string {
+  color: #42b983
+}
+.hljs-keyword {
+  color: #e96900
+}
+.hljs-number {
+  color: #fc1e70
+}
+.hljs-attribute {
+  color: #af7dff
+}
+.hljs-variable, .hljs-template-variable, .hljs-selector-id, .hljs-selector-class {
+  color: #62c8f3;
+}
