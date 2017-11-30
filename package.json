@@ -4,7 +4,6 @@
   "description": "懒懒前端UI库",
   "scripts": {
     "dev": "node build/dev-server.js",
-    "start": "npm run dev",
     "build": "node build/build.js"
   },
   "main": "dist/lanlanui.js",

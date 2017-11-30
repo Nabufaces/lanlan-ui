@@ -9,7 +9,7 @@ const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin');
 
 module.exports = merge(baseWebpackConfig, {
   entry: {
-    example: ['./examples/main.js', './build/dev-client'],
+    examples: ['./examples/main.js', './build/dev-client'],
     vendors: ['vue', 'vue-router']
   },
   module: {
@@ -28,7 +28,7 @@ module.exports = merge(baseWebpackConfig, {
     new HtmlWebpackPlugin({
       template: './examples/index.html',
       inject: true,
-      chunks: ['example']
+      chunks: ['examples']
     }),
     new FriendlyErrorsPlugin()
   ]
