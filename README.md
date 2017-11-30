@@ -1,7 +1,3 @@
-<p align="center">
-    <img width="200" src="./static/img/logo.png">
-</p>
-
 ## lanlan-ui
 
 #### A UI Toolkit built on Vue.js.

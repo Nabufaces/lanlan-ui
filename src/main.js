@@ -25,7 +25,6 @@ import lanTabs from './components/lan-tabs'
 import lanTabPane from './components/lan-tab-pane'
 import lanTooltip from './components/lan-tooltip'
 import lanBackTop from './components/lan-backTop'
-//import lanCarousel from './components/lan-carousel'
 
 const components = {
     lanRow,
@@ -50,8 +49,7 @@ const components = {
     lanTabs,
     lanTabPane,
     lanTooltip,
-    lanBackTop,
-    //lanCarousel
+    lanBackTop
 };
 
 const install = function(Vue, opts = {}) {
@@ -69,7 +67,7 @@ if (typeof window !== 'undefined' && window.Vue) {
 };
 
 export default {
-  version: '0.1.5',
+  version: '0.1.6',
   install,
   ...components
 };
