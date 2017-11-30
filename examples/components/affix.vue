@@ -11,6 +11,8 @@
 
         import lanlanui from 'lanlan-ui'
 
+        import Vue from 'vue'
+
         Vue.use(lanlanui);
       </code>
     </pre>
@@ -23,6 +25,8 @@
         import 'lanlan-ui/dist/lanlanui.css'
 
         import { lanButton } from 'lanlan-ui'
+
+        import Vue from 'vue'
 
         new Vue({
           el: '#app',
