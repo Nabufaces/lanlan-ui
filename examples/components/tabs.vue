@@ -64,10 +64,7 @@
 
 <script>
 
-  import LanIcon from "../../src/components/lan-icon/lan-icon.vue";
-
   export default {
-    components: {LanIcon},
     name: 'tabs',
     data() {
       return {

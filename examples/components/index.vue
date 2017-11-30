@@ -1,7 +1,7 @@
 <template>
   <div class="m-wrapper">
     <div class="m-hd">
-      <img src="../../static/img/logo.png" class="m-hd-logo"/>
+      <img src="../img/logo.png" class="m-hd-logo"/>
       <lan-tabs :activeLabel="1" @change="toRepository">
         <lan-tab-pane :label="1"><router-link to="/affix" tag="span">组件</router-link></lan-tab-pane>
         <lan-tab-pane :label="2">
