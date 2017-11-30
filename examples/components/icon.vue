@@ -780,6 +780,11 @@
       </li>
 
       <li>
+        <i class="icon iconfont icon-github"></i>
+        <div class="name">github</div>
+      </li>
+
+      <li>
         <i class="icon iconfont icon-double-backward"></i>
         <div class="name">double-backward</div>
       </li>

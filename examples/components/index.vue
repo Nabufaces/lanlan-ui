@@ -4,7 +4,9 @@
       <img src="../../static/img/logo.png" class="m-hd-logo"/>
       <lan-tabs :activeLabel="1" @change="toRepository">
         <lan-tab-pane :label="1"><router-link to="/affix" tag="span">组件</router-link></lan-tab-pane>
-        <lan-tab-pane :label="2">仓库</lan-tab-pane>
+        <lan-tab-pane :label="2">
+          <lan-icon name="github"></lan-icon>&emsp;Github
+        </lan-tab-pane>
       </lan-tabs>
     </div>
     <div class="m-mn">
@@ -52,7 +54,7 @@
     methods: {
       toRepository(value) {
         if(value === 2) {
-          window.location.href = 'https://code.aliyun.com/lanlan_xsj/lanlanFE'
+          window.location.href = 'https://github.com/Nabufaces/lanlan-ui'
         }
       }
     }
