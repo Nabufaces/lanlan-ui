@@ -49,7 +49,7 @@ const webpackConfig = merge(baseWebpackConfig, {
       }
     }),
     new HtmlWebpackPlugin({
-      filename: './dist/src/index.html',
+      filename: 'index.html',
       template: './src/index.html',
       inject: true
     }),
