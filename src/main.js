@@ -26,6 +26,7 @@ import lanTabPane from './components/lan-tab-pane'
 import lanTooltip from './components/lan-tooltip'
 import lanBackTop from './components/lan-backTop'
 import lanBadge from './components/lan-badge'
+import lanLoadingBar from './components/lan-loadingBar'
 
 const components = {
     lanRow,
@@ -51,7 +52,8 @@ const components = {
     lanTabPane,
     lanTooltip,
     lanBackTop,
-    lanBadge
+    lanBadge,
+    lanLoadingBar
 };
 
 const install = function(Vue, opts = {}) {
@@ -61,6 +63,7 @@ const install = function(Vue, opts = {}) {
   });
 
   Vue.prototype.$Message = lanMessage;
+  Vue.prototype.$LoadingBar = lanLoadingBar;
 };
 
 /* istanbul ignore if */

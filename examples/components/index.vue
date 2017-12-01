@@ -32,6 +32,7 @@
             <router-link to="/messageBox" class="menu-item" tag="li">MessageBox 消息框</router-link>
             <router-link to="/modal" class="menu-item" tag="li">Modal 模态框</router-link>
             <router-link to="/tooltip" class="menu-item" tag="li">Tooltip 提示</router-link>
+            <router-link to="/loadingBar" class="menu-item" tag="li">LoadingBar 加载进度条</router-link>
             <li class="menu-group">Other</li>
             <router-link to="/tabs" class="menu-item" tag="li">Tabs 标签</router-link>
             <router-link to="/badge" class="menu-item" tag="li">Badge 徽标</router-link>
