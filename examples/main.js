@@ -2,8 +2,8 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import router from './router'
-//测试环境
-import lanlanui from '../src/main'
+import 'lanlan-ui/dist/lanlanui.css'
+import lanlanui from 'lanlan-ui'
 import index from './components/index.vue'
 import hightlight from './lib/highlight'
 
