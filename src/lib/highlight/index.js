@@ -1,6 +1,4 @@
-import Vue from 'vue'
 import Hljs from './highlight.js'
-import './highlight.css'
 
 let Highlight = {};
 Highlight.install = function (Vue, options) {

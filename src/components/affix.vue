@@ -13,7 +13,7 @@
 
         import Vue from 'vue'
 
-        Vue.use(lanlanui);
+        Vue.use(lanlanui)
       </code>
     </pre>
 

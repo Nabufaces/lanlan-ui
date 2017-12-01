@@ -1,8 +1,13 @@
 {
   "name": "lanlan-ui",
-  "version": "0.1.6",
   "description": "懒懒前端UI网站",
   "scripts": {
+    "comment": {
+      "start": "server开启",
+      "dev": "test开启",
+      "build": "打包项目"
+    },
+    "start": "node build/start-server.js",
     "dev": "node build/dev-server.js",
     "build": "node build/build.js"
   },
@@ -11,7 +16,7 @@
     "less-loader": "^4.0.5",
     "vue": "^2.5.0",
     "vue-router": "^3.0.1",
-    "lanlan-ui": "^0.1.6"
+    "lanlan-ui": "^0.1.7"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",

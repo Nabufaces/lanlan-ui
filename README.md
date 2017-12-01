@@ -1,49 +1,8 @@
-## lanlan-ui
-
-#### A UI Toolkit built on Vue.js.
-
-> This branch is for Vue.js 2.x.
-
-### Install
-
-Using npm:
-```
-  npm install lanlan-ui --save
-```
-
-Install for global use:
-```js
-  import 'lanlan-ui/dist/lanlanui.css'
-  import lanlanui from 'lanlan-ui'
-  import Vue from 'vue'
-  Vue.use(lanlanui)
-```
-
-Install for local use:
-```js
-  import 'lanlan-ui/dist/lanlanui.css'
-  import { lanButton } from 'lanlan-ui'
-  import Vue from 'vue'
-  new Vue({
-    el: '#app',
-    components: {
-      lanButton
-    }
-  })
-```
+## lanlan-ui website
 
 ### Usage
-```vue
-  <template>
-      <lan-input v-model="value" />
-  </template>
-  <script>
-      export default {
-          data () {
-              return {
-                  value: ''
-              }
-          }
-      }
-  </script>
+```
+  npm run start   //server开启
+  npm run dev     //test开启
+  npm run build   //打包项目
 ```
