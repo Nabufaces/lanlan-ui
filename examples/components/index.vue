@@ -34,6 +34,7 @@
             <router-link to="/tooltip" class="menu-item" tag="li">Tooltip 提示</router-link>
             <li class="menu-group">Other</li>
             <router-link to="/tabs" class="menu-item" tag="li">Tabs 标签</router-link>
+            <router-link to="/badge" class="menu-item" tag="li">Badge 徽标</router-link>
             <router-link to="/pagination" class="menu-item" tag="li">Pagination 分页</router-link>
             <router-link to="/backTop" class="menu-item" tag="li">BackTop 返回顶部</router-link>
           </ul>

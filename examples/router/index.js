@@ -78,6 +78,10 @@ export default new Router({
       component: resolve => {require(['../components/tabs'],resolve)}
     },
     {
+      path: '/badge',
+      component: resolve => {require(['../components/badge'],resolve)}
+    },
+    {
       path: '/pagination',
         component: resolve => {require(['../components/pagination'],resolve)}
     },
