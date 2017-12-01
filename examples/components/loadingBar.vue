@@ -34,11 +34,10 @@
       </code>
     </pre>
 
-    <h2>API</h2>
+    <h2>LoadingBar instance #</h2>
 
-    <h3>LoadingBar instance #</h3>
-    <p>通过直接调用以下方法来使用组件：</p>
-    <ul class="ul" style="margin-bottom: 40px">
+    <p>直接通过调用以下方法来使用组件：</p>
+    <ul class="ul" style="margin-bottom: 30px">
       <li class="li"><code>this.$LoadingBar.start()</code></li>
       <li class="li"><code>this.$LoadingBar.finish()</code></li>
       <li class="li"><code>this.$LoadingBar.error()</code></li>
@@ -57,6 +56,7 @@
         });
       </code>
     </pre>
+    <h3 style="margin-bottom: 20px">config配置：</h3>
     <lan-table :column="columnProps" :tableSource="sourceMessage" :border="true"></lan-table>
 
   </article>

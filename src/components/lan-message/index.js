@@ -17,9 +17,6 @@ lanMessage.newInstance = properties => {
   const message = Instance.$children[0];
 
   return {
-    addProps (props) {
-      message.addProps(props);
-    },
     component: message,
     destroy (element) {
       document.body.removeChild(document.getElementsByClassName(element)[0]);
@@ -27,18 +24,9 @@ lanMessage.newInstance = properties => {
   };
 };
 
-let messageInstance;
-
-function getMessageInstance () {
-  messageInstance = lanMessage.newInstance({});
-  return messageInstance;
-}
-
 function initMessage (message = '', duration = 3000, type = 'success') {
 
-  let instance = getMessageInstance();
-
-  instance.addProps({
+  return lanMessage.newInstance({
     message,
     type,
     duration
@@ -65,10 +53,5 @@ export default {
       };
     }
     return initMessage(options.message, options.duration, type);
-  },
-  destroy () {
-    let instance = getMessageInstance();
-    messageInstance = null;
-    instance.destroy('lan-message');
   }
 };

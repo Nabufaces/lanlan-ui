@@ -12,12 +12,14 @@
 <script>
   export default{
     name: 'lan-message',
+    props: {
+      type: String,
+      message: String,
+      duration: Number
+    },
     data() {
       return {
         prefixCls: 'lan-message',
-        type: '',
-        message: '',
-        duration: 3000,
         visible: false,
         modalType: {
           warning : 'http://oss1.lanlanlife.com/f1af2aa2ed6c34fcc46d9f380f176f16_48x48.png',
@@ -32,17 +34,14 @@
           clearTimeout(this.closeTimer);
           this.closeTimer = null;
         }
-      },
-      addProps(props) {
-        this.clearCloseTimer();
-        this.type = props.type;
-        this.duration = props.duration;
-        this.message = props.message;
-        this.visible = true;
-        this.closeTimer = setTimeout(() => {
-          this.visible = false;
-        }, this.duration);
       }
+    },
+    mounted() {
+      this.clearCloseTimer();
+      this.visible = true;
+      this.closeTimer = setTimeout(() => {
+        this.visible = false;
+      }, this.duration);
     },
     beforeDestroy () {
       this.clearCloseTimer();

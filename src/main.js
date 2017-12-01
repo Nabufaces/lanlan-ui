@@ -8,7 +8,7 @@ import lanButton from './components/lan-button'
 import lanSwitch from './components/lan-switch'
 import lanRadioGroup from './components/lan-radioGroup'
 import lanRadio from './components/lan-radio'
-import LanCheckboxGroup from './components/lan-checkboxGroup'
+import lanCheckboxGroup from './components/lan-checkboxGroup'
 import lanCheckbox from './components/lan-checkbox'
 import lanIcon from './components/lan-icon'
 import lanInput from './components/lan-input'
@@ -35,7 +35,7 @@ const components = {
     lanSwitch,
     lanRadioGroup,
     lanRadio,
-    LanCheckboxGroup,
+    lanCheckboxGroup,
     lanCheckbox,
     lanIcon,
     lanInput,
@@ -56,7 +56,7 @@ const components = {
     lanLoadingBar
 };
 
-const install = function(Vue, opts = {}) {
+const install = (Vue) => {
 
   Object.keys(components).forEach(key => {
     Vue.component(key, components[key]);
@@ -72,7 +72,7 @@ if (typeof window !== 'undefined' && window.Vue) {
 };
 
 export default {
-  version: '0.1.8',
+  version: '0.1.9',
   install,
   ...components
 };
