@@ -1,7 +1,7 @@
 <template>
   <div class="m-wrapper">
     <div class="m-hd">
-      <img src="../../static/img/logo.png" class="m-hd-logo"/>
+      <img src="../img/logo.png" class="m-hd-logo"/>
       <lan-tabs :activeLabel="1" @change="toRepository">
         <lan-tab-pane :label="1"><router-link to="/affix" tag="span">组件</router-link></lan-tab-pane>
         <lan-tab-pane :label="2">
@@ -32,8 +32,10 @@
             <router-link to="/messageBox" class="menu-item" tag="li">MessageBox 消息框</router-link>
             <router-link to="/modal" class="menu-item" tag="li">Modal 模态框</router-link>
             <router-link to="/tooltip" class="menu-item" tag="li">Tooltip 提示</router-link>
+            <router-link to="/loadingBar" class="menu-item" tag="li">LoadingBar 加载进度条</router-link>
             <li class="menu-group">Other</li>
             <router-link to="/tabs" class="menu-item" tag="li">Tabs 标签</router-link>
+            <router-link to="/badge" class="menu-item" tag="li">Badge 徽标</router-link>
             <router-link to="/pagination" class="menu-item" tag="li">Pagination 分页</router-link>
             <router-link to="/backTop" class="menu-item" tag="li">BackTop 返回顶部</router-link>
           </ul>

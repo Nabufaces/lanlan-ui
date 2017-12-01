@@ -74,8 +74,16 @@ export default new Router({
       component: resolve => {require(['../components/tooltip'],resolve)}
     },
     {
+      path: '/loadingBar',
+      component: resolve => {require(['../components/loadingBar'],resolve)}
+    },
+    {
       path: '/tabs',
       component: resolve => {require(['../components/tabs'],resolve)}
+    },
+    {
+      path: '/badge',
+      component: resolve => {require(['../components/badge'],resolve)}
     },
     {
       path: '/pagination',
