@@ -13,6 +13,7 @@
            :autofocus="autofocus"
            :autocomplete="autoComplete"
            :maxlength="maxlength"
+           :type="password ? 'password' : 'text'"
            @input="handleInput($event.target.value)"
            @change="handleChange($event.target.value)"
            @focus="handleFocus"
@@ -48,7 +49,11 @@
         type: String,
         default: 'off'
       },
-      maxlength: Number
+      maxlength: Number,
+      password: {
+        type: Boolean,
+        default: false
+      }
     },
     components: {
       lanIcon

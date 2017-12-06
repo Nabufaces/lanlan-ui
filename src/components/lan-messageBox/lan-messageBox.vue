@@ -57,10 +57,11 @@
         if(!this.closeWindow){
           return;
         }
-        this.handleConfirm();
+        this.$emit('close');
       },
       handleConfirm(){
         this.$emit('confirm');
+        this.$emit('close');
       }
     }
   }

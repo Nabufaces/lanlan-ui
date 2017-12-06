@@ -122,6 +122,11 @@
           type: 'Number',
           default: '-'
         }, {
+          property: 'password',
+          explain: '是否为输入密码',
+          type: 'Boolean',
+          default: 'false'
+        }, {
           property: 'prefixIcon',
           explain: '输入框头部图标',
           type: 'String',

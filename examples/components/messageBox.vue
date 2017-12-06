@@ -7,14 +7,14 @@
 
     <h3>基础使用</h3>
     <lan-button classType="primary" @click="visible = true">点击打开messageBox</lan-button>
-    <lan-message-box v-if="visible" type="success" @confirm="visible = false">
+    <lan-message-box v-if="visible" type="success" @close="visible = false">
       <template slot="title">这是messageBox的标题</template>
       <span>这是messageBox的内容</span>
     </lan-message-box>
     <pre v-highlight>
       <code class="html">
         &ltlan-button classType="primary" @click="visible = true"&gt点击打开messageBox&lt/lan-button&gt
-        &ltlan-message-box v-if="visible" type="success" @confirm="visible = false"&gt
+        &ltlan-message-box v-if="visible" type="success" @close="visible = false"&gt
           &lttemplate slot="title"&gt这是messageBox的标题&lt/template&gt
           &ltspan&gt这是messageBox的内容&lt/span&gt
         &lt/lan-message-box&gt
@@ -102,6 +102,10 @@
         }],
         sourceEvents: [{
           eventName: 'confirm',
+          explain: '点击确认按钮时触发',
+          back: '-'
+        }, {
+          eventName: 'close',
           explain: '点击确认按钮或点击消息弹框区域之外关闭时触发',
           back: '-'
         }]

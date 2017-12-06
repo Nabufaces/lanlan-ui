@@ -22,7 +22,7 @@
       </table>
     </div>
 
-    <div class="lan-table-bd" :style="{ height: height + 'px'}">
+    <div class="lan-table-bd" :style="{ maxHeight: height + 'px'}">
       <table>
         <colgroup>
           <col v-for="item in columns" :width="item.width">

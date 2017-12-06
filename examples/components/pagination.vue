@@ -71,7 +71,7 @@
           width: 100
         }],
         sourceEvents: [{
-          eventName: 'currentChange',
+          eventName: 'change',
           explain: '页数改变时触发',
           back: '当前页'
         }]

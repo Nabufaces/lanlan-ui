@@ -71,7 +71,7 @@
       handleClick(value){
         if(value >= 1 && value <= this.total){
           this.current = value;
-          this.$emit('currentChange', value);
+          this.$emit('change', value);
         }
       },
       handleConfirm(){
