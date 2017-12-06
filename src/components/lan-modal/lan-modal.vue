@@ -1,6 +1,6 @@
 <template>
   <transition name="fade">
-    <div :class="`${prefixCls}-mask`" v-show="showModal"
+    <div :class="`${prefixCls}-mask`" v-if="showModal"
          @click.self="handleCloseWindow">
       <div :class="`${prefixCls}`"
            :style="{width: width ? width + 'px' : '400px'}">

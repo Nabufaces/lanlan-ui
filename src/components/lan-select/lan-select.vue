@@ -9,7 +9,6 @@
                @click="handleClick"
                @blur="handleBlur"
                @input="handleInput"
-               ref="ipt"
     ></lan-input>
     <div class="lan-select-dropdown" v-if="showSelect" :style="{width: selectWidth}">
       <ul class="lan-select-list">
@@ -54,7 +53,7 @@
       }
     },
     mounted() {
-      this.selectWidth = this.$refs.ipt.$el.getBoundingClientRect().width + 'px';
+      this.selectWidth = this.$el.getBoundingClientRect().width + 'px';
     },
     methods: {
       handleClick (){
