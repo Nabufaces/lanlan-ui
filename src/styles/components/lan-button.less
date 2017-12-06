@@ -1,3 +1,10 @@
+.disabled() {
+  cursor: not-allowed;
+  color: @disabled-color;
+  background-color: @background-color-base;
+  border-color: @disabled-border-color;
+}
+
 .lan-button{
   display: inline-block;
   line-height: 1;
@@ -22,57 +29,52 @@
     padding: 8px 137px;
   }
   &&-default {
-    border: 1px solid #B0B4B8;
-    color: #1E242A;
-    background-color: #ffffff;
+    border: 1px solid @default-border-color;
+    color: @default-color;
+    background-color: @body-background;
     &:hover {
-      background-color: #EDF0F4;
+      background-color: @default-hover-color;
     }
   }
   &&-primary {
-    border: 1px solid #1BAEFF;
-    background-color: #1BAEFF;
+    border: 1px solid @primary-color;
+    background-color: @primary-color;
     &:hover {
-      background-color: #409eff;
+      background-color: @primary-hover-color;
     }
   }
   &&-success {
-    border: 1px solid #0EDE00;
-    background-color: #0EDE00;
+    border: 1px solid @success-color;
+    background-color: @success-color;
     &:hover {
-      background-color: #67c23a;
+      background-color: @success-hover-color;
     }
   }
   &&-warning {
-    border: 1px solid #FF7846;
-    background-color: #FF7846;
+    border: 1px solid @warning-color;
+    background-color: @warning-color;
     &:hover {
-      background-color: #E7551F;
+      background-color: @warning-hover-color;
     }
   }
   &&-danger {
-    border: 1px solid #FE4B4B;
-    background-color: #FE4B4B;
+    border: 1px solid @danger-color;
+    background-color: @danger-color;
     &:hover {
-      background-color: #D00000;
+      background-color: @danger-hover-color;
     }
   }
   &&-info {
-    border: 1px solid #686E74;
-    background-color: #686E74;
+    border: 1px solid @info-color;
+    background-color: @info-color;
     &:hover {
-      background-color: #4A5056;
+      background-color: @info-hover-color;
     }
   }
   &:disabled {
-    cursor: not-allowed;
-    color: #c3cbd6;
-    background-color: #f7f7f7;
-    border-color: #d7dde4;
+    .disabled();
     &:hover {
-      color: #c3cbd6;
-      background-color: #f7f7f7;
-      border-color: #d7dde4;
+      .disabled();
     }
   }
 }

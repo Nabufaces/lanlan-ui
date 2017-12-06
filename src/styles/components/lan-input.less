@@ -3,6 +3,7 @@
   font-size: 14px;
   display: inline-block;
   line-height: normal;
+  width: 100%;
   &&-with-prefix {
     .lan-input-inner {
       padding-left: 23px;
@@ -33,29 +34,30 @@
   &-inner {
     background-color: #fff;
     border-radius: 2px;
-    border: 1px solid #E4E6EC;
+    border: 1px solid @input-border-color;
     box-sizing: border-box;
-    color: #B0B4B8;
+    color: @default-border-color;
     display: inline-block;
     font-size: inherit;
     outline: none;
     padding: 8px 10px;
     transition: border-color .2s cubic-bezier(.645,.045,.355,1);
+    width: 100%;
     &:hover {
-      border-color: #FF7846;
+      border-color: @warning-color;
     }
     &:disabled {
-      background-color: #f5f7fa;
-      border-color: #dfe4ed;
-      color: #b4bccc;
       cursor: not-allowed;
+      color: @disabled-color;
+      background-color: @background-color-base;
+      border-color: @disabled-border-color;
     }
   }
   &-prefix, &-suffix {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    color: #B0B4B8;
+    color: @default-border-color;
     transition: all .3s;
   }
   &-prefix {
@@ -68,7 +70,7 @@
     line-height: 1;
     background-color: #f5f7fa;
     color: #878d99;
-    border: 1px solid #E4E6EC;
+    border: 1px solid @input-border-color;
     border-radius: 2px;
     padding: 7px 10px;
     white-space: nowrap;
