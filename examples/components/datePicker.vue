@@ -6,20 +6,20 @@
     <h2 style="margin-top: 40px">代码示例</h2>
 
     <h3>基础使用</h3>
-    <lan-date-picker placeholder="选择日期"></lan-date-picker>
+    <lan-date-picker placeholder="选择日期" style="width: 200px"></lan-date-picker>
     <pre v-highlight>
       <code class="html">
-        &ltlan-date-picker placeholder="选择日期"&gt&lt/lan-date-picker&gt
+        &ltlan-date-picker placeholder="选择日期" style="width: 200px"&gt&lt/lan-date-picker&gt
       </code>
     </pre>
 
     <h3>含日期范围</h3>
     <lan-row>
-      <lan-date-picker placeholder="选择日期" min="2015-09-01" max="2020-12-30"></lan-date-picker>
+      <lan-date-picker placeholder="选择日期" min="2015-09-01" max="2020-12-30" style="width: 200px"></lan-date-picker>
     </lan-row>
     <pre v-highlight>
       <code class="html">
-        &ltlan-date-picker placeholder="选择日期" min="2015-09-01" max="2020-12-30"&gt&lt/lan-date-picker&gt
+        &ltlan-date-picker placeholder="选择日期" min="2015-09-01" max="2020-12-30" style="width: 200px"&gt&lt/lan-date-picker&gt
       </code>
     </pre>
 

@@ -1,36 +1,61 @@
 <template>
   <div :class="classes">
-    <div class="lan-input-prepend" v-if="$slots.prepend">
-      <slot name="prepend"></slot>
-    </div>
-    <lan-icon :name="prefixIcon" customClass="lan-input-prefix" v-if="prefixIcon"></lan-icon>
-    <lan-icon :name="suffixIcon" customClass="lan-input-suffix" v-if="suffixIcon"></lan-icon>
-    <input :class="inputClasses"
-           :value="value"
-           :placeholder="placeholder"
-           :readonly="readonly"
-           :disabled="disabled"
-           :autofocus="autofocus"
-           :autocomplete="autoComplete"
-           :maxlength="maxlength"
-           :type="password ? 'password' : 'text'"
-           @input="handleInput($event.target.value)"
-           @change="handleChange($event.target.value)"
-           @focus="handleFocus"
-           @blur="handleBlur"
-           @click="handleClick"
-           @keyup="handleKeyup"
-           @keypress="handleKeypress"
-           @keydown="handleKeydown"
-           />
-    <div class="lan-input-append" v-if="$slots.append">
-      <slot name="append"></slot>
-    </div>
+    <template v-if="type !== 'textarea'">
+      <div class="lan-input-prepend" v-if="$slots.prepend">
+        <slot name="prepend"></slot>
+      </div>
+      <lan-icon :name="prefixIcon" customClass="lan-input-prefix" v-if="prefixIcon"></lan-icon>
+      <lan-icon :name="suffixIcon" customClass="lan-input-suffix" v-if="suffixIcon"></lan-icon>
+      <input :class="inputClasses"
+             :value="value"
+             :type="type"
+             :placeholder="placeholder"
+             :readonly="readonly"
+             :disabled="disabled"
+             :autofocus="autofocus"
+             :autocomplete="autoComplete"
+             :maxlength="maxlength"
+             @input="handleInput($event.target.value)"
+             @change="handleChange($event.target.value)"
+             @focus="handleFocus"
+             @blur="handleBlur"
+             @click="handleClick"
+             @keyup="handleKeyup"
+             @keypress="handleKeypress"
+             @keydown="handleKeydown"
+             />
+      <div class="lan-input-append" v-if="$slots.append">
+        <slot name="append"></slot>
+      </div>
+    </template>
+    <textarea v-else
+              :class="inputClasses"
+              :style="textareaStyles"
+              :value="value"
+              :type="type"
+              :placeholder="placeholder"
+              :readonly="readonly"
+              :disabled="disabled"
+              :autofocus="autofocus"
+              :autocomplete="autoComplete"
+              :maxlength="maxlength"
+              :rows="rows"
+              @input="handleInput($event.target.value)"
+              @change="handleChange($event.target.value)"
+              @focus="handleFocus"
+              @blur="handleBlur"
+              @click="handleClick"
+              @keyup="handleKeyup"
+              @keypress="handleKeypress"
+              @keydown="handleKeydown"
+              ref="textarea">
+    </textarea>
   </div>
 </template>
 
 <script>
   import lanIcon from '../lan-icon'
+  import calcTextareaHeight from '../../base/calcTextareaHeight'
 
   const prefixCls = 'lan-input';
 
@@ -38,6 +63,10 @@
     name: 'lan-input',
     props: {
       value: [String, Number, Date],
+      type: {
+        type: String,
+        default: 'text'
+      },
       prefixIcon: String,
       suffixIcon: String,
       customClass: String,
@@ -50,9 +79,13 @@
         default: 'off'
       },
       maxlength: Number,
-      password: {
-        type: Boolean,
+      autosize: {
+        type: [Boolean, Object],
         default: false
+      },
+      rows: {
+        type: Number,
+        default: 2
       }
     },
     components: {
@@ -80,6 +113,14 @@
         ]
       }
     },
+    data() {
+      return {
+        textareaStyles: {}
+      }
+    },
+    mounted() {
+      this.resizeTextarea();
+    },
     methods: {
       handleInput(value){
         this.$emit('input', value);
@@ -104,7 +145,18 @@
       },
       handleKeydown() {
         this.$emit('keydown');
-      }
+      },
+      resizeTextarea () {
+        const autosize = this.autosize;
+        if (!autosize || this.type !== 'textarea') {
+          return;
+        }
+
+        const minRows = autosize.minRows;
+        const maxRows = autosize.maxRows;
+
+        this.textareaStyles = calcTextareaHeight(this.$refs.textarea, minRows, maxRows);
+      },
     }
   }
 </script>

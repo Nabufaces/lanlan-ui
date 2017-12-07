@@ -6,34 +6,34 @@
     <h2 style="margin-top: 40px">代码示例</h2>
 
     <h3>基础使用</h3>
-    <lan-input placeholder="请输入内容"></lan-input>
+    <lan-input placeholder="请输入内容" style="width: 200px"></lan-input>
     <pre v-highlight>
       <code class="html">
-        &ltlan-input placeholder="请输入内容"&gt&lt/lan-input&gt
+        &ltlan-input placeholder="请输入内容" style="width: 200px"&gt&lt/lan-input&gt
       </code>
     </pre>
 
     <h3>input禁用</h3>
-    <lan-input placeholder="disabled" :disabled="true"></lan-input>
+    <lan-input placeholder="disabled" :disabled="true" style="width: 200px"></lan-input>
     <pre v-highlight>
       <code class="html">
-        &ltlan-input placeholder="disabled" :disabled="true"&gt&lt/lan-input&gt
+        &ltlan-input placeholder="disabled" :disabled="true" style="width: 200px"&gt&lt/lan-input&gt
       </code>
     </pre>
 
     <h3>带Icon的input</h3>
-    <lan-input prefixIcon="search"></lan-input>
-    <lan-input suffixIcon="add"></lan-input>
+    <lan-input prefixIcon="search" style="width: 200px"></lan-input>
+    <lan-input suffixIcon="add" style="width: 200px"></lan-input>
     <pre v-highlight>
       <code class="html">
-        &ltlan-input prefixIcon="search"&gt&lt/lan-input&gt
-        &ltlan-input suffixIcon="add"&gt&lt/lan-input&gt
+        &ltlan-input prefixIcon="search" style="width: 200px"&gt&lt/lan-input&gt
+        &ltlan-input suffixIcon="add" style="width: 200px"&gt&lt/lan-input&gt
       </code>
     </pre>
 
     <h3>复合型输入框</h3>
     <p>通过前置和后置的 slot 可以实现复合型的输入框。</p>
-    <lan-input placeholder="请输入内容">
+    <lan-input placeholder="请输入内容" style="width: 400px">
       <template slot="prepend">
         <span>Http://</span>
       </template>
@@ -43,13 +43,22 @@
     </lan-input>
     <pre v-highlight>
       <code class="html">
-        &ltlan-input placeholder="请输入内容"&gt
+        &ltlan-input placeholder="请输入内容" style="width: 400px"&gt
           &lttemplate slot="prepend"&gt
             &ltspan&gtHttp://&lt/span&gt
           &lt/template&gt
           &lttemplate slot="append"&gt
             &ltlan-icon name="search"&gt&lt/lan-icon&gt&nbsp;搜索
           &lt/template&gt
+        &lt/lan-input&gt
+      </code>
+    </pre>
+
+    <h3>输入文本框</h3>
+    <lan-input type="textarea" :autosize="{minRows: 4,maxRows: 6}" placeholder="textarea..." style="width: 400px"></lan-input>
+    <pre v-highlight>
+      <code class="html">
+        &ltlan-input type="textarea" :autosize="{minRows: 4,maxRows: 6}" placeholder="textarea..." style="width: 400px"&gt
         &lt/lan-input&gt
       </code>
     </pre>
@@ -76,7 +85,21 @@
           width: 200
         }, {
           prop: "explain",
-          label: "说明"
+          label: "说明",
+          render: (h, params) => {
+            const tr = params.tr;
+            if(tr.property === 'type') {
+              return (
+                <span>
+                  输入框类型，可选值为 <code>text</code> <code>password</code> <code>textarea</code> <code>url</code> <code>email</code> <code>date</code>
+                </span>
+              )
+            } else {
+              return (
+                  <span>{tr['explain']}</span>
+              )
+            }
+          }
         }, {
           prop: "type",
           label: "类型",
@@ -91,6 +114,11 @@
           explain: 'input 绑定的值，可使用 v-model 双向绑定',
           type: 'String | Number',
           default: '-'
+        }, {
+          property: 'type',
+          explain: '输入框类型',
+          type: 'String',
+          default: 'text'
         }, {
           property: 'placeholder',
           explain: '非范围选择时的占位内容',
@@ -122,9 +150,14 @@
           type: 'Number',
           default: '-'
         }, {
-          property: 'password',
-          explain: '是否为输入密码',
-          type: 'Boolean',
+          property: 'rows',
+          explain: '文本域默认行数，仅在 textarea 类型下有效',
+          type: 'Number',
+          default: '2'
+        }, {
+          property: 'autosize',
+          explain: '自适应内容高度，仅在 textarea 类型下有效，可传入对象，如 { minRows: 2, maxRows: 6 }',
+          type: 'Boolean | Object',
           default: 'false'
         }, {
           property: 'prefixIcon',

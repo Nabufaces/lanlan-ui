@@ -1,6 +1,6 @@
 <template>
   <div class="lan-select">
-    <lan-input v-model="selectedValue.label"
+    <lan-input :value="selectedValue.label"
                :placeholder="placeholder"
                :readonly="!filterable"
                :disabled="disabled"

@@ -7,12 +7,13 @@
     <h2 style="margin-top: 40px">代码示例</h2>
 
     <h3>基础使用</h3>
-    <lan-select>
+    <lan-select v-model="selectedValue" style="width: 200px">
       <lan-option :value="item.value" :label="item.label" v-for="item in source" :key="item.value"></lan-option>
     </lan-select>
+    <p>{{selectedValue}}</p>
     <pre v-highlight>
       <code class="html">
-        &ltlan-select&gt
+        &ltlan-select v-model="selectedValue" style="width: 200px"&gt
           &ltlan-option :value="item.value" :label="item.label" v-for="item in source" :key="item.value"&gt&lt/lan-option&gt
         &lt/lan-select&gt
         &ltscript&gt
@@ -47,31 +48,31 @@
     </pre>
 
     <h3>含禁止</h3>
-    <lan-select placeholder="含禁止">
+    <lan-select placeholder="含禁止" style="width: 200px">
       <lan-option :value="item.value" :label="item.label" :disabled="item.disabled" v-for="item in source" :key="item.value"></lan-option>
     </lan-select>
     <pre v-highlight>
       <code class="html">
-        &ltlan-select placeholder="含禁止"&gt
+        &ltlan-select placeholder="含禁止" style="width: 200px"&gt
           &ltlan-option :value="item.value" :label="item.label" :disabled="item.disabled" v-for="item in source" :key="item.value"&gt&lt/lan-option&gt
         &lt/lan-select&gt
       </code>
     </pre>
 
     <h3>可搜索</h3>
-    <lan-select placeholder="含搜索" filterable>
+    <lan-select placeholder="含搜索" filterable style="width: 200px">
       <lan-option :value="item.value" :label="item.label" :disabled="item.disabled" v-for="item in source" :key="item.value"></lan-option>
     </lan-select>
     <pre v-highlight>
       <code class="html">
-        &ltlan-select placeholder="含搜索" filterable&gt
+        &ltlan-select placeholder="含搜索" filterable style="width: 200px"&gt
           &ltlan-option :value="item.value" :label="item.label" :disabled="item.disabled" v-for="item in source" :key="item.value"&gt&lt/lan-option&gt
         &lt/lan-select&gt
       </code>
     </pre>
 
     <h3>自定义模板</h3>
-    <lan-select placeholder="自定义模板">
+    <lan-select placeholder="自定义模板" style="width: 200px">
       <lan-option :value="item.value" :label="item.label" :disabled="item.disabled" v-for="item in source" :key="item.value">
         <span>{{item.label}}</span><br/>
         <span>{{item.value}}</span>
@@ -100,8 +101,14 @@
 
   export default {
     name: 'select',
+    watch: {
+      selectedValue(value) {
+        console.log(value)
+      }
+    },
     data() {
       return {
+        selectedValue: '',
         source: [{
           value: 0,
           label: '黄金糕'
@@ -123,7 +130,7 @@
           label: '北京糖葫芦'
         }],
         tpl: `
-        <lan-select placeholder="自定义模板">
+        <lan-select placeholder="自定义模板" style="width: 200px">
           <lan-option :value="item.value" :label="item.label" :disabled="item.disabled" v-for="item in source" :key="item.value">
             <span>{{item.label}}</span><br/>
             <span>{{item.value}}</span>
