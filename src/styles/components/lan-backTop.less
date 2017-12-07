@@ -1,19 +1,19 @@
 .lan-backTop {
   cursor: pointer;
   display: none;
+  z-index: @zindex-back-top;
   position: fixed;
-  z-index: 10;
   &&-show {
     display: block;
   }
   &-inner {
-    color: #fff;
-    background-color: #FF7846;
-    border-radius: 2px;
-    box-shadow: 0 1px 3px rgba(0,0,0,.2);
+    color: @body-background;
+    background-color: @warning-color;
+    box-shadow: @shadow-base;
+    border-radius: @border-radius-base / 2;
     transition: all .2s ease-in-out;
     i {
-      font-size: 24px;
+      font-size: @font-size-small * 2;
       font-weight: bold;
       padding: 8px 12px;
     }

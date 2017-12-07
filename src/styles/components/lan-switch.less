@@ -1,14 +1,14 @@
 .lan-switch {
   height: 22px;
+  color: @body-background;
+  border-radius: 10px;
+  cursor: pointer;
+  outline: none;
+  vertical-align: middle;
+  box-sizing: border-box;
   display: inline-block;
   position: relative;
-  outline: none;
-  border-radius: 10px;
-  box-sizing: border-box;
-  cursor: pointer;
-  transition: border-color .3s,background-color .3s;
-  vertical-align: middle;
-  color: #fff;
+  transition: border-color .3s, background-color .3s;
   &&-normal {
     width: 44px;
     .lan-switch-close {
@@ -24,20 +24,20 @@
   &-open, &-close {
     width: 18px;
     height: 18px;
+    background: @body-background;
+    border-radius: 9px;
     position: absolute;
     top: 2px;
-    border-radius: 9px;
-    background-color: #fff;
     transition: transform .3s;
   }
   &-open {
     right: 2px;
   }
   &-onText, &-offText {
+    line-height: 1;
+    font-size: @font-size-small;
     position: absolute;
     top: 5px;
-    font-size: 12px;
-    line-height: 1;
   }
   &-onText {
     left: 8px;

@@ -1,12 +1,9 @@
-@dark : #1E242A;
-@light : #fff;
-
 .lan-tooltip {
   display: inline-block;
   &-popper {
     display: block;
-    font-size: 12px;
-    z-index: 1000;
+    font-size: @font-size-small;
+    z-index: @zindex-tooltip;
     &[x-placement^=top] {
       padding-bottom: 9px;
       &::before, &::after {
@@ -24,10 +21,10 @@
         bottom: 3px;
       }
       &.lan-tooltip-dark::after {
-        border-top-color: @dark;
+        border-top-color: @text-color;
       }
       &.lan-tooltip-light::after {
-        border-top-color: @light;
+        border-top-color: @body-background;
       }
     }
     &[x-placement^=bottom] {
@@ -47,10 +44,10 @@
         top: 3px;
       }
       &.lan-tooltip-dark:after {
-        border-bottom-color: @dark;
+        border-bottom-color: @text-color;
       }
       &.lan-tooltip-light::after {
-        border-bottom-color: @light;
+        border-bottom-color: @body-background;
       }
     }
     &[x-placement=top], &[x-placement=bottom] {
@@ -86,10 +83,10 @@
         left: 3px;
       }
       &.lan-tooltip-dark::after {
-        border-right-color: @dark;
+        border-right-color: @text-color;
       }
       &.lan-tooltip-light::after {
-        border-right-color: @light;
+        border-right-color: @body-background;
       }
     }
     &[x-placement^=left] {
@@ -109,10 +106,10 @@
         right: 3px;
       }
       &.lan-tooltip-dark::after {
-        border-left-color: @dark;
+        border-left-color: @text-color;
       }
       &.lan-tooltip-light::after {
-        border-left-color: @light;
+        border-left-color: @body-background;
       }
     }
     &[x-placement=left], &[x-placement=right] {
@@ -136,16 +133,16 @@
     width: 100%;
     background-clip: padding-box;
     padding: 8px;
-    box-shadow: 0 1px 6px rgba(0, 0, 0, .2);
+    box-shadow: @shadow-base;
     border-radius: 2px;
     word-wrap: break-word;
     &.lan-tooltip-dark {
-      color: @light;
-      background-color: @dark;
+      color: @body-background;
+      background-color: @text-color;
     }
     &.lan-tooltip-light {
-      color: @dark;
-      background-color: @light;
+      color: @text-color;
+      background-color: @body-background;
     }
   }
 }

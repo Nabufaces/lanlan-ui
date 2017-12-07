@@ -1,21 +1,21 @@
 .disabled() {
-  cursor: not-allowed;
   color: @disabled-color;
-  background-color: @background-color-base;
+  background: @background-color-base;
   border-color: @disabled-border-color;
+  cursor: not-allowed;
 }
 
 .lan-button{
-  display: inline-block;
   line-height: 1;
-  white-space: nowrap;
+  color: @body-background;
+  font-size: @font-size-base;
   text-align: center;
-  border-radius: 1px;
-  font-size: 14px;
-  outline: none;
+  white-space: nowrap;
+  border-radius: @border-radius-base / 4;
   cursor: pointer;
+  outline: none;
+  display: inline-block;
   transition: .1s;
-  color: #fff;
   &&-tiny {
     padding: 8px 28px;
   }
@@ -29,46 +29,46 @@
     padding: 8px 137px;
   }
   &&-default {
-    border: 1px solid @default-border-color;
     color: @default-color;
-    background-color: @body-background;
+    background: @body-background;
+    border: 1px solid @default-border-color;
     &:hover {
-      background-color: @default-hover-color;
+      background: @default-hover-color;
     }
   }
   &&-primary {
+    background: @primary-color;
     border: 1px solid @primary-color;
-    background-color: @primary-color;
     &:hover {
-      background-color: @primary-hover-color;
+      background: @primary-hover-color;
     }
   }
   &&-success {
+    background: @success-color;
     border: 1px solid @success-color;
-    background-color: @success-color;
     &:hover {
-      background-color: @success-hover-color;
+      background: @success-hover-color;
     }
   }
   &&-warning {
+    background: @warning-color;
     border: 1px solid @warning-color;
-    background-color: @warning-color;
     &:hover {
-      background-color: @warning-hover-color;
+      background: @warning-hover-color;
     }
   }
   &&-danger {
+    background: @danger-color;
     border: 1px solid @danger-color;
-    background-color: @danger-color;
     &:hover {
-      background-color: @danger-hover-color;
+      background: @danger-hover-color;
     }
   }
   &&-info {
+    background: @info-color;
     border: 1px solid @info-color;
-    background-color: @info-color;
     &:hover {
-      background-color: @info-hover-color;
+      background: @info-hover-color;
     }
   }
   &:disabled {

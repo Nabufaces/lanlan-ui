@@ -1,8 +1,9 @@
 /*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
 
 /**
- * 1. Change the default font family in all browsers (opinionated).
- * 2. Correct the line height in all browsers.
+
+ * 1. Correct the line height in all browsers.
+ * 2. Change the default font family in all browsers (opinionated)
  * 3. Prevent adjustments of font size after orientation changes in
  *    IE on Windows Phone and in iOS.
  */
@@ -11,8 +12,8 @@
    ========================================================================== */
 
 html {
-  font-family: sans-serif; /* 1 */
-  line-height: 1.15; /* 2 */
+  line-height: 1.15; /* 1 */
+  font-family: sans-serif; /* 2 */
   -ms-text-size-adjust: 100%; /* 3 */
   -webkit-text-size-adjust: 100%; /* 3 */
 }
@@ -171,7 +172,7 @@ dfn {
  */
 
 mark {
-  background-color: #ff0;
+  background: #ff0;
   color: #000;
 }
 
@@ -190,10 +191,10 @@ small {
 
 sub,
 sup {
-  font-size: 75%;
   line-height: 0;
-  position: relative;
+  font-size: 75%;
   vertical-align: baseline;
+  position: relative;
 }
 
 sub {
@@ -221,8 +222,8 @@ video {
  */
 
 audio:not([controls]) {
-  display: none;
   height: 0;
+  display: none;
 }
 
 /**
@@ -254,9 +255,9 @@ input,
 optgroup,
 select,
 textarea {
+  line-height: 1.15; /* 1 */
   font-family: sans-serif; /* 1 */
   font-size: 100%; /* 1 */
-  line-height: 1.15; /* 1 */
   margin: 0; /* 2 */
 }
 
@@ -322,8 +323,8 @@ button:-moz-focusring,
 
 fieldset {
   border: 1px solid #c0c0c0;
-  margin: 0 2px;
   padding: 0.35em 0.625em 0.75em;
+  margin: 0 2px;
 }
 
 /**
@@ -334,22 +335,22 @@ fieldset {
  */
 
 legend {
-  box-sizing: border-box; /* 1 */
-  color: inherit; /* 2 */
-  display: table; /* 1 */
   max-width: 100%; /* 1 */
-  padding: 0; /* 3 */
+  color: inherit; /* 2 */
   white-space: normal; /* 1 */
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 3 */
+  display: table; /* 1 */
 }
 
 /**
- * 1. Add the correct display in IE 9-.
- * 2. Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ * 1. Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ * 2. Add the correct display in IE 9-.
  */
 
 progress {
-  display: inline-block; /* 1 */
-  vertical-align: baseline; /* 2 */
+  vertical-align: baseline; /* 1 */
+  display: inline-block; /* 2 */
 }
 
 /**

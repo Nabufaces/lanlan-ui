@@ -1,26 +1,26 @@
 .lan-timePicker {
-  position: relative;
-  display: inline-block;
   line-height: normal;
-  &-group-2 {
+  display: inline-block;
+  position: relative;
+  &&-group-2 {
     width: 113px;
   }
-  &-group-3 {
+  &&-group-3 {
     width: 170px;
   }
   &-dropdown {
-    position: absolute;
-    background: #fff;
+    background: @body-background;
+    box-shadow: @shadow-base;
+    border-radius: @border-radius-base / 2;
     margin: 5px 0;
     box-sizing: border-box;
-    border-radius: 2px;
-    box-shadow: 0 1px 6px rgba(0,0,0,.2);
-    z-index: 1000;
+    z-index: @zindex-select;
+    position: absolute;
   }
   &-cells-list {
     width: 56px;
+    border-left: 1px solid @input-border-color;
     overflow: hidden;
-    border-left: 1px solid #E4E6EC;
     float: left;
     &:first-child {
       border-left: none;
@@ -29,39 +29,37 @@
   }
   &-cells-ul {
     width: 100%;
-    margin: 0;
-    padding: 0;
-    list-style: none;
     height: 144px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
     overflow: scroll;
   }
   &-cells-li {
     width: 100%;
     height: 24px;
     line-height: 24px;
-    margin: 0;
     padding-left: 7px;
     color: #657180;
     font-size: 12px;
     box-sizing: content-box;
     user-select: none;
     cursor: pointer;
-    list-style: none;
     transition: background .2s ease-in-out;
     &:hover {
-      color: #1E242A;
-      background: #EDF0F4;
+      color: @text-color;
+      background: @default-hover-color;
       font-weight: 500;
     }
     &&-selected {
-      background: #EDF0F4;
+      background: @default-hover-color;
       font-weight: bold;
     }
     &&-disabled {
-      color: #c3cbd6;
+      color: @disabled-color;
       cursor: not-allowed;
       &:hover {
-        background: #fff;
+        background: @body-background;
       }
     }
   }

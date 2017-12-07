@@ -1,4 +1,5 @@
 .lan-message {
+  z-index: @zindex-message;
   position: fixed;
   top: 10%;
   left: 50%;
@@ -6,12 +7,12 @@
   &-tips {
     height: 40px;
     line-height: 40px;
+    color: @text-color;
+    background: @body-background;
+    font-size: @font-size-small;
+    box-shadow: @shadow-base;
+    border-radius: @border-radius-base;
     padding: 0 16px;
-    color: #1E242A;
-    background: #FFFFFF;
-    font-size: 12px;
-    box-shadow: 0 2px 8px 0 rgba(0,0,0,.2);
-    border-radius: 4px;
     &-iconImg {
       width: 24px;
       height: 24px;

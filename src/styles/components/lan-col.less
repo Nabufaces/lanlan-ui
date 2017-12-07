@@ -2,10 +2,10 @@
 @grid-columns: 24;
 
 .make-row() {
-  position: relative;
   height: auto;
-  display: block;
   zoom: 1;
+  display: block;
+  position: relative;
   &:after {
     content: '';
     display: block;
@@ -53,8 +53,8 @@
 .lan-row {
   .make-row();
   .lan-col {
-    position: relative;
     box-sizing: border-box;
+    position: relative;
   }
 }
 .make-col();

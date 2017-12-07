@@ -1,37 +1,37 @@
 .lan-badge {
-  position: relative;
-  display: inline-block;
   line-height: 1;
   vertical-align: middle;
+  display: inline-block;
+  position: relative;
   &-dot, &-count {
+    background: @danger-color;
+    box-shadow: 0 0 0 1px @body-background;
+    z-index: @zindex-back-top;
     position: absolute;
-    background: #FE4B4B;
-    z-index: 10;
-    box-shadow: 0 0 0 1px #fff;
   }
   &-dot {
-    transform: translateX(-50%);
-    transform-origin: 0 center;
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
     top: -4px;
     right: -8px;
-    height: 8px;
-    width: 8px;
-    border-radius: 100%;
+    transform-origin: 0 center;
+    transform: translateX(-50%);
   }
   &-count {
-    transform: translateY(-50%) translateX(100%);
+    min-width: 20px;
+    height: 20px;
+    line-height: 18px;
+    color: @body-background;
+    font-size: @font-size-small;
+    text-align: center;
+    white-space: nowrap;
+    padding: 0 6px;
+    border: 1px solid transparent;
+    border-radius: @border-radius-base * 2.5;
     top: 0;
     right: 10px;
-    height: 20px;
-    border-radius: 10px;
-    min-width: 20px;
-    border: 1px solid transparent;
-    color: #fff;
-    line-height: 18px;
-    text-align: center;
-    padding: 0 6px;
-    font-size: 12px;
-    white-space: nowrap;
     transform-origin: -10% center;
+    transform: translateY(-50%) translateX(100%);
   }
 }
