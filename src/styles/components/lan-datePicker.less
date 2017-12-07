@@ -1,47 +1,44 @@
 .isSelected() {
-  color: #fff;
-  background-color: #FF7846;
+  color: @body-background;
+  background: @warning-color;
   &:hover {
-    color: #fff;
-    background-color: #FF7846;
+    color: @body-background;
+    background: @warning-color;
     font-weight: normal;
   }
 }
 
 .invalid() {
-  color: #c3cbd6;
-  background-color: #fff;
+  color: @disabled-color;
+  background: @body-background;
   cursor: not-allowed;
   &:hover {
-    color: #c3cbd6;
-    background-color: #fff;
+    color: @disabled-color;
+    background: @body-background;
   }
 }
 
 .lan-datePicker {
   position: relative;
-  &-customClass {
-    width: 266px;
-  }
   &-dropdown {
-    position: absolute;
-    background: #fff;
-    margin: 5px 0;
-    box-sizing: border-box;
+    background: @body-background;
     border-radius: 2px;
-    box-shadow: 0 1px 6px rgba(0,0,0,.2);
+    box-shadow: @shadow-base;
     cursor: pointer;
-    z-index: 1000;
+    box-sizing: border-box;
+    z-index: @zindex-select;
+    margin: 5px 0;
+    position: absolute;
   }
   &-hd {
     height: 32px;
     line-height: 32px;
+    color: @text-color;
+    font-size: @font-size-base;
     text-align: center;
-    color: #22282E;
-    font-size: 14px;
     padding: 0 15px;
     span:hover {
-      color: #FF7846;
+      color: @warning-color;
     }
     &-back {
       margin-right: 8px;
@@ -60,7 +57,7 @@
     }
   }
   &-bd {
-    color: #22282E;
+    color: @text-color;
     padding: 10px 5px;
     &-cell {
       width: 256px;
@@ -68,26 +65,26 @@
         width: 50px;
         height: 28px;
         line-height: 28px;
-        font-size: 16px;
-        margin: 10px 7px;
+        font-size: @font-size-base + 2;
         border-radius: 3px;
         text-align: center;
         cursor: pointer;
+        margin: 10px 7px;
         display: inline-block;
         em {
           width: 50px;
           height: 28px;
           line-height: 28px;
           font-style: normal;
-          margin: 0;
           border-radius: 3px;
           text-align: center;
-          transition: all .2s ease-in-out;
+          margin: 0;
           display: inline-block;
+          transition: all .2s ease-in-out;
         }
         &:hover {
-          color: #666;
-          background-color: #EDF0F4;
+          color: @option-color;
+          background: @option-hover-color;
         }
         &.isSelected {
           .isSelected()
@@ -97,7 +94,7 @@
         }
       }
       &-week, &-date {
-        color: rgba(0, 0, 0, .6);
+        color: @text-color;
         text-align: center;
         span {
           width: 33px;
@@ -111,11 +108,11 @@
       }
       &-date {
         .notCurrent {
-          color: #CCC;
+          color: #ccc;
         }
         .current:hover {
-          color: #666;
-          background: #EDF0F4;
+          color: @option-color;
+          background: @option-hover-color;
         }
         .isSelected {
           .isSelected()

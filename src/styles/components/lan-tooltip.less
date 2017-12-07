@@ -1,17 +1,17 @@
 .lan-tooltip {
   display: inline-block;
   &-popper {
-    display: block;
     font-size: @font-size-small;
     z-index: @zindex-tooltip;
+    display: block;
     &[x-placement^=top] {
       padding-bottom: 9px;
       &::before, &::after {
         content: '';
-        position: absolute;
         border-style: solid;
         border-width: 6px 6px 0 6px;
         border-color: transparent;
+        position: absolute;
       }
       &::before {
         bottom: 2px;
@@ -31,10 +31,10 @@
       padding-top: 9px;
       &::before, &::after {
         content: '';
-        position: absolute;
         border-style: solid;
         border-width: 0 6px 6px 6px;
         border-color: transparent;
+        position: absolute;
       }
       &::before {
         top: 2px;
@@ -70,10 +70,10 @@
       padding-left: 9px;
       &::before, &::after {
         content: '';
-        position: absolute;
         border-style: solid;
         border-width: 6px 6px 6px 0;
         border-color: transparent;
+        position: absolute;
       }
       &::before {
         left: 2px;
@@ -93,10 +93,10 @@
       padding-right: 9px;
       &::before, &::after {
         content: '';
-        position: absolute;
         border-style: solid;
         border-width: 6px 0 6px 6px;
         border-color: transparent;
+        position: absolute;
       }
       &::before {
         right: 2px;
@@ -132,17 +132,17 @@
   &-inner {
     width: 100%;
     background-clip: padding-box;
-    padding: 8px;
     box-shadow: @shadow-base;
     border-radius: 2px;
     word-wrap: break-word;
+    padding: 8px;
     &.lan-tooltip-dark {
       color: @body-background;
-      background-color: @text-color;
+      background: @text-color;
     }
     &.lan-tooltip-light {
       color: @text-color;
-      background-color: @body-background;
+      background: @body-background;
     }
   }
 }

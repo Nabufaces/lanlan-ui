@@ -1,20 +1,20 @@
 .lan-pagination {
-  padding: 10px;
   color: @text-color;
-  font-size: 12px;
+  font-size: @font-size-small;
+  padding: 10px;
   display: inline-block;
   &-btn {
     background: @body-background;
-    padding: 4px 7px;
-    border-radius: 2px;
     border: 1px solid @default-border-color;
+    border-radius: @border-radius-base / 2;
     outline: none;
-    margin-right: 5px;
     cursor: pointer;
+    padding: 4px 7px;
+    margin-right: 5px;
     &&-disabled {
       cursor: not-allowed;
       &:hover {
-        background-color: @default-border-color;
+        background: @default-border-color;
       }
     }
   }
@@ -26,10 +26,10 @@
     width: 22px;
     height: 22px;
     line-height: 22px;
-    float: left;
-    margin-right: 5px;
     text-align: center;
     cursor: pointer;
+    margin-right: 5px;
+    float: left;
     &&-active {
       background: @warning-color;
     }
@@ -38,15 +38,15 @@
     margin: 0 20px 0 5px;
   }
   &-input {
-    padding: 4px 8px;
-    color: @default-border-color;
-    font-size: 12px;
-    border-radius: 2px;
-    border: 1px solid @input-border-color;
-    outline: none;
-    margin: 0 5px;
     width: 40px;
+    color: @default-border-color;
+    font-size: @font-size-small;
+    border: 1px solid @input-border-color;
+    border-radius: @border-radius-base / 2;
+    outline: none;
     box-sizing: border-box;
+    padding: 4px 8px;
+    margin: 0 5px;
     &:hover{
       border: 1px solid @warning-color;
     }

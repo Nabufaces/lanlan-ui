@@ -1,47 +1,46 @@
 .lan-select {
-  white-space: nowrap;
-  position: relative;
-  display: inline-block;
   width: 100%;
+  white-space: nowrap;
+  display: inline-block;
+  position: relative;
   &-dropdown {
-    position: absolute;
-    border-radius: 2px;
-    border: 1px solid #E4E6EC;
-    background-color: #fff;
+    background: @body-background;
+    box-shadow: @shadow-base;
+    border: 1px solid @input-border-color;
+    border-radius: @border-radius-base / 2;
     box-sizing: border-box;
-    box-shadow: 0 2px 12px 0 rgba(0,0,0,.1);
     margin-top: 5px;
-    z-index: 1000;
+    z-index: @zindex-select;
+    position: absolute;
   }
   &-list {
-    list-style: none;
+    max-height: 274px;
+    box-sizing: border-box;
     padding: 6px 0;
     margin: 0;
-    box-sizing: border-box;
-    max-height: 274px;
     overflow: scroll;
     &-noMatch {
-      color: #B0B4B8;
-      font-size: 15px;
+      color: @default-border-color;
+      font-size: @font-size-base + 1;
       text-align: center;
     }
     &-item {
-      font-size: 14px;
-      padding: 8px 20px;
+      color: @option-color;
+      font-size: @font-size-base;
       white-space: nowrap;
-      overflow: hidden;
       text-overflow: ellipsis;
-      color: #5a5e66;
-      box-sizing: border-box;
       cursor: pointer;
+      box-sizing: border-box;
+      overflow: hidden;
+      padding: 8px 20px;
       &:hover {
-        background-color: #F2F6FA;
+        background: @option-hover-color;
       }
       &-disabled {
-        color: #b4bccc;
+        color: @disabled-color;
         cursor: not-allowed;
         &:hover {
-          background-color: #fff;
+          background: @body-background;
         }
       }
     }
