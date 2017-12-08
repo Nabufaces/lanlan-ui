@@ -1,8 +1,8 @@
 import {findComponentUpward} from  '../base/assist'
 
 const map = {
-  'lan-radio' : 'lan-radioGroup',
-  'lan-checkbox' : 'lan-checkboxGroup'
+  'lan-radio' : 'lan-radio-group',
+  'lan-checkbox' : 'lan-checkbox-group'
 };
 
 export default {

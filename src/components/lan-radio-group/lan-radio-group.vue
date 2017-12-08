@@ -1,5 +1,5 @@
 <template>
-  <div class="lan-radioGroup">
+  <div class="lan-radio-group">
     <slot></slot>
   </div>
 </template>
@@ -8,7 +8,7 @@
   import {findComponentsDownward} from '../../base/assist'
 
   export default {
-    name: 'lan-radioGroup',
+    name: 'lan-radio-group',
     props: {
       value: {
         type: [String, Number],

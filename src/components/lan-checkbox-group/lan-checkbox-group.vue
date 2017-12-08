@@ -1,5 +1,5 @@
 <template>
-  <div class="lan-checkboxGroup">
+  <div class="lan-checkbox-group">
     <slot></slot>
   </div>
 </template>
@@ -8,7 +8,7 @@
   import {findComponentsDownward} from '../../base/assist'
 
   export default {
-    name: 'lan-checkboxGroup',
+    name: 'lan-checkbox-group',
     props: {
       value: {
         type: Array,

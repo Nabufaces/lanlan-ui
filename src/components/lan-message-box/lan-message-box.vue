@@ -23,7 +23,7 @@
   import lanButton from '../lan-button'
 
   export default{
-    name: 'lan-messageBox',
+    name: 'lan-message-box',
     props: {
       type: {
         type: String,
@@ -41,7 +41,7 @@
     },
     data() {
       return {
-        prefixCls: 'lan-messageBox',
+        prefixCls: 'lan-message-box',
         modalType: {
           warning : 'http://oss1.lanlanlife.com/f1af2aa2ed6c34fcc46d9f380f176f16_48x48.png',
           error : 'http://oss3.lanlanlife.com/61dc954ee3a65d4679c1e2622e6a3205_48x48.png',

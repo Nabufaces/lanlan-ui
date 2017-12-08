@@ -78,6 +78,10 @@ export default new Router({
       component: resolve => {require(['../components/loadingBar'],resolve)}
     },
     {
+      path: '/carousel',
+      component: resolve => {require(['../components/carousel'],resolve)}
+    },
+    {
       path: '/tabs',
       component: resolve => {require(['../components/tabs'],resolve)}
     },
