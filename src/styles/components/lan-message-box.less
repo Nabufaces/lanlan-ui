@@ -6,6 +6,21 @@
   position: fixed;
   top: 0;
   left: 0;
+  &-type {
+    font-size: @font-size-small * 2;
+    position: absolute;
+    top: 8px;
+    left: 20px;
+  }
+  &-warning {
+    color: #f90;
+  }
+  &-error {
+    color: @danger-color;
+  }
+  &-success {
+    color: @success-color;
+  }
   &-wrapper {
     width: 360px;
     background: @body-background;
@@ -15,15 +30,8 @@
     animation: lanMoveDownIn .5s ease;
     animation-fill-mode: forwards;
     &-hd {
-      height: 50px;
-      line-height: 50px;
-      padding: 0 15px;
-      &-iconImg {
-        width: 24px;
-        height: 24px;
-        margin-right: 10px;
-        vertical-align: middle;
-      }
+      padding: 13px 15px 13px 60px;
+      position: relative;
       &-tt {
         color: @text-color;
         font-size: @font-size-base + 2;

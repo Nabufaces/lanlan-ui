@@ -3,8 +3,10 @@
     <div :class="prefixCls" @click.self="handleCloseWindow">
       <div :class="`${prefixCls}-wrapper`">
         <div :class="`${prefixCls}-wrapper-hd`">
-          <img :src="modalType[type]" :class="`${prefixCls}-wrapper-hd-iconImg`"/>
-          <span class="`${prefixCls}-wrapper-hd-tt`">
+          <span :class="`${prefixCls}-type ${prefixCls}-${type}`">
+            <lan-icon :name="modalType"></lan-icon>
+          </span>
+          <span :class="`${prefixCls}-wrapper-hd-tt`">
             <slot name="title">{{title}}</slot>
           </span>
         </div>
@@ -20,10 +22,21 @@
 </template>
 
 <script>
+  const map = {
+    warning: 'infofill',
+    success: 'roundcheckfill',
+    error: 'roundclosefill'
+  };
+
   import lanButton from '../lan-button'
+  import lanIcon from '../lan-icon'
 
   export default{
     name: 'lan-message-box',
+    components: {
+      lanButton,
+      lanIcon
+    },
     props: {
       type: {
         type: String,
@@ -41,16 +54,13 @@
     },
     data() {
       return {
-        prefixCls: 'lan-message-box',
-        modalType: {
-          warning : 'http://oss1.lanlanlife.com/f1af2aa2ed6c34fcc46d9f380f176f16_48x48.png',
-          error : 'http://oss3.lanlanlife.com/61dc954ee3a65d4679c1e2622e6a3205_48x48.png',
-          success : 'http://oss1.lanlanlife.com/9300bd45cfb8ec9655257285fd0e0330_48x48.png'
-        }
+        prefixCls: 'lan-message-box'
       }
     },
-    components: {
-      lanButton
+    computed: {
+      modalType() {
+        return map[this.type]
+      }
     },
     methods: {
       handleCloseWindow(){

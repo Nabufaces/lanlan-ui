@@ -44,8 +44,8 @@
     </ul>
     <p>另外提供了全局配置和全局销毁的方法：</p>
     <ul class="ul" style="margin-bottom: 20px">
-      <li class="li"><code>this.$Loading.config(options)</code></li>
-      <li class="li"><code>this.$Loading.destroy()</code></li>
+      <li class="li"><code>this.$LoadingBar.config(options)</code></li>
+      <li class="li"><code>this.$LoadingBar.destroy()</code></li>
     </ul>
     <pre v-highlight>
       <code class="html">

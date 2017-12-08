@@ -73,10 +73,10 @@ const install = (Vue) => {
 /* istanbul ignore if */
 if (typeof window !== 'undefined' && window.Vue) {
   install(window.Vue);
-};
+}
 
 export default {
-  version: '0.2.6',
+  version: '0.2.7',
   install,
   ...components
 };

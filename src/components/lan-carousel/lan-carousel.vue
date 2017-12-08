@@ -22,7 +22,7 @@
 </template>
 <script>
   import lanIcon from '../lan-icon'
-  import { getStyle, findComponentsDownward } from '../../base/assist'
+  import { getStyle, findComponentsDownward, typeOf } from '../../base/assist'
   import { on, off } from '../../base/dom'
 
   export default {
@@ -59,7 +59,7 @@
         type: [String, Number],
         default: 'auto',
         validator (value) {
-          return value === 'auto' || Object.prototype.toString.call(value) === '[object Number]';
+          return value === 'auto' || typeOf(value) === 'number';
         }
       }
     },
@@ -90,14 +90,14 @@
       trackStyles () {
         return {
           width: `${this.trackWidth}px`,
-          transform: `translate3d(${-this.trackOffset}px, 0px, 0px)`,
+          transform: `translate(${-this.trackOffset}px, 0px)`,
           transition: `transform 500ms ${this.easing}`
         };
       },
       copyTrackStyles () {
         return {
           width: `${this.trackWidth}px`,
-          transform: `translate3d(${-this.trackCopyOffset}px, 0px, 0px)`,
+          transform: `translate(${-this.trackCopyOffset}px, 0px)`,
           transition: `transform 500ms ${this.easing}`,
           position: 'absolute',
           top: 0
@@ -113,13 +113,11 @@
       },
       updateSlides (init) {
         let slides = [];
-        let index = 1;
         const children = findComponentsDownward(this, 'lan-carousel-item');
         children.forEach((child) => {
           slides.push({
             $el: child.$el
           });
-          child.index = index++;
 
           this.slideInstances.push(child);
         });
@@ -192,7 +190,7 @@
           if (!this.loop) index = index % this.slides.length;
           this.updateTrackIndex(index);
         }
-        this.$emit('input', index === this.slides.length ? 0 : index);
+        this.currentIndex = this.showCopyTrack ? this.copyTrackIndex : this.trackIndex;
       },
       arrowEvent (offset) {
         this.setAutoplay();
@@ -201,6 +199,7 @@
       dotsEvent (n) {
         let curIndex = this.showCopyTrack ? this.copyTrackIndex : this.trackIndex;
         if (curIndex !== n) {
+          this.currentIndex = n;
           this.updateTrackIndex(n);
           // Reset autoplay timer when trigger be activated
           this.setAutoplay();

@@ -2,7 +2,9 @@
   <transition name="move-down">
     <div :class="prefixCls" v-if="visible">
       <div :class="`${prefixCls}-tips`">
-        <img :src="modalType[type]" :class="`${prefixCls}-tips-iconImg`"/>
+        <span :class="`${prefixCls}-type ${prefixCls}-${type}`">
+          <lan-icon :name="modalType"></lan-icon>
+        </span>
         <span>{{message}}</span>
       </div>
     </div>
@@ -10,8 +12,19 @@
 </template>
 
 <script>
+  const map = {
+    warning: 'infofill',
+    success: 'roundcheckfill',
+    error: 'roundclosefill'
+  };
+
+  import lanIcon from '../lan-icon'
+
   export default{
     name: 'lan-message',
+    components: {
+      lanIcon
+    },
     props: {
       type: String,
       message: String,
@@ -20,12 +33,12 @@
     data() {
       return {
         prefixCls: 'lan-message',
-        visible: false,
-        modalType: {
-          warning : 'http://oss1.lanlanlife.com/f1af2aa2ed6c34fcc46d9f380f176f16_48x48.png',
-          error : 'http://oss3.lanlanlife.com/61dc954ee3a65d4679c1e2622e6a3205_48x48.png',
-          success : 'http://oss1.lanlanlife.com/9300bd45cfb8ec9655257285fd0e0330_48x48.png'
-        }
+        visible: false
+      }
+    },
+    computed: {
+      modalType() {
+        return map[this.type]
       }
     },
     methods: {

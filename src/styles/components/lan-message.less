@@ -5,19 +5,26 @@
   left: 50%;
   transform: translate(-50%, -50%);
   &-tips {
-    height: 40px;
-    line-height: 40px;
     color: @text-color;
     background: @body-background;
     font-size: @font-size-small;
     box-shadow: @shadow-base;
     border-radius: @border-radius-base;
-    padding: 0 16px;
-    &-iconImg {
-      width: 24px;
-      height: 24px;
-      margin-right: 9px;
-      vertical-align: middle;
-    }
+    padding: 8px 17px 8px 42px;
+  }
+  &-type {
+    font-size: @font-size-base + 3;
+    position: absolute;
+    top: 4px;
+    left: 16px;
+  }
+  &-warning {
+    color: #f90;
+  }
+  &-error {
+    color: @danger-color;
+  }
+  &-success {
+    color: @success-color;
   }
 }
