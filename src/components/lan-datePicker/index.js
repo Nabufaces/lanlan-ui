@@ -1,2 +1,2 @@
-import lanDatePicker from './lan-datePicker.vue';
+import lanDatePicker from './lan-datePicker';
 export default lanDatePicker;

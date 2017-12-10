@@ -1,2 +1,2 @@
-import lanSelect from './lan-select.vue';
+import lanSelect from './lan-select';
 export default lanSelect;

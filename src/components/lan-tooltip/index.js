@@ -1,2 +1,2 @@
-import lanTooltip from './lan-tooltip.vue';
+import lanTooltip from './lan-tooltip';
 export default lanTooltip;

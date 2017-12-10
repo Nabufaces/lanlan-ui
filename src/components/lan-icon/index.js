@@ -1,2 +1,2 @@
-import lanIcon from './lan-icon.vue';
+import lanIcon from './lan-icon';
 export default lanIcon;

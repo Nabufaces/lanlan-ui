@@ -1,2 +1,2 @@
-import lanBadge from './lan-badge.vue'
+import lanBadge from './lan-badge'
 export default lanBadge

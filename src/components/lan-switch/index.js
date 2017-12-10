@@ -1,2 +1,2 @@
-import lanSwitch from './lan-switch.vue';
+import lanSwitch from './lan-switch';
 export default lanSwitch;

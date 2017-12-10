@@ -1,2 +1,2 @@
-import lanButton from './lan-button.vue';
+import lanButton from './lan-button';
 export default lanButton;

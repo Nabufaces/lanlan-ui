@@ -1,2 +1,2 @@
-import lanCheckbox from './lan-checkbox.vue';
+import lanCheckbox from './lan-checkbox';
 export default lanCheckbox;

@@ -74,6 +74,10 @@ export default new Router({
       component: resolve => {require(['../components/tooltip'],resolve)}
     },
     {
+      path: '/progress',
+      component: resolve => {require(['../components/progress'],resolve)}
+    },
+    {
       path: '/loadingBar',
       component: resolve => {require(['../components/loadingBar'],resolve)}
     },

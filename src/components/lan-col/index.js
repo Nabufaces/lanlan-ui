@@ -1,2 +1,2 @@
-import lanCol from './lan-col.vue';
+import lanCol from './lan-col';
 export default lanCol;

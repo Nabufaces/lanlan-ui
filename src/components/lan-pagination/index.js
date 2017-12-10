@@ -1,2 +1,2 @@
-import lanPagination from './lan-pagination.vue';
+import lanPagination from './lan-pagination';
 export default lanPagination;

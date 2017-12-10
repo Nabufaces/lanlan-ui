@@ -32,6 +32,7 @@
             <router-link to="/messageBox" class="menu-item" tag="li">MessageBox 消息框</router-link>
             <router-link to="/modal" class="menu-item" tag="li">Modal 模态框</router-link>
             <router-link to="/tooltip" class="menu-item" tag="li">Tooltip 提示</router-link>
+            <router-link to="/progress" class="menu-item" tag="li">Progress 进度条</router-link>
             <router-link to="/loadingBar" class="menu-item" tag="li">LoadingBar 加载进度条</router-link>
             <router-link to="/carousel" class="menu-item" tag="li">Carousel 轮播图</router-link>
             <li class="menu-group">Other</li>

@@ -1,2 +1,2 @@
-import lanBackTop from './lan-backTop.vue';
+import lanBackTop from './lan-backTop';
 export default lanBackTop;

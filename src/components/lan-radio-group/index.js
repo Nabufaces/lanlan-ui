@@ -1,2 +1,2 @@
-import lanRadioGroup from './lan-radio-group.vue';
+import lanRadioGroup from './lan-radio-group';
 export default lanRadioGroup;

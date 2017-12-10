@@ -1,2 +1,2 @@
-import lanRadio from './lan-radio.vue';
+import lanRadio from './lan-radio';
 export default lanRadio;

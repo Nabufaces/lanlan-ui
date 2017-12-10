@@ -1,0 +1,49 @@
+.lan-progress {
+  width: 100%;
+  font-size: @font-size-small;
+  &-outer {
+    width: 100%;
+    padding-right: 70px;
+    margin-right: -70px;
+    display: inline-block;
+  }
+  &-inner {
+    width: 100%;
+    background: #f3f3f3;
+    border-radius: 100px;
+    vertical-align: middle;
+    display: inline-block;
+  }
+  &-bg {
+    border-radius: 100px;
+    transition: all @transition-time linear;
+  }
+  &-text {
+    margin-left: 10px;
+    text-align: left;
+    font-size: @font-size-small;
+    vertical-align: middle;
+    display: inline-block;
+  }
+  &-active {
+    .lan-progress-bg {
+      background: @warning-color;
+    }
+  }
+  &-error {
+    .lan-progress-bg {
+      background: @danger-color;
+    }
+    .lan-progress-text {
+      color: @danger-color;
+    }
+  }
+  &-success {
+    .lan-progress-bg {
+      background: @success-color;
+    }
+    .lan-progress-text {
+      color: @success-color;
+    }
+  }
+}

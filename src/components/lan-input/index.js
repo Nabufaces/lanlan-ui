@@ -1,2 +1,2 @@
-import lanInput from './lan-input.vue';
+import lanInput from './lan-input';
 export default lanInput;

@@ -1,2 +1,2 @@
-import lanOption from './lan-option.vue';
+import lanOption from './lan-option';
 export default lanOption;

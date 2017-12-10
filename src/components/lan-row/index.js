@@ -1,2 +1,2 @@
-import lanRow from './lan-row.vue';
+import lanRow from './lan-row';
 export default lanRow;

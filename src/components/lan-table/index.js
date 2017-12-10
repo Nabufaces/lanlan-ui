@@ -1,2 +1,2 @@
-import lanTable from './lan-table.vue';
+import lanTable from './lan-table';
 export default lanTable;

@@ -1,2 +1,2 @@
-import lanTimePicker from './lan-timePicker.vue';
+import lanTimePicker from './lan-timePicker';
 export default lanTimePicker;

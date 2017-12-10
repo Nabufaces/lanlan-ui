@@ -1,2 +1,2 @@
-import lanCarouselItem from './lan-carousel-item.vue';
+import lanCarouselItem from './lan-carousel-item';
 export default lanCarouselItem;

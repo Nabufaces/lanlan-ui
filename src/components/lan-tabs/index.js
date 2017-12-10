@@ -1,2 +1,2 @@
-import lanTabs from './lan-tabs.vue';
+import lanTabs from './lan-tabs';
 export default lanTabs;
