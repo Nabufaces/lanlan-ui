@@ -126,7 +126,7 @@
         type: 'Number',
         default: 0
       }, {
-        property: 'customClass',
+        property: 'custom-class',
         explain: '样式扩展',
         type: 'String',
         default: '-'
@@ -152,7 +152,7 @@
         type: 'Number | String',
         default: '-'
       }, {
-        property: 'customClass',
+        property: 'custom-class',
         explain: '样式扩展',
         type: 'String',
         default: '-'

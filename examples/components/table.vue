@@ -308,7 +308,7 @@
           type: 'Array',
           default: '-'
         }, {
-          property: 'tableSource',
+          property: 'table-source',
           explain: '表格数据源，与column.prop对应',
           type: 'Array',
           default: '-'

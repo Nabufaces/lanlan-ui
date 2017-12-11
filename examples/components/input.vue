@@ -160,17 +160,17 @@
           type: 'Boolean | Object',
           default: 'false'
         }, {
-          property: 'prefixIcon',
+          property: 'prefix-icon',
           explain: '输入框头部图标',
           type: 'String',
           default: '-'
         }, {
-          property: 'suffixIcon',
+          property: 'suffix-icon',
           explain: '输入框尾部图标',
           type: 'String',
           default: '-'
         }, {
-          property: 'customClass',
+          property: 'custom-class',
           explain: '扩展样式',
           type: 'String',
           default: '-'

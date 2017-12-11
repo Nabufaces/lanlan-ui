@@ -70,7 +70,7 @@
           width: 100
         }],
         sourceModal: [{
-          property: 'showModal',
+          property: 'show-modal',
           explain: '是否显示模态框',
           type: 'Boolean',
           default: '必填'
@@ -85,12 +85,12 @@
           type: 'Number',
           default: 400
         }, {
-          property: 'showClose',
+          property: 'show-close',
           explain: '是否显示关闭按钮',
           type: 'Boolean',
           default: 'true'
         }, {
-          property: 'closeWindow',
+          property: 'close-window',
           explain: '点击模态框区域之外是否关闭',
           type: 'Boolean',
           default: 'true'

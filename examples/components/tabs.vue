@@ -85,7 +85,7 @@
           width: 100
         }],
         tabsSource: [{
-          property: 'activeLabel',
+          property: 'active-label',
           explain: '当前激活 tab 面板的 label',
           type: 'String | Number',
           default: '必填'

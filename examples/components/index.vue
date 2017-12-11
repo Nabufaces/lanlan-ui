@@ -28,6 +28,7 @@
             <router-link to="/datePicker" class="menu-item" tag="li">DatePicker 日期选择器</router-link>
             <router-link to="/table" class="menu-item" tag="li">Table 表格</router-link>
             <li class="menu-group">View</li>
+            <router-link to="/alert" class="menu-item" tag="li">Alert 警告提示</router-link>
             <router-link to="/message" class="menu-item" tag="li">Message 消息</router-link>
             <router-link to="/messageBox" class="menu-item" tag="li">MessageBox 消息框</router-link>
             <router-link to="/modal" class="menu-item" tag="li">Modal 模态框</router-link>

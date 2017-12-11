@@ -91,7 +91,7 @@
           width: 100
         }],
         sourceProps: [{
-          property: 'switchType',
+          property: 'switch-type',
           explain: '开关状态',
           type: 'Bollean',
           default: 'true'
@@ -100,22 +100,22 @@
           type: 'String',
           default: 'normal'
         }, {
-          property: 'activeColor',
+          property: 'active-color',
           explain: '开启背景颜色',
           type: 'String',
           default: '#FF7846'
         }, {
-          property: 'inactiveColor',
+          property: 'inactive-color',
           explain: '关闭背景颜色',
           type: 'Boolean',
           default: '#686E74'
         }, {
-          property: 'onText',
+          property: 'on-text',
           explain: '开启时的文字',
           type: 'String',
           default: '-'
         }, {
-          property: 'offText',
+          property: 'off-text',
           explain: '关闭时的文字',
           type: 'String',
           default: '-'

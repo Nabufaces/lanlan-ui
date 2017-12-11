@@ -53,7 +53,7 @@
           type: 'Number',
           default: '必填'
         }, {
-          property: 'isEllipsis',
+          property: 'is-ellipsis',
           explain: '是否展示总页数',
           type: 'Boolean',
           default: true

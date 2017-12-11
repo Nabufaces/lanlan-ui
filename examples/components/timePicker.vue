@@ -74,17 +74,17 @@
           type: 'String',
           default: 'HH:mm'
         }, {
-          property: 'disabledHours',
+          property: 'disabled-hours',
           explain: '禁用小时段',
           type: 'Array',
           default: '-'
         }, {
-          property: 'disabledMinutes',
+          property: 'disabled-minutes',
           explain: '禁用分钟段',
           type: 'Array',
           default: '-'
         }, {
-          property: 'disabledSeconds',
+          property: 'disabled-seconds',
           explain: '禁用秒段',
           type: 'Array',
           default: '-'

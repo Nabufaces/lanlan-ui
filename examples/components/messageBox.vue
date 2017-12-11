@@ -83,7 +83,7 @@
           type: 'String',
           default: '-'
         }, {
-          property: 'closeWindow',
+          property: 'close-window',
           explain: '点击消息弹框区域之外是否关闭',
           type: 'Boolean',
           default: 'true'

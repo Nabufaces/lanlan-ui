@@ -86,7 +86,7 @@
           type: 'String | Number',
           default: '-'
         }, {
-          property: 'overflowCount',
+          property: 'overflow-count',
           explain: '展示封顶的数字值',
           type: 'String | Number',
           default: 999

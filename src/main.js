@@ -30,6 +30,7 @@ import lanLoadingBar from './components/lan-loadingBar'
 import lanCarouselItem from './components/lan-carousel-item'
 import lanCarousel from './components/lan-carousel'
 import lanProgress from './components/lan-progress'
+import lanAlert from './components/lan-alert'
 
 const components = {
     lanRow,
@@ -59,7 +60,8 @@ const components = {
     lanLoadingBar,
     lanCarouselItem,
     lanCarousel,
-    lanProgress
+    lanProgress,
+    lanAlert
 };
 
 const install = (Vue) => {
@@ -78,7 +80,7 @@ if (typeof window !== 'undefined' && window.Vue) {
 }
 
 export default {
-  version: '0.2.8',
+  version: '0.2.9',
   install,
   ...components
 };

@@ -116,7 +116,7 @@
           width: 100
         }],
         sourceProps: [{
-          property: 'classType',
+          property: 'class-type',
           type: 'String',
           default: 'default'
         }, {
@@ -129,7 +129,7 @@
           type: 'Boolean',
           default: 'false'
         }, {
-          property: 'customClass',
+          property: 'custom-class',
           explain: '样式扩展',
           type: 'String',
           default: '-'

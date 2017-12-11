@@ -58,6 +58,10 @@ export default new Router({
       component: resolve => {require(['../components/table'],resolve)}
     },
     {
+      path: '/alert',
+      component: resolve => {require(['../components/alert'],resolve)}
+    },
+    {
       path: '/message',
       component: resolve => {require(['../components/message'],resolve)}
     },
