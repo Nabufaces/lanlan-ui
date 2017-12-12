@@ -30,11 +30,6 @@
         default: true
       }
     },
-    created(){
-      for(let i = 1;i <= this.total && i <= 5; i++){
-        this.pageList.push(i);
-      }
-    },
     watch: {
       current(newVal){
         let arr = this.pageList;
@@ -60,10 +55,18 @@
         }
       }
     },
+    computed: {
+      pageList() {
+        let arr = [];
+        for(let i = 1;i <= this.total && i <= 5; i++){
+          arr.push(i);
+        }
+        return arr;
+      }
+    },
     data: function(){
       return {
         current: 1,
-        pageList: [],
         inputValue: ''
       }
     },

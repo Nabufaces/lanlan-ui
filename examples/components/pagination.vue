@@ -7,7 +7,7 @@
 
     <h3>基础使用</h3>
     <lan-row>
-      <lan-pagination :total="16"></lan-pagination>
+      <lan-pagination :total="total"></lan-pagination>
     </lan-row>
     <pre v-highlight>
       <code class="html">
@@ -31,6 +31,7 @@
     name: 'backTop',
     data() {
       return {
+        total: 2,
         columnProps: [{
           prop: "property",
           label: "属性",
