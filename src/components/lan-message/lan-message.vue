@@ -2,11 +2,7 @@
   <transition name="move-down">
     <div :class="prefixCls" v-if="visible">
       <div :class="`${prefixCls}-tips`">
-        <span :class="`${prefixCls}-type ${prefixCls}-${type}`">
-          <lan-icon type="roundclosefill" v-if="type == 'error'"></lan-icon>
-          <lan-icon type="roundcheckfill" v-else-if="type == 'success'"></lan-icon>
-          <lan-icon type="infofill" v-else></lan-icon>
-        </span>
+        <img :src="modalType" :class="`${prefixCls}-type`"/>
         <span>{{message}}</span>
       </div>
     </div>
@@ -15,13 +11,8 @@
 
 <script>
 
-  import lanIcon from '../lan-icon'
-
   export default{
     name: 'lan-message',
-    components: {
-      lanIcon
-    },
     props: {
       type: String,
       message: String,
@@ -39,6 +30,15 @@
           clearTimeout(this.closeTimer);
           this.closeTimer = null;
         }
+      }
+    },
+    computed: {
+      modalType() {
+        return {
+          'warning': 'http://oss.lanlanlife.com/086045ea36307bb9fb61ba63568c53dd_28x28.png',
+          'success': 'http://oss3.lanlanlife.com/e5f860df2f8459bbd9eeb538ada77f8e_28x28.png',
+          'error': 'http://oss3.lanlanlife.com/6db96f5a0b46bec560383c752d895bc7_28x28.png'
+        }[this.type]
       }
     },
     mounted() {

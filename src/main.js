@@ -80,7 +80,7 @@ if (typeof window !== 'undefined' && window.Vue) {
 }
 
 export default {
-  version: '0.3.8',
+  version: '0.3.9',
   install,
   ...components
 };
