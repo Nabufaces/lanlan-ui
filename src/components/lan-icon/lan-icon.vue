@@ -8,7 +8,7 @@
     props: {
       type: {
         type: String,
-        required: true
+        default: 'infofill'
       },
       customClass: String
     },

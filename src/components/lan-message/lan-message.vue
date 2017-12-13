@@ -3,8 +3,8 @@
     <div :class="prefixCls" v-if="visible">
       <div :class="`${prefixCls}-tips`">
         <span :class="`${prefixCls}-type ${prefixCls}-${type}`">
-          <lan-icon :type="modalType" v-if="modalType"></lan-icon>
-        </span>y
+          <lan-icon :type="modalType"></lan-icon>
+        </span>
         <span>{{message}}</span>
       </div>
     </div>

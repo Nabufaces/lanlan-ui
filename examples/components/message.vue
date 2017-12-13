@@ -115,7 +115,7 @@
       handleDuration() {
         this.$Message.success({
           message: '这是一条成功消息',
-          duration: 1000
+          duration: 100000
         })
       }
     }
