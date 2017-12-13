@@ -1,7 +1,7 @@
 <template>
   <div :class="prefixCls">
     <div :class="arrowClasses" class="left" @click="arrowEvent(-1)">
-      <lan-icon name="backward"></lan-icon>
+      <lan-icon type="backward"></lan-icon>
     </div>
     <div :class="`${prefixCls}-list`">
       <div :class="[prefixCls + '-track', showCopyTrack ? '' : 'higher']" :style="trackStyles" ref="originTrack">
@@ -11,7 +11,7 @@
       </div>
     </div>
     <div :class="arrowClasses" class="right" @click="arrowEvent(1)">
-      <lan-icon name="forward"></lan-icon>
+      <lan-icon type="forward"></lan-icon>
     </div>
     <ul :class="`${prefixCls}-dots`" v-if="dots">
       <template v-for="n in slides.length">

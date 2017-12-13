@@ -2,7 +2,7 @@
   <transition name="fade">
     <div v-if="!closed" :class="wrapClasses">
       <span :class="iconClasses" v-if="showIcon">
-          <lan-icon :name="iconType"></lan-icon>
+          <lan-icon :type="iconType"></lan-icon>
       </span>
       <div :class="contentClasses">
         <template v-if="$slots.title">
@@ -12,7 +12,7 @@
         <span><slot></slot></span>
       </div>
       <a :class="closeClasses" v-if="closable" @click="handleClose">
-        <lan-icon name="close"></lan-icon>
+        <lan-icon type="close"></lan-icon>
       </a>
     </div>
   </transition>

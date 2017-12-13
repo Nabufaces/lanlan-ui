@@ -45,20 +45,20 @@
     <lan-row>
       <lan-button disabled>disabled</lan-button>
       <lan-button classType="primary">
-        <lan-icon name="search"></lan-icon>&nbsp;自定义
+        <lan-icon type="search"></lan-icon>&nbsp;自定义
       </lan-button>
       <lan-button classType="success">
-        自定义&nbsp;<lan-icon name="add"></lan-icon>
+        自定义&nbsp;<lan-icon type="add"></lan-icon>
       </lan-button>
     </lan-row>
     <pre v-highlight>
       <code class="html">
         &ltlan-button disabled&gtdisabled&lt/lan-button&gt
         &ltlan-button classType="primary"&gt
-          &ltlan-icon name="search"&gt&lt/lan-icon&gt&nbsp;自定义
+          &lt<lan-icon :type="search"&gt&lt/lan-icon&gt&nbsp;自定义
         &lt/lan-button&gt
         &ltlan-button classType="success"&gt
-          自定义&nbsp;&ltlan-icon name="add"&gt&lt/lan-icon&gt
+          自定义&nbsp;&lt<lan-icon :type="add"&gt&lt/lan-icon&gt
         &lt/lan-button&gt
       </code>
     </pre>

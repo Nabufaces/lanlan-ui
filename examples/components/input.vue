@@ -38,7 +38,7 @@
         <span>Http://</span>
       </template>
       <template slot="append">
-        <lan-icon name="search"></lan-icon>&nbsp;搜索
+        <lan-icon type="search"></lan-icon>&nbsp;搜索
       </template>
     </lan-input>
     <pre v-highlight>
@@ -48,7 +48,7 @@
             &ltspan&gtHttp://&lt/span&gt
           &lt/template&gt
           &lttemplate slot="append"&gt
-            &ltlan-icon name="search"&gt&lt/lan-icon&gt&nbsp;搜索
+            &lt<lan-icon :type="search"&gt&lt/lan-icon&gt&nbsp;搜索
           &lt/template&gt
         &lt/lan-input&gt
       </code>

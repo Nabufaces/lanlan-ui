@@ -4,8 +4,8 @@
       <div class="lan-input-prepend" v-if="$slots.prepend">
         <slot name="prepend"></slot>
       </div>
-      <lan-icon :name="prefixIcon" customClass="lan-input-prefix" v-if="prefixIcon"></lan-icon>
-      <lan-icon :name="suffixIcon" customClass="lan-input-suffix" v-if="suffixIcon"></lan-icon>
+      <lan-icon :type="prefixIcon" customClass="lan-input-prefix" v-if="prefixIcon"></lan-icon>
+      <lan-icon :type="suffixIcon" customClass="lan-input-suffix" v-if="suffixIcon"></lan-icon>
       <input :class="inputClasses"
              :value="value"
              :type="type"

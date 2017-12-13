@@ -2,7 +2,7 @@
   <div :class="classes" :style="styles" @click="handleBack">
     <slot>
       <div :class="innerClasses">
-        <lan-icon name="upward"></lan-icon>
+        <lan-icon type="upward"></lan-icon>
       </div>
     </slot>
   </div>

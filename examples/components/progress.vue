@@ -34,10 +34,10 @@
       <lan-progress :percent="percent" style="width: 400px"></lan-progress>
     </lan-row>
     <lan-button size="small" @click="startProgress(-1)">
-      <lan-icon name="move"></lan-icon>
+      <lan-icon type="move"></lan-icon>
     </lan-button>
     <lan-button size="small" @click="startProgress(1)">
-      <lan-icon name="add"></lan-icon>
+      <lan-icon type="add"></lan-icon>
     </lan-button>
     <pre v-highlight>
       <code class="html">
@@ -45,10 +45,10 @@
           &ltlan-progress :percent="percent" style="width: 400px"&gt&lt/lan-progress&gt
         &lt/lan-row&gt
         &ltlan-button size="small" @click="startProgress(-1)"&gt
-          &ltlan-icon name="move"&gt&lt/lan-icon&gt
+          &lt<lan-icon :type="move"&gt&lt/lan-icon&gt
         &lt/lan-button&gt
         &ltlan-button size="small" @click="startProgress(1)"&gt
-          &ltlan-icon name="add"&gt&lt/lan-icon&gt
+          &lt<lan-icon :type="add"&gt&lt/lan-icon&gt
         &lt/lan-button&gt
           export default {
             data() {

@@ -3,7 +3,7 @@
     <div :class="prefixCls" v-if="visible">
       <div :class="`${prefixCls}-tips`">
         <span :class="`${prefixCls}-type ${prefixCls}-${type}`">
-          <lan-icon :name="modalType"></lan-icon>
+          <lan-icon :type="modalType"></lan-icon>
         </span>
         <span>{{message}}</span>
       </div>
@@ -38,7 +38,6 @@
     },
     computed: {
       modalType() {
-        console.log(map[this.type]);
         return map[this.type]
       }
     },
@@ -51,7 +50,6 @@
       }
     },
     mounted() {
-      console.log(this.$props)
       this.clearCloseTimer();
       this.visible = true;
       this.closeTimer = setTimeout(() => {

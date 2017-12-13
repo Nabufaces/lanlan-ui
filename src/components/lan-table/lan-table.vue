@@ -14,8 +14,8 @@
             @click="handleSort(item)">
           <span>{{item.label}}</span>
           <span class="lan-table-hd-sort" v-if="item.sortable">
-            <lan-icon name="upward" :customClass="item.sortType === 1 ? 'lan-table-hd-sort-chosen' : ''"></lan-icon>
-            <lan-icon name="downward" :customClass="item.sortType === 2 ? 'lan-table-hd-sort-chosen' : ''"></lan-icon>
+            <lan-icon type="upward" :customClass="item.sortType === 1 ? 'lan-table-hd-sort-chosen' : ''"></lan-icon>
+            <lan-icon type="downward" :customClass="item.sortType === 2 ? 'lan-table-hd-sort-chosen' : ''"></lan-icon>
           </span>
         </th>
         </thead>

@@ -27,10 +27,10 @@
     <lan-row>
       <lan-tabs :activeLabel="1">
         <lan-tab-pane :label="1">
-          <lan-icon name="present"></lan-icon>&nbsp;标签一
+          <lan-icon type="present"></lan-icon>&nbsp;标签一
         </lan-tab-pane>
         <lan-tab-pane :label="2">
-          <lan-icon name="date"></lan-icon>&nbsp;标签二
+          <lan-icon type="date"></lan-icon>&nbsp;标签二
         </lan-tab-pane>
         <lan-tab-pane :label="3">标签三</lan-tab-pane>
       </lan-tabs>
@@ -39,10 +39,10 @@
       <code class="html">
         &ltlan-tabs :activeLabel="1"&gt
           &ltlan-tab-pane :label="1"&gt
-            &ltlan-icon name="present"&gt&lt/lan-icon&gt&nbsp;标签一
+            &lt<lan-icon :type="present"&gt&lt/lan-icon&gt&nbsp;标签一
           &lt/lan-tab-pane&gt
           &ltlan-tab-pane :label="2"&gt
-            &ltlan-icon name="date"&gt&lt/lan-icon&gt&nbsp;标签二
+            &lt<lan-icon :type="date"&gt&lt/lan-icon&gt&nbsp;标签二
           &lt/lan-tab-pane&gt
           &ltlan-tab-pane :label="3"&gt标签三&lt/lan-tab-pane&gt
         &lt/lan-tabs&gt

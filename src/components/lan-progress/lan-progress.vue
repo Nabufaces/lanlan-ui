@@ -8,10 +8,10 @@
     <span :class="textClasses">
         <slot>
             <span v-if="currentStatus == 'error'">
-                <lan-icon name="roundclosefill"></lan-icon> 失败
+                <lan-icon type="roundclosefill"></lan-icon> 失败
             </span>
             <span v-else-if="currentStatus == 'success'">
-                <lan-icon name="roundcheckfill"></lan-icon> 成功
+                <lan-icon type="roundcheckfill"></lan-icon> 成功
             </span>
             <span v-else>
                 {{ percent }}%

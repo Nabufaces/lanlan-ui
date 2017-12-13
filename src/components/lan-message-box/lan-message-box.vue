@@ -4,7 +4,7 @@
       <div :class="`${prefixCls}-wrapper`">
         <div :class="`${prefixCls}-wrapper-hd`">
           <span :class="`${prefixCls}-type ${prefixCls}-${type}`">
-            <lan-icon :name="modalType"></lan-icon>
+            <lan-icon :type="modalType"></lan-icon>
           </span>
           <span :class="`${prefixCls}-wrapper-hd-tt`">
             <slot name="title">{{title}}</slot>

@@ -5,7 +5,7 @@
       <lan-tabs :activeLabel="1" @change="toRepository">
         <lan-tab-pane :label="1"><router-link to="/affix" tag="span">组件</router-link></lan-tab-pane>
         <lan-tab-pane :label="2">
-          <lan-icon name="github"></lan-icon>&emsp;Github
+          <lan-icon type="github"></lan-icon>&emsp;Github
         </lan-tab-pane>
       </lan-tabs>
     </div>

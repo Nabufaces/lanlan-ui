@@ -6,7 +6,7 @@
   export default {
     name: 'lan-icon',
     props: {
-      name: {
+      type: {
         type: String,
         required: true
       },
@@ -16,7 +16,7 @@
       classes() {
         return [
           'iconfont',
-          `icon-${this.name}`,
+          `icon-${this.type}`,
           {
             [`${this.customClass}`]: this.customClass
           }

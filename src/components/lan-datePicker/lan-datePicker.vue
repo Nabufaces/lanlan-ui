@@ -11,18 +11,18 @@
     <div class="lan-datePicker-dropdown" v-if="showPick" @mousedown.prevent>
       <div class="lan-datePicker-hd">
         <span class="lan-datePicker-hd-back" @click="prevYearPreview">
-          <lan-icon name="double-backward"></lan-icon>
+          <lan-icon type="double-backward"></lan-icon>
         </span>
         <span class="lan-datePicker-hd-back" @click="prevMonthPreview">
-          <lan-icon name="backward"></lan-icon>
+          <lan-icon type="backward"></lan-icon>
         </span>
         <span class="lan-datePicker-hd-month" @click="chosenType('month')">{{tmpMonth+1 | formatMonth}}</span>
         <span class="lan-datePicker-hd-year" @click="chosenType('year')">{{tmpYear}}</span>
         <span class="lan-datePicker-hd-more" @click="nextYearPreview">
-          <lan-icon name="double-forward"></lan-icon>
+          <lan-icon type="double-forward"></lan-icon>
         </span>
         <span class="lan-datePicker-hd-more" @click="nextMonthPreview">
-          <lan-icon name="forward"></lan-icon>
+          <lan-icon type="forward"></lan-icon>
         </span>
       </div>
       <div class="lan-datePicker-bd">
