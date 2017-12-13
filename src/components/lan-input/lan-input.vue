@@ -156,6 +156,7 @@
         const maxRows = autosize.maxRows;
 
         this.textareaStyles = calcTextareaHeight(this.$refs.textarea, minRows, maxRows);
+        this.$set(this.textareaStyles, 'resize', 'none');
       },
     }
   }

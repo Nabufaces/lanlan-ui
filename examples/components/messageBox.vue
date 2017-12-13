@@ -7,7 +7,7 @@
 
     <h3>基础使用</h3>
     <lan-button classType="primary" @click="visible = true">点击打开messageBox</lan-button>
-    <lan-message-box v-if="visible" type="success" @close="visible = false">
+    <lan-message-box v-if="visible" type="warning" @close="visible = false">
       <template slot="title">这是messageBox的标题</template>
       <span>这是messageBox的内容</span>
     </lan-message-box>
