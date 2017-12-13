@@ -1,8 +1,8 @@
-import lanMessage from './lan-message'
+import lanMessage from './lan-message.vue'
 import Vue from 'vue'
 
 lanMessage.newInstance = properties => {
-
+  console.log(properties)
   const Instance = new Vue({
     data: properties,
     render (h) {

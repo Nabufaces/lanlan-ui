@@ -38,6 +38,7 @@
     },
     computed: {
       modalType() {
+        console.log(map[this.type]);
         return map[this.type]
       }
     },
@@ -50,6 +51,7 @@
       }
     },
     mounted() {
+      console.log(this.$props)
       this.clearCloseTimer();
       this.visible = true;
       this.closeTimer = setTimeout(() => {
