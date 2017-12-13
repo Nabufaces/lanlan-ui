@@ -1,6 +1,6 @@
 {
   "name": "lanlan-ui",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "懒懒前端UI库",
   "scripts": {
     "dev": "node build/dev-server.js",

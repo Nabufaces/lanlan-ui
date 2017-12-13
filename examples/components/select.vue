@@ -200,7 +200,7 @@
         sourceEvents: [{
           eventName: 'selected',
           explain: '选项选中时触发',
-          back: '选中的 value'
+          back: '选中的 value, 选中的 label'
         }]
       }
     }

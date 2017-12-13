@@ -83,7 +83,7 @@
       },
       handleSelect(item){
         this.selectedValue = item;
-        this.$emit('selected', item.value);
+        this.$emit('selected', item.value, item.label);
         this.showSelect = false;
       }
     }
