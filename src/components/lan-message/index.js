@@ -1,12 +1,6 @@
 import lanMessage from './lan-message'
 import Vue from 'vue'
 
-const map = {
-  warning: 'infofill',
-  success: 'roundcheckfill',
-  error: 'roundclosefill'
-};
-
 lanMessage.newInstance = properties => {
   const Instance = new Vue({
     data: properties,
@@ -34,8 +28,7 @@ function initMessage (message = '', duration = 3000, type = 'success') {
   return lanMessage.newInstance({
     type,
     duration,
-    message,
-    modalType: map[type]
+    message
   });
 
 }

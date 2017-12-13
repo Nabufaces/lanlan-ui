@@ -1,6 +1,6 @@
 {
   "name": "lanlan-ui",
-  "version": "0.3.7",
+  "version": "0.3.8",
   "description": "懒懒前端UI库",
   "scripts": {
     "dev": "node build/dev-server.js",
@@ -12,7 +12,7 @@
     "less-loader": "^4.0.5",
     "vue": "^2.5.0",
     "vue-router": "^3.0.1",
-    "lanlan-ui": "^0.3.7"
+    "lanlan-ui": "^0.3.8"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",

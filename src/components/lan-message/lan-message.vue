@@ -3,7 +3,9 @@
     <div :class="prefixCls" v-if="visible">
       <div :class="`${prefixCls}-tips`">
         <span :class="`${prefixCls}-type ${prefixCls}-${type}`">
-          <lan-icon :type="modalType"></lan-icon>
+          <lan-icon type="roundclosefill" v-if="type == 'error'"></lan-icon>
+          <lan-icon type="roundcheckfill" v-else-if="type == 'success'"></lan-icon>
+          <lan-icon type="infofill" v-else></lan-icon>
         </span>
         <span>{{message}}</span>
       </div>
@@ -22,7 +24,6 @@
     },
     props: {
       type: String,
-      modalType: String,
       message: String,
       duration: Number
     },
