@@ -12,11 +12,6 @@
 </template>
 
 <script>
-  const map = {
-    warning: 'infofill',
-    success: 'roundcheckfill',
-    error: 'roundclosefill'
-  };
 
   import lanIcon from '../lan-icon'
 
@@ -27,6 +22,7 @@
     },
     props: {
       type: String,
+      modalType: String,
       message: String,
       duration: Number
     },
@@ -34,11 +30,6 @@
       return {
         prefixCls: 'lan-message',
         visible: false
-      }
-    },
-    computed: {
-      modalType() {
-        return map[this.type]
       }
     },
     methods: {
