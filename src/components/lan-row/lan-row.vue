@@ -6,9 +6,26 @@
 <script>
   import { findComponentsDownward } from '../../base/assist';
 
+  const prefixCls = 'lan-row';
+
   export default {
     name: 'lan-row',
     props: {
+      type: {
+        validator (value) {
+          return ['flex'].indexOf(value) > -1
+        }
+      },
+      align: {
+        validator (value) {
+          return ['top', 'middle', 'bottom'].indexOf(value) > -1
+        }
+      },
+      justify: {
+        validator (value) {
+          return ['start', 'end', 'center', 'space-around', 'space-between'].indexOf(value) > -1
+        }
+      },
       gutter: {
         type: Number,
         default: 0
@@ -18,8 +35,11 @@
     computed: {
       classes () {
         return [
-          'lan-row',
           {
+            [`${prefixCls}`]: !this.type,
+            [`${prefixCls}-${this.type}`]: this.type,
+            [`${prefixCls}-${this.type}-${this.align}`]: this.align,
+            [`${prefixCls}-${this.type}-${this.justify}`]: this.justify,
             [`${this.customClass}`]: !!this.customClass
           }
         ];

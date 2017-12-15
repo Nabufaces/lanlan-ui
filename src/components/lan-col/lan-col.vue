@@ -15,6 +15,7 @@
       offset: [Number, String],
       push: [Number, String],
       pull: [Number, String],
+      order: [Number, String],
       customClass: String
     },
     data () {
@@ -31,6 +32,7 @@
             [`${prefixCls}-offset-${this.offset}`]: this.offset,
             [`${prefixCls}-push-${this.push}`]: this.push,
             [`${prefixCls}-pull-${this.pull}`]: this.pull,
+            [`${prefixCls}-order-${this.order}`]: this.order,
             [`${this.customClass}`]: !!this.customClass
           }
         ];

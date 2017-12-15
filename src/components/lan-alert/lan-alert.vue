@@ -1,6 +1,6 @@
 <template>
   <transition name="fade">
-    <div v-if="!closed" :class="wrapClasses">
+    <lan-row v-if="!closed" :class="wrapClasses" type="flex" align="middle" :justify="center ? 'center' : 'start'">
       <span :class="iconClasses" v-if="showIcon">
           <lan-icon :type="iconType"></lan-icon>
       </span>
@@ -14,7 +14,7 @@
       <a :class="closeClasses" v-if="closable" @click="handleClose">
         <lan-icon type="close"></lan-icon>
       </a>
-    </div>
+    </lan-row>
   </transition>
 </template>
 <script>
@@ -26,11 +26,13 @@
   const prefixCls = 'lan-alert';
 
   import lanIcon from '../lan-icon';
+  import lanRow from '../lan-row';
 
   export default {
     name: 'lan-alert',
     components: {
-      lanIcon
+      lanIcon,
+      lanRow
     },
     props: {
       type: {
@@ -63,10 +65,7 @@
       wrapClasses () {
         return [
           `${prefixCls}`,
-          `${prefixCls}-${this.type}`,
-          {
-            [`${prefixCls}-center`]: this.center
-          }
+          `${prefixCls}-${this.type}`
         ];
       },
       iconType () {
