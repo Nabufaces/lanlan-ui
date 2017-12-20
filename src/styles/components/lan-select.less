@@ -19,10 +19,13 @@
     padding: 6px 0;
     margin: 0;
     overflow: scroll;
-    &-noMatch {
+    &-notFound, &-loading {
       color: @default-border-color;
       font-size: @font-size-base + 1;
       text-align: center;
+      box-sizing: border-box;
+      padding: 6px 0;
+      margin: 0;
     }
     &-item {
       color: @option-color;

@@ -7,13 +7,12 @@
     <h2 style="margin-top: 40px">代码示例</h2>
 
     <h3>基础使用</h3>
-    <lan-select v-model="selectedValue" style="width: 200px">
+    <lan-select style="width: 200px">
       <lan-option :value="item.value" :label="item.label" v-for="item in source" :key="item.value"></lan-option>
     </lan-select>
-    <p>{{selectedValue}}</p>
     <pre v-highlight>
       <code class="html">
-        &ltlan-select v-model="selectedValue" style="width: 200px"&gt
+        &ltlan-select style="width: 200px"&gt
           &ltlan-option :value="item.value" :label="item.label" v-for="item in source" :key="item.value"&gt&lt/lan-option&gt
         &lt/lan-select&gt
         &ltscript&gt
@@ -68,6 +67,43 @@
         &ltlan-select placeholder="含搜索" filterable style="width: 200px"&gt
           &ltlan-option :value="item.value" :label="item.label" :disabled="item.disabled" v-for="item in source" :key="item.value"&gt&lt/lan-option&gt
         &lt/lan-select&gt
+      </code>
+    </pre>
+
+    <h3>远程搜索</h3>
+    <lan-select placeholder="远程搜索" filterable remote :remote-method="remoteMethod" :loading="loading" style="width: 200px">
+      <lan-option :value="item.value" :label="item.label" :disabled="item.disabled" v-for="item in remoteSource" :key="item.value"></lan-option>
+    </lan-select>
+    <pre v-highlight>
+      <code class="html">
+        &ltlan-select placeholder="远程搜索" filterable remote :remote-method="remoteMethod" :loading="loading" style="width: 200px"&gt
+          &ltlan-option :value="item.value" :label="item.label" :disabled="item.disabled" v-for="item in remoteSource" :key="item.value"&gt&lt/lan-option&gt
+        &lt/lan-select&gt
+        &ltscript&gt
+          export default {
+            methods: {
+              data() {
+                return {
+                  loading: false,
+                  remoteSource: []
+                }
+              },
+              remoteMethod(query) {
+                if (query !== '') {
+                  this.loading = true;
+                  setTimeout(() =&gt {
+                    this.loading = false;
+                    this.remoteSource = this.source.filter(item =&gt {
+                      return item.label.indexOf(query) &gt -1
+                    });
+                  }, 150);
+                } else {
+                  this.remoteSource = [];
+                }
+              }
+            }
+          }
+        &lt/script&gt
       </code>
     </pre>
 
@@ -129,6 +165,8 @@
           value: 5,
           label: '北京糖葫芦'
         }],
+        remoteSource: [],
+        loading: false,
         tpl: `
         <lan-select placeholder="自定义模板" style="width: 200px">
           <lan-option :value="item.value" :label="item.label" :disabled="item.disabled" v-for="item in source" :key="item.value">
@@ -168,6 +206,21 @@
           explain: '是否支持搜索',
           type: 'Boolean',
           default: 'false'
+        }, {
+          property: 'remote',
+          explain: '是否使用远程搜索',
+          type: 'Boolean',
+          default: 'false'
+        }, {
+          property: 'remote-method',
+          explain: '远程搜索的方法',
+          type: 'Function',
+          default: '-'
+        }, {
+          property: 'loading',
+          explain: '当前是否正在远程搜索',
+          type: 'Boolean',
+          default: 'false'
         }],
         sourceOption: [{
           property: 'label',
@@ -201,7 +254,26 @@
           eventName: 'selected',
           explain: '选项选中时触发',
           back: '选中的 value, 选中的 label'
+        }, {
+          eventName: 'query-change',
+          explain: '搜索词改变时触发',
+          back: '输入的搜索词'
         }]
+      }
+    },
+    methods: {
+      remoteMethod(query) {
+        if (query !== '') {
+          this.loading = true;
+          setTimeout(() => {
+            this.loading = false;
+            this.remoteSource = this.source.filter(item => {
+              return item.label.indexOf(query) > -1
+            });
+          }, 150);
+        } else {
+          this.remoteSource = [];
+        }
       }
     }
   }

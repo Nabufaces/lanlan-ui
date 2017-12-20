@@ -5,7 +5,7 @@
 </template>
 
 <script>
-  import {findComponentUpward} from '../../base/assist'
+  import { findComponentUpward } from '../../base/assist'
 
   const prefixCls = 'lan-select-list-item';
 
@@ -39,12 +39,20 @@
         hidden: false
       }
     },
+    mounted() {
+      const select = findComponentUpward(this, 'lan-select');
+      if(select.remote && select.filterable) {
+        //update slots.default
+        select.handleFilter();
+      }
+    },
     methods: {
       handleSelect() {
         if(this.disabled){
           return;
         }
-        findComponentUpward(this, 'lan-select').handleSelect({
+        const select = findComponentUpward(this, 'lan-select');
+        select.handleSelect({
           label: this.label,
           value: this.value
         });
